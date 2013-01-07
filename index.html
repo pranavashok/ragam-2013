@@ -1,0 +1,50 @@
+<html>
+<head>
+	<link href="css/style.css" rel="stylesheet"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/jQueryRotate.2.2.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#mainlinks a").click(function(){
+				//$("#font-pane").rotate'-25deg', x: '50%'}, 500, 'in-out');
+				$("#mainmenu-pane").rotate({animateTo:0, easing: $.easing.easeInOutExpo, callback: function() {
+						$("mainmenu-pane").animate({left:"-120%"}); 
+					}
+				});
+				
+				
+				
+				
+			});
+		});
+	</script>
+</head>
+<body>
+<div class="pane" id="font-pane">
+<img src="img/logo.jpg">
+</div>
+<div class="pane" id="mainmenu-pane">
+<div id="mainlinks">
+<ul>
+<li>
+	<a href="#">Link 1</a>
+</li>
+<li>
+	<a href="#">Link 2</a>
+</li>
+<li>
+	<a href="#">Link 3</a>
+</li>
+</ul>
+</div>
+</div>
+
+<!--
+<div class="pane" id="submenu-pane">
+
+</div>
+<div class="pane" id="content-pane">
+
+</div>-->
+</body>
+</html>
