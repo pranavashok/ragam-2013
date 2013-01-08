@@ -51,9 +51,9 @@
 #submenu-pane{
 	position:absolute;
 	height:300%;
-	width:200%;
+	width:300%;
 	background-color:#cef;
-	top:150%;
+	top:5%;
 	left:-100%;
 	z-index:1;
 }
