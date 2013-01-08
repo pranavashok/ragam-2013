@@ -8,7 +8,8 @@ function initialize()
 $(document).ready(function(){
 			initialize();
 			$("#mainlinks a").click(function(){
-				$("#font-pane").animate({left:'100%'}, '2000');
 				$("#mainmenu-pane").animate({right:'98%'}, '2000', function() { $("#mainmenu-pane").rotate({angle: -25, animateTo:0})});
+
+				$("#font-pane").animate({left:'120%'}, '2000');
 			});
 		});
