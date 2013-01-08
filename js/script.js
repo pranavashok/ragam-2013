@@ -2,6 +2,8 @@ function initialize()
 {
 	$("#mainmenu-pane").animate({right:'70%'},'slow', function(){ $("#mainmenu-pane").rotate({angle:0, animateTo:-25})});
 	$("#font-pane").animate({left:'30%'}, 'slow', function(){ $("#font-pane").rotate({angle:0, animateTo:-25})});
+	$("#submenu-pane").rotate({angle:-25});
+	$("#contents-pane").rotate({angle:-25});
 }
 $(document).ready(function(){
 			
@@ -10,6 +12,8 @@ $(document).ready(function(){
 				$("#mainmenu-pane").rotate({angle: -25, animateTo:0, callback: function(){
 					$("#mainmenu-pane").animate({right:'100%'});
 				}});
-				$("#font-pane").animate({left:'100%'}, 'slow');
+				//$("#font-pane").rotate({angle: -25, animateTo:0, callback: function(){
+					$("#font-pane").animate({left:'100%'}, 'slow');
+				//}});
 			});
 		});
