@@ -1,11 +1,4 @@
-
-
 .pane{
-	transform-origin:0 0;
-	-ms-transform-origin:0 0; /* IE 9 */
-	-moz-transform-origin:0 0; /* Firefox */
-	-webkit-transform-origin:0 0; /* Safari and Chrome */
-	-o-transform-origin:0 0; /* Opera */
 	-webkit-transition: 0.5s ease-out;
 }
 
@@ -17,11 +10,6 @@
 	top:-100%;
 	z-index:2;
 	background-color:#f7f7f7;
-	transform:rotate(-25deg);
-	-ms-transform:rotate(-25deg); /* IE 9 */
-	-moz-transform:rotate(-25deg); /* Firefox */
-/*	-webkit-transform:rotate(-25deg); /* Safari and Chrome */
-	-o-transform:rotate(-25deg); /* Opera */	
 	transform-origin:0 540;
 	-ms-transform-origin:0 540; /* IE 9 */
 	-moz-transform-origin:0 540; /* Firefox */
@@ -46,11 +34,6 @@
 	z-index:2;
 /*	right:70%;*/
 	top:-100%;
-	transform:rotate(-25deg);
-	-ms-transform:rotate(-25deg); /* IE 9 */
-	-moz-transform:rotate(-25deg); /* Firefox */
-/*	-webkit-transform:rotate(-25deg); /* Safari and Chrome */
-	-o-transform:rotate(-25deg); /* Opera */
 	transform-origin:1920 540;
 	-ms-transform-origin:0 0; /* IE 9 */
 	-moz-transform-origin:0 0; /* Firefox */
@@ -66,17 +49,12 @@
 }
 #submenu-pane{
 	position:absolute;
-	height:200%;
-	width:300%;
+	height:300%;
+	width:200%;
 	background-color:#cef;
 	top:150%;
 	left:-100%;
 	z-index:1;
-	transform:rotate(-25deg);
-	-ms-transform:rotate(-25deg); /* IE 9 */
-	-moz-transform:rotate(-25deg); /* Firefox */
-	-webkit-transform:rotate(-25deg); /* Safari and Chrome */
-	-o-transform:rotate(-25deg); /* Opera */
 }
 #sublinks{
 	position:absolute;
@@ -90,12 +68,22 @@
 	height:300%;
 	width:200%;
 	background-color:#ecf;
-	top:-100%;
+	top:-150%;
 	left:-100%;
 	z-index:0;
-	transform:rotate(-25deg);
-	-ms-transform:rotate(-25deg); /* IE 9 */
-	-moz-transform:rotate(-25deg); /* Firefox */
-	-webkit-transform:rotate(-25deg); /* Safari and Chrome */
-	-o-transform:rotate(-25deg); /* Opera */
 }
+/*
+#heading{
+	position:absolute;
+	top:100%;
+	left:100%;
+	font-size:40px;
+}
+#content-container{
+	position:absolute;
+	top:-100%;
+	left:100%;
+	width:50%;
+	height:50%;
+	background-color:#000;
+}*/
