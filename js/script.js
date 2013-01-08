@@ -6,14 +6,9 @@ function initialize()
 	$("#contents-pane").rotate({angle:-25});
 }
 $(document).ready(function(){
-			
 			initialize();
 			$("#mainlinks a").click(function(){
-				$("#mainmenu-pane").rotate({angle: -25, animateTo:0, callback: function(){
-					$("#mainmenu-pane").animate({right:'100%'});
-				}});
-				//$("#font-pane").rotate({angle: -25, animateTo:0, callback: function(){
-					$("#font-pane").animate({left:'100%'}, 'slow');
-				//}});
+				$("#font-pane").animate({left:'100%'}, '2000');
+				$("#mainmenu-pane").animate({right:'98%'}, '2000', function() { $("#mainmenu-pane").rotate({angle: -25, animateTo:0})});
 			});
 		});
