@@ -1,5 +1,8 @@
 .pane{
+	transition: 0.5s ease-out;
 	-webkit-transition: 0.5s ease-out;
+	-moz-transition: 0.5s ease-out;
+	-o-transition: 0.5s ease-out;
 }
 
 #font-pane{
