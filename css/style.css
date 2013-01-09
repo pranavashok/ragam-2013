@@ -157,6 +157,13 @@ opacity:1;
 	-webkit-transform-origin:20% -38%; /* Safari and Chrome */
 	-o-transform-origin:20% 0; /* Opera */
 }
+#home-button{
+	position:absolute;
+	left:10px;
+	bottom:10px;
+	z-index:5;
+	font-size:20px;
+}
 #sublinks{
 	position:absolute;
 	top:20px;
