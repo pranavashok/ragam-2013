@@ -56,6 +56,21 @@ src: url('HelveticaNeueCyr-Thin.otf');
 	right:3px;
 	width:70px;
 	height:70px;
+	opacity:1;
+	-webkit-transition: opacity 0.3s ease;
+	-moz-transition: opacity 0.3s ease;
+	-o-transition: opacity 0.3s ease;
+	-ms-transition:opacity 0.3s ease;
+	transition:opacity 0.3s ease;
+}
+
+#followlinks:hover{
+	opacity:1;
+	-webkit-transition: opacity 0.3s ease;
+	-moz-transition: opacity 0.3s ease;
+	-o-transition: opacity 0.3s ease;
+	-ms-transition:opacity 0.3s ease;
+	transition:opacity 0.3s ease;
 }
 	
 #followlinks img{

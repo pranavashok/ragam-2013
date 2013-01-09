@@ -12,12 +12,16 @@ $(document).ready(function(){
 			$("#mainlinks li").click(function(){
 				$("#font-pane").css({left: w*0.3+'px'});
 				$("#font-pane").stop().animate({left:'100%', top:'-160%'}, 1000, 'easeInOutQuad');
+				
 				$("#mainmenu-pane").stop().animate({right:'105%', top:'-70%'}, 1000, 'easeInOutQuad', 
 					function() { 
 						mstate = 1;
+						$("#followlinks").css({opacity:'0'});
 					});
 
 			});
+
+			
 			/* Code for bringbing back homepage */
 			/*
 			$("#mainmenu-pane").click(
