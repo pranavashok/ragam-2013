@@ -77,8 +77,9 @@ src: url('HelveticaNeueCyr-Thin.otf');
 }
 #mainlinks{
 	position:absolute;
-	top:40%;
-	right:1.1%;
+	top:45%;
+	width: 100%;
+	right:0;
 	list-style-type:none;
 	font-family: 'HelveticaThin';
 	font-size:350%;
@@ -92,7 +93,6 @@ src: url('HelveticaNeueCyr-Thin.otf');
 #mainlinks ul li {
 	padding-right:10px;
 	padding-left:10px;
-	margin-bottom:6px;
 }
 #mainlinks a{
 	text-decoration:none;
@@ -102,7 +102,6 @@ src: url('HelveticaNeueCyr-Thin.otf');
     	border-left: 27px solid transparent;
     	border-right: 0px solid transparent;
     	height: 0;
-		width:95%;
 		color:#777;
 		-webkit-transition: border 0.5s ease, color 0.5s ease;
 		-moz-transition: border 0.5s ease, color 0.5s ease;
