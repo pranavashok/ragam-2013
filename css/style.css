@@ -78,11 +78,11 @@ src: url('HelveticaNeueCyr-Thin.otf');
 #mainlinks{
 	position:absolute;
 	top:40%;
-	right:-2px;
+	right:1.1%;
 	list-style-type:none;
 	font-family: 'HelveticaThin';
-	font-size:40px;
-	line-height: 60px;
+	font-size:350%;
+	line-height: 70px;
 	text-align:right;
 }
 #mainlinks ul{
@@ -102,7 +102,7 @@ src: url('HelveticaNeueCyr-Thin.otf');
     	border-left: 27px solid transparent;
     	border-right: 0px solid transparent;
     	height: 0;
-		width:200px;
+		width:95%;
 		color:#777;
 		-webkit-transition: border 0.5s ease, color 0.5s ease;
 		-moz-transition: border 0.5s ease, color 0.5s ease;
@@ -120,38 +120,38 @@ src: url('HelveticaNeueCyr-Thin.otf');
 }
 
 #mainlink1{
-	border-bottom: 55px solid rgba(221, 24, 31, 0.1);
+	border-bottom: 65px solid rgba(221, 24, 31, 0.1);
 }
 #mainlink1:hover{
-	border-bottom: 55px solid #dd181f;
+	border-bottom: 65px solid #dd181f;
 	color:#fff;
 }
 #mainlink2{
-	border-bottom: 55px solid rgba(119, 183, 8, 0.1);
+	border-bottom: 65px solid rgba(119, 183, 8, 0.1);
 }
 #mainlink2:hover{
-	border-bottom: 55px solid #77b708;
+	border-bottom: 65px solid #77b708;
 	color:#fff;
 }
 #mainlink3{
-	border-bottom: 55px solid rgba(111, 21, 46, 0.1);
+	border-bottom: 65px solid rgba(111, 21, 46, 0.1);
 }
 #mainlink3:hover{
-	border-bottom: 55px solid #6f152e;
+	border-bottom: 65px solid #6f152e;
 	color:#fff;
 }
 #mainlink4{
-	border-bottom: 55px solid rgba(255, 127, 0, 0.1);
+	border-bottom: 65px solid rgba(255, 127, 0, 0.1);
 }
 #mainlink4:hover{
-	border-bottom: 55px solid #ff7f00;
+	border-bottom: 65px solid #ff7f00;
 	color:#fff;
 }
 #mainlink5{
-	border-bottom: 55px solid rgba(9, 186, 255, 0.1);
+	border-bottom: 65px solid rgba(9, 186, 255, 0.1);
 }
 #mainlink5:hover{
-	border-bottom: 55px solid #09baff;
+	border-bottom: 65px solid #09baff;
 	color:#fff;
 }
 
