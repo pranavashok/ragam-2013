@@ -78,10 +78,12 @@ src: url('HelveticaNeueCyr-Thin.otf');
 #mainlinks{
 	position:absolute;
 	top:45%;
-	right:-2px;
+	width: 100%;
+	right:0;
 	list-style-type:none;
 	font-family: 'HelveticaThin';
-	font-size:32px;
+	font-size:350%;
+	line-height: 70px;
 	text-align:right;
 }
 #mainlinks ul{
@@ -89,20 +91,21 @@ src: url('HelveticaNeueCyr-Thin.otf');
 }
 
 #mainlinks ul li {
-	padding-right:15px;
+	padding-right:10px;
 	padding-left:10px;
+<<<<<<< HEAD
 	margin-bottom:6px;
+=======
+>>>>>>> 9a9c3c1a05d7443df7264537b6d93d48e90ec1ec
 }
 #mainlinks a{
 	text-decoration:none;
 	color:#777;
 }
 #mainlinks li{
-		border-bottom: 35px solid transparent;
-    	border-left: 10px solid transparent;
+    	border-left: 27px solid transparent;
     	border-right: 0px solid transparent;
     	height: 0;
-		width:145px;
 		color:#777;
 		-webkit-transition: border 0.5s ease, color 0.5s ease;
 		-moz-transition: border 0.5s ease, color 0.5s ease;
@@ -119,28 +122,39 @@ src: url('HelveticaNeueCyr-Thin.otf');
 		transition: border 0.5s ease, color 0.5s ease;
 }
 
+#mainlink1{
+	border-bottom: 65px solid rgba(221, 24, 31, 0.1);
+}
 #mainlink1:hover{
-	border-bottom: 35px solid #dd181f;
+	border-bottom: 65px solid #dd181f;
 	color:#fff;
 }
-
+#mainlink2{
+	border-bottom: 65px solid rgba(119, 183, 8, 0.1);
+}
 #mainlink2:hover{
-	border-bottom: 35px solid #77b708;
+	border-bottom: 65px solid #77b708;
 	color:#fff;
 }
-
+#mainlink3{
+	border-bottom: 65px solid rgba(111, 21, 46, 0.1);
+}
 #mainlink3:hover{
-	border-bottom: 35px solid #6f152e;
+	border-bottom: 65px solid #6f152e;
 	color:#fff;
 }
-
+#mainlink4{
+	border-bottom: 65px solid rgba(255, 127, 0, 0.1);
+}
 #mainlink4:hover{
-	border-bottom: 35px solid #ff7f00;
+	border-bottom: 65px solid #ff7f00;
 	color:#fff;
 }
-
+#mainlink5{
+	border-bottom: 65px solid rgba(9, 186, 255, 0.1);
+}
 #mainlink5:hover{
-	border-bottom: 35px solid #09baff;
+	border-bottom: 65px solid #09baff;
 	color:#fff;
 }
 
