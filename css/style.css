@@ -51,11 +51,16 @@
 #submenu-pane{
 	position:absolute;
 	height:300%;
-	width:300%;
+	width:200%;
 	background-color:#cef;
-	top:5%;
-	left:-100%;
+	top:30%;
+	left:-40%;
 	z-index:1;
+	transform-origin:20% 0;
+	-ms-transform-origin:20% 0; /* IE 9 */
+	-moz-transform-origin:20% 0; /* Firefox */
+	-webkit-transform-origin:20% -38%; /* Safari and Chrome */
+	-o-transform-origin:20% 0; /* Opera */
 }
 #sublinks{
 	position:absolute;
@@ -70,16 +75,25 @@
 	width:200%;
 	background-color:#ecf;
 	top:-100%;
-	left:-100%;
+	left:-40%;
 	z-index:0;
+	transform-origin:20% 0;
+	-ms-transform-origin:20% 0; /* IE 9 */
+	-moz-transform-origin:20% 0; /* Firefox */
+	-webkit-transform-origin:20% 0; /* Safari and Chrome */
+	-o-transform-origin:20% 0; /* Opera */	
 }
-/*
+
 #heading{
 	position:absolute;
-	top:100%;
-	left:100%;
-	font-size:40px;
+	color: #000;
+	top:38%;
+	left:13%;
+	font-size:100px;
+	z-index: 3;
+	display: block;
 }
+/*
 #content-container{
 	position:absolute;
 	top:-100%;
