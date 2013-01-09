@@ -7,11 +7,20 @@ function initialize()
 }
 $(document).ready(function(){
 			var w = $(window).width();
+			var mstate = 0;
 			initialize();
 			$("#mainlinks a").click(function(){
 				$("#font-pane").css({left: w*0.3+'px'});
-				$("#font-pane").animate({left:'120%'}, 2000, 'easeOutQuart', function() {});
-				$("#mainmenu-pane").animate({right:'100%'}, 1500, 'easeOutQuart', function() {});
-				$("#mainmenu-pane").rotate({angle: -25, animateTo:0}, 1000, 'easeOutQuart');
+				$("#font-pane").stop().animate({left:'100%', top:'-160%'}, 1500, 'easeOutQuart');
+				$("#mainmenu-pane").stop().animate({right:'100%', top:'-70%'}, 1500, 'easeOutQuart', function() { mstate = 1; });
 			});
-		});
+			$("#mainmenu-pane").click(
+				function(){
+					if(mstate == 1) {
+						mstate = 0;
+						$("#mainmenu-pane").stop().animate({right:'70%', top:'-100%'}, 1500, 'easeOutQuart');
+						$("#font-pane").stop().animate({left:'30%', top:'-100%'}, 1500, 'easeOutQuart');
+						$("#font-pane").css({left: w*0.3+'px'});
+					}
+				});
+});
