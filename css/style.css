@@ -22,8 +22,8 @@
 #font-pane img{
 	position:absolute;
 	left:20px;
-	top:50%;
-	width:15%;
+	top:47%;
+	width:25%;
 
 	
 }
@@ -31,8 +31,8 @@
 	position:absolute;
 	height:300%;
 	width:200%;
-	background-color:#ccc	;
-	box-shadow:2px 2px 3px 3px #ddd;	
+	background-color:#e6e6e6	;
+	/*box-shadow:2px 2px 3px 3px #ddd;	*/
 	z-index:2;
 	top:-100%;
 	transform-origin:100% 50%;
@@ -42,12 +42,108 @@
 	-o-transform-origin:100% 50%; /* Opera */	
 
 }
+
+#followlinks{
+	position:absolute;
+	top:30%;
+	left:0;
+	width:200px;
+	height:200px;
+	transform: rotate(30deg);
+-ms-transform: rotate(30deg); /* IE 9 */
+-webkit-transform: rotate(25deg); /* Safari and Chrome */
+-o-transform: rotate(30deg); /* Opera */
+-moz-transform: rotate(30deg); /* Firefox */
+}
+#followlinks img{
+
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+
+#followlinks img:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+	-webkit-transition: -webkit 0.5s ease, color 0.5s ease;
+	-moz-transition: background 0.5s ease, color 0.5s ease;
+	-o-transition: background 0.5s ease, color 0.5s ease;
+	-ms-transition: background 0.5s ease, color 0.5s ease;
+	transition: background 0.5s ease, color 0.5s ease;
+}
+
 #mainlinks{
 	position:absolute;
-	top:50%;
-	right:30px;
+	top:45%;
+	right:0px;
+	list-style-type:none;
+	font-family: 'Istok Web', sans-serif;
+	font-size:30px;
+	text-align:center;
+
+	
+}
+#mainlinks ul{
 	list-style-type:none;
 }
+
+#mainlinks ul li {
+	width:140px;
+	background: #ccc;
+	padding-right:20px;
+	padding-left:20px;
+	margin-bottom:10px;
+	
+}
+#mainlinks a{
+	text-decoration:none;
+	color:#777;
+}
+#mainlinks li{
+		
+		color:#777;
+		-webkit-transition: background 0.5s ease, color 0.5s ease;
+		-moz-transition: background 0.5s ease, color 0.5s ease;
+		-o-transition: background 0.5s ease, color 0.5s ease;
+		-ms-transition: background 0.5s ease, color 0.5s ease;
+		transition: background 0.5s ease, color 0.5s ease;
+}
+
+#mainlinks li:hover{
+		-webkit-transition: background 0.5s ease, color 0.5s ease;
+		-moz-transition:background 0.5s ease, color 0.5s ease;
+		-o-transition: background 0.5s ease, color 0.5s ease;
+		-ms-transition:background 0.5s ease, color 0.5s ease;
+		transition: background 0.5s ease, color 0.5s ease;
+}
+
+#mainlink1:hover{
+	background:#dd181f;
+	color:#fff;
+}
+
+#mainlink2:hover{
+	background:#77b708;
+	color:#fff;
+}
+
+#mainlink3:hover{
+	background:#6f152e;
+	color:#fff;
+}
+
+#mainlink4:hover{
+	background:#ff7f00;
+	color:#fff;
+}
+
+#mainlink5:hover{
+	background:#09baff;
+	color:#fff;
+}
+
+
+
 #submenu-pane{
 	position:absolute;
 	height:300%;
