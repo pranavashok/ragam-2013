@@ -17,12 +17,23 @@
 #submenu-pane.movedown {
 	animation-name: submenu-movedown;
 	-webkit-animation-name: submenu-movedown;
+	-moz-animation-name: submenu-movedown;
+	-o-animation-name: submenu-movedown;
+
 	animation-duration: 2s;
 	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	-o-animation-duration: 2s;
+
 	animation-timing-function: ease;
+	-moz-animation-timing-function: ease;
 	-webkit-animation-timing-function: ease;
+	-o-animation-timing-function: ease;
+
 	animation-fill-mode:forwards;
 	-webkit-animation-fill-mode:forwards;
+	-o-animation-fill-mode:forwards;
+	-moz-animation-fill-mode:forwards;
 }
 @-webkit-keyframes font-pane-moveout {
 	0% {
@@ -45,12 +56,23 @@
 #font-pane.moveout {
 	animation-name: font-pane-moveout;
 	-webkit-animation-name: font-pane-moveout;
+	-o-animation-name: font-pane-moveout;
+	-moz-animation-name: font-pane-moveout;
+
 	animation-duration: 2s;
 	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	-o-animation-duration: 2s;
+
 	animation-timing-function: ease;
+	-moz-animation-timing-function: ease;
 	-webkit-animation-timing-function: ease;
+	-o-animation-timing-function: ease;
+
 	animation-fill-mode:forwards;
 	-webkit-animation-fill-mode:forwards;
+	-o-animation-fill-mode:forwards;
+	-moz-animation-fill-mode:forwards;
 }
 @-webkit-keyframes mainmenu-pane-moveout {
 	0% {
@@ -75,10 +97,21 @@
 #mainmenu-pane.moveout {
 	animation-name: mainmenu-pane-moveout;
 	-webkit-animation-name: mainmenu-pane-moveout;
+	-moz-animation-name: mainmenu-pane-moveout;
+	-o-animation-name: mainmenu-pane-moveout;
+
 	animation-duration: 2s;
 	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	-o-animation-duration: 2s;
+
 	animation-timing-function: ease;
+	-moz-animation-timing-function: ease;
 	-webkit-animation-timing-function: ease;
+	-o-animation-timing-function: ease;
+
 	animation-fill-mode:forwards;
 	-webkit-animation-fill-mode:forwards;
+	-o-animation-fill-mode:forwards;
+	-moz-animation-fill-mode:forwards;
 }
