@@ -1,0 +1,84 @@
+@-webkit-keyframes submenu-movedown {
+	0% {
+		top:30%;
+	}
+	100% {
+		top:130%;
+	}
+}
+@keyframes submenu-movedown {
+	0% {
+		top:30%;
+	}
+	100% {
+		top:130%;
+	}
+}
+#submenu-pane.movedown {
+	animation-name: submenu-movedown;
+	-webkit-animation-name: submenu-movedown;
+	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+	animation-fill-mode:forwards;
+	-webkit-animation-fill-mode:forwards;
+}
+@-webkit-keyframes font-pane-moveout {
+	0% {
+		top:-100%;
+	}
+	100% {
+		left:100%;
+		top:-160%;
+	}
+}
+@keyframes font-pane-moveout {
+	0% {
+		top:-100%;
+	}
+	100% {
+		left:100%;
+		top:-160%;
+	}
+}
+#font-pane.moveout {
+	animation-name: font-pane-moveout;
+	-webkit-animation-name: font-pane-moveout;
+	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+	animation-fill-mode:forwards;
+	-webkit-animation-fill-mode:forwards;
+}
+@-webkit-keyframes mainmenu-pane-moveout {
+	0% {
+		top:-100%;
+		right: 70%;
+	}
+	100% {
+		right:105%;
+		top:-70%;
+	}
+}
+@keyframes mainmenu-pane-moveout {
+	0% {
+		top:-100%;
+		right: 70%;
+	}
+	100% {
+		right:105%;
+		top:-70%;
+	}
+}
+#mainmenu-pane.moveout {
+	animation-name: mainmenu-pane-moveout;
+	-webkit-animation-name: mainmenu-pane-moveout;
+	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+	animation-fill-mode:forwards;
+	-webkit-animation-fill-mode:forwards;
+}

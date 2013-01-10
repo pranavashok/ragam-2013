@@ -1,14 +1,17 @@
+html {
+	overflow: hidden;
+}
 @font-face
 {
-font-family: HelveticaThin;
-src: url('HelveticaNeueCyr-Thin.otf');
+	font-family: HelveticaThin;
+	src: url('HelveticaNeueCyr-Thin.otf');
 }
 
 .pane{
-/*	transition: 0.5s ease-out;
+	transition: 0.5s ease-out;
 	-webkit-transition: 0.5s ease-out;
 	-moz-transition: 0.5s ease-out;
-	-o-transition: 0.5s ease-out;*/
+	-o-transition: 0.5s ease-out;
 }
 
 #font-pane{
@@ -23,7 +26,16 @@ src: url('HelveticaNeueCyr-Thin.otf');
 	-moz-transform-origin:0 50%; /* Firefox */
 	-webkit-transform-origin:0 50%; /* Safari and Chrome */
 	-o-transform-origin:0 50%; /* Opera */	
-
+}
+#font-pane.moveout {
+	animation-name: font-pane-moveout;
+	-webkit-animation-name: font-pane-moveout;
+	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+	animation-fill-mode:forwards;
+	-webkit-animation-fill-mode:forwards;
 }
 #font-pane img{
 	position:absolute;
@@ -33,7 +45,7 @@ src: url('HelveticaNeueCyr-Thin.otf');
 
 	
 }
-#mainmenu-pane{
+#mainmenu-pane {
 	position:absolute;
 	height:300%;
 	width:200%;
@@ -46,9 +58,17 @@ src: url('HelveticaNeueCyr-Thin.otf');
 	-moz-transform-origin:100% 50%; /* Firefox */
 	-webkit-transform-origin:100% 50%; /* Safari and Chrome */
 	-o-transform-origin:100% 50%; /* Opera */	
-
 }
-
+#mainmenu-pane.moveout {
+	animation-name: mainmenu-pane-moveout;
+	-webkit-animation-name: mainmenu-pane-moveout;
+	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+	animation-fill-mode:forwards;
+	-webkit-animation-fill-mode:forwards;
+}
 #followlinks{
 	z-index:2;
 	position:absolute;
@@ -168,7 +188,6 @@ src: url('HelveticaNeueCyr-Thin.otf');
 	border-bottom: 65px solid #09baff;
 	color:#fff;
 }
-
 #submenu-pane{
 	position:absolute;
 	height:300%;
@@ -182,6 +201,16 @@ src: url('HelveticaNeueCyr-Thin.otf');
 	-moz-transform-origin:20% 0; /* Firefox */
 	-webkit-transform-origin:20% -38%; /* Safari and Chrome */
 	-o-transform-origin:20% 0; /* Opera */
+}
+#submenu-pane.movedown {
+	animation-name: submenu-movedown;
+	-webkit-animation-name: submenu-movedown;
+	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+	animation-fill-mode:forwards;
+	-webkit-animation-fill-mode:forwards;
 }
 #home-button{
 	position:absolute;
