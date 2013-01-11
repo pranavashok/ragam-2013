@@ -115,3 +115,91 @@
 	-o-animation-fill-mode:forwards;
 	-moz-animation-fill-mode:forwards;
 }
+
+@-webkit-keyframes content-pane-rotate {
+	0% {
+		-webkit-transform: rotate(-15deg); /* Safari and Chrome */
+	}
+	100% {
+		-webkit-transform: rotate(0); /* Safari and Chrome */
+	}
+}
+@keyframes content-pane-rotate {
+	0% {
+		transform: rotate(-15deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+#content-pane.rotate {
+	animation-name: content-pane-rotate;
+	-webkit-animation-name: content-pane-rotate;
+	-moz-animation-name: content-pane-rotate;
+	-o-animation-name: content-pane-rotate;
+
+	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	-o-animation-duration: 2s;
+
+	animation-timing-function: ease;
+	-moz-animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+	-o-animation-timing-function: ease;
+
+	animation-fill-mode:forwards;
+	-webkit-animation-fill-mode:forwards;
+	-o-animation-fill-mode:forwards;
+	-moz-animation-fill-mode:forwards;
+}
+
+@-webkit-keyframes submenu-pane-rotate {
+	0% {
+		-webkit-transform: rotate(-15deg); /* Safari and Chrome */
+		top:15%;
+	}
+	75% {
+		-webkit-transform: rotate(0); /* Safari and Chrome */
+		top:15%;
+	}
+	100 {
+		-webkit-transform: rotate(0); /* Safari and Chrome */
+		top:100%;
+	}
+}
+@keyframes submenu-pane-rotate {
+	0% {
+		transform: rotate(-15deg);
+		top:15%;
+	}
+	75% {
+		transform: rotate(0);
+		top:15%;
+	}
+	100% {
+		-webkit-transform: rotate(0); /* Safari and Chrome */
+		top:100%;
+	}
+}
+#submenu-pane.rotate {
+	animation-name: submenu-pane-rotate;
+	-webkit-animation-name: submenu-pane-rotate;
+	-moz-animation-name: submenu-pane-rotate;
+	-o-animation-name: submenu-pane-rotate;
+
+	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	-o-animation-duration: 2s;
+
+	animation-timing-function: ease;
+	-moz-animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+	-o-animation-timing-function: ease;
+
+	animation-fill-mode:forwards;
+	-webkit-animation-fill-mode:forwards;
+	-o-animation-fill-mode:forwards;
+	-moz-animation-fill-mode:forwards;
+}

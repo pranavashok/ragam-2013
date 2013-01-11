@@ -1,5 +1,5 @@
 html {
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 @font-face
 {
@@ -27,23 +27,12 @@ html {
 	-webkit-transform-origin:0 50%; /* Safari and Chrome */
 	-o-transform-origin:0 50%; /* Opera */	
 }
-#font-pane.moveout {
-	animation-name: font-pane-moveout;
-	-webkit-animation-name: font-pane-moveout;
-	animation-duration: 2s;
-	-webkit-animation-duration: 2s;
-	animation-timing-function: ease;
-	-webkit-animation-timing-function: ease;
-	animation-fill-mode:forwards;
-	-webkit-animation-fill-mode:forwards;
-}
+
 #font-pane img{
 	position:absolute;
 	left:20px;
 	top:45%;
 	height:325px;
-
-	
 }
 #mainmenu-pane {
 	position:absolute;
@@ -58,16 +47,6 @@ html {
 	-moz-transform-origin:100% 50%; /* Firefox */
 	-webkit-transform-origin:100% 50%; /* Safari and Chrome */
 	-o-transform-origin:100% 50%; /* Opera */	
-}
-#mainmenu-pane.moveout {
-	animation-name: mainmenu-pane-moveout;
-	-webkit-animation-name: mainmenu-pane-moveout;
-	animation-duration: 2s;
-	-webkit-animation-duration: 2s;
-	animation-timing-function: ease;
-	-webkit-animation-timing-function: ease;
-	animation-fill-mode:forwards;
-	-webkit-animation-fill-mode:forwards;
 }
 #followlinks{
 	z-index:2;
@@ -193,24 +172,19 @@ html {
 	height:300%;
 	width:200%;
 	background-color:#cef;
-	top:30%;
-	left:-40%;
+	top:15%;
+	left:-50%;
 	z-index:1;
-	transform-origin:20% 0;
-	-ms-transform-origin:20% 0; /* IE 9 */
-	-moz-transform-origin:20% 0; /* Firefox */
-	-webkit-transform-origin:20% -38%; /* Safari and Chrome */
-	-o-transform-origin:20% 0; /* Opera */
-}
-#submenu-pane.movedown {
-	animation-name: submenu-movedown;
-	-webkit-animation-name: submenu-movedown;
-	animation-duration: 2s;
-	-webkit-animation-duration: 2s;
-	animation-timing-function: ease;
-	-webkit-animation-timing-function: ease;
-	animation-fill-mode:forwards;
-	-webkit-animation-fill-mode:forwards;
+	transform-origin:41% 15%;
+	-ms-transform-origin:40% 20%; /* IE 9 */
+	-moz-transform-origin:40% 20%; /* Firefox */
+	-webkit-transform-origin:41% 15%; /* Safari and Chrome */
+	-o-transform-origin:40% 20%; /* Opera */
+	transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg); /* IE 9 */
+	-webkit-transform: rotate(-15deg); /* Safari and Chrome */
+	-o-transform: rotate(-15deg); /* Opera */
+	-moz-transform: rotate(-15deg); /* Firefox */
 }
 #home-button{
 	position:absolute;
@@ -231,31 +205,34 @@ html {
 	height:300%;
 	width:200%;
 	background-color:#ecf;
-	top:-100%;
-	left:-70%;
+	top:-120%;
+	left:-50%;
 	z-index:0;
-	transform-origin:0 0;
-	-ms-transform-origin:0 0; /* IE 9 */
-	-moz-transform-origin:0 0; /* Firefox */
-	-webkit-transform-origin:0 0; /* Safari and Chrome */
-	-o-transform-origin:0 0; /* Opera */	
+	transform-origin:40% 60%;
+	-ms-transform-origin:40% 60%; /* IE 9 */
+	-moz-transform-origin:40% 60%; /* Firefox */
+	-webkit-transform-origin:40% 60%; /* Safari and Chrome */
+	-o-transform-origin:40% 60%; /* Opera */	
+	transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg); /* IE 9 */
+	-webkit-transform: rotate(-15deg); /* Safari and Chrome */
+	-o-transform: rotate(-15deg); /* Opera */
+	-moz-transform: rotate(-15deg); /* Firefox */
 }
-
 #heading{
 	position:absolute;
 	color: #000;
-	top:50%;
+	top:41%;
 	left:28%;
 	font-size:60px;
 	z-index: 3;
 	display: block;
 }
-
 #content-container{
 	position:absolute;
-	top:58%;
-	left:20%;
-	width:30%;
+	top:50%;
+	left:30%;
+	width:40%;
 	height:20%;
 	background-color:#000;
 }
