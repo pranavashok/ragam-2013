@@ -18,7 +18,22 @@ $(document).ready(function(){
 		$("#followlinks").animate({opacity:'0'});
 		$("#home-button").show();
 	});
-
+	$(".support-puller").click(function(){
+		$(this).hide();
+		$("#mainmenu-pane").addClass('support');
+		$("#font-pane").addClass('support');
+		$("#support-pane").addClass('support');
+	});
+	$(document).mouseup(function (e)
+	{
+		var container = $("#support-pane");
+		if (container.has(e.target).length === 0)
+		{
+			container.removeClass('support');
+			$("#mainmenu-pane").removeClass('support');
+			$("#font-pane").removeClass('support');
+		}
+	});
 	$("#sublinks li a").click(function(){
 		$("#content-pane").addClass('rotate');
 		$("#submenu-pane").addClass('rotate');

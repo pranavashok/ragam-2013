@@ -1,5 +1,5 @@
 html {
-	/*overflow: hidden;*/
+	overflow: hidden;
 }
 @font-face
 {
@@ -235,4 +235,38 @@ html {
 	width:40%;
 	height:20%;
 	background-color:#000;
+}
+.support-puller {
+	font-family:'HelveticaThin';
+  padding-left: 1.25em;
+  position: relative;
+  top:97%;
+  left:50%;
+  z-index: 5;
+}
+.support-puller:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -0.21em;
+  bottom: 0.21em;
+  width: 1em;
+  background: -webkit-linear-gradient(
+    top, 
+    grey, grey 20%, 
+    transparent 20%, transparent 40%, 
+    grey 40%, grey 60%, 
+    transparent 60%, transparent 80%, 
+    grey 80%, grey 100%
+  );
+}
+#support-pane {
+	height:100%;
+	width:150%;
+	background: #555;
+	top:100%;
+	left:-25%;
+	z-index:3;
+	display: block;
+	position: absolute;
 }
