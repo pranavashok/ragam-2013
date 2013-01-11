@@ -48,6 +48,9 @@ html {
 	-webkit-transform-origin:100% 50%; /* Safari and Chrome */
 	-o-transform-origin:100% 50%; /* Opera */	
 }
+
+
+/* Follow Twitter, Facebook, Youtube  */
 #followlinks{
 	z-index:2;
 	position:absolute;
@@ -83,12 +86,56 @@ html {
 	opacity:1;
 	filter: none;
 	-webkit-filter: grayscale(0%);
-	-webkit-transition: -webkit 0.5s ease, color 0.5s ease;
+	-webkit-transition: background 0.5s ease, color 0.5s ease;
 	-moz-transition: background 0.5s ease, color 0.5s ease;
 	-o-transition: background 0.5s ease, color 0.5s ease;
 	-ms-transition: background 0.5s ease, color 0.5s ease;
 	transition: background 0.5s ease, color 0.5s ease;
 }
+
+/* Searchbox */
+
+
+#searchBox {
+	z-index: 10;
+	opacity:0.2;
+	cursor:pointer;
+	position: absolute;
+	left:10px;
+	top:10px;
+	background: white url('../img/search.png') no-repeat 1px 1px;
+	border: 1px solid #999;
+	height: 32px;
+	width:32px;
+	color: transparent;
+	overflow:hidden;
+	-webkit-transition: width 0.3s ease;
+	-moz-transition: width 0.3s ease;
+	-o-transition: width 0.3s ease;
+	-ms-transition:width 0.3s ease;
+	transition:width 0.3s ease;
+}
+
+#searchBox:hover{
+	opacity: 1;
+	width: 240px;
+	color: #444;
+	padding: 4px 4px 4px 34px;
+	-webkit-transition: width 0.3s ease, opcaity 0.3s ease;
+	-moz-transition: width 0.3s ease, opcaity 0.3s ease;
+	-o-transition: width 0.3s ease, opcaity 0.3s ease;
+	-ms-transition: width 0.3s ease, opcaity 0.3s ease;
+	transition: width 0.3s ease, opcaity 0.3s ease;
+
+}
+#searchBox:focus{
+	opacity: 1;
+	color: #444;
+	width: 240px;
+	padding: 4px 4px 4px 34px;
+}
+
+
 #mainlinks{
 	position:absolute;
 	top:45%;
