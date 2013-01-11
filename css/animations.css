@@ -1,4 +1,111 @@
+@keyframes font-pane-loading {
+	0% {
+		left: 0%;
+	}
+	50% {
+		left: 20%;
+		transform: rotate(0deg);
+	}
+	75% {
+		left: 25%;
+		transform: rotate(-10deg);	
+	}
+	100% {
+		left: 30%;
+		transform: rotate(-25deg); 
+	}
+}
+@-webkit-keyframes font-pane-loading {
+	0% {
+		left: 0%;
+	}
+	50% {
+		left: 20%;
+		-webkit-transform: rotate(0deg);
+	}
+	75% {
+		left: 25%;
+		webkit-transform: rotate(-10deg);
+	}
+	100% {
+		left: 30%;
+		-webkit-transform: rotate(-25deg);
+	}
+}
+@-moz-keyframes font-pane-loading {
+	0% {
+		left: 0%;
+	}
+	50% {
+		left: 20%;
+		-moz-transform: rotate(0deg);
+	}
+	75% {
+		left: 25%;
+		-moz-transform: rotate(-10deg);	
+	}
+	100% {
+		left: 30%;
+		-moz-transform: rotate(-25deg); 
+	}
+}
+@-o-keyframes font-pane-loading {
+	0% {
+		left: 0%;
+	}
+	50% {
+		left: 20%;
+		-o-transform: rotate(0deg);
+	}
+	75% {
+		left: 25%;
+		-o-transform: rotate(-10deg);	
+	}
+	100% {
+		left: 30%;
+		-o-transform: rotate(-25deg); 
+	}
+}
+#font-pane.loading {
+	animation-name: font-pane-loading;
+	-webkit-animation-name: font-pane-loading;
+	-moz-animation-name: font-pane-loading;
+	-o-animation-name: font-pane-loading;
+
+	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	-o-animation-duration: 2s;
+
+	animation-timing-function: ease;
+	-moz-animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+	-o-animation-timing-function: ease;
+
+	animation-fill-mode:forwards;
+	-webkit-animation-fill-mode:forwards;
+	-o-animation-fill-mode:forwards;
+	-moz-animation-fill-mode:forwards;
+}
 @-webkit-keyframes font-pane-moveout {
+	0% {
+		top:-100%;
+	}
+	100% {
+		left:100%;
+		top:-160%;
+	}
+}
+@-moz-keyframes font-pane-moveout {
+	0% {
+		top:-100%;
+	}
+	100% {
+		left:100%;
+		top:-160%;
+	}
+}
+@-o-keyframes font-pane-moveout {
 	0% {
 		top:-100%;
 	}
@@ -37,7 +144,118 @@
 	-o-animation-fill-mode:forwards;
 	-moz-animation-fill-mode:forwards;
 }
+
+@keyframes mainmenu-pane-loading {
+	0% {
+		right: 0%;
+	}
+	50% {
+		right: 60%;
+		transform: rotate(0deg);
+	}
+	75% {
+		right: 65%;
+		transform: rotate(-10deg);	
+	}
+	100% {
+		right: 70%;
+		transform: rotate(-25deg); 
+	}
+}
+@-webkit-keyframes mainmenu-pane-loading {
+	0% {
+		right: 0%;
+	}
+	50% {
+		right: 60%;
+		-webkit-transform: rotate(0deg);
+	}
+	75% {
+		right: 65%;
+		-webkit-transform: rotate(-10deg);	
+	}
+	100% {
+		right: 70%;
+		-webkit-transform: rotate(-25deg); /* Safari and Chrome */
+	}
+}
+@-o-keyframes mainmenu-pane-loading {
+	0% {
+		right: 0%;
+	}
+	50% {
+		right: 60%;
+		-o-transform: rotate(0deg);
+	}
+	75% {
+		right: 65%;
+		-o-transform: rotate(-10deg);	
+	}
+	100% {
+		right: 70%;
+		-o-transform: rotate(-25deg); 
+	}
+}
+@-moz-keyframes mainmenu-pane-loading {
+	0% {
+		right: 0%;
+	}
+	50% {
+		right: 60%;
+		-moz-transform: rotate(0deg);
+	}
+	75% {
+		right: 65%;
+		-moz-transform: rotate(0deg);	
+	}
+	100% {
+		right: 70%;
+		-moz-transform: rotate(-25deg);
+	}
+}
+#mainmenu-pane.loading {
+	animation-name: mainmenu-pane-loading;
+	-webkit-animation-name: mainmenu-pane-loading;
+	-moz-animation-name: mainmenu-pane-loading;
+	-o-animation-name: mainmenu-pane-loading;
+
+	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	-o-animation-duration: 2s;
+
+	animation-timing-function: linear;
+	-moz-animation-timing-function: linear;
+	-webkit-animation-timing-function: linear;
+	-o-animation-timing-function: linear;
+
+	animation-fill-mode:forwards;
+	-webkit-animation-fill-mode:forwards;
+	-o-animation-fill-mode:forwards;
+	-moz-animation-fill-mode:forwards;
+}
+
 @-webkit-keyframes mainmenu-pane-moveout {
+	0% {
+		top:-100%;
+		right: 70%;
+	}
+	100% {
+		right:105%;
+		top:-70%;
+	}
+}
+@-moz-keyframes mainmenu-pane-moveout {
+	0% {
+		top:-100%;
+		right: 70%;
+	}
+	100% {
+		right:105%;
+		top:-70%;
+	}
+}
+@-o-keyframes mainmenu-pane-moveout {
 	0% {
 		top:-100%;
 		right: 70%;
@@ -87,6 +305,22 @@
 		-webkit-transform: rotate(0); /* Safari and Chrome */
 	}
 }
+@-moz-keyframes content-pane-rotate {
+	0% {
+		-moz-transform: rotate(-15deg); /* Safari and Chrome */
+	}
+	100% {
+		-moz-transform: rotate(0); /* Safari and Chrome */
+	}
+}
+@-o-keyframes content-pane-rotate {
+	0% {
+		-o-transform: rotate(-15deg); /* Safari and Chrome */
+	}
+	100% {
+		-o-transform: rotate(0); /* Safari and Chrome */
+	}
+}
 @keyframes content-pane-rotate {
 	0% {
 		transform: rotate(-15deg);
@@ -117,6 +351,7 @@
 	-moz-animation-fill-mode:forwards;
 }
 
+
 @-webkit-keyframes submenu-pane-rotate {
 	0% {
 		-webkit-transform: rotate(-15deg); /* Safari and Chrome */
@@ -128,6 +363,34 @@
 	}
 	100% {
 		-webkit-transform: rotate(0); /* Safari and Chrome */
+		top:100%;
+	}
+}
+@-moz-keyframes submenu-pane-rotate {
+	0% {
+		-moz-transform: rotate(-15deg); /* Safari and Chrome */
+		top:15%;
+	}
+	75% {
+		-moz-transform: rotate(0); /* Safari and Chrome */
+		top:15%;
+	}
+	100% {
+		-moz-transform: rotate(0); /* Safari and Chrome */
+		top:100%;
+	}
+}
+@-o-keyframes submenu-pane-rotate {
+	0% {
+		-o-transform: rotate(-15deg); /* Safari and Chrome */
+		top:15%;
+	}
+	75% {
+		-o-transform: rotate(0); /* Safari and Chrome */
+		top:15%;
+	}
+	100% {
+		-o-transform: rotate(0); /* Safari and Chrome */
 		top:100%;
 	}
 }

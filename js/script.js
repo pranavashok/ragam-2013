@@ -10,7 +10,8 @@ $(document).ready(function(){
 	var w = $(window).width();
 	var h = $(window).height();
 	initialize();
-	
+	//$("#mainmenu-pane").addClass("loading");
+	//$("#font-pane").addClass("loading");
 	$("#mainlinks li").click(function(){
 		$("#font-pane").addClass("moveout");
 		$("#mainmenu-pane").addClass("moveout");
