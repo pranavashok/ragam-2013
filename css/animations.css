@@ -12,67 +12,14 @@
 		transform: rotate(-25deg); 
 	}
 }
-@-webkit-keyframes font-pane-loading {
-	0% {
-		left: 0%;
-	}
 
-	70% {
-		left: 30%;
-		-webkit-transform: rotate(0deg);
-	}
-	100% {
-		left: 30%;
-		-webkit-transform: rotate(-25deg); 
-	}
-}
-@-moz-keyframes font-pane-loading {
-	0% {
-		left: 0%;
-	}
-	70% {
-		left: 30%;
-		-moz-transform: rotate(0deg);	
-	}
-	100% {
-		left: 30%;
-		-moz-transform: rotate(-25deg); 
-	}
-}
-@-o-keyframes font-pane-loading {
-	0% {
-		left: 0%;
-	}
-	70% {
-		left: 30%;
-		-o-transform: rotate(0deg);	
-	}
-	100% {
-		left: 30%;
-		-o-transform: rotate(-25deg); 
-	}
-}
 #font-pane.loading {
 	animation-name: font-pane-loading;
-	-webkit-animation-name: font-pane-loading;
-	-moz-animation-name: font-pane-loading;
-	-o-animation-name: font-pane-loading;
-
 	animation-duration: 1.3s;
-	-webkit-animation-duration: 1.3s;
-	-moz-animation-duration: 1.3s;
-	-o-animation-duration: 1.3s;
-
 	animation-timing-function: linear;
-	-moz-animation-timing-function: linear;
-	-webkit-animation-timing-function: linear;
-	-o-animation-timing-function: linear;
-
 	animation-fill-mode:forwards;
-	-webkit-animation-fill-mode:forwards;
-	-o-animation-fill-mode:forwards;
-	-moz-animation-fill-mode:forwards;
 }
+
 @keyframes font-pane-moveout {
 	0% {
 		left:30%
@@ -85,62 +32,12 @@
 		transform: rotate(-25deg);
 	}
 }
-@-webkit-keyframes font-pane-moveout {
-	0% {
-		left:30%;
-		top:-100%;
-		-webkit-transform: rotate(-25deg);
-	}
-	100% {
-		left:100%;
-		top:-160%;
-		-webkit-transform: rotate(-25deg);
-	}
-}
-@-moz-keyframes font-pane-moveout {
-	0% {
-		left:30%
-		top:-100%;
-		-moz-transform: rotate(-25deg);
-	}
-	100% {
-		left:100%;
-		top:-160%;
-		-moz-transform: rotate(-25deg);
-	}
-}
-@-o-keyframes font-pane-moveout {
-	0% {
-		left:30%
-		top:-100%;
-		-o-transform: rotate(-25deg);
-	}
-	100% {
-		left:100%;
-		top:-160%;
-		-o-transform: rotate(-25deg);
-	}
-}
+
 #font-pane.moveout {
 	animation-name: font-pane-moveout;
-	-webkit-animation-name: font-pane-moveout;
-	-o-animation-name: font-pane-moveout;
-	-moz-animation-name: font-pane-moveout;
-
 	animation-duration: 2s;
-	-webkit-animation-duration: 2s;
-	-moz-animation-duration: 2s;
-	-o-animation-duration: 2s;
-
 	animation-timing-function: ease;
-	-moz-animation-timing-function: ease;
-	-webkit-animation-timing-function: ease;
-	-o-animation-timing-function: ease;
-
 	animation-fill-mode:forwards;
-	-webkit-animation-fill-mode:forwards;
-	-o-animation-fill-mode:forwards;
-	-moz-animation-fill-mode:forwards;
 }
 
 @keyframes mainmenu-pane-loading {
@@ -156,68 +53,11 @@
 		transform: rotate(-25deg); 
 	}
 }
-@-webkit-keyframes mainmenu-pane-loading {
-	0% {
-		right: 0%;
-		-webkit-transform: rotate(0deg);
-	}
-
-	70% {
-		right: 70%;
-		-webkit-transform: rotate(0deg);
-	}
-	100% {
-		right: 70%;
-		-webkit-transform: rotate(-25deg); /* Safari and Chrome */
-	}
-}
-@-o-keyframes mainmenu-pane-loading {
-	0% {
-		right: 0%;
-	}
-	70% {
-		right: 70%;
-		-o-transform: rotate(0deg);	
-	}
-	100% {
-		right: 70%;
-		-o-transform: rotate(-25deg); 
-	}
-}
-@-moz-keyframes mainmenu-pane-loading {
-	0% {
-		right: 0%;
-	}
-
-	70% {
-		right: 70%;
-		-moz-transform: rotate(0deg);	
-	}
-	100% {
-		right: 70%;
-		-moz-transform: rotate(-25deg);
-	}
-}
 #mainmenu-pane.loading {
 	animation-name: mainmenu-pane-loading;
-	-webkit-animation-name: mainmenu-pane-loading;
-	-moz-animation-name: mainmenu-pane-loading;
-	-o-animation-name: mainmenu-pane-loading;
-
 	animation-duration: 1.3s;
-	-webkit-animation-duration: 1.3s;
-	-moz-animation-duration: 1.3s;
-	-o-animation-duration: 1.3s;
-
 	animation-timing-function: linear;
-	-moz-animation-timing-function: linear;
-	-webkit-animation-timing-function: linear;
-	-o-animation-timing-function: linear;
-
 	animation-fill-mode:forwards;
-	-webkit-animation-fill-mode:forwards;
-	-o-animation-fill-mode:forwards;
-	-moz-animation-fill-mode:forwards;
 }
 
 @keyframes mainmenu-pane-moveout {
@@ -232,87 +72,11 @@
 		transform: rotate(-25deg); 
 	}
 }
-@-webkit-keyframes mainmenu-pane-moveout {
-	0% {
-		top:-100%;
-		right: 70%;
-		-webkit-transform: rotate(-25deg); 
-	}
-	100% {
-		right:105%;
-		top:-70%;
-		-webkit-transform: rotate(-25deg); 
-	}
-}
-@-moz-keyframes mainmenu-pane-moveout {
-	0% {
-		top:-100%;
-		right: 80%;
-		-moz-transform: rotate(-25deg); 
-	}
-	100% {
-		right:105%;
-		top:-70%;
-		-moz-transform: rotate(-25deg); 
-	}
-}
-@-o-keyframes mainmenu-pane-moveout {
-	0% {
-		top:-100%;
-		right: 70%;
-		-o-transform: rotate(-25deg); 
-	}
-	100% {
-		right:105%;
-		top:-70%;
-		-o-transform: rotate(-25deg); 
-	}
-}
 #mainmenu-pane.moveout {
 	animation-name: mainmenu-pane-moveout;
-	-webkit-animation-name: mainmenu-pane-moveout;
-	-moz-animation-name: mainmenu-pane-moveout;
-	-o-animation-name: mainmenu-pane-moveout;
-
 	animation-duration: 2s;
-	-webkit-animation-duration: 2s;
-	-moz-animation-duration: 2s;
-	-o-animation-duration: 2s;
-
 	animation-timing-function: ease;
-	-moz-animation-timing-function: ease;
-	-webkit-animation-timing-function: ease;
-	-o-animation-timing-function: ease;
-
 	animation-fill-mode:forwards;
-	-webkit-animation-fill-mode:forwards;
-	-o-animation-fill-mode:forwards;
-	-moz-animation-fill-mode:forwards;
-}
-
-@-webkit-keyframes content-pane-rotate {
-	0% {
-		-webkit-transform: rotate(-15deg); /* Safari and Chrome */
-	}
-	100% {
-		-webkit-transform: rotate(0); /* Safari and Chrome */
-	}
-}
-@-moz-keyframes content-pane-rotate {
-	0% {
-		-moz-transform: rotate(-15deg); /* Safari and Chrome */
-	}
-	100% {
-		-moz-transform: rotate(0); /* Safari and Chrome */
-	}
-}
-@-o-keyframes content-pane-rotate {
-	0% {
-		-o-transform: rotate(-15deg); /* Safari and Chrome */
-	}
-	100% {
-		-o-transform: rotate(0); /* Safari and Chrome */
-	}
 }
 @keyframes content-pane-rotate {
 	0% {
@@ -324,68 +88,9 @@
 }
 #content-pane.rotate {
 	animation-name: content-pane-rotate;
-	-webkit-animation-name: content-pane-rotate;
-	-moz-animation-name: content-pane-rotate;
-	-o-animation-name: content-pane-rotate;
-
 	animation-duration: 1.5s;
-	-webkit-animation-duration: 1.5s;
-	-moz-animation-duration: 1.5s;
-	-o-animation-duration: 1.5s;
-
 	animation-timing-function: ease;
-	-moz-animation-timing-function: ease;
-	-webkit-animation-timing-function: ease;
-	-o-animation-timing-function: ease;
-
 	animation-fill-mode:forwards;
-	-webkit-animation-fill-mode:forwards;
-	-o-animation-fill-mode:forwards;
-	-moz-animation-fill-mode:forwards;
-}
-
-
-@-webkit-keyframes submenu-pane-rotate {
-	0% {
-		-webkit-transform: rotate(-15deg); /* Safari and Chrome */
-		top:15%;
-	}
-	75% {
-		-webkit-transform: rotate(0); /* Safari and Chrome */
-		top:15%;
-	}
-	100% {
-		-webkit-transform: rotate(0); /* Safari and Chrome */
-		top:100%;
-	}
-}
-@-moz-keyframes submenu-pane-rotate {
-	0% {
-		-moz-transform: rotate(-15deg); /* Safari and Chrome */
-		top:15%;
-	}
-	75% {
-		-moz-transform: rotate(0); /* Safari and Chrome */
-		top:15%;
-	}
-	100% {
-		-moz-transform: rotate(0); /* Safari and Chrome */
-		top:100%;
-	}
-}
-@-o-keyframes submenu-pane-rotate {
-	0% {
-		-o-transform: rotate(-15deg); /* Safari and Chrome */
-		top:15%;
-	}
-	75% {
-		-o-transform: rotate(0); /* Safari and Chrome */
-		top:15%;
-	}
-	100% {
-		-o-transform: rotate(0); /* Safari and Chrome */
-		top:100%;
-	}
 }
 @keyframes submenu-pane-rotate {
 	0% {
@@ -403,58 +108,28 @@
 }
 #submenu-pane.rotate {
 	animation-name: submenu-pane-rotate;
-	-webkit-animation-name: submenu-pane-rotate;
-	-moz-animation-name: submenu-pane-rotate;
-	-o-animation-name: submenu-pane-rotate;
-
 	animation-duration: 2s;
-	-webkit-animation-duration: 2s;
-	-moz-animation-duration: 2s;
-	-o-animation-duration: 2s;
-
 	animation-timing-function: ease;
-	-moz-animation-timing-function: ease;
-	-webkit-animation-timing-function: ease;
-	-o-animation-timing-function: ease;
-
 	animation-fill-mode:forwards;
-	-webkit-animation-fill-mode:forwards;
-	-o-animation-fill-mode:forwards;
-	-moz-animation-fill-mode:forwards;
 }
-@-webkit-keyframes support {
+@keyframes support {
 	0% {
-		-webkit-transform:rotate(0deg);
+		ransform:rotate(0deg);
 	}
 	80% {
 		top:70%;
-		-webkit-transform:rotate(0deg);
+		transform:rotate(0deg);
 	}
 	100% {
 		top:70%;
-		-webkit-transform:rotate(1.5deg);
+		transform:rotate(1.5deg);
 	}
 }
 #support-pane.support {
 	animation-name: support;
-	-webkit-animation-name: support;
-	-moz-animation-name: support;
-	-o-animation-name: support;
-
 	animation-duration: 1.5s;
-	-webkit-animation-duration: 1.5s;
-	-moz-animation-duration: 1.5s;
-	-o-animation-duration: 1.5s;
-
 	animation-timing-function: ease;
-	-moz-animation-timing-function: ease;
-	-webkit-animation-timing-function: ease;
-	-o-animation-timing-function: ease;
-
 	animation-fill-mode:forwards;
-	-webkit-animation-fill-mode:forwards;
-	-o-animation-fill-mode:forwards;
-	-moz-animation-fill-mode:forwards;
 }
 @keyframes mainmenu-support {
 	0% {
@@ -472,74 +147,12 @@
 		transform:rotate(-23.5deg);
 	}
 }
-@-webkit-keyframes mainmenu-support {
-	0% {
-		right:70%;
-		-webkit-transform:rotate(-25deg);
-	}
-	80% {
-		right:70%;
-		top:-130%;
-		-webkit-transform:rotate(-25deg);
-	}
-	100% {
-		right:70%;
-		top:-130%;
-		-webkit-transform:rotate(-23.5deg);
-	}
-}
-@-moz-keyframes mainmenu-support {
-	0% {
-		right:70%;
-		-moz-transform:rotate(-25deg);
-	}
-	80% {
-		right:70%;
-		top:-130%;
-		-moz-transform:rotate(-25deg);
-	}
-	100% {
-		right:70%;
-		top:-130%;
-		-moz-transform:rotate(-23.5deg);
-	}
-}
-@-o-keyframes mainmenu-support {
-	0% {
-		right:70%;
-		-o-transform:rotate(-25deg);
-	}
-	80% {
-		right:70%;
-		top:-130%;
-		-o-transform:rotate(-25deg);
-	}
-	100% {
-		right:70%;
-		top:-130%;
-		-o-transform:rotate(-23.5deg);
-	}
-}
+
 #mainmenu-pane.support {
 	animation-name: mainmenu-support;
-	-webkit-animation-name: mainmenu-support;
-	-moz-animation-name: mainmenu-support;
-	-o-animation-name: mainmenu-support;
-
 	animation-duration: 1.5s;
-	-webkit-animation-duration: 1.5s;
-	-moz-animation-duration: 1.5s;
-	-o-animation-duration: 1.5s;
-
 	animation-timing-function: ease;
-	-moz-animation-timing-function: ease;
-	-webkit-animation-timing-function: ease;
-	-o-animation-timing-function: ease;
-
 	animation-fill-mode:forwards;
-	-webkit-animation-fill-mode:forwards;
-	-o-animation-fill-mode:forwards;
-	-moz-animation-fill-mode:forwards;
 }
 @keyframes font-pane-support {
 	0% {
@@ -557,73 +170,9 @@
 		transform:rotate(-23.5deg);
 	}
 }
-@-webkit-keyframes font-pane-support {
-	0% {
-		left:30%;
-		-webkit-transform:rotate(-25deg);
-	}
-	80% {
-		left:30%;
-		top:-130%;
-		-webkit-transform:rotate(-25deg);
-	}
-	100% {
-		left:30%;
-		top:-130%;
-		-webkit-transform:rotate(-23.5deg);
-	}
-}
-@-moz-keyframes font-pane-support {
-	0% {
-		left:30%;
-		-moz-transform:rotate(-25deg);
-	}
-	80% {
-		left:30%;
-		top:-130%;
-		-moz-transform:rotate(-25deg);
-	}
-	100% {
-		left:30%;
-		top:-130%;
-		-moz-transform:rotate(-23.5deg);
-	}
-}
-@-o-keyframes font-pane-support {
-	0% {
-		left:30%;
-		-o-transform:rotate(-25deg);
-	}
-	80% {
-		left:30%;
-		top:-130%;
-		-o-transform:rotate(-25deg);
-	}
-	100% {
-		left:30%;
-		top:-130%;
-		-o-transform:rotate(-23.5deg);
-	}
-}
-
 #font-pane.support {
 	animation-name: font-pane-support;
-	-webkit-animation-name: font-pane-support;
-	-moz-animation-name: font-pane-support;
-	-o-animation-name: font-pane-support;
-
 	animation-duration: 1.5s;
-	-webkit-animation-duration: 1.5s;
-	-moz-animation-duration: 1.5s;
-	-o-animation-duration: 1.5s;
-
 	animation-timing-function: ease;
-	-moz-animation-timing-function: ease;
-	-webkit-animation-timing-function: ease;
-	-o-animation-timing-function: ease;
-
 	animation-fill-mode:forwards;
-	-webkit-animation-fill-mode:forwards;
-	-o-animation-fill-mode:forwards;
-	-moz-animation-fill-mode:forwards;
 }
