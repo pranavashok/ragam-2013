@@ -334,7 +334,7 @@ html {
 	background: #555;
 	top:100%;
 	left:-25%;
-	z-index:3;
+	z-index:20;
 	display: block;
 	position: absolute;
 }
