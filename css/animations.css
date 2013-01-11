@@ -151,7 +151,7 @@
 }
 @keyframes support {
 	0% {
-		ransform:rotate(0deg);
+		transform:rotate(0deg);
 	}
 	80% {
 		top:70%;
