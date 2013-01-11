@@ -34,8 +34,7 @@ $(document).ready(function(){
 		$("#followlinks").animate({opacity:'0'});
 		$("#home-button").show();
 	});
-	$(".support-puller").click(function(){
-		$(this).hide();
+	$("#arrow-up").click(function(){
 		$("#mainmenu-pane").addClass('support');
 		$("#font-pane").addClass('support');
 		$("#support-pane").addClass('support');

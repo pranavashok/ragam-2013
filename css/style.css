@@ -312,10 +312,22 @@ html {
 #support-pane {
 	height:100%;
 	width:150%;
-	background: #555;
-	top:100%;
+	background: #333;
+	top:101%;
 	left:-25%;
 	z-index:3;
 	display: block;
 	position: absolute;
+	box-shadow: 0 0 10px #555;
+	z-index: 20;
+}
+#arrow-up {
+	position:absolute;
+	width: 0; 
+	height: 0; 
+	left:50%;
+	top:-25px;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 25px solid #333;
 }
