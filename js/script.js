@@ -34,8 +34,9 @@ $(document).ready(function(){
 		$("#followlinks").animate({opacity:'0'});
 	});
 	$("#arrow-up").click(function(){
-		$("#mainmenu-pane").addClass('support');
-		$("#font-pane").addClass('support');
+		//$("#mainmenu-pane").addClass('support');
+		//$("#font-pane").addClass('support');
+		$("#wrapper").attr("class", "support");
 		$("#support-pane").addClass('support');
 	});
 	$(document).mouseup(function (e)

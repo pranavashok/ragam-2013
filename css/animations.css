@@ -1,14 +1,14 @@
 @keyframes font-pane-loading {
 	0% {
-		left: 0%;
+		left: 33.33%;
 	}
 
 	70% {
-		left: 30%;
+		left: 43.3%;
 		transform: rotate(0deg);	
 	}
 	100% {
-		left: 30%;
+		left: 43.3%;
 		transform: rotate(-25deg); 
 	}
 }
@@ -61,14 +61,14 @@
 }
 @keyframes mainmenu-pane-loading {
 	0% {
-		right: 0%;
+		right: 33.33%;
 	}
 	70% {
-		right: 70%;
+		right: 56.67%;
 		transform: rotate(0deg);	
 	}
 	100% {
-		right: 70%;
+		right: 56.67%;
 		transform: rotate(-25deg); 
 	}
 }
@@ -164,6 +164,30 @@
 }
 #support-pane.support {
 	animation-name: support;
+	animation-duration: 1.5s;
+	animation-timing-function: ease;
+	animation-fill-mode:forwards;
+}
+@keyframes wrapper-support {
+	0% {
+		/*right:70%;*/
+		top:-100%;
+		transform:rotate(0deg);
+	}
+	80% {
+		/*right:70%;*/
+		top:-130%;
+		transform:rotate(0deg);
+	}
+	100% {
+		/*right:70%;*/
+		top:-130%;
+		transform:rotate(1.5deg);
+	}
+}
+
+#wrapper.support {
+	animation-name: wrapper-support;
 	animation-duration: 1.5s;
 	animation-timing-function: ease;
 	animation-fill-mode:forwards;
