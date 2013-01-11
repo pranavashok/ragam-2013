@@ -98,7 +98,7 @@ html {
 
 #searchBox {
 	z-index: 10;
-	opacity:0.8;
+	opacity:0.2;
 	cursor:pointer;
 	position: absolute;
 	left:10px;
