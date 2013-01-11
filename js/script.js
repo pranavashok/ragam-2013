@@ -19,7 +19,7 @@ function setCssL(a){
 $(document).ready(function(){
 	var w = $(window).width();
 	var h = $(window).height();
-	$("#home-button").hide();
+	
 	
 	$("#mainmenu-pane").attr("class", "loading");
 	$("#font-pane").attr("class", "loading");
@@ -32,8 +32,7 @@ $(document).ready(function(){
 		$("#mainmenu-pane").attr("class", "moveout");
 
 		$("#followlinks").animate({opacity:'0'});
-		$("#home-button").show();
-	});
+		});
 	$(".support-puller").click(function(){
 		$(this).hide();
 		$("#mainmenu-pane").addClass('support');
@@ -58,7 +57,6 @@ $(document).ready(function(){
 
 	$("#home-button").click(function(){
 		/* Code to reset level zero */
-		$(this).hide();
 		$("#font-pane").attr("class", "movein");
 		$("#mainmenu-pane").attr("class", "movein");
 		/* Code to reset level one */
