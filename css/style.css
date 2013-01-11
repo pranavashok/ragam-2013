@@ -7,18 +7,21 @@ html {
 	src: url('HelveticaNeueCyr-Thin.otf');
 }
 
-.pane{
+/*.pane{
 	transition: 0.5s ease-out;
 	-webkit-transition: 0.5s ease-out;
 	-moz-transition: 0.5s ease-out;
 	-o-transition: 0.5s ease-out;
-}
+}*/
 
 #font-pane{
 	position:absolute;
 	height:300%;
 	width:200%;
 	top:-100%;
+	bottom:auto;
+	left:0;
+	right:auto;
 	z-index:2;
 	background-color:#f7f7f7;
 	transform-origin:0 50%;
@@ -38,10 +41,13 @@ html {
 	position:absolute;
 	height:300%;
 	width:200%;
-	background-color:#e6e6e6	;
+	background-color:#e6e6e6;
 	/*box-shadow:2px 2px 3px 3px #ddd;	*/
 	z-index:2;
 	top:-100%;
+	left:auto;
+	right:0;
+	bottom:auto;
 	transform-origin:100% 50%;
 	-ms-transform-origin:100% 50%; /* IE 9 */
 	-moz-transform-origin:100% 50%; /* Firefox */

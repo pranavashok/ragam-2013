@@ -6,15 +6,30 @@
 	//$("#content-pane").rotate({angle:-15});
 	$("#home-button").hide();
 }*/
+function setCss(a,b){
+	var left,right,top,bottom;
+	vleft = $(a).css("left");
+	vright = $(a).css("right");
+	//vright = $(a).position().right;
+	vtop = $(a).css("top");
+	vbottom = $(a).css("bottom");
+	$(a).css({left: vleft, right: vright, top: vtop, bottom: vbottom});
+	$(a).rotate(b);
+	alert('ele,l,r,t,b,a:'+a+' '+vleft+' '+vright+' '+vtop+' '+vbottom+' '+b);
+}
 $(document).ready(function(){
 	var w = $(window).width();
 	var h = $(window).height();
 	$("#home-button").hide();
+	
 	$("#mainmenu-pane").addClass("loading");
 	$("#font-pane").addClass("loading");
+	setTimeout("setCss('#mainmenu-pane',-25);",5000);
+	setTimeout("setCss('#font-pane',-25);",5000);
 	$("#mainlinks li").click(function(){
 		$("#font-pane").addClass("moveout");
 		$("#mainmenu-pane").addClass("moveout");
+
 		$("#followlinks").animate({opacity:'0'});
 		$("#home-button").show();
 	});
