@@ -19,13 +19,8 @@ $(document).ready(function(){
 	});
 
 	$("#sublinks li a").click(function(){
-		$("#submenu-pane").addClass('rotate');
-		//$("#content-pane").css({top: -h+'px', left: -w*0.7+'px'});
-		//$("#content-pane").stop().animate({left:'-30%', top:'-150%'}, 1000, 'easeInOutQuad', function(){
-		//	$("#content-pane").rotate({angle:-13, animateTo:0});
-		//});
 		$("#content-pane").addClass('rotate');
-		//$("#submenu-pane").stop().animate({top:'130%'}, 3000, 'easeInOutQuad');
+		$("#submenu-pane").addClass('rotate');
 	});
 
 	$("#home-button").click(function(){
@@ -34,7 +29,6 @@ $(document).ready(function(){
 		$("#font-pane").removeClass("moveout");
 		$("#mainmenu-pane").removeClass("moveout");
 		/* Code to reset level one */
-		$("#submenu-pane").removeClass("movedown");
 		$("#submenu-pane").removeClass("rotate");
 
 		$("#content-pane").removeClass("rotate");

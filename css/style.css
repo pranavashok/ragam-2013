@@ -71,18 +71,18 @@ html {
 	-ms-transition:opacity 0.3s ease;
 	transition:opacity 0.3s ease;
 }
-	
+
 #followlinks img{
 	opacity:0.5;
-  	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
-  	filter: gray; /* IE6-9 */
-  	-webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+	filter: gray; /* IE6-9 */
+	-webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
 }
 
 #followlinks img:hover {
 	opacity:1;
-  	filter: none;
-  	-webkit-filter: grayscale(0%);
+	filter: none;
+	-webkit-filter: grayscale(0%);
 	-webkit-transition: -webkit 0.5s ease, color 0.5s ease;
 	-moz-transition: background 0.5s ease, color 0.5s ease;
 	-o-transition: background 0.5s ease, color 0.5s ease;
@@ -113,23 +113,23 @@ html {
 	color:#777;
 }
 #mainlinks li{
-    	border-left: 27px solid transparent;
-    	border-right: 0px solid transparent;
-    	height: 0;
-		color:#777;
-		-webkit-transition: border 0.5s ease, color 0.5s ease;
-		-moz-transition: border 0.5s ease, color 0.5s ease;
-		-o-transition: border 0.5s ease, color 0.5s ease;
-		-ms-transition: border 0.5s ease, color 0.5s ease;
-		transition: border 0.5s ease, color 0.5s ease;
+	border-left: 27px solid transparent;
+	border-right: 0px solid transparent;
+	height: 0;
+	color:#777;
+	-webkit-transition: border 0.5s ease, color 0.5s ease;
+	-moz-transition: border 0.5s ease, color 0.5s ease;
+	-o-transition: border 0.5s ease, color 0.5s ease;
+	-ms-transition: border 0.5s ease, color 0.5s ease;
+	transition: border 0.5s ease, color 0.5s ease;
 }
 
 #mainlinks li:hover{
-		-webkit-transition: border 0.5s ease, color 0.5s ease;
-		-moz-transition:border 0.5s ease, color 0.5s ease;
-		-o-transition: border 0.5s ease, color 0.5s ease;
-		-ms-transition:border 0.5s ease, color 0.5s ease;
-		transition: border 0.5s ease, color 0.5s ease;
+	-webkit-transition: border 0.5s ease, color 0.5s ease;
+	-moz-transition:border 0.5s ease, color 0.5s ease;
+	-o-transition: border 0.5s ease, color 0.5s ease;
+	-ms-transition:border 0.5s ease, color 0.5s ease;
+	transition: border 0.5s ease, color 0.5s ease;
 }
 
 #mainlink1{
@@ -175,10 +175,10 @@ html {
 	top:15%;
 	left:-50%;
 	z-index:1;
-	transform-origin:41% 15%;
+	transform-origin:40% 15%;
 	-ms-transform-origin:40% 20%; /* IE 9 */
 	-moz-transform-origin:40% 20%; /* Firefox */
-	-webkit-transform-origin:41% 15%; /* Safari and Chrome */
+	-webkit-transform-origin:40% 15%; /* Safari and Chrome */
 	-o-transform-origin:40% 20%; /* Opera */
 	transform: rotate(-15deg);
 	-ms-transform: rotate(-15deg); /* IE 9 */
