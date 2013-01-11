@@ -40,6 +40,25 @@
 	animation-fill-mode:forwards;
 }
 
+@keyframes font-pane-movein {
+	0% {
+		left:100%;
+		top:-160%;
+		transform: rotate(-25deg);
+	}
+	100% {
+		left:30%;
+		top:-100%;
+		transform: rotate(-25deg);
+	}
+}
+
+#font-pane.movein {
+	animation-name: font-pane-movein;
+	animation-duration: 2s;
+	animation-timing-function: ease;
+	animation-fill-mode:forwards;
+}
 @keyframes mainmenu-pane-loading {
 	0% {
 		right: 0%;
@@ -74,6 +93,24 @@
 }
 #mainmenu-pane.moveout {
 	animation-name: mainmenu-pane-moveout;
+	animation-duration: 2s;
+	animation-timing-function: ease;
+	animation-fill-mode:forwards;
+}
+@keyframes mainmenu-pane-movein {
+	0% {
+		right:105%;
+		top:-70%;
+		transform: rotate(-25deg); 
+	}
+	100% {
+		top:-100%;
+		right: 70%;
+		transform: rotate(-25deg); 
+	}
+}
+#mainmenu-pane.movein {
+	animation-name: mainmenu-pane-movein;
 	animation-duration: 2s;
 	animation-timing-function: ease;
 	animation-fill-mode:forwards;

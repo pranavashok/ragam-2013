@@ -19,20 +19,19 @@ function setCssL(a){
 $(document).ready(function(){
 	var w = $(window).width();
 	var h = $(window).height();
-	$("#home-button").hide();
 	
-	$("#mainmenu-pane").addClass("loading");
-	$("#font-pane").addClass("loading");
+	
+	$("#mainmenu-pane").attr("class", "loading");
+	$("#font-pane").attr("class", "loading");
 	//setTimeout("setCss('#mainmenu-pane',-25);",5000);
 	//setTimeout("setCss('#font-pane',-25);",5000);
 	$("#mainlinks li").click(function(){
 		setCssL('#font-pane');
 		setCssR('#mainmenu-pane');
-		$("#font-pane").addClass("moveout");
-		$("#mainmenu-pane").addClass("moveout");
+		$("#font-pane").attr("class", "moveout");
+		$("#mainmenu-pane").attr("class", "moveout");
 
 		$("#followlinks").animate({opacity:'0'});
-		$("#home-button").show();
 	});
 	$("#arrow-up").click(function(){
 		$("#mainmenu-pane").addClass('support');
@@ -51,19 +50,14 @@ $(document).ready(function(){
 		}
 	});
 	$("#sublinks li a").click(function(){
-		$("#content-pane").addClass('rotate');
-		$("#submenu-pane").addClass('rotate');
+		$("#content-pane").attr("class", "rotate");
+		$("#submenu-pane").attr("class", "rotate");
 	});
 
 	$("#home-button").click(function(){
 		/* Code to reset level zero */
-		$(this).hide();
-		$("#font-pane").removeClass("moveout");
-		$("#mainmenu-pane").removeClass("moveout");
-		/* Code to reset level one */
-		$("#submenu-pane").removeClass("rotate");
-
-		$("#content-pane").removeClass("rotate");
+		$("#font-pane").attr("class", "movein");
+		$("#mainmenu-pane").attr("class", "movein");
 		/* Code to reset level one */
 		$("#followlinks").animate({opacity:'1'});
 		/* Code to reset level zero */
