@@ -6,16 +6,15 @@
 	//$("#content-pane").rotate({angle:-15});
 	$("#home-button").hide();
 }*/
-function setCss(a,b){
-	var left,right,top,bottom;
-	vleft = $(a).css("left");
-	vright = $(a).css("right");
-	//vright = $(a).position().right;
+function setCssR(a){
+	vright = $(a).css("right");	
 	vtop = $(a).css("top");
-	vbottom = $(a).css("bottom");
-	$(a).css({left: vleft, right: vright, top: vtop, bottom: vbottom});
-	$(a).rotate(b);
-	alert('ele,l,r,t,b,a:'+a+' '+vleft+' '+vright+' '+vtop+' '+vbottom+' '+b);
+	$(a).css({right: vright, top: vtop});
+}
+function setCssL(a){
+	vleft = $(a).css("left");
+	vtop = $(a).css("top");
+	$(a).css({left: vleft, top: vtop});
 }
 $(document).ready(function(){
 	var w = $(window).width();
@@ -24,9 +23,11 @@ $(document).ready(function(){
 	
 	$("#mainmenu-pane").addClass("loading");
 	$("#font-pane").addClass("loading");
-	setTimeout("setCss('#mainmenu-pane',-25);",5000);
-	setTimeout("setCss('#font-pane',-25);",5000);
+	//setTimeout("setCss('#mainmenu-pane',-25);",5000);
+	//setTimeout("setCss('#font-pane',-25);",5000);
 	$("#mainlinks li").click(function(){
+		setCssL('#font-pane');
+		setCssR('#mainmenu-pane');
 		$("#font-pane").addClass("moveout");
 		$("#mainmenu-pane").addClass("moveout");
 

@@ -247,7 +247,7 @@
 @-moz-keyframes mainmenu-pane-moveout {
 	0% {
 		top:-100%;
-		right: 80%;
+		right: 70%;
 		-moz-transform: rotate(-25deg); 
 	}
 	100% {
