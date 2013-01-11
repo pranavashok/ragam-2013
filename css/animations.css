@@ -73,40 +73,52 @@
 	-o-animation-fill-mode:forwards;
 	-moz-animation-fill-mode:forwards;
 }
-@-webkit-keyframes font-pane-moveout {
+@keyframes font-pane-moveout {
 	0% {
+		left:30%
 		top:-100%;
+		transform: rotate(-25deg);
 	}
 	100% {
 		left:100%;
 		top:-160%;
+		transform: rotate(-25deg);
+	}
+}
+@-webkit-keyframes font-pane-moveout {
+	0% {
+		left:30%;
+		top:-100%;
+		-webkit-transform: rotate(-25deg);
+	}
+	100% {
+		left:100%;
+		top:-160%;
+		-webkit-transform: rotate(-25deg);
 	}
 }
 @-moz-keyframes font-pane-moveout {
 	0% {
+		left:30%
 		top:-100%;
+		-moz-transform: rotate(-25deg);
 	}
 	100% {
 		left:100%;
 		top:-160%;
+		-moz-transform: rotate(-25deg);
 	}
 }
 @-o-keyframes font-pane-moveout {
 	0% {
+		left:30%
 		top:-100%;
+		-o-transform: rotate(-25deg);
 	}
 	100% {
 		left:100%;
 		top:-160%;
-	}
-}
-@keyframes font-pane-moveout {
-	0% {
-		top:-100%;
-	}
-	100% {
-		left:100%;
-		top:-160%;
+		-o-transform: rotate(-25deg);
 	}
 }
 #font-pane.moveout {
@@ -162,7 +174,7 @@
 	0% {
 		right: 0%;
 	}
-	75% {
+	70% {
 		right: 70%;
 		-o-transform: rotate(0deg);	
 	}
@@ -176,7 +188,7 @@
 		right: 0%;
 	}
 
-	75% {
+	70% {
 		right: 70%;
 		-moz-transform: rotate(0deg);	
 	}
@@ -191,10 +203,10 @@
 	-moz-animation-name: mainmenu-pane-loading;
 	-o-animation-name: mainmenu-pane-loading;
 
-	animation-duration: 2s;
+	animation-duration: 1.3s;
 	-webkit-animation-duration: 1.3s;
-	-moz-animation-duration: 2s;
-	-o-animation-duration: 2s;
+	-moz-animation-duration: 1.3s;
+	-o-animation-duration: 1.3s;
 
 	animation-timing-function: linear;
 	-moz-animation-timing-function: linear;
@@ -207,44 +219,52 @@
 	-moz-animation-fill-mode:forwards;
 }
 
-@-webkit-keyframes mainmenu-pane-moveout {
+@keyframes mainmenu-pane-moveout {
 	0% {
 		top:-100%;
 		right: 70%;
+		transform: rotate(-25deg); 
 	}
 	100% {
 		right:105%;
 		top:-70%;
+		transform: rotate(-25deg); 
+	}
+}
+@-webkit-keyframes mainmenu-pane-moveout {
+	0% {
+		top:-100%;
+		right: 70%;
+		-webkit-transform: rotate(-25deg); 
+	}
+	100% {
+		right:105%;
+		top:-70%;
+		-webkit-transform: rotate(-25deg); 
 	}
 }
 @-moz-keyframes mainmenu-pane-moveout {
 	0% {
 		top:-100%;
 		right: 70%;
+		-moz-transform: rotate(-25deg); 
 	}
 	100% {
 		right:105%;
 		top:-70%;
+		-moz-transform: rotate(-25deg); 
 	}
 }
 @-o-keyframes mainmenu-pane-moveout {
 	0% {
 		top:-100%;
 		right: 70%;
+		-o-transform: rotate(-25deg); 
 	}
 	100% {
 		right:105%;
 		top:-70%;
-	}
-}
-@keyframes mainmenu-pane-moveout {
-	0% {
-		top:-100%;
-		right: 70%;
-	}
-	100% {
-		right:105%;
-		top:-70%;
+		-o-transform: rotate(-25deg); 
 	}
 }
 #mainmenu-pane.moveout {

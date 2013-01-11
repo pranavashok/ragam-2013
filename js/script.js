@@ -1,15 +1,15 @@
-function initialize()
+/*function initialize()
 {
 	$("#mainmenu-pane").animate({right:'70%'},'slow', 'easeInOutQuad', function(){ $("#mainmenu-pane").rotate({angle:0, animateTo:-25})});
 	$("#font-pane").animate({left:'30%'}, 'slow', 'easeInOutQuad', function(){ $("#font-pane").rotate({angle:0, animateTo:-25})});
 	//$("#submenu-pane").rotate({angle:-15});
 	//$("#content-pane").rotate({angle:-15});
 	$("#home-button").hide();
-}
+}*/
 $(document).ready(function(){
 	var w = $(window).width();
 	var h = $(window).height();
-	//initialize();
+	$("#home-button").hide();
 	$("#mainmenu-pane").addClass("loading");
 	$("#font-pane").addClass("loading");
 	$("#mainlinks li").click(function(){
