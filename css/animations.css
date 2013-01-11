@@ -22,7 +22,7 @@
 
 @keyframes font-pane-moveout {
 	0% {
-		left:30%
+		left:30%;
 		top:-100%;
 		transform: rotate(-25deg);
 	}
@@ -114,7 +114,7 @@
 }
 @keyframes support {
 	0% {
-		ransform:rotate(0deg);
+		transform:rotate(0deg);
 	}
 	80% {
 		top:70%;
