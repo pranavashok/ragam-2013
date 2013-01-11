@@ -32,6 +32,7 @@ $(document).ready(function(){
 			container.removeClass('support');
 			$("#mainmenu-pane").removeClass('support');
 			$("#font-pane").removeClass('support');
+			$(".support-puller").show();
 		}
 	});
 	$("#sublinks li a").click(function(){
