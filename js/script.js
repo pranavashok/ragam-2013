@@ -36,7 +36,7 @@ $(document).ready(function(){
 	$("#arrow-up").click(function(){
 		//$("#mainmenu-pane").addClass('support');
 		//$("#font-pane").addClass('support');
-		$("#wrapper").attr("class", "support");
+		$("#wrapper").attr("class", "support-up");
 		$("#support-pane").addClass('support');
 	});
 	$(document).mouseup(function (e)
@@ -45,8 +45,9 @@ $(document).ready(function(){
 		if (container.has(e.target).length === 0)
 		{
 			container.removeClass('support');
-			$("#mainmenu-pane").removeClass('support');
-			$("#font-pane").removeClass('support');
+			//$("#mainmenu-pane").removeClass('support');
+			//$("#font-pane").removeClass('support');
+			$("#wrapper").attr("class", "support-down");
 			$(".support-puller").show();
 		}
 	});

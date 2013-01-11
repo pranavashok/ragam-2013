@@ -181,11 +181,11 @@ html {
 }
 #submenu-pane{
 	position:absolute;
-	height:300%;
-	width:200%;
+	height:100%;
+	width:66.67%;
 	background-color:#cef;
-	top:15%;
-	left:-50%;
+	top:38.33%;
+	left:16.67%;
 	z-index:1;
 	transform-origin:40% 15%;
 	transform: rotate(-15deg);
@@ -221,11 +221,11 @@ html {
 }
 #content-pane{
 	position:absolute;
-	height:300%;
-	width:200%;
+	height:100%;
+	width:66.67%;
 	background-color:#ecf;
-	top:-120%;
-	left:-50%;
+	top:-6.67%;
+	left:16.67%;
 	z-index:0;
 	transform-origin:40% 60%;
 	transform: rotate(-15deg);
