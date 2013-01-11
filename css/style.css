@@ -7,21 +7,22 @@ html {
 	src: url('HelveticaNeueCyr-Thin.otf');
 }
 
-/*.pane{
+.pane{
 	transition: 0.5s ease-out;
 	-webkit-transition: 0.5s ease-out;
-	-moz-transition: 0.5s ease-out;
+	-moz-trzzansition: 0.5s ease-out;
 	-o-transition: 0.5s ease-out;
-}*/
+}
 
 #font-pane{
 	position:absolute;
 	height:300%;
 	width:200%;
 	top:-100%;
-	bottom:auto;
+<<<<<<< HEAD
+=======
 	left:0;
-	right:auto;
+>>>>>>> 367638e8119bb13eee93401ca2e95db99d3d7b3c
 	z-index:2;
 	background-color:#f7f7f7;
 	transform-origin:0 50%;
@@ -41,13 +42,11 @@ html {
 	position:absolute;
 	height:300%;
 	width:200%;
-	background-color:#e6e6e6;
+	background-color:#e6e6e6	;
 	/*box-shadow:2px 2px 3px 3px #ddd;	*/
 	z-index:2;
 	top:-100%;
-	left:auto;
 	right:0;
-	bottom:auto;
 	transform-origin:100% 50%;
 	-ms-transform-origin:100% 50%; /* IE 9 */
 	-moz-transform-origin:100% 50%; /* Firefox */
@@ -109,7 +108,7 @@ html {
 	position: absolute;
 	left:10px;
 	top:10px;
-	background: white url('../img/search.png') no-repeat 1px 1px;
+	background: white url('../img/search.png') no-repeat 0px 0px;
 	border: 1px solid #999;
 	height: 32px;
 	width:32px;
@@ -124,7 +123,7 @@ html {
 
 #searchBox:hover{
 	opacity: 1;
-	width: 240px;
+	width: 220px;
 	color: #444;
 	padding: 4px 4px 4px 34px;
 	-webkit-transition: width 0.3s ease, opcaity 0.3s ease;
@@ -291,27 +290,27 @@ html {
 }
 .support-puller {
 	font-family:'HelveticaThin';
-  padding-left: 1.25em;
-  position: relative;
-  top:97%;
-  left:50%;
-  z-index: 5;
+	padding-left: 1.25em;
+	position: relative;
+	top:97%;
+	left:50%;
+	z-index: 5;
 }
 .support-puller:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -0.21em;
-  bottom: 0.21em;
-  width: 1em;
-  background: -webkit-linear-gradient(
-    top, 
-    grey, grey 20%, 
-    transparent 20%, transparent 40%, 
-    grey 40%, grey 60%, 
-    transparent 60%, transparent 80%, 
-    grey 80%, grey 100%
-  );
+	content: "";
+	position: absolute;
+	left: 0;
+	top: -0.21em;
+	bottom: 0.21em;
+	width: 1em;
+	background: -webkit-linear-gradient(
+		top, 
+		grey, grey 20%, 
+		transparent 20%, transparent 40%, 
+		grey 40%, grey 60%, 
+		transparent 60%, transparent 80%, 
+		grey 80%, grey 100%
+		);
 }
 #support-pane {
 	height:100%;
