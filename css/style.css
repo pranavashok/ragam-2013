@@ -310,7 +310,7 @@ html {
 	position: absolute;
 	top:97%;
 	left:50%;
-	z-index: 20;
+	z-index: 19;
 }
 .support-puller:before {
 	content: "";
