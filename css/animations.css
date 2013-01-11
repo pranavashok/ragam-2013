@@ -4,11 +4,11 @@
 	}
 
 	70% {
-		left: 43.3%;
+		left: 43.33%;
 		transform: rotate(0deg);	
 	}
 	100% {
-		left: 43.3%;
+		left: 43.33%;
 		transform: rotate(-25deg); 
 	}
 }
@@ -22,13 +22,13 @@
 
 @keyframes font-pane-moveout {
 	0% {
-		left:30%;
-		top:-100%;
+		left:43.33%;
+		top:0%;
 		transform: rotate(-25deg);
 	}
 	100% {
-		left:100%;
-		top:-160%;
+		left:66.67%;
+		top:-20%;
 		transform: rotate(-25deg);
 	}
 }
@@ -42,13 +42,13 @@
 
 @keyframes font-pane-movein {
 	0% {
-		left:100%;
-		top:-160%;
+		left:66.67%;
+		top:-20%;
 		transform: rotate(-25deg);
 	}
 	100% {
-		left:30%;
-		top:-100%;
+		left:43.33%;
+		top:0%;
 		transform: rotate(-25deg);
 	}
 }
@@ -81,13 +81,13 @@
 
 @keyframes mainmenu-pane-moveout {
 	0% {
-		top:-100%;
-		right: 70%;
+		top: 0%;
+		right: 56.67%;
 		transform: rotate(-25deg); 
 	}
 	100% {
-		right:105%;
-		top:-70%;
+		top: 10%;
+		right: 68.33%;
 		transform: rotate(-25deg); 
 	}
 }
@@ -99,13 +99,13 @@
 }
 @keyframes mainmenu-pane-movein {
 	0% {
-		right:105%;
-		top:-70%;
+		top: 10%;
+		right: 68.33%;
 		transform: rotate(-25deg); 
 	}
 	100% {
-		top:-100%;
-		right: 70%;
+		top: 0%;
+		right: 56.67%;
 		transform: rotate(-25deg); 
 	}
 }
