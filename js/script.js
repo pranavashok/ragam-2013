@@ -1,11 +1,3 @@
-/*function initialize()
-{
-	$("#mainmenu-pane").animate({right:'70%'},'slow', 'easeInOutQuad', function(){ $("#mainmenu-pane").rotate({angle:0, animateTo:-25})});
-	$("#font-pane").animate({left:'30%'}, 'slow', 'easeInOutQuad', function(){ $("#font-pane").rotate({angle:0, animateTo:-25})});
-	//$("#submenu-pane").rotate({angle:-15});
-	//$("#content-pane").rotate({angle:-15});
-	$("#home-button").hide();
-}*/
 function setCssR(a){
 	vright = $(a).css("right");	
 	vtop = $(a).css("top");
@@ -26,18 +18,6 @@ function setCssL(a){
         return false;
     }
 
-    
-
-    // Change our States
-    /*History.pushState({state:1}, "State 1", "?state=1"); // logs {state:1}, "State 1", "?state=1"
-    History.pushState({state:2}, "State 2", "?state=2"); // logs {state:2}, "State 2", "?state=2"
-    History.replaceState({state:3}, "State 3", "?state=3"); // logs {state:3}, "State 3", "?state=3"
-    History.pushState(null, null, "?state=4"); // logs {}, '', "?state=4"
-    History.back(); // logs {state:3}, "State 3", "?state=3"
-    History.back(); // logs {state:1}, "State 1", "?state=1"
-    History.back(); // logs {}, "Home Page", "?"
-    History.go(2); // logs {state:3}, "State 3", "?state=3"
-	*/
 	$(function(){
 		var w = $(window).width();
 		var h = $(window).height();
@@ -46,15 +26,13 @@ function setCssL(a){
 	        var State = History.getState(), // Note: We are using History.getState() instead of event.state
 	        	rootUrl = History.getRootUrl(),
 	        	relativeUrl = State.url.replace(rootUrl+'magar/', '');
-	        //History.log(State.data, State.title, State.url);
-	        //alert(relativeUrl);
+	        	//History.log(State.data, State.title, State.url);
 	        if(relativeUrl=="")
 	        {
 	        	$("#mainmenu-pane").attr("class", "movein");
 				$("#font-pane").attr("class", "movein");	        	
 	        }else
 	        {
-	        		//alert('test');
 	        	     loc=relativeUrl.split("/");
 	        	     heading.innerHTML = loc[0];
 	        }   
@@ -62,9 +40,7 @@ function setCssL(a){
 
 		$("#mainmenu-pane").attr("class", "loading");
 		$("#font-pane").attr("class", "loading");
-		//setTimeout("setCss('#mainmenu-pane',-25);",5000);
-		//setTimeout("setCss('#font-pane',-25);",5000);
-		//History.pushState(null, "Ragam 2013", "");
+		History.pushState(null, "Ragam 2013", "");
 		$("#mainlinks a").click(function(e){
 			e.preventDefault();
 		});
@@ -78,8 +54,6 @@ function setCssL(a){
 			$("#followlinks").animate({opacity:'0'});
 		});
 		$("#arrow-up").click(function(){
-			//$("#mainmenu-pane").addClass('support');
-			//$("#font-pane").addClass('support');
 			$("#wrapper").attr("class", "support-up");
 			$("#support-pane").attr("class", "support-up");
 		});
@@ -89,8 +63,6 @@ function setCssL(a){
 			if (container.has(e.target).length === 0 && $("#wrapper").attr("class")=="support-up")
 			{
 				container.attr("class", "support-down");
-				//$("#mainmenu-pane").removeClass('support');
-				//$("#font-pane").removeClass('support');
 				$("#wrapper").attr("class", "support-down");
 				$(".support-puller").show();
 			}
