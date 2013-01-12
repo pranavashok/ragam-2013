@@ -42,7 +42,7 @@ $(document).ready(function(){
 	$(document).mouseup(function (e)
 	{
 		var container = $("#support-pane");
-		if (container.has(e.target).length === 0)
+		if (container.has(e.target).length === 0 && $("#wrapper").attr("class")=="support-up")
 		{
 			container.removeClass('support');
 			//$("#mainmenu-pane").removeClass('support');
