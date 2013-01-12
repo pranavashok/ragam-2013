@@ -149,8 +149,9 @@
 	animation-timing-function: ease;
 	animation-fill-mode:forwards;
 }
-@keyframes support {
+@keyframes support-up {
 	0% {
+		top:101%;
 		transform:rotate(0deg);
 	}
 	80% {
@@ -162,8 +163,28 @@
 		transform:rotate(1.5deg);
 	}
 }
-#support-pane.support {
-	animation-name: support;
+#support-pane.support-up {
+	animation-name: support-up;
+	animation-duration: 1.5s;
+	animation-timing-function: ease;
+	animation-fill-mode:forwards;
+}
+@keyframes support-down {
+	0% {
+		top:70%;
+		transform:rotate(1.5deg);
+	}
+	20% {
+		top:70%;
+		transform:rotate(0deg);
+	}
+	100% {
+		top:101%;
+		transform:rotate(0deg);
+	}
+}
+#support-pane.support-down {
+	animation-name: support-down;
 	animation-duration: 1.5s;
 	animation-timing-function: ease;
 	animation-fill-mode:forwards;

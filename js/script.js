@@ -37,14 +37,14 @@ $(document).ready(function(){
 		//$("#mainmenu-pane").addClass('support');
 		//$("#font-pane").addClass('support');
 		$("#wrapper").attr("class", "support-up");
-		$("#support-pane").addClass('support');
+		$("#support-pane").attr("class", "support-up");
 	});
 	$(document).mouseup(function (e)
 	{
 		var container = $("#support-pane");
 		if (container.has(e.target).length === 0 && $("#wrapper").attr("class")=="support-up")
 		{
-			container.removeClass('support');
+			container.attr("class", "support-down");
 			//$("#mainmenu-pane").removeClass('support');
 			//$("#font-pane").removeClass('support');
 			$("#wrapper").attr("class", "support-down");
@@ -63,5 +63,6 @@ $(document).ready(function(){
 		/* Code to reset level one */
 		$("#followlinks").animate({opacity:'1'});
 		/* Code to reset level zero */
+		$("#home-button").animate({opacity:'0'});
 	});
 });
