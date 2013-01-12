@@ -111,12 +111,12 @@ html {
 
 #mainlinks{
 	position:absolute;
-	top:40%;
+	top:45%;
 	width: 100%;
 	right:0;
 	list-style-type:none;
 	font-family: 'HelveticaThin';
-	font-size:250%;
+	font-size:300%;
 	line-height: 70px;
 	text-align:right;
 }
