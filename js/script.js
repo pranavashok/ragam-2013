@@ -50,7 +50,6 @@ function setCssL(a){
 			setCssR('#mainmenu-pane');
 			$("#font-pane").attr("class", "moveout");
 			$("#mainmenu-pane").attr("class", "moveout");
-
 			$("#followlinks").animate({opacity:'0'});
 		});
 		$("#arrow-up").click(function(){
@@ -79,7 +78,6 @@ function setCssL(a){
 			/* Code to reset level one */
 			$("#followlinks").animate({opacity:'1'});
 			/* Code to reset level zero */
-			$("#home-button").animate({opacity:'0'});
 		});
 	});
 })(window);
