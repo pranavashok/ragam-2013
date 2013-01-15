@@ -6,6 +6,11 @@ html {
 	font-family: HelveticaThin;
 	src: url('HelveticaNeueCyr-Thin.otf');
 }
+@font-face
+{
+	font-family: ProximaNova;
+	src: url('ProximaNova-Black.otf');
+}
 #wrapper{
 	position:relative;
 	width:300%;
@@ -231,6 +236,8 @@ html {
 	transform: rotate(-15deg);
 }
 #heading{
+	font-family: ProximaNova;
+	text-transform: uppercase;
 	position:absolute;
 	color: #000;
 	top:41%;

@@ -115,7 +115,7 @@
 	animation-timing-function: ease;
 	animation-fill-mode:forwards;
 }
-@keyframes content-pane-rotate {
+@keyframes content-pane-rotateout {
 	0% {
 		transform: rotate(-15deg);
 	}
@@ -123,13 +123,27 @@
 		transform: rotate(0);
 	}
 }
-#content-pane.rotate {
-	animation-name: content-pane-rotate;
+#content-pane.rotateout {
+	animation-name: content-pane-rotateout;
 	animation-duration: 1.5s;
 	animation-timing-function: ease;
 	animation-fill-mode:forwards;
 }
-@keyframes submenu-pane-rotate {
+@keyframes content-pane-rotatein {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(-15deg);
+	}
+}
+#content-pane.rotatein {
+	animation-name: content-pane-rotatein;
+	animation-duration: 1.5s;
+	animation-timing-function: ease;
+	animation-fill-mode:forwards;
+}
+@keyframes submenu-pane-rotateout {
 	0% {
 		transform: rotate(-15deg);
 	/*	top:15%;*/
@@ -143,8 +157,26 @@
 		top:70.67%;
 	}
 }
-#submenu-pane.rotate {
-	animation-name: submenu-pane-rotate;
+#submenu-pane.rotateout {
+	animation-name: submenu-pane-rotateout;
+	animation-duration: 2s;
+	animation-timing-function: ease;
+	animation-fill-mode:forwards;
+}
+@keyframes submenu-pane-rotatein {
+	100% {
+		transform: rotate(-15deg);
+	}
+	25% {
+		transform: rotate(0);
+	}
+	0% {
+		transform: rotate(0);
+		top:70.67%;
+	}
+}
+#submenu-pane.rotatein {
+	animation-name: submenu-pane-rotatein;
 	animation-duration: 2s;
 	animation-timing-function: ease;
 	animation-fill-mode:forwards;

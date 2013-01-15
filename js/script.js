@@ -67,14 +67,16 @@ function setCssL(a){
 			}
 		});
 		$("#sublinks li a").click(function(){
-			$("#content-pane").attr("class", "rotate");
-			$("#submenu-pane").attr("class", "rotate");
+			$("#content-pane").attr("class", "rotateout");
+			$("#submenu-pane").attr("class", "rotateout");
 		});
 
 		$("#home-button").click(function(){
 			/* Code to reset level zero */
 			$("#font-pane").attr("class", "movein");
 			$("#mainmenu-pane").attr("class", "movein");
+			$("#content-pane").attr("class", "rotatein");
+			$("#submenu-pane").attr("class", "rotatein");
 			/* Code to reset level one */
 			$("#followlinks").animate({opacity:'1'});
 			/* Code to reset level zero */
