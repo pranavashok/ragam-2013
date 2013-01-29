@@ -2,6 +2,7 @@
 <head>
 	<link href="css/reset.css" rel="stylesheet"/>
 	<link href="css/style.css" rel="stylesheet"/>
+	<link href="css/logo.css" rel="stylesheet"/>
 	<link href="css/animations.css" rel="stylesheet"/>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/prefixfree.min.js"></script>
@@ -14,9 +15,17 @@
 </head>
 <body>
 <div id="wrapper">
-	<section class="pane" id="font-pane">
-		<img src="img/logo.jpg">
-	</section>
+ <section class="pane" id="font-pane">
+  <div id="logo">
+   <canvas id="letterr"  width="1400" height="500" ></canvas>
+   <canvas id="lettera"  width="1400" height="500" ></canvas>
+   <canvas id="letterg"  width="1400" height="500" ></canvas>
+   <canvas id="lettera2"  width="1400" height="500" ></canvas>
+   <canvas id="letterm"  width="1400" height="500" ></canvas>
+   <script type="text/javascript" src="js/logo.js"></script>
+
+  </div>
+ </section>
 
 	<section class="pane" id="mainmenu-pane">
 			<nav id="mainlinks">
