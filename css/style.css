@@ -188,7 +188,7 @@ html {
 	position:absolute;
 	height:100%;
 	width:66.67%;
-	background-color:#cef;
+	background-color:#eee;
 	top:38.33%;
 	left:16.67%;
 	z-index:1;
@@ -228,7 +228,7 @@ html {
 	position:absolute;
 	height:100%;
 	width:66.67%;
-	background-color:#ecf;
+	background-color:#eee;
 	top:-6.67%;
 	left:16.67%;
 	z-index:0;
@@ -241,7 +241,7 @@ html {
 	position:absolute;
 	color: #000;
 	top:41%;
-	left:28%;
+	left:29%;
 	font-size:60px;
 	z-index: 3;
 	display: block;

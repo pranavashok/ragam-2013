@@ -27,7 +27,7 @@ function setCssL(a){
 	        	rootUrl = History.getRootUrl(),
 	        	relativeUrl = State.url.replace(rootUrl+'magar/', '');
 	        	//History.log(State.data, State.title, State.url);
-	        if(relativeUrl=="")
+	        if(relativeUrl=="" && $("#mainmenu-pane").attr("class")=="moveout")
 	        {
 	        	$("#mainmenu-pane").attr("class", "movein");
 				$("#font-pane").attr("class", "movein");	        	
@@ -46,6 +46,17 @@ function setCssL(a){
 		});
 		$("#mainlinks li").click(function(){
 			History.pushState(null, $(this).attr("title") + " | Ragam 2013", $(this).attr("title"));
+			$.ajax("rsublinks.php", {
+			dataType : "json",
+			data: {"cat":$(this).attr('title')},
+			type: "POST",
+			success: function (d) {
+				if(d[0]==1)
+				{
+				// load content to hidden div	
+				}
+			}
+			});
 			setCssL('#font-pane');
 			setCssR('#mainmenu-pane');
 			$("#font-pane").attr("class", "moveout");
