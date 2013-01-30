@@ -1,14 +1,14 @@
-#logo canvas { position:absolute; top:1130; left:0 }
+#logo canvas { position:absolute; top:1630; left:-950; border:solid 0px black; }
    #lettera {z-index:5;}
    #lettera2 {z-index:5;}
    #letterm {z-index:0;}
     #logo
     {
-    	transform: scale(1,1);
--ms-transform: scale(2,4); /* IE 9 */
--webkit-transform: scale(1,1); /* Safari and Chrome */
--o-transform: scale(2,4); /* Opera */
--moz-transform: scale(2,4); /* Firefox */
+    	transform: scale(0.6,0.6);
+-ms-transform: scale(0.6,0.6); /* IE 9 */
+-webkit-transform: scale(0.6,0.6); /* Safari and Chrome */
+-o-transform: scale(0.6,0.6); /* Opera */
+-moz-transform: scale(0.6,0.6); /* Firefox */
 	 /*transform:matrix(0.433,-0.25,0.25,0.433,0,0);
 	 -ms-transform:matrix(0.433,-0.25,0.25,0.433,0,0); /* IE 9 */
 	 /*-moz-transform:matrix(0.433,-0.25,0.25,0.433,0,0); /* Firefox */

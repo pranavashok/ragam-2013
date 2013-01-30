@@ -12,14 +12,9 @@
   var thick=40;
   var counterClockwise = true;
   var  a=0, da=0.01 ;
-
-  context.translate(radius*4, 0);
-  contexta2.translate(radius*6+2*thick, 0);
-  contexta.translate(radius*2+thick,0);
-  contextm.translate(radius*8+2*thick,0);
   function g() {
     /////ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg////
-    var x= 180, y = 02;
+    var x=180+radius*4, y = 0;
     context.beginPath();
     context.arc(x, y, radius, .5* Math.PI, 1* Math.PI, false);
     context.moveTo(x,y+radius);
@@ -36,7 +31,7 @@
         context.stroke();
         context.closePath();
         ///mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm//////
-        xm=0,ym=0;
+        xm=radius*8+2*thick,ym=0;
         contextm.beginPath();
     contextm.arc(xm+2*radius, ym+2*radius, radius, .80* Math.PI, 0* Math.PI, false);
     contextm.arc(xm+4*radius, ym+2*radius, radius, 1* Math.PI, .5* Math.PI, false);
@@ -63,21 +58,21 @@
     contextr.stroke();
 
     ///aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa//////////////////
-    xa=0,ya=0        
-        contexta.beginPath();
+    xa=radius*2+thick,ya=0   
+    contexta.beginPath();
     contexta.arc((xa+2*radius), ya+2*radius, radius, 0, 2* Math.PI, false);
     contexta.arc(xa+4*radius, ya+2*radius+1, radius, 1* Math.PI, .5* Math.PI, true);
     contexta.lineWidth =thick;
-    var grda = contexta.createLinearGradient((xa+radius)*Math.cos(a/100*Math.PI),(ya+radius)*Math.sin(a/100*Math.PI),(xa+radius)*Math.cos(a/100*Math.PI),(ya+radius)*Math.sin(a/100*Math.PI));
+    var grda = contexta.createLinearGradient(xa+radius,ya+2*radius,xa+3*radius,ya+2*radius);
         grda.addColorStop(0, '#89c540');  
-        grda.addColorStop(Math.sin(a/10*Math.PI), '#00b04d');
+        grda.addColorStop(1, '#00b04d');
         contexta.strokeStyle = grda;
         contexta.stroke();
       contexta.closePath();
-      canvas.width*Math.cos(a), canvas.height*Math.sin(a), canvas.width*Math.cos(a+Math.PI), canvas.height*Math.sin(a+Math.PI)
+      
 
         ///a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2//////////////////
-    xa2=0,ya2=0
+    xa2=radius*6+2*thick,ya2=0
         contexta2.beginPath();
     contexta2.arc(xa2+2*radius, ya2+2*radius, radius, 0, 2* Math.PI, false);
     contexta2.arc(xa2+4*radius, ya2+2*radius+1, radius, 1* Math.PI, .5* Math.PI, true);
