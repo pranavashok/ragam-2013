@@ -16,6 +16,51 @@
 	<script type="text/javascript" src="js/signin.js"></script>
 </head>
 <body>
+<div id="top-stuff">
+	<div id="top-bar-out">
+    	<div id="container">
+    	<div id="topnav">
+        <div class="active-links">
+            <div id="session">
+            <a id="signin-link" href="#">
+            <em>Have an account?</em>
+            <strong>Sign in</strong>
+            </a>
+            </div>
+            	<div id="signin-dropdown">
+        	
+                <form method="post" class="signin" action="#">
+                <fieldset class="textbox">
+            	<label class="username">
+                <span>Username or email</span>
+                <input id="username" name="username" value="" type="text" autocomplete="on">
+                </label>
+                
+                <label class="password">
+                <span>Password</span>
+                <input id="password" name="password" value="" type="password">
+                </label>
+                </fieldset>
+                
+                <fieldset class="remb">
+                <label class="remember">
+                <input type="checkbox" value="1" name="remember_me" />
+                <span>Remember me</span>
+                </label>
+                <button class="submit button" type="button">Sign in</button>
+                </fieldset>
+                <p>
+                <a class="forgot" href="#">Forgot your password</a>
+                <br>
+                <a class="mobile" href="#">Register with Facebook.</a>
+                </p>
+                </form>
+         	</div>
+                </div>
+             </div>
+    	</div>
+    </div>
+</div>
 <div id="wrapper">
  <section class="pane" id="font-pane">
   <div id="logo">
@@ -65,53 +110,10 @@
 
 		</div>
 	</section>
-	<div id="top-stuff">
-	<div id="top-bar-out">
-    	<div id="container">
-    	<div id="topnav">
-        <div class="active-links">
-            <div id="session">
-            <a id="signin-link" href="#">
-            <em>Have an account?</em>
-            <strong>Sign in</strong>
-            </a>
-            </div>
-            	<div id="signin-dropdown">
-        	
-                <form method="post" class="signin" action="#">
-                <fieldset class="textbox">
-            	<label class="username">
-                <span>Username or email</span>
-                <input id="username" name="username" value="" type="text" autocomplete="on">
-                </label>
-                
-                <label class="password">
-                <span>Password</span>
-                <input id="password" name="password" value="" type="password">
-                </label>
-                </fieldset>
-                
-                <fieldset class="remb">
-                <label class="remember">
-                <input type="checkbox" value="1" name="remember_me" />
-                <span>Remember me</span>
-                </label>
-                <button class="submit button" type="button">Sign in</button>
-                </fieldset>
-                <p>
-                <a class="forgot" href="#">Forgot your password</a>
-                <br>
-                <a class="mobile" href="#">Register with Facebook.</a>
-                </p>
-                </form>
-         	</div>
-                </div>
-             </div>
-    	</div>
-    </div>
-</div>
 	
 </div>
+	
+
 <aside class="pane" id="support-pane">
 	<div id="arrow-up"></div>
 </aside>

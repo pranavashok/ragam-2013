@@ -12,7 +12,7 @@ html {
 	src: url('ProximaNova-Black.otf');
 }
 #wrapper{
-	position:relative;
+	position:absolute;
 	width:300%;
 	height:300%;
 	top:-100%;
@@ -321,15 +321,15 @@ a {
 
 #top-stuff {
 	left:0;
-	position:fixed;
-	top:0;
+	position:absolute;
+	top:0%;
 	width:100%;
 	z-index:12;
 }
 
 #top-bar-out {
 	display:block;
-	position:relative;
+	position:absolute;
 	width:100%;
 	height:40px;
 	background: -moz-linear-gradient(center top, #333333, #111111);
@@ -348,7 +348,7 @@ a {
 #container {
     width:780px;
     margin:0 auto;
-    position: relative;
+    position: absolute;
 }
 
 #topnav {
