@@ -27,7 +27,7 @@
     context.moveTo(x,3*radius);
     context.arc(x, y+4*radius-1, radius,1.5* Math.PI, 0, true);
     context.lineWidth =thick;
-        var grd = context.createLinearGradient(radius*5+Math.cos(a), Math.sin(a), radius*5+Math.cos(a+Math.PI), Math.sin(a+Math.PI));
+        var grd = context.createLinearGradient(x-radius,y-2*radius,x+radius,y-2*radius);
       // light blue
       grd.addColorStop(0, '#831228');   
       // dark blue
@@ -41,7 +41,7 @@
     contextm.arc(xm+2*radius, ym+2*radius, radius, .80* Math.PI, 0* Math.PI, false);
     contextm.arc(xm+4*radius, ym+2*radius, radius, 1* Math.PI, .5* Math.PI, false);
     contextm.lineWidth =thick;
-    var grdm = contextm.createLinearGradient(canvas.width/2*Math.cos(a), canvas.height/2*Math.sin(a), canvas.width/2*Math.cos(a+Math.PI), canvas.height/2*Math.sin(a+Math.PI));
+    var grdm = contextm.createLinearGradient(xm+radius,ym+radius,xm+5*radius,ym+radius);
         grdm.addColorStop(0, '#00b7ec');         
       grdm.addColorStop(1, '#0067c1');
         contextm.strokeStyle = grdm;
@@ -53,7 +53,7 @@
     contextr.arc(xr+2*radius, yr+2*radius, radius, 1.20* Math.PI, .67* Math.PI, false);
     moveTo(xr+2*radius, yr+3*radius)
     contextr.arc(xr+2*radius, yr+4*radius, radius, 1.5* Math.PI, 0* Math.PI, false);
-     var grdr = contextr.createLinearGradient(canvas.width*Math.cos(a), canvas.height*Math.sin(a), canvas.width*Math.cos(a+Math.PI), canvas.height*Math.sin(a+Math.PI));
+     var grdr = contextr.createLinearGradient(xr+radius,yr+radius,xr+3*radius,yr+radius);
      
         grdr.addColorStop(0, '#ed1d24');   
       
@@ -65,15 +65,16 @@
     ///aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa//////////////////
     xa=0,ya=0        
         contexta.beginPath();
-    contexta.arc(xa+2*radius, ya+2*radius, radius, 0, 2* Math.PI, false);
+    contexta.arc((xa+2*radius), ya+2*radius, radius, 0, 2* Math.PI, false);
     contexta.arc(xa+4*radius, ya+2*radius+1, radius, 1* Math.PI, .5* Math.PI, true);
     contexta.lineWidth =thick;
-    var grda = contexta.createLinearGradient(canvas.width*Math.cos(a), canvas.height*Math.sin(a), canvas.width*Math.cos(a+Math.PI), canvas.height*Math.sin(a+Math.PI));
-        grda.addColorStop(0, '#89c540');   
-        grda.addColorStop(1, '#00b04d');
+    var grda = contexta.createLinearGradient((xa+radius)*Math.cos(a/100*Math.PI),(ya+radius)*Math.sin(a/100*Math.PI),(xa+radius)*Math.cos(a/100*Math.PI),(ya+radius)*Math.sin(a/100*Math.PI));
+        grda.addColorStop(0, '#89c540');  
+        grda.addColorStop(Math.sin(a/10*Math.PI), '#00b04d');
         contexta.strokeStyle = grda;
         contexta.stroke();
       contexta.closePath();
+      canvas.width*Math.cos(a), canvas.height*Math.sin(a), canvas.width*Math.cos(a+Math.PI), canvas.height*Math.sin(a+Math.PI)
 
         ///a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2//////////////////
     xa2=0,ya2=0
@@ -81,7 +82,7 @@
     contexta2.arc(xa2+2*radius, ya2+2*radius, radius, 0, 2* Math.PI, false);
     contexta2.arc(xa2+4*radius, ya2+2*radius+1, radius, 1* Math.PI, .5* Math.PI, true);
     contexta2.lineWidth =thick;
-    var grda2 = contexta2.createLinearGradient(canvas.width*Math.cos(a), canvas.height*Math.sin(a), canvas.width*Math.cos(a+Math.PI), canvas.height*Math.sin(a+Math.PI));
+    var grda2 = contexta2.createLinearGradient(xa2+radius,ya2+radius,xa2+3*radius,ya2+radius);
         grda2.addColorStop(0, '#f89a1c');   
       
         grda2.addColorStop(1, '#ee2524');
