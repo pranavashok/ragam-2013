@@ -1,9 +1,20 @@
-#logo canvas { position:absolute; top:1630; left:-950; border:solid 0px black; }
-   #lettera {z-index:5;}
-   #lettera2 {z-index:5;}
-   #letterm {z-index:0;}
+#logo canvas {  left:20px;
+    	 top:49%;
+    	 position: absolute; }
+#logo canvas#letterr{}
+
+
+   #letterr {z-index:5;}
+   #lettera {z-index:10;}
+   #lettera {z-index:6;}
+   #lettera2 {z-index:11;}
+   #letterm {z-index:9;}
     #logo
     {
+    	  left:20px;
+    	 top:49%;
+    	 position: absolute;
+
     	transform: scale(0.6,0.6);
 -ms-transform: scale(0.6,0.6); /* IE 9 */
 -webkit-transform: scale(0.6,0.6); /* Safari and Chrome */
