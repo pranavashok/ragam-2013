@@ -1,3 +1,4 @@
+var subDir = 'magar';
 function setCssR(a){
 	vright = $(a).css("right");	
 	vtop = $(a).css("top");
@@ -25,14 +26,14 @@ function setCssL(a){
 		$(window).bind('load',function() {
 	        var State = History.getState(), // Note: We are using History.getState() instead of event.state
 	        	rootUrl = History.getRootUrl(),
-	        	relativeUrl = State.url.replace(rootUrl+'magar/', '');
-	        if(relativeUrl!="")
+	        	relativeUrl = State.url.replace(rootUrl+subDir, '');
+	        if(relativeUrl!="/")
 				History.pushState(null, null, relativeUrl);
 		});
 	    $(window).bind('statechange',function(){ // Note: We are using statechange instead of popstate
 	        var State = History.getState(), // Note: We are using History.getState() instead of event.state
 	        	rootUrl = History.getRootUrl(),
-	        	relativeUrl = State.url.replace(rootUrl+'magar/', '');
+	        	relativeUrl = State.url.replace(rootUrl+subDir+'/', '');
 	        	//History.log(State.data, State.title, State.url);
 	        if(relativeUrl=="" && $("#mainmenu-pane").attr("class")=="moveout") {
 	        	$("#mainmenu-pane").attr("class", "movein");
@@ -98,7 +99,7 @@ function setCssL(a){
 			/* Code to reset level one */
 			$("#followlinks").animate({opacity:'1'});
 			/* Code to reset level zero */
-			History.pushState(null, "Ragam 2013", "/magar/");
+			History.pushState(null, "Ragam 2013", "/"+subDir+"/");
 		});
 	});
 })(window);
