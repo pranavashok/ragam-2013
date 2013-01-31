@@ -1,4 +1,4 @@
-var subDir = 'magar';
+var subDir = 'magartest';
 function setCssR(a){
 	vright = $(a).css("right");	
 	vtop = $(a).css("top");
@@ -62,6 +62,19 @@ function setCssL(a){
 		});
 		$("#mainlinks li").click(function(){
 			History.pushState(null, $(this).attr("title") + " | Ragam 2013", $(this).attr("title"));
+		
+		$.ajax("rsublinks.php", {
+			dataType : "json",
+			data: {"cat":$(this).attr('title')},
+			type: "POST",
+			success: function (d) {
+				alert(d);
+				if(d[0]==1)
+				{
+				// load content to hidden div	
+				}
+			}
+			});
 		});
 		$("#arrow-up").click(function(){
 			$("#wrapper").attr("class", "support-up");
