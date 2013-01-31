@@ -12,6 +12,30 @@
 	<script type="text/javascript" src="js/jQueryRotate.2.2.js"></script>
 	<script type="text/javascript" src="js/jquery.history.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript">
+    $(document).ready(function () {
+    $('.active-links').click(function () {
+        //Conditional states allow the dropdown box appear and disappear 
+          if ($('#signin-dropdown').is(":visible")) {
+              $('#signin-dropdown').hide()
+	      $('#session').removeClass('active'); // When the dropdown is not visible removes the class "active"
+          } else {
+              $('#signin-dropdown').show()
+	      $('#session').addClass('active'); // When the dropdown is visible add class "active"
+          }
+	      return false;
+      });
+ //     Allow to hide the dropdown box if you click anywhere on the document.
+      $('#signin-dropdown').click(function(e) {
+      e.stopPropagation();
+      });
+      $(document).click(function() {
+          $('#signin-dropdown').hide();
+	      $('#session').removeClass('active');
+      });
+    });          
+	</script>
 </head>
 <body>
 <div id="wrapper">
@@ -63,6 +87,51 @@
 
 		</div>
 	</section>
+	<div id="top-stuff">
+	<div id="top-bar-out">
+    	<div id="container">
+    	<div id="topnav">
+        <div class="active-links">
+            <div id="session">
+            <a id="signin-link" href="#">
+            <em>Have an account?</em>
+            <strong>Sign in</strong>
+            </a>
+            </div>
+            	<div id="signin-dropdown">
+        	
+                <form method="post" class="signin" action="#">
+                <fieldset class="textbox">
+            	<label class="username">
+                <span>Username or email</span>
+                <input id="username" name="username" value="" type="text" autocomplete="on">
+                </label>
+                
+                <label class="password">
+                <span>Password</span>
+                <input id="password" name="password" value="" type="password">
+                </label>
+                </fieldset>
+                
+                <fieldset class="remb">
+                <label class="remember">
+                <input type="checkbox" value="1" name="remember_me" />
+                <span>Remember me</span>
+                </label>
+                <button class="submit button" type="button">Sign in</button>
+                </fieldset>
+                <p>
+                <a class="forgot" href="#">Forgot your password</a>
+                <br>
+                <a class="mobile" href="#">Register with Facebook.</a>
+                </p>
+                </form>
+         	</div>
+                </div>
+             </div>
+    	</div>
+    </div>
+</div>
 	
 </div>
 <aside class="pane" id="support-pane">
