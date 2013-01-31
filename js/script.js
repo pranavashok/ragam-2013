@@ -22,19 +22,29 @@ function setCssL(a){
 		var w = $(window).width();
 		var h = $(window).height();
 		// Bind to StateChange Event
+		$(window).bind('load',function() {
+	        var State = History.getState(), // Note: We are using History.getState() instead of event.state
+	        	rootUrl = History.getRootUrl(),
+	        	relativeUrl = State.url.replace(rootUrl+'magar/', '');
+	        if(relativeUrl!="")
+				History.pushState(null, null, relativeUrl);
+		});
 	    $(window).bind('statechange',function(){ // Note: We are using statechange instead of popstate
 	        var State = History.getState(), // Note: We are using History.getState() instead of event.state
 	        	rootUrl = History.getRootUrl(),
 	        	relativeUrl = State.url.replace(rootUrl+'magar/', '');
 	        	//History.log(State.data, State.title, State.url);
-	        if(relativeUrl=="" && $("#mainmenu-pane").attr("class")=="moveout")
-	        {
+	        if(relativeUrl=="" && $("#mainmenu-pane").attr("class")=="moveout") {
 	        	$("#mainmenu-pane").attr("class", "movein");
-				$("#font-pane").attr("class", "movein");	        	
-	        }else
-	        {
-	        	     loc=relativeUrl.split("/");
-	        	     heading.innerHTML = loc[0];
+				$("#font-pane").attr("class", "movein");	     
+				$("#content-pane").attr("class", "rotatein");
+				$("#submenu-pane").attr("class", "rotatein");   	
+	        } 
+	        else {
+	        	$("#mainmenu-pane").attr("class", "moveout");
+				$("#font-pane").attr("class", "moveout");
+	        	loc=relativeUrl.split("/");
+	        	heading.innerHTML = loc[0];
 	        }   
 	    });
 
@@ -46,7 +56,7 @@ function setCssL(a){
 		});
 		$("#mainlinks li").click(function(){
 			History.pushState(null, $(this).attr("title") + " | Ragam 2013", $(this).attr("title"));
-			$.ajax("rsublinks.php", {
+			/*$.ajax("rsublinks.php", {
 			dataType : "json",
 			data: {"cat":$(this).attr('title')},
 			type: "POST",
@@ -56,7 +66,7 @@ function setCssL(a){
 				// load content to hidden div	
 				}
 			}
-			});
+			});*/
 			setCssL('#font-pane');
 			setCssR('#mainmenu-pane');
 			$("#font-pane").attr("class", "moveout");
@@ -84,13 +94,11 @@ function setCssL(a){
 
 		$("#home-button").click(function(){
 			/* Code to reset level zero */
-			$("#font-pane").attr("class", "movein");
-			$("#mainmenu-pane").attr("class", "movein");
-			$("#content-pane").attr("class", "rotatein");
-			$("#submenu-pane").attr("class", "rotatein");
+			//Handled by statechange bind
 			/* Code to reset level one */
 			$("#followlinks").animate({opacity:'1'});
 			/* Code to reset level zero */
+			History.pushState(null, "Ragam 2013", "/magar/");
 		});
 	});
 })(window);
