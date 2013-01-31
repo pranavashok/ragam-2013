@@ -21,13 +21,13 @@ function setCssL(a){
 		var w = $(window).width();
 		var h = $(window).height();
 		// Bind to StateChange Event
-		/*$(window).bind('load',function() {
-	        var State = History.getState(), // Note: We are using History.getState() instead of event.state
+		$(window).bind('load',function() {
+	        	var State = History.getState(), // Note: We are using History.getState() instead of event.state
 	        	rootUrl = History.getRootUrl(),
 	        	relativeUrl = State.url.replace(rootUrl+subDir, '');
-	        if(relativeUrl!="/")
-				History.pushState(null, null, relativeUrl);
-		});*/
+		        if(relativeUrl!="/")
+				History.pushState(null, null, subdir+'/'+relativeUrl);
+		});
 		$("#mainmenu-pane").attr("class","loading");
 		$("#font-pane").attr("class","loading");
 		History.pushState(null, "Ragam 2013", "");
