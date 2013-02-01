@@ -1,4 +1,4 @@
-var subDir = 'magartest';
+var subDir = 'magar';
 function setCssR(a){
 	vright = $(a).css("right");	
 	vtop = $(a).css("top");
@@ -58,7 +58,7 @@ function setCssL(a){
 
 		$.ajax({
 			dataType: "json",
-			url:"http://localhost/magartest/manager/rsublinks.php",
+			url:"manager/rsublinks.php",
 			data: {"cat":$(this).attr('title')},
 			type: "POST",
 			 //beforeSend: function () {
@@ -72,13 +72,13 @@ function setCssL(a){
 				 slinks=slinks+"<li>"+d[i].name+"</li>";
 				
 				}	
-				$("#sublinks").html(slinks);
+				$("#subsubmenu").html(slinks);
 				// load content to hidden div	
 				
 			}
 
 			});
-History.pushState(null, $(this).attr("title") + " | Ragam 2013", $(this).attr("title"));
+			History.pushState(null, $(this).attr("title") + " | Ragam 2013", $(this).attr("title"));
 			
 		});
 		$("#arrow-up").click(function(){
