@@ -58,7 +58,7 @@ function setCssL(a){
 
 		$.ajax({
 			dataType: "json",
-			url:"http://localhost/magartest/php1/rsublinks.php",
+			url:"http://localhost/magartest/manager/rsublinks.php",
 			data: {"cat":$(this).attr('title')},
 			type: "POST",
 			 //beforeSend: function () {

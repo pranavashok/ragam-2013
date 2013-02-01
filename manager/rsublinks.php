@@ -1,6 +1,6 @@
 <?php
 require_once("initdb.php");
-$par_cat=$_GET['cat'];
+$par_cat=$_POST['cat'];
 if($par_cat == "Events")
 	$par_cat_id=1;
 else if($par_cat == "Proshows")
