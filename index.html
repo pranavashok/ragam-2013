@@ -4,6 +4,7 @@
 	<link href="css/style.css" rel="stylesheet"/>
 	<link href="css/logo.css" rel="stylesheet"/>
 	<link href="css/animations.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="css/nanoscroller.css"> 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="js/prefixfree.jquery.js"></script>
@@ -14,6 +15,7 @@
 	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script type="text/javascript" src="js/signin1.js"></script>
+	<script type="text/javascript" src="js/jquery.nanoscroller.min.js"></script>
 </head>
 <body>
 	<div class="pane" id="login-pane">
@@ -77,11 +79,11 @@
 	<section class="pane" id="mainmenu-pane">
 			<nav id="mainlinks">
 				<ul>
-					<a href="Events"><li id="mainlink1" title="Events">events</li></a>
-					<a href="Proshows"><li id="mainlink2" title="Proshows">proshows</li></a>
-					<a href="Workshops"><li id="mainlink3" title="Workshops">workshops</li></a>
-					<a href="Showcase"><li id="mainlink4" title="Showcase">showcase</li></a>
-					<a href="Informals"><li id="mainlink5" title="Informals">informals</li></a>
+					<a href="?Events"><li id="mainlink1" title="Events">events</li></a>
+					<a href="?Proshows"><li id="mainlink2" title="Proshows">proshows</li></a>
+					<a href="?Workshops"><li id="mainlink3" title="Workshops">workshops</li></a>
+					<a href="?Showcase"><li id="mainlink4" title="Showcase">showcase</li></a>
+					<a href="?Informals"><li id="mainlink5" title="Informals">informals</li></a>
 				</ul>
 			</nav>
 	</section>
@@ -94,6 +96,12 @@
 			</div>
 			<div id="content-container">
 				<div id="content-wrapper">
+					<div id="content-heading">
+					</div>
+					<div id="content-content-wrapper" class="nano">
+						<div id="content-content" class="content">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

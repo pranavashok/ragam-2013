@@ -71,6 +71,7 @@ html {
 	float: right;
 }
 #content-wrapper {
+	font-family: HelveticaThin;
 	position: absolute;
 	width: 60%;
 	height: 27%;
@@ -78,6 +79,40 @@ html {
 	background: #2a32a5;
 	right: 5%;
 	top: 20%;
+}
+#content-heading {
+	position:relative;
+	width:100%;
+	height:5%;
+	display:block;
+	background: #4a52b5;
+	top:0;
+	left:0;
+	padding:10px;
+	font-size:30px;
+	text-transform:lower;
+	color: #fff;
+}
+.nano { 
+	background: #4a42b5; 
+	position:relative; 
+	width:100%;
+	height:90%;
+	left:0;
+	display:block;
+}
+.nano .content { padding: 10px; }
+.nano .pane   { background: #4a52b5; }
+.nano .slider { background: #111; }
+#content-content {
+	position:relative;
+	width:100%;
+	height:100%;
+	display:block;
+	background:#4a52b5;
+	color: #fff;
+	left:0;
+	padding:15px;
 }
 #subsubmenu {
 	font-family: HelveticaThin;
@@ -94,20 +129,26 @@ html {
 	line-height: 35px;
 	position: absolute;
 	top: 22%;
-	right: 2%;
+	right: 0%;
 	list-style: none;
 	text-align: right;
 }
-#subsubmenu-links a {
+#subsubmenu-links a, #subsubmenu-links a.notselected {
 	text-decoration: none;
-	color: #fff;
+	color:#fff;
+	display:block;
+	width:250px;
+	padding-right:20px;
 }
-#subsubmenu-links a:hover {
-	color:#000;
+#subsubmenu-links a:hover, #subsubmenu-links a.selected {
+	color:#4a52b5;
+	background-color:#fff;
 }
+/*
 #subsubmenu-links a:active {
-	color:#000;
-}
+	color:#4a52b5;
+	background-color:#fff;
+}*/
 #submenu-half {
 	font-family: HelveticaThin;
 	text-transform: lowercase;
@@ -121,22 +162,32 @@ html {
 	font-size: 40px;
 	position:absolute;
 	top:22%;
-	left:1%;
+	left:0%;
 	list-style:none;
 }
 #submenu-links li {
-	width:200px;
+	width:250px;
+	padding-left:20px;
 	display:block;
 }
 #submenu-links a {
 	text-decoration: none;
-	color: #4a52b5;;
+	color: #4a52b5;
+	display:block;
+	width:250px;
+	background-color: #f7f7f7;
 }
-#submenu-links li:hover {
+/*#submenu-links li:hover {
 	color:#fff;
-}
+	background-color:#4a52b5;
+}*/
 #submenu-links a.selected {
 	color:#fff;
+	background-color:#4a52b5;
+}
+#submen-links a.notselected {
+	color: #4a52b5;
+	background-color: #f7f7f7;
 }
 #painting {
 	transform: rotate(25deg);
