@@ -84,7 +84,18 @@ html {
 	height: 100%;
 	width: 50%;
 }
-
+#submenu-half #submenu-links {
+	position:absolute;
+	top:25%;
+	left:1%;
+	list-style:none;
+}
+#submenu-half #submenu-links li {
+	font-size:14px;
+	width:200px;
+	height:25px;
+	display:block;
+}
 /* Follow Twitter, Facebook, Youtube  */
 #followlinks{
 	z-index:15;

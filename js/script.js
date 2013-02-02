@@ -44,7 +44,7 @@ function setCssL(a){
 				$("#font-pane").attr("class", "moveout");
 				$("#followlinks").animate({opacity:'0'});
 		        	loc=relativeUrl.split("/");
-	        		heading.innerHTML = loc[0];
+	        		$("#heading").text(loc[0]);
 		        }   	
 		});
 		$(window).bind('load',function() {
@@ -64,15 +64,14 @@ function setCssL(a){
 			 //beforeSend: function () {
 			// 	alert("sfd");},
 
-			success: function (d) {
-				
+			success: function (d) {	
  			var len=d.length,i=0,slinks="";
 				for(;i<len;i++)
 				{
 				 slinks=slinks+"<li>"+d[i].name+"</li>";
 				
 				}	
-				$("#subsubmenu").html(slinks);
+				$("#submenu-links").html(slinks);
 				// load content to hidden div	
 				
 			}

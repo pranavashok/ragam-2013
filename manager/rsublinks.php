@@ -1,7 +1,7 @@
 <?php
 require_once("initdb.php");
 
-$par_cat=$_GET['cat'];
+$par_cat=$_POST['cat'];
 if($par_cat == "Events")
 	$par_cat_id=1;
 else if($par_cat == "Proshows")
@@ -22,5 +22,5 @@ while($cat=$query1->fetch_assoc())
 
 }
 
-	print json_encode($links);
+	echo json_encode($links);
 ?>
