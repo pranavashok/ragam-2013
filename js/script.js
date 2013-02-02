@@ -1,4 +1,5 @@
 var subDir = 'magar';
+var title = '';
 var menu;
 
 function setCssR(a) {
@@ -58,8 +59,26 @@ function setMenu(j) {
 				$("#followlinks").animate({
 					opacity: '0'
 				});
-				loc = relativeUrl.split("/");
-				$("#heading").text(loc[0]);
+				if(relativeUrl.search("/") == -1) { //If it's a first level page
+					title = relativeUrl;
+					$.ajax({
+						dataType: "json",
+						url: "manager/rsublinks.php",
+						data: {
+							"cat": title
+						},
+						type: "POST",
+						success: function (d) {
+							setMenu(d);
+							var catlinks = "";
+							d.forEach(function (ele) {
+								catlinks = catlinks + "<a href='"+title+"/"+ele.name.replace(" ","-")+"'><li>" + ele.name + "</li></a>";
+							});
+							$("#submenu-links").html(catlinks);
+							// load content to hidden div					
+						}
+					});
+				}
 			}
 		});
 		$(window).bind('load', function () {
@@ -69,13 +88,12 @@ function setMenu(j) {
 			e.preventDefault();
 		});
 		$("#mainlinks li").click(function () {
-
-
+			title = $(this).attr('title');
 			$.ajax({
 				dataType: "json",
 				url: "manager/rsublinks.php",
 				data: {
-					"cat": $(this).attr('title')
+					"cat": title
 				},
 				type: "POST",
 				//beforeSend: function () {
@@ -83,33 +101,44 @@ function setMenu(j) {
 
 				success: function (d) {
 					setMenu(d);
-					var slinks = "";
+					var catlinks = "";
 					d.forEach(function (ele) {
-						slinks = slinks + "<li>" + ele.name + "</li>";
+						catlinks = catlinks + "<a href='"+title+"/"+ele.name.replace(" ","-")+"'><li>" + ele.name + "</li></a>";
 					});
-					$("#submenu-links").html(slinks);
+					$("#submenu-links").html(catlinks);
 					// load content to hidden div					
 				}
 			});
-			History.pushState(null, $(this).attr("title") + " | Ragam 2013", $(this).attr("title"));
-
+			History.pushState(null, title + " | Ragam 2013", title);
 		});
-		$("#submenu-links li").live({
+		$("#submenu-links a").live({
 			mouseenter: function () {
-				var sslinks = "";
+				var sublinks = "";
 				for (ele in menu) {
 					if (menu[ele].name == $(this).text()) {
-						menu[ele]['sublinks'].forEach(function (s) {
-							sslinks = sslinks + "<li>" + s.name + "</li>";
-						});
+						for(s in menu[ele]['sublinks']) {
+							sublinks = sublinks + "<a href='"+title+"/"+menu[ele].name.replace(" ","-")+"/"+menu[ele]['sublinks'][s].name.replace(" ","-")+"'><li>" + menu[ele]['sublinks'][s].name + "</li></a>";
+						}
 						break;
 					}
 				}
-				$("#subsubmenu-links").html(sslinks);
+				$("#subsubmenu-links").html(sublinks);
+			},
+			mouseleave: function() {
+				$("#submenu-links a").each(function() {
+					$(this).attr("class", "notselected");
+				});
+				$(this).attr("class", "selected");
+			},
+			click: function(e) {
+				e.preventDefault();
 			}
 		});
-		$("#subsubmenu-links li").live('click', function () {
+		$("#subsubmenu-links a").live('click', function (e) {
+			e.preventDefault();
+			$("#painting").fadeOut();
 			$("#inner-pane").attr("class", "moveright");
+			$(this).attr("class", "selected");
 		});
 		$("#arrow-up").click(function () {
 			$("#wrapper").attr("class", "support-up");
@@ -127,7 +156,9 @@ function setMenu(j) {
 			$("#content-pane").attr("class", "rotateout");
 			$("#submenu-pane").attr("class", "rotateout");
 		});
-
+		$("#subsubmenu-links li a").click(function () {
+			$("#inner-pane").attr("class", "moveright");
+		});
 		$("#home-button").click(function () {
 			/* Code to reset level zero */
 			//Handled by statechange bind

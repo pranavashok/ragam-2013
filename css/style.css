@@ -47,6 +47,7 @@ html {
 	transform-origin:100% 50%;
 }
 #inner-pane {
+	background: #4a52b5;
 	position: absolute;
 	width: 66.67%;
 	height: 100%;
@@ -61,20 +62,29 @@ html {
 	width: 50%;
 	float:left;
 }
-#content-half #content {
+#content-container {
 	width: 80%;
 	height: 100%;
-	background: red;
+	background: #4a52b5;
 	display: block;
 	position: relative;
 	float: right;
+}
+#content-wrapper {
+	position: absolute;
+	width: 60%;
+	height: 27%;
+	display: block;
+	background: #2a32a5;
+	right: 5%;
+	top: 20%;
 }
 #subsubmenu {
 	font-family: HelveticaThin;
 	text-transform: lowercase;
 	width: 20%;
 	height: 100%;
-	background: blue;
+	background: #4a52b5;
 	display: block;
 	position: relative;
 	float: right;
@@ -88,12 +98,22 @@ html {
 	list-style: none;
 	text-align: right;
 }
+#subsubmenu-links a {
+	text-decoration: none;
+	color: #fff;
+}
+#subsubmenu-links a:hover {
+	color:#000;
+}
+#subsubmenu-links a:active {
+	color:#000;
+}
 #submenu-half {
 	font-family: HelveticaThin;
 	text-transform: lowercase;
 	position: relative;
 	float:right;
-	background: yellow;
+	background: #f7f7f7;
 	height: 100%;
 	width: 50%;
 }
@@ -107,6 +127,25 @@ html {
 #submenu-links li {
 	width:200px;
 	display:block;
+}
+#submenu-links a {
+	text-decoration: none;
+	color: #4a52b5;;
+}
+#submenu-links li:hover {
+	color:#fff;
+}
+#submenu-links a.selected {
+	color:#fff;
+}
+#painting {
+	transform: rotate(25deg);
+	width: 600px;
+	height: 600px;
+	top: 30%;
+	left: 20%;
+	position: absolute;
+	background: url('/magar/img/fs.png') no-repeat;
 }
 /* Follow Twitter, Facebook, Youtube  */
 #followlinks{

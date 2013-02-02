@@ -122,6 +122,10 @@
 	}
 	30% {
 		left: 10%;
+		transfort:rotate(-25deg);
+	}
+	60% {
+		left: 10%;
 		transform:rotate(0deg);
 	}
 	100% {
