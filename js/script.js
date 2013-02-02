@@ -44,7 +44,7 @@ function setMenu(j) {
 				} else if ($("#mainmenu-pane").attr("class") == "pane") {
 					$("#mainmenu-pane").attr("class", "loading");
 					$("#font-pane").attr("class", "loading");
-					History.pushState(null,"Ragam 2013","");
+					History.pushState(null,"Ragam 2013","#");
 				}
 			} else {
 				setCssL('#font-pane');
@@ -56,6 +56,7 @@ function setMenu(j) {
 				});
 				if(relativeUrl.search("/") == -1) { //If it's a first level page
 					title = relativeUrl;
+					alert('still first');
 					$.ajax({
 						dataType: "json",
 						url: "manager/rsublinks.php",
@@ -67,11 +68,26 @@ function setMenu(j) {
 							setMenu(d);
 							var catlinks = "";
 							d.forEach(function (ele) {
-								catlinks = catlinks + "<a href='"+title+"/"+ele.name.replace(" ","-")+"'><li>" + ele.name + "</li></a>";
+								catlinks = catlinks + "<a href='#"+title+"/"+ele.name.replace(" ","-")+"'><li>" + ele.name + "</li></a>";
 							});
 							$("#submenu-links").html(catlinks);
 							// load content to hidden div					
 						}
+					});
+				}else { //Its a second level url
+					eve = relativeUrl.split("/")[1];
+					alert(eve);
+					$.ajax({
+						dataType: "json",
+						url: "manager/content.php",
+						data: { 
+							"event" : title
+						},
+						type: "POST",
+						success: function (d) {
+
+						}
+
 					});
 				}
 			}
@@ -113,14 +129,12 @@ function setMenu(j) {
 				for (ele in menu) {
 					if (menu[ele].name == $(this).text()) {
 						for(s in menu[ele]['sublinks']) {
-							sublinks = sublinks + "<a href='"+title+"/"+menu[ele].name.replace(" ","-")+"/"+menu[ele]['sublinks'][s].name.replace(" ","-")+"'><li>" + menu[ele]['sublinks'][s].name + "</li></a>";
+							sublinks = sublinks + "<li><a href='"+title+"/"+menu[ele].name.replace(" ","-")+"/"+menu[ele]['sublinks'][s].name.replace(" ","-")+"'>" + menu[ele]['sublinks'][s].name + "</a></li>";
 						}
 						break;
 					}
 				}
 				$("#subsubmenu-links").html(sublinks);
-			},
-			mouseleave: function() {
 				$("#submenu-links a").each(function() {
 					$(this).attr("class", "notselected");
 				});
@@ -134,7 +148,11 @@ function setMenu(j) {
 			e.preventDefault();
 			$("#painting").fadeOut();
 			$("#inner-pane").attr("class", "moveright");
+			$("#subsubmenu-links a").each(function() {
+				$(this).attr("class","notselected");
+			});
 			$(this).attr("class", "selected");
+			History.pushState(null, $(this).text() + " | Ragam 2013", $(this).attr("href"));
 		});
 		$("#arrow-up").click(function () {
 			$("#wrapper").attr("class", "support-up");
@@ -167,8 +185,8 @@ function setMenu(j) {
 				opacity: '1'
 			});
 			/* Code to reset level zero */
-
-//			$(window).trigger('statechange');
+			History.pushState(null,"Ragam 2013","/"+subDir+"/");
+			$(window).trigger('statechange');
 		});
 	});
 })(window);
