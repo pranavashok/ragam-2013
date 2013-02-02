@@ -2,6 +2,7 @@
 <head>
 	<link href="css/reset.css" rel="stylesheet"/>
 	<link href="css/style.css" rel="stylesheet"/>
+	<link href="css/logo.css" rel="stylesheet"/>
 	<link href="css/animations.css" rel="stylesheet"/>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/prefixfree.min.js"></script>
@@ -11,12 +12,67 @@
 	<script type="text/javascript" src="js/jQueryRotate.2.2.js"></script>
 	<script type="text/javascript" src="js/jquery.history.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/signin1.js"></script>
 </head>
 <body>
+	<div class="pane" id="login-pane">
+		 <button id="logcancel" >Cancel</button> <!--<input type="button" value="Cancel" id="logcancel" /> -->  
+	</div>
+<div id="top-stuff">  
+    	<div id="topnav">
+        <div class="active-links">
+            <div id="session">
+            <a id="signin-link" href="#">
+            <strong>Sign in</strong>
+            </a>
+            </div>
+            	<div id="signin-dropdown">
+        	
+                <form method="post" class="signin" action="#">
+                <fieldset class="textbox">
+            	<label class="username">
+                <span>Username or email</span>
+                <input id="username" name="username" value="" type="text" autocomplete="on">
+                </label>
+                
+                <label class="password">
+                <span>Password</span>
+                <input id="password" name="password" value="" type="password">
+                </label>
+                </fieldset>
+                
+                <fieldset class="remb">
+                <label class="remember">
+                <input type="checkbox" value="1" name="remember_me" /> 
+                <span>Remember me</span>
+                </label>
+                <button class="submit button" type="button">Sign in</button>
+                </fieldset>
+                <p>
+                <a class="forgot" href="#">Forgot your password</a>
+                <br>
+                <a class="mobile" href="#">Register with Facebook.</a>
+                </p>
+                </form>
+         	</div>
+                </div>
+             </div>
+    	</div>
+    </div>
+</div>
 <div id="wrapper">
-	<section class="pane" id="font-pane">
-		<img src="img/logo.jpg">
-	</section>
+ <section class="pane" id="font-pane">
+  <div id="logo">
+   <canvas id="letterr"  width="1050" height="500" ></canvas>
+   <canvas id="lettera"  width="1050" height="500" ></canvas>
+   <canvas id="letterg"  width="1050" height="500" ></canvas>
+   <canvas id="lettera2"  width="1050" height="500" ></canvas>
+   <canvas id="letterm"  width="1050" height="500" ></canvas>
+   <script type="text/javascript" src="js/logo.js"></script>
+
+  </div>
+ </section>
 
 	<section class="pane" id="mainmenu-pane">
 			<nav id="mainlinks">

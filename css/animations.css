@@ -163,6 +163,12 @@
 	animation-timing-function: ease;
 	animation-fill-mode:forwards;
 }
+#wrapper.support-up {
+	animation-name: wrapper-support-up;
+	animation-duration: 1.5s;
+	animation-timing-function: ease;
+	animation-fill-mode:forwards;
+}
 @keyframes wrapper-support-up {
 	0% {
 		top:-100%;
@@ -171,9 +177,8 @@
 		top:-130%;
 	}
 }
-
-#wrapper.support-up {
-	animation-name: wrapper-support-up;
+#wrapper.support-down {
+	animation-name: wrapper-support-down;
 	animation-duration: 1.5s;
 	animation-timing-function: ease;
 	animation-fill-mode:forwards;
@@ -186,10 +191,68 @@
 		top:-100%;
 	}
 }
-
-#wrapper.support-down {
-	animation-name: wrapper-support-down;
+#wrapper.login-down {
+	animation-name: wrapper-login-down;
 	animation-duration: 1.5s;
 	animation-timing-function: ease;
 	animation-fill-mode:forwards;
 }
+@keyframes wrapper-login-down {
+	0% {
+		top:-100%;
+		transform:rotate(0deg);
+	}
+	100% {
+		top:-130%;
+	}
+}
+
+#wrapper.login-up {
+	animation-name: wrapper-login-up;
+	animation-duration: 1.5s;
+	animation-timing-function: ease;
+	animation-fill-mode:forwards;
+}
+
+@keyframes wrapper-login-up {
+	0% {
+		top:-130%;
+	}
+	100% {
+		top:-100%;
+	}
+}
+
+#login-pane.move-down {
+	animation-name: movedown;
+	animation-duration: 1.5s;
+	animation-timing-function: ease;
+	animation-fill-mode:forwards;
+}
+@keyframes movedown {
+	0% {
+		bottom:101%;
+		transform:rotate(0deg);
+	}
+	100% {
+		bottom:60%;
+		transform:rotate(0deg);
+	}
+}
+#login-pane.move-up {
+	animation-name: moveup;
+	animation-duration: 1.5s;
+	animation-timing-function: ease;
+	animation-fill-mode:forwards;
+}
+@keyframes moveup {
+	0% {
+		bottom:60%;
+		transform:rotate(0deg);
+	}
+	100% {
+		bottom:101%;
+		transform:rotate(0deg);
+	}
+}
+

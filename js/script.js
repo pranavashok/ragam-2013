@@ -23,22 +23,17 @@ function setMenu(j) {
 	menu = j;
 }
 (function (window, undefined) {
-	// Prepare
-	var History = window.History; // Note: We are using a capital H instead of a lower h
-	if (!History.enabled) {
-		// History.js is disabled for this browser.
-		// This is because we can optionally choose to support HTML4 browsers or not.
-		return false;
-	}
+	var History = window.History; 
+	if (!History.enabled) {return false;} 
 	$(function () {
 		var w = $(window).width();
 		var h = $(window).height();
 
 		$(window).bind('statechange', function () { // Note: We are using statechange instead of popstate
 			var State = History.getState(), // Note: We are using History.getState() instead of event.state
-				rootUrl = History.getRootUrl(),
-				relativeUrl = State.url.replace(rootUrl + subDir + '/', '');
-			//History.log(State.data, State.title, State.url);
+			rootUrl = History.getRootUrl(),
+			relativeUrl = State.url.replace(rootUrl + subDir + '/', '');
+			//History.log(State.data, State.title, Stateurl);
 			if (relativeUrl == "") {
 				if ($("#mainmenu-pane").attr("class") == "moveout") {
 					$("#mainmenu-pane").attr("class", "movein");
@@ -48,7 +43,7 @@ function setMenu(j) {
 				} else if ($("#mainmenu-pane").attr("class") == "pane") {
 					$("#mainmenu-pane").attr("class", "loading");
 					$("#font-pane").attr("class", "loading");
-					History.pushState(null, "Ragam 2013", "");
+					History.pushState(null,"Ragam 2013","");
 				}
 			} else {
 				setCssL('#font-pane');
@@ -92,7 +87,7 @@ function setMenu(j) {
 				}
 			});
 			History.pushState(null, $(this).attr("title") + " | Ragam 2013", $(this).attr("title"));
-
+			$(window).trigger('statechange');
 		});
 		$("#submenu-links li").live({
 			mouseenter: function () {
@@ -115,6 +110,10 @@ function setMenu(j) {
 			$("#wrapper").attr("class", "support-up");
 			$("#support-pane").attr("class", "support-up");
 		});
+		$("#logcancel").click(function(e) {
+	    		$("#login-pane").attr("class", "move-up");
+	    		$("#wrapper").attr("class", "login-up");
+	   	});
 		$(document).mouseup(function (e) {
 			var container = $("#support-pane");
 			if (container.has(e.target).length === 0 && $("#wrapper").attr("class") == "support-up") {
@@ -136,7 +135,8 @@ function setMenu(j) {
 				opacity: '1'
 			});
 			/* Code to reset level zero */
-			History.pushState(null, "Ragam 2013", "/" + subDir + "/");
+
+//			$(window).trigger('statechange');
 		});
 	});
 })(window);
