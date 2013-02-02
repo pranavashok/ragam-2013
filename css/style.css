@@ -87,7 +87,7 @@ html {
 	opacity:0.2;
 	cursor:pointer;
 	position: absolute;
-	left:1250px;
+	left:10px;
 	top:5px;
 	background: white url('../img/search.png') no-repeat 0px 0px;
 	border: 1px solid #999;
