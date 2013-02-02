@@ -125,13 +125,13 @@
 		transform:rotate(0deg);
 	}
 	100% {
-		left: 40%;
+		left: 25%;
 		transform:rotate(0deg);
 	}
 }
 #inner-pane.moveright {
 	animation-name: inner-pane-moveright;
-	animation-duration: 1.5s;
+	animation-duration: 2s;
 	animation-timing-function: ease;
 	animation-fill-mode:forwards;
 }

@@ -62,14 +62,16 @@ html {
 	float:left;
 }
 #content-half #content {
-	width: 40%;
+	width: 80%;
 	height: 100%;
 	background: red;
 	display: block;
 	position: relative;
 	float: right;
 }
-#content-half #subsubmenu {
+#subsubmenu {
+	font-family: HelveticaThin;
+	text-transform: lowercase;
 	width: 20%;
 	height: 100%;
 	background: blue;
@@ -77,23 +79,33 @@ html {
 	position: relative;
 	float: right;
 }
+#subsubmenu-links {
+	font-size: 30px;
+	line-height: 35px;
+	position: absolute;
+	top: 22%;
+	right: 2%;
+	list-style: none;
+	text-align: right;
+}
 #submenu-half {
+	font-family: HelveticaThin;
+	text-transform: lowercase;
 	position: relative;
 	float:right;
 	background: yellow;
 	height: 100%;
 	width: 50%;
 }
-#submenu-half #submenu-links {
+#submenu-links {
+	font-size: 40px;
 	position:absolute;
-	top:25%;
+	top:22%;
 	left:1%;
 	list-style:none;
 }
-#submenu-half #submenu-links li {
-	font-size:14px;
+#submenu-links li {
 	width:200px;
-	height:25px;
 	display:block;
 }
 /* Follow Twitter, Facebook, Youtube  */

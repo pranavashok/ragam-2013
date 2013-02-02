@@ -1,4 +1,5 @@
 var subDir = 'magar';
+var menu;
 function setCssR(a){
 	vright = $(a).css("right");	
 	vtop = $(a).css("top");
@@ -8,6 +9,9 @@ function setCssL(a){
 	vleft = $(a).css("left");
 	vtop = $(a).css("top");
 	$(a).css({left: vleft, top: vtop});
+}
+function setMenu(j) {
+	menu = j;
 }
 (function(window,undefined){
     	// Prepare
@@ -65,20 +69,33 @@ function setCssL(a){
 			// 	alert("sfd");},
 
 			success: function (d) {	
- 			var len=d.length,i=0,slinks="";
-				for(;i<len;i++)
-				{
-				 slinks=slinks+"<li>"+d[i].name+"</li>";
-				
-				}	
-				$("#submenu-links").html(slinks);
-				// load content to hidden div	
-				
-			}
-
+					setMenu(d);
+					var slinks = "";
+					d.forEach(function(ele) {
+						slinks = slinks + "<li>" + ele.name + "</li>";	
+					});
+					$("#submenu-links").html(slinks);
+					// load content to hidden div					
+				}
 			});
 			History.pushState(null, $(this).attr("title") + " | Ragam 2013", $(this).attr("title"));
 			
+		});
+		$("#submenu-links li").live({mouseenter: function(){
+				var sslinks="";
+				for(ele in menu) {
+					if(menu[ele].name == $(this).text()) {
+						menu[ele]['sublinks'].forEach(function(s) {
+							sslinks = sslinks + "<li>" + s.name + "</li>";
+						});
+						break;
+					}
+				}
+				$("#subsubmenu-links").html(sslinks);
+			}
+		});
+		$("#subsubmenu-links li").live('click', function(){
+			$("#inner-pane").attr("class", "moveright");
 		});
 		$("#arrow-up").click(function(){
 			$("#wrapper").attr("class", "support-up");
