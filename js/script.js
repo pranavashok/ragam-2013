@@ -67,7 +67,7 @@ function setMenu(j) {
 							setMenu(d);
 							var catlinks = "";
 							d.forEach(function (ele) {
-								catlinks = catlinks + "<a href='"+title+"/"+ele.name.replace(" ","-")+"'><li>" + ele.name + "</li></a>";
+								catlinks = catlinks + "<a href='/"+subDir+"/"+title+"/"+ele.name.replace(" ","-")+"'><li>" + ele.name + "</li></a>";
 							});
 							$("#submenu-links").html(catlinks);
 							// load content to hidden div					
@@ -94,7 +94,6 @@ function setMenu(j) {
 		});
 		$(window).bind('load', function () {
 			History.pushState({state:1},"Ragam 2013","");
-//			$(window).trigger('statechange');
 		});
 		$("#mainlinks a").click(function (e) {
 			e.preventDefault();
@@ -102,7 +101,6 @@ function setMenu(j) {
 		$("#mainlinks li").click(function () {
 			title = $(this).attr('title');
 			History.pushState(null, title + " | Ragam 2013",$(this).parent("a").attr("href"));
-//			$(window).trigger('statechange');
 		});
 		$("#submenu-links a").live({
 			mouseenter: function () {
@@ -110,7 +108,7 @@ function setMenu(j) {
 				for (ele in menu) {
 					if (menu[ele].name == $(this).text()) {
 						for(s in menu[ele]['sublinks']) {
-							sublinks = sublinks + "<li><a href='"+title+"/"+menu[ele].name.replace(" ","-")+"/"+menu[ele]['sublinks'][s].name.replace(" ","-")+"'>" + menu[ele]['sublinks'][s].name + "</a></li>";
+							sublinks = sublinks + "<li><a href='/"+subDir+"/"+title+"/"+menu[ele].name.replace(" ","-")+"/"+menu[ele]['sublinks'][s].name.replace(" ","-")+"'>" + menu[ele]['sublinks'][s].name + "</a></li>";
 						}
 						break;
 					}
@@ -167,7 +165,6 @@ function setMenu(j) {
 			});
 			/* Code to reset level zero */
 			History.pushState(null,"Ragam 2013","/"+subDir+"/");
-			$(window).trigger('statechange');
 		});
 	});
 })(window);
