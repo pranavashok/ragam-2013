@@ -54,8 +54,8 @@ function setMenu(j) {
 				$("#followlinks").animate({
 					opacity: '0'
 				});
-				if(relativeUrl.search("&") == -1) { //If it's a first level page
-					title = relativeUrl.split('?')[1];
+				if(relativeUrl.search("/") == -1) { //If it's a first level page
+					title = relativeUrl;
 					$.ajax({
 						dataType: "json",
 						url: "manager/rsublinks.php",
@@ -67,17 +67,17 @@ function setMenu(j) {
 							setMenu(d);
 							var catlinks = "";
 							d.forEach(function (ele) {
-								catlinks = catlinks + "<a href='?"+title+"&"+ele.name.replace(" ","-")+"'><li>" + ele.name + "</li></a>";
+								catlinks = catlinks + "<a href='"+title+"/"+ele.name.replace(" ","-")+"'><li>" + ele.name + "</li></a>";
 							});
 							$("#submenu-links").html(catlinks);
 							// load content to hidden div					
 						}
 					});
 				}else { //Its a second level url
-					eve = relativeUrl.split("?")[1].split("&")[2];
+					eve = relativeUrl.split("/")[2];
 					$.ajax({
 						dataType: "json",
-						url: "manager/content.php",
+						url: "/"+subDir+"/manager/content.php",
 						data: { 
 							"event" : eve
 						},
@@ -101,26 +101,6 @@ function setMenu(j) {
 		});
 		$("#mainlinks li").click(function () {
 			title = $(this).attr('title');
-/*			$.ajax({
-				dataType: "json",
-				url: "manager/rsublinks.php",
-				data: {
-					"cat": title
-				},
-				type: "POST",
-				//beforeSend: function () {
-				// 	alert("sfd");},
-
-				success: function (d) {
-					setMenu(d);
-					var catlinks = "";
-					d.forEach(function (ele) {
-						catlinks = catlinks + "<a href='?"+title+"&"+ele.name.replace(" ","-")+"'><li>" + ele.name + "</li></a>";
-					});
-					$("#submenu-links").html(catlinks);
-					// load content to hidden div					
-				}
-			});*/
 			History.pushState(null, title + " | Ragam 2013",$(this).parent("a").attr("href"));
 //			$(window).trigger('statechange');
 		});
@@ -130,7 +110,7 @@ function setMenu(j) {
 				for (ele in menu) {
 					if (menu[ele].name == $(this).text()) {
 						for(s in menu[ele]['sublinks']) {
-							sublinks = sublinks + "<li><a href='?"+title+"&"+menu[ele].name.replace(" ","-")+"&"+menu[ele]['sublinks'][s].name.replace(" ","-")+"'>" + menu[ele]['sublinks'][s].name + "</a></li>";
+							sublinks = sublinks + "<li><a href='"+title+"/"+menu[ele].name.replace(" ","-")+"/"+menu[ele]['sublinks'][s].name.replace(" ","-")+"'>" + menu[ele]['sublinks'][s].name + "</a></li>";
 						}
 						break;
 					}
