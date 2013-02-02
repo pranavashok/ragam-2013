@@ -54,7 +54,32 @@ function setCssL(a){
 			e.preventDefault();
 		});
 		$("#mainlinks li").click(function(){
+			
+
+		$.ajax({
+			dataType: "json",
+			url:"manager/rsublinks.php",
+			data: {"cat":$(this).attr('title')},
+			type: "POST",
+			 //beforeSend: function () {
+			// 	alert("sfd");},
+
+			success: function (d) {
+				
+ 			var len=d.length,i=0,slinks="";
+				for(;i<len;i++)
+				{
+				 slinks=slinks+"<li>"+d[i].name+"</li>";
+				
+				}	
+				$("#subsubmenu").html(slinks);
+				// load content to hidden div	
+				
+			}
+
+			});
 			History.pushState(null, $(this).attr("title") + " | Ragam 2013", $(this).attr("title"));
+			
 		});
 		$("#arrow-up").click(function(){
 			$("#wrapper").attr("class", "support-up");

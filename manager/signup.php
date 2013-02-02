@@ -204,26 +204,28 @@ $(document).ready(function() {
 </head>
 
 <body>
-  <?php
+  <?php /*
 if ($erlist) {
   $res = $mysqli->query("SELECT name FROM events WHERE code='$erlist'");
   if ($row=$res->fetch_assoc()) {
 	$erlname = $row['name'];
 	$res->free();
-	echo "<div id='erlist'><h3 style='margin:10px 0'>$erlname Registration List</h3>";
+	echo "<div id='erlist'><h3 style='margin:10px 0'>$erlname Registration List</h3>";*/
   ?>
-  <table>
+  <!--<table>
     <tr><th>Team ID</th><th>Tathva ID</th><th>Name</th><th>Phone no.</th><th>eMail</th><th>College</th></tr>
-    <?php
+    <?php /*
 	$res = $mysqli->query("SELECT e.team_id, e.tat_id, s.name as name, s.phone, s.email, c.name as clg FROM event_reg e INNER JOIN student_reg s ON e.tat_id=s.id INNER JOIN colleges c ON s.clg_id=c.id WHERE e.code='$erlist'");
 	while($row=$res->fetch_assoc())
 	  echo "<tr><td>$row[team_id]</td><td>$row[tat_id]</td><td>$row[name]</td><td>$row[phone]</td><td>$row[email]</td><td>$row[clg]</td></tr>";
-    ?>
-  </table></div>
-  <?php
+    */ ?>
+  </table>
+-->
+  </div>
+  <?php /*
 	$res->free();
   } else $res->free();
-}
+} */
   ?>
   <noscript>
   <div style="background-color: #FF7777; padding: 20px; font-size: 20px">Please enable Javascript</div>
