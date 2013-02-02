@@ -1,21 +1,22 @@
+<?php $subDir = "/magar/"?>
 <html>
 <head>
-	<link href="css/reset.css" rel="stylesheet"/>
-	<link href="css/style.css" rel="stylesheet"/>
-	<link href="css/logo.css" rel="stylesheet"/>
-	<link href="css/animations.css" rel="stylesheet"/>
-	<link rel="stylesheet" href="css/nanoscroller.css"> 
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/prefixfree.min.js"></script>
-	<script type="text/javascript" src="js/prefixfree.jquery.js"></script>
-	<script type="text/javascript" src="js/prefixfree.dynamic-dom.min.js"></script>
-	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="js/jQueryRotate.2.2.js"></script>
-	<script type="text/javascript" src="js/jquery.history.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
+	<link href="<?php echo $subDir; ?>css/reset.css" rel="stylesheet"/>
+	<link href="<?php echo $subDir; ?>css/style.css" rel="stylesheet"/>
+	<link href="<?php echo $subDir; ?>css/logo.css" rel="stylesheet"/>
+	<link href="<?php echo $subDir; ?>css/animations.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="<?php echo $subDir; ?>css/nanoscroller.css"> 
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.jquery.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.dynamic-dom.min.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotate.2.2.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.history.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/script.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	<script type="text/javascript" src="js/signin1.js"></script>
-	<script type="text/javascript" src="js/jquery.nanoscroller.min.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/signin1.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.nanoscroller.min.js"></script>
 </head>
 <body>
 	<div class="pane" id="login-pane">
