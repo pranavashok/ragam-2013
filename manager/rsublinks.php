@@ -10,10 +10,7 @@ $query1=$mysqli->query("SELECT name,cat_id FROM event_cats WHERE par_cat='$par_c
 
 $i=0;
 
-while($cat=$query1->fetch_assoc())
-{
-
-
+while($cat=$query1->fetch_assoc()) {
 	$query2=$mysqli->query("SELECT name,shortdesc,code FROM events WHERE cat_id='$cat[cat_id]'");
 	while($cat2=$query2->fetch_assoc())
 		$cat['sublinks'][]=$cat2;
@@ -21,6 +18,5 @@ while($cat=$query1->fetch_assoc())
     $i++;
 
 }
-
-	echo json_encode($links);
+echo json_encode($links);
 ?>
