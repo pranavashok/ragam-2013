@@ -78,7 +78,7 @@ else {
 	$v = "<a href='$x&a=";
 	$v .= ($row['validate'] == 0) ? "val'>Validate" : "inv'>Invalidate";
 	$v .= "</a>";
-	echo "<tr> <td>$u</td> <td>$row[password]</td> <td>$row[eventcode]</td> <td>$v</td> <td><a href='javascript:alert(\"$x&a=del\");'>Delete</a></td></tr>";
+	echo "<tr> <td>$u</td> <td>$row[password]</td> <td>$row[eventcode]</td> <td>$v</td> <td><a href='$x&a=del'>Delete</a></td></tr>";
     } while($row=$result->fetch_array());
     ?></table><br/>
     <?php
@@ -106,7 +106,7 @@ else {
 	$v .= "</a>";
 	echo "<tr><td>$e</td> <td>$row[name]</td> <td>$row[cat]</td> <td>$row[shortdesc]</td>
 		  <td><div class='overflow'>".str_replace(array('||sec||','||ttl||'),array('<h4>','</h4>'),$row['longdesc'])."</div></td> <td>$row[tags]</td> <td>".str_replace(array("||0||","||@||"),array("<br/>"," "),$row['contacts'])."</td>
-		  <td>".str_replace("||@||","<br/>",$row['prize'])."</td> <td>$v</td>  <td><a href='javascript:alert(\"$x&a=del\");'>Delete</a></td></tr>";
+		  <td>".str_replace("||@||","<br/>",$row['prize'])."</td> <td>$v</td>  <td><a href='$x&a=del'>Delete</a></td></tr>";
     } while($row=$result->fetch_array());
     ?></table>
     <?php

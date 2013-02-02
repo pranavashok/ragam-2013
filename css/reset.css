@@ -61,3 +61,6 @@ legend {
 body{
 	/*overflow:hidden;*/
 }
+a, a:active {
+	outline : none;
+}
