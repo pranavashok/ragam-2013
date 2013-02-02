@@ -64,7 +64,9 @@ function setCssL(a){
 			 //beforeSend: function () {
 			// 	alert("sfd");},
 
+
 			success: function (d) {
+				//alert(d);
 				
  			var len=d.length,i=0,slinks="";
 				for(;i<len;i++)
