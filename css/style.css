@@ -88,7 +88,7 @@ html {
 	cursor:pointer;
 	position: absolute;
 	left:10px;
-	top:5px;
+	top:50px;
 	background: white url('../img/search.png') no-repeat 0px 0px;
 	border: 1px solid #999;
 	height: 32px;
@@ -96,6 +96,14 @@ html {
 	color: transparent;
 	overflow:hidden;
 	transition:width 0.3s ease;
+}
+#logcancel {
+	z-index: 100;
+	position: absolute;
+	left: 10%;
+	top: 80%;
+	height: 32px;
+	width: 50px;
 }
 
 #searchBox:hover{
@@ -291,6 +299,19 @@ html {
 	z-index: 20;
 	transform-origin: 36.7% -20%;
 }
+#login-pane {
+	height:100%;
+	width:100%;
+	background: #333;
+	bottom:101%;
+	left:0%;
+	z-index:30;
+	display: block;
+	position: absolute;
+	box-shadow: 0 0 10px #555;
+	z-index:30;
+	transform-origin: 36.7% -20%;
+}
 #arrow-up {
 	position:absolute;
 	width: 0; 
@@ -382,7 +403,7 @@ a#signin-link em {
 }
 
 a#signin-link strong {
-	color:#fff;
+	color:#333;
 }
 
 #signin-dropdown {
