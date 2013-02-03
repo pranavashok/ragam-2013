@@ -11,11 +11,15 @@
   //   eval("console.log("+args.join(",")+")")
   // }  
   
-  var Renderer = function(elt){
-    var dom = $(elt)
-    var canvas = dom.get(0)
-    var ctx = canvas.getContext("2d");
-     ctx.fillStyle   = '#CC5422';
+  var Renderer = function(){
+    
+    var canvas =document.getElementById("sitemap");
+     var ctx = canvas.getContext('2d');
+    var dom=$("#sitemap");
+    var cWidth=canvas.width=window.innerWidth;
+    var cHeight=canvas.height=window.innerHeight;
+   
+     
     var gfx = arbor.Graphics(canvas)
     var sys = null
 
@@ -26,13 +30,16 @@
 
     
     var that = {
+
       init:function(pSystem){
         sys = pSystem
-        sys.screen({size:{width:dom.width(), height:dom.height()},
-                    padding:[36,60,36,60]})
+         sys.screenSize(cWidth, cHeight);
+            sys.screenPadding(100);
+        //sys.screen({size:{width:dom.width(), height:dom.height()},
+                    //padding:[36,60,36,60]})
 
         $(window).resize(that.resize)
-        that.resize()
+       // that.resize()
         that._initMouseHandling()
 
         if (document.referrer.match(/echolalia|atlas|halfviz/)){
@@ -42,14 +49,17 @@
         }
       },
       resize:function(){
-        canvas.width = $(window).width()
-        canvas.height = .75* $(window).height()
-        sys.screen({size:{width:canvas.width, height:canvas.height}})
+       cWidth = window.innerWidth;
+      cHeight = window.innerHeight;
+        sys.screenSize(cWidth, cHeight);
         _vignette = null
         //that.redraw()
       },
       redraw:function(){
         gfx.clear()
+
+         ctx.fillStyle = "#eee";
+            ctx.fillRect(0,0, cWidth, cHeight);
         sys.eachEdge(function(edge, p1, p2){
           if (edge.source.data.alpha * edge.target.data.alpha == 0) return
           gfx.line(p1, p2, {stroke:"#b2b19d", width:2, alpha:edge.target.data.alpha})
@@ -73,7 +83,7 @@
       _drawVignette:function(){
         var w = canvas.width
         var h = canvas.height
-        var r = 20
+        var r = 40
 
         if (!_vignette){
           var top = ctx.createLinearGradient(0,0,0,r)
@@ -96,7 +106,7 @@
         ctx.fillRect(0,h-r, w,r)
       },
 
-    /*  switchMode:function(e){
+     switchMode:function(e){
         if (e.mode=='hidden'){
           dom.stop(true).fadeTo(e.dt,0, function(){
             if (sys) sys.stop()
@@ -108,7 +118,7 @@
           })
           if (sys) sys.start()
         }
-      },*/
+      },
       
       switchSection:function(newSection){
         var parent = sys.getEdgesFrom(newSection)[0].source
@@ -391,18 +401,18 @@
         }
       }
     }*/
-
-//$.getJSON("http://localhost/magartest/manager/rsublinks2.php", null, function(data){var theUI[] = {var nodes[]={data}});{nodes://
-var theUI = {"nodes":{"Events":{"color":"blue","shape":"dot","alpha":1},"Workshops":{"color":"blue","shape":"dot","alpha":1},"Proshows":{"color":"blue","shape":"dot","alpha":1},"Social Initiatives":{"color":"blue","shape":"dot","alpha":1},"General":{"color":"black","alpha":0},"Literary":{"color":"black","alpha":0},"Dance":{"color":"black","alpha":0},"Dramatics":{"color":"black","alpha":0},"Music":{"color":"black","alpha":0},"Fine Arts":{"color":"black","alpha":0},"Adventure":{"color":"black","alpha":0},"Quiz":{"color":"black","alpha":0},"Ragnarok":{"color":"black","alpha":0},"Online":{"color":"black","alpha":0},"Ragam":{"color":"red","shape":"dot","alpha":1}},"edges":{"Ragam":{"Events":{"length":0.8},"Workshops":{"length":0.8},"Proshows":{"length":0.8},"Social Initiatives":{"length":0.8}},"Events":{"General":[],"Literary":[],"Dance":[],"Dramatics":[],"Music":[],"Fine Arts":[],"Adventure":[],"Quiz":[],"Ragnarok":[],"Online":[]}}};
-//var theUI=  {"nodes":{"Competitions":{"color":"blue","shape":"dot","alpha":1},"Workshops":{"color":"blue","shape":"dot","alpha":1},"Exhibition":{"color":"blue","shape":"dot","alpha":1},"Highlights":{"color":"blue","shape":"dot","alpha":1},"Envision":{"color":"black","alpha":0},"Online":{"color":"blue","shape":"dot","alpha":1},"General":{"color":"black","alpha":0},"Robotics":{"color":"black","alpha":0},"Blitzkrieg":{"color":"black","alpha":0},"Management":{"color":"black","alpha":0},"Mechanical":{"color":"black","alpha":0},"Electrical":{"color":"black","alpha":0},"Electronics":{"color":"black","alpha":0},"Computer Science":{"color":"black","alpha":0},"Civil":{"color":"black","alpha":0},"Chemical":{"color":"black","alpha":0},"pre-tathva":{"color":"black","alpha":0},"on-tathva":{"color":"black","alpha":0},"Lectures":{"color":"blue","shape":"dot","alpha":1},"Nites":{"color":"blue","shape":"dot","alpha":1},"Architecture":{"color":"black","alpha":0},"wheels":{"color":"blue","shape":"dot","alpha":1},"Ragam":{"color":"red","shape":"dot","alpha":1}}
-//,"edges":
-//{"Ragam":{"Competitions":{"length":0.8},"Workshops":{"length":0.8},"Exhibition":{"length":0.8},"Highlights":{"length":0.8},"Online":{"length":0.8},"Lectures":{"length":0.8},"Nites":{"length":0.8},"wheels":{"length":0.8}},"Competitions":{"Envision":{},"General":{},"Robotics":{},"Blitzkrieg":{},"Management":{},"Mechanical":{},"Electrical":{},"Electronics":{},"Computer Science":{},"Civil":{},"Chemical":{},"Architecture":{}},"Workshops":{"pre-tathva":{},"on-tathva":{}}}};//$.getJSON("http://localhost/magartest/manager/rsublinks2.php", null, function(data){var theUI = "{nodes:"+data+"}"});
+//var theUI;
+//$.getJSON("http://localhost/magartest/manager/rsublinks2.php", null, function(data){theUI=data});//
+//var theUI = {"nodes":{"Events":{"color":"blue","shape":"dot","alpha":1},"Workshops":{"color":"blue","shape":"dot","alpha":1},"Proshows":{"color":"blue","shape":"dot","alpha":1},"Social Initiatives":{"color":"blue","shape":"dot","alpha":1},"General":{"color":"black","alpha":0},"Literary":{"color":"black","alpha":0},"Dance":{"color":"black","alpha":0},"Dramatics":{"color":"black","alpha":0},"Music":{"color":"black","alpha":0},"Fine Arts":{"color":"black","alpha":0},"Adventure":{"color":"black","alpha":0},"Quiz":{"color":"black","alpha":0},"Ragnarok":{"color":"black","alpha":0},"Online":{"color":"black","alpha":0},"Ragam":{"color":"red","shape":"dot","alpha":1}},"edges":{"Ragam":{"Events":{"length":0.8},"Workshops":{"length":0.8},"Proshows":{"length":0.8},"Social Initiatives":{"length":0.8}},"Events":{"General":[],"Literary":[],"Dance":[],"Dramatics":[],"Music":[],"Fine Arts":[],"Adventure":[],"Quiz":[],"Ragnarok":[],"Online":[]}}};
+var theUI=  {"nodes":{"Competitions":{"color":"blue","shape":"dot","alpha":1},"Workshops":{"color":"blue","shape":"dot","alpha":1},"Exhibition":{"color":"blue","shape":"dot","alpha":1},"Highlights":{"color":"blue","shape":"dot","alpha":1},"Envision":{"color":"black","alpha":0},"Online":{"color":"blue","shape":"dot","alpha":1},"General":{"color":"black","alpha":0},"Robotics":{"color":"black","alpha":0},"Blitzkrieg":{"color":"black","alpha":0},"Management":{"color":"black","alpha":0},"Mechanical":{"color":"black","alpha":0},"Electrical":{"color":"black","alpha":0},"Electronics":{"color":"black","alpha":0},"Computer Science":{"color":"black","alpha":0},"Civil":{"color":"black","alpha":0},"Chemical":{"color":"black","alpha":0},"pre-tathva":{"color":"black","alpha":0},"on-tathva":{"color":"black","alpha":0},"Lectures":{"color":"blue","shape":"dot","alpha":1},"Nites":{"color":"blue","shape":"dot","alpha":1},"Architecture":{"color":"black","alpha":0},"wheels":{"color":"blue","shape":"dot","alpha":1},"Ragam":{"color":"red","shape":"dot","alpha":1}}
+,"edges":
+{"Ragam":{"Competitions":{"length":0.8},"Workshops":{"length":0.8},"Exhibition":{"length":0.8},"Highlights":{"length":0.8},"Online":{"length":0.8},"Lectures":{"length":0.8},"Nites":{"length":0.8},"wheels":{"length":0.8}},"Competitions":{"Envision":{},"General":{},"Robotics":{},"Blitzkrieg":{},"Management":{},"Mechanical":{},"Electrical":{},"Electronics":{},"Computer Science":{},"Civil":{},"Chemical":{},"Architecture":{}},"Workshops":{"pre-tathva":{},"on-tathva":{}}}};//$.getJSON("http://localhost/magartest/manager/rsublinks2.php", null, function(data){var theUI = "{nodes:"+data+"}"});
 //var theUI=result
 
 
     var sys = arbor.ParticleSystem()
-    sys.parameters({stiffness:900, repulsion:2000, gravity:true, dt:0.015})
-    sys.renderer = Renderer("#sitemap")
+    sys.parameters({stiffness:1000, repulsion:500, gravity:false, dt:0.015,friction:1,precision:1.0})
+    sys.renderer = Renderer()
     sys.graft(theUI)
     
     var nav = Nav("#nav")

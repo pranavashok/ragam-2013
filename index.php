@@ -1,4 +1,4 @@
-<?php $subDir = "/magar/"?>
+<?php $subDir = "/magartest/"?>
 <html>
 <head>
 	<link href="<?php echo $subDir; ?>css/reset.css" rel="stylesheet"/>
@@ -117,11 +117,11 @@
 	<img src="<?php echo $subDir; ?>img/home.png">
 </div>
 <aside id="followlinks">
-	<a style="width:48px; height:48px; display:inline; opacity:0"><img src="<?php echo $subDir; ?>img/twitter.png"></a>
-	<a href="facebook.com" target="blank" ><img src="<?php echo $subDir; ?>img/twitter.png"></a>
+	<!--<a style="width:48px; height:48px; display:inline; opacity:0"><img src="<?php echo $subDir; ?>img/twitter.png"></a>
+	<!--<a href="facebook.com" target="blank" ><img src="<?php echo $subDir; ?>img/twitter.png"></a>-->
+	
 	<a href="youtube.com" target="blank"><img src="<?php echo $subDir; ?>img/youtube.png"></a>	
-	<a href="twitter.com" target="blank"><img src="<?php echo $subDir; ?>img/facebook.png"></a>				
-</aside>
-<input id="searchBox" type="text" name="search" size="40">
+	<a href="www.facebook.com/Ragam.nitc" target="blank"><img src="<?php echo $subDir; ?>img/facebook.png"></a>				</aside>
+	<input id="searchBox" type="text" name="search" size="40">
 </body>
 </html>
