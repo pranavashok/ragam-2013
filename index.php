@@ -92,7 +92,6 @@
 		<div id="content-half">
 			<div id="subsubmenu">
 				<ul id="subsubmenu-links">
-					<li>blah</li>
 				</ul>
 			</div>
 			<div id="content-container">
