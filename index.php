@@ -50,7 +50,7 @@
 			<div class="active-links">
 				<div id="session">
 					<a id="signin-link" href="#">
-						<strong>Sign in</strong>
+						<img src="<?php echo $subDir; ?>img/signin.png" />
 					</a>
 				</div>
 				<div id="signin-dropdown">
