@@ -584,4 +584,9 @@ form.signin .remb .remember {
 
 .button:hover { background:#ddd; }
 
-/* Merged code till here*/
+#loginform{
+    position: relative;
+	left: 10%;
+	top: 75%;
+}
+

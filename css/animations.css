@@ -227,7 +227,7 @@
 		transform:rotate(0deg);
 	}
 	100% {
-		top:-60%;
+		top:-70%;
 	}
 }
 
@@ -238,9 +238,10 @@
 	animation-fill-mode:forwards;
 }
 
+
 @keyframes wrapper-login-up {
 	0% {
-		top:-60%;
+		top:-70%;
 	}
 	100% {
 		top:-100%;
@@ -255,11 +256,11 @@
 }
 @keyframes movedown {
 	0% {
-		bottom:101%;
+		bottom:100%;
 		transform:rotate(0deg);
 	}
 	100% {
-		bottom:60%;
+		bottom:70%;
 		transform:rotate(0deg);
 	}
 }
@@ -271,11 +272,11 @@
 }
 @keyframes moveup {
 	0% {
-		bottom:60%;
+		bottom:70%;
 		transform:rotate(0deg);
 	}
 	100% {
-		bottom:101%;
+		bottom:100%;
 		transform:rotate(0deg);
 	}
 }
