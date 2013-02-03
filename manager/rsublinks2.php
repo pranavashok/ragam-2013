@@ -8,10 +8,10 @@ require_once("initdb.php");
 $query1=$mysqli->query("SELECT name,cat_id,par_cat FROM event_cats");
 while($event_cats=$query1->fetch_assoc())
 {
-	if($event_cats['par_cat']==-1)
-	
-	$nodes[$event_cats["name"]]=array("color"=>"blue", "shape"=>"dot", "alpha"=>1);
-	else 	$nodes[$event_cats["name"]]=array("color"=>"black", "alpha"=>0);
+	if($event_cats['par_cat']==-1)	
+		$nodes[$event_cats["name"]]=array("color"=>"blue", "shape"=>"dot", "alpha"=>1);
+	else 	
+		$nodes[$event_cats["name"]]=array("color"=>"black", "alpha"=>0);
 }
 $nodes["Ragam"]=array("color"=>"red","shape"=>"dot", "alpha"=>1);
 
@@ -34,6 +34,9 @@ while($event_cats4=$query4->fetch_assoc())
 	$main[]=$event_cats4["name"];
 }
 $mains[]="Ragam";
+$data["nodes"]=$nodes;
+$data["edges"]=$edges;
+echo json_encode($data);
 //while
 //$i=0;
 //$links_level1="";
