@@ -80,7 +80,7 @@
    <canvas id="letterg"  width="1050" height="500" ></canvas>
    <canvas id="lettera2"  width="1050" height="500" ></canvas>
    <canvas id="letterm"  width="1050" height="500" ></canvas>
-   <script type="text/javascript" src="js/logo.js"></script>
+   <script type="text/javascript" src="<?php echo $subDir; ?>js/logo.js"></script>
 
   </div>
  </section>
@@ -100,7 +100,6 @@
 		<div id="content-half">
 			<div id="subsubmenu">
 				<ul id="subsubmenu-links">
-					<li>blah</li>
 				</ul>
 			</div>
 			<div id="content-container">
@@ -129,13 +128,13 @@
 	<div id="arrow-up"></div>
 </div>
 <div id="home-button">
-	<img src="img/home.png">
+	<img src="<?php echo $subDir; ?>img/home.png">
 </div>
 <aside id="followlinks">
-	<a style="width:48px; height:48px; display:inline; opacity:0"><img src="img/twitter.png"></a>
-	<a href="facebook.com" target="blank" ><img src="img/twitter.png"></a>
-	<a href="youtube.com" target="blank"><img src="img/youtube.png"></a>	
-	<a href="twitter.com" target="blank"><img src="img/facebook.png"></a>				
+	<a style="width:48px; height:48px; display:inline; opacity:0"><img src="<?php echo $subDir; ?>img/twitter.png"></a>
+	<a href="facebook.com" target="blank" ><img src="<?php echo $subDir; ?>img/twitter.png"></a>
+	<a href="youtube.com" target="blank"><img src="<?php echo $subDir; ?>img/youtube.png"></a>	
+	<a href="twitter.com" target="blank"><img src="<?php echo $subDir; ?>img/facebook.png"></a>				
 </aside>
 <input id="searchBox" type="text" name="search" size="40">
 </body>

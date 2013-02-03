@@ -76,6 +76,7 @@ html {
 	height: 100%;
 	width: 50%;
 	float:left;
+	z-index: 1;
 }
 #content-container {
 	width: 80%;
@@ -105,7 +106,7 @@ html {
 	left:0;
 	padding:10px;
 	font-size:30px;
-	text-transform:lower;
+	text-transform:lowercase;
 	color: #fff;
 }
 .nano { 
@@ -128,6 +129,8 @@ html {
 	color: #fff;
 	left:0;
 	padding:15px;
+	font-size: 15px;
+	line-height: 20px;
 }
 #subsubmenu {
 	font-family: HelveticaThin;
@@ -144,26 +147,26 @@ html {
 	line-height: 35px;
 	position: absolute;
 	top: 22%;
-	right: 0%;
+	right: 0;
 	list-style: none;
 	text-align: right;
 }
 #subsubmenu-links a, #subsubmenu-links a.notselected {
 	text-decoration: none;
 	color:#fff;
-	display:block;
+	display: block;
 	width:250px;
-	padding-right:20px;
+	padding-right: 20px;
 }
-#subsubmenu-links a:hover, #subsubmenu-links a.selected {
+#subsubmenu-links a.selected {
 	color:#4a52b5;
-	background-color:#fff;
+	background-color:#f7f7f7;
 }
-/*
-#subsubmenu-links a:active {
+#subsubmenu-links a:hover {
 	color:#4a52b5;
-	background-color:#fff;
-}*/
+	background-color:#f7f7f7;	
+	width:250px;
+}
 #submenu-half {
 	font-family: HelveticaThin;
 	text-transform: lowercase;
@@ -177,7 +180,7 @@ html {
 	font-size: 40px;
 	position:absolute;
 	top:22%;
-	left:0%;
+	left:-1px;
 	list-style:none;
 }
 #submenu-links li {
@@ -192,10 +195,6 @@ html {
 	width:250px;
 	background-color: #f7f7f7;
 }
-/*#submenu-links li:hover {
-	color:#fff;
-	background-color:#4a52b5;
-}*/
 #submenu-links a.selected {
 	color:#fff;
 	background-color:#4a52b5;
@@ -440,11 +439,6 @@ html {
 	border-bottom: 25px solid #333;
 }
 /* Merged code from here */
-/*a { 
-	text-decoration:none; 
-	color:#00c6ff;
-}
-*/
 .content {width: 960px; margin: 0 auto; overflow: hidden;}
 
 #top-stuff {
