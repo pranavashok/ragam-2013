@@ -17,8 +17,16 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/signin1.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.nanoscroller.min.js"></script>
+    <script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>
+    <script type="text/javascript" src="<?php echo $subDir; ?>js/arbor.js"></script>
+  	<script type="text/javascript" src="<?php echo $subDir; ?>js/arbor-tween.js"></script>
+  	<script type="text/javascript" src="<?php echo $subDir; ?>js/arbor-graphics.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/shortcut.js"></script>
 </head>
 <body>
+	<div  id="shortcut" >
+		<canvas id="sitemap"></canvas>
+	</div>
 	<div class="pane" id="login-pane">
 		 <button id="logcancel" >Cancel</button> <!--<input type="button" value="Cancel" id="logcancel" /> -->  
 	</div>
@@ -92,7 +100,6 @@
 		<div id="content-half">
 			<div id="subsubmenu">
 				<ul id="subsubmenu-links">
-					<li>blah</li>
 				</ul>
 			</div>
 			<div id="content-container">
