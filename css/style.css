@@ -91,7 +91,7 @@ html {
 	left:0;
 	padding:10px;
 	font-size:30px;
-	text-transform:lower;
+	text-transform:lowercase;
 	color: #fff;
 }
 .nano { 
@@ -114,6 +114,8 @@ html {
 	color: #fff;
 	left:0;
 	padding:15px;
+	font-size: 15px;
+	line-height: 20px;
 }
 #subsubmenu {
 	font-family: HelveticaThin;
@@ -130,20 +132,25 @@ html {
 	line-height: 35px;
 	position: absolute;
 	top: 22%;
-	right: 0%;
+	right: 0;
 	list-style: none;
 	text-align: right;
 }
 #subsubmenu-links a, #subsubmenu-links a.notselected {
 	text-decoration: none;
 	color:#fff;
-	display:block;
+	display: block;
 	width:250px;
-	padding-right:20px;
+	padding-right: 20px;
 }
-#subsubmenu-links a:hover, #subsubmenu-links a.selected {
+#subsubmenu-links a.selected {
 	color:#4a52b5;
 	background-color:#f7f7f7;
+}
+#subsubmenu-links a:hover {
+	color:#4a52b5;
+	background-color:#f7f7f7;	
+	width:250px;
 }
 #submenu-half {
 	font-family: HelveticaThin;
