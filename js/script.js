@@ -148,10 +148,6 @@ function setMenu(j) {
 			$("#login-pane").attr("class", "move-up");
 			
 		});
-		$("#logcancel").click(function(e) {
-	    		$("#login-pane").attr("class", "move-up");
-	    		$("#wrapper").attr("class", "login-up");
-	   	});
 		$(document).mouseup(function (e) {
 			var container = $("#support-pane");
 			if (container.has(e.target).length === 0 && $("#wrapper").attr("class") == "support-up") {
@@ -167,5 +163,13 @@ function setMenu(j) {
 			});
 			/* Code to reset level zero */
 		});
+		$('.active-links').click(function () {
+			$('#login-pane').attr('class', 'move-down');
+            $('#wrapper').attr('class', 'login-down');
+        });
+        $("#logcancel").click(function(e) {
+	    		$("#login-pane").attr("class", "move-up");
+	    		$("#wrapper").attr("class", "login-up");
+	   	});
 	});
 })(window);
