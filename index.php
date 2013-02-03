@@ -67,13 +67,14 @@
 	<div id="wrapper">
 		<section class="pane" id="font-pane">
 			<div id="logo">
-				<canvas id="letterr"  width="1050" height="500" ></canvas>
+			<!--<canvas id="letterr"  width="1050" height="500" ></canvas>
 				<canvas id="lettera"  width="1050" height="500" ></canvas>
 				<canvas id="letterg"  width="1050" height="500" ></canvas>
 				<canvas id="lettera2"  width="1050" height="500" ></canvas>
 				<canvas id="letterm"  width="1050" height="500" ></canvas>
 				<script type="text/javascript" src="<?php echo $subDir; ?>js/logo.js"></script>
-
+			-->
+				<img src="<?php echo $subDir; ?>img/font.png" />
 			</div>
 		</section>
 
