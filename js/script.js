@@ -1,4 +1,4 @@
-var subDir = 'magartest';
+var subDir = 'magar';
 var title = '';
 var menu;
 
