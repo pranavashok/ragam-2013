@@ -31,7 +31,7 @@
 				<form name="input" action="login.php" method="post">
 					<fieldset>
 						<legend>Personal Information:</legend>
-						Name: <input type="text" name="name"><br>
+						<span "color:green">Name: </span><input type="text" name="name"><br>
 						Email id: <input type="email" name="email"><br>
 						Phone number: <input type="tel" name="ph_no"><br>
 						Password: <input type="password" name="pwd"><br>

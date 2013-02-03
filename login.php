@@ -15,7 +15,7 @@ if (!mysql_query($sql,$con))
   {
   die('Error: ' . mysql_error());
   }
-echo "1 record added";
+echo "Registration Successful";
 
 mysql_close($con);
 ?>
