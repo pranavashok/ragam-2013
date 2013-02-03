@@ -13,7 +13,7 @@ $data['content']=preg_replace("/\|\|sec\|\|/","<br/><br/><strong>",$data['conten
 $data['content']=preg_replace("/\|\|ttl\|\|/","</strong><br/><br/>",$data['content']);
 
 $data['content']=preg_replace("/\|\|@\|\|/","<br/>",$data['content']);
-$data['content']=preg_replace("/\|\|0\|\|/","@tathva.org<br/><br/>",$data['content']);
+$data['content']=preg_replace("/\|\|0\|\|/","@ragam.org.in<br/><br/>",$data['content']);
 
 echo json_encode($data);
 ?>
