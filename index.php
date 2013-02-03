@@ -28,7 +28,7 @@
 		</div>
 		<div class="pane" id="login-pane">
 			<div id="loginform">
-				<form name="input" action="loginres.php" method="post">
+				<form name="input" action="login.php" method="post">
 					<fieldset>
 						<legend>Personal Information:</legend>
 						Name: <input type="text" name="name"><br>
