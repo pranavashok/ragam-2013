@@ -590,3 +590,6 @@ form.signin .remb .remember {
 	top: 75%;
 }
 
+.field_set {
+	border: 1px #00E4F5 solid;
+}
