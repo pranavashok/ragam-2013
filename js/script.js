@@ -42,8 +42,6 @@ function setMenu(j) {
 				if ($("#mainmenu-pane").attr("class") == "moveout") {
 					$("#mainmenu-pane").attr("class", "movein");
 					$("#font-pane").attr("class", "movein");
-					$("#content-pane").attr("class", "rotatein");
-					$("#submenu-pane").attr("class", "rotatein");
 				} else if ($("#mainmenu-pane").attr("class") == "pane") {
 					$("#mainmenu-pane").attr("class", "loading");
 					$("#font-pane").attr("class", "loading");
@@ -54,6 +52,7 @@ function setMenu(j) {
 					relativeUrl = relativeUrl.substr(0, relativeUrl.length-1);
 				setCssL('#font-pane');
 				setCssR('#mainmenu-pane');
+				$("#inner-pane").attr("class", "pane"); //Reset the inner-pane just before opening
 				$("#mainmenu-pane").attr("class", "moveout");
 				$("#font-pane").attr("class", "moveout");
 				$("#followlinks").animate({
@@ -159,22 +158,12 @@ function setMenu(j) {
 				$(".support-puller").show();
 			}
 		});
-		$("#sublinks li a").click(function () {
-			$("#content-pane").attr("class", "rotateout");
-			$("#submenu-pane").attr("class", "rotateout");
-		});
-		$("#subsubmenu-links li a").click(function () {
-			$("#inner-pane").attr("class", "moveright");
-		});
 		$("#home-button").click(function () {
-			/* Code to reset level zero */
-			//Handled by statechange bind
-			/* Code to reset level one */
+			History.pushState({timestamp: (new Date().getTime())},"Ragam 2013","/"+subDir+"/");
 			$("#followlinks").animate({
 				opacity: '1'
 			});
 			/* Code to reset level zero */
-			History.pushState(null,"Ragam 2013","/"+subDir);
 		});
 	});
 })(window);

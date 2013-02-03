@@ -139,6 +139,26 @@
 	animation-timing-function: ease;
 	animation-fill-mode:forwards;
 }
+@keyframes inner-pane-moveback {
+	0% {
+		left: 25%;
+		transfort:rotate(0deg);
+	}
+	70% {
+		left: 25%;
+		transform:rotate(-25deg);
+	}
+	100% {
+		left: 10%;
+		transform:rotate(-25deg);
+	}
+}
+#inner-pane.moveback {
+	animation-name: inner-pane-moveback;
+	animation-duration: 2s;
+	animation-timing-function: ease;
+	animation-fill-mode:forwards;
+}
 @keyframes support-up {
 	0% {
 		top:101%;

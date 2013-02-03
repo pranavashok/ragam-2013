@@ -254,8 +254,8 @@ html {
 	opacity:0.2;
 	cursor:pointer;
 	position: absolute;
-	left:10px;
-	top:50px;
+	right:10px;
+	top:10px;
 	background: white url('../img/search.png') no-repeat 0px 0px;
 	border: 1px solid #999;
 	height: 32px;
@@ -362,7 +362,7 @@ html {
 #home-button{
 	position:absolute;
 	left:10px;
-	bottom:10px;
+	top:10px;
 	z-index:2;
 	font-size:20px;
 	cursor:hand;
@@ -396,14 +396,7 @@ html {
 	top: -0.21em;
 	bottom: 0.21em;
 	width: 1em;
-	background: -webkit-linear-gradient(
-		top, 
-		grey, grey 20%, 
-		transparent 20%, transparent 40%, 
-		grey 40%, grey 60%, 
-		transparent 60%, transparent 80%, 
-		grey 80%, grey 100%
-		);
+	background: -webkit-linear-gradient(top, grey, grey 20%, transparent 20%, transparent 40%, grey 40%, grey 60%, transparent 60%, transparent 80%, grey 80%, grey 100%);
 }
 #support-pane {
 	height:100%;
@@ -460,9 +453,8 @@ html {
 	background: -moz-linear-gradient(center top, #333333, #111111);
 	background: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#111111));
 	background:  -o-linear-gradient(top, #333333, #111111);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#333333', EndColorStr='#111111');
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#333333', EndColorStr='#111111');
 	box-shadow:0 1px 2px #666666;
-	-webkit-box-shadow: 0 1px 2px #666666;
 }
 
 .active-links {
@@ -515,7 +507,6 @@ a#signin-link strong {
 	border-bottom-left-radius:5px;
 	border-bottom-right-radius:5px;
 	box-shadow:0 1px 2px #666666;
-	-webkit-box-shadow: 0 1px 2px #666666;
 	min-height:200px;
 	min-width:160px;
 	position:absolute;
@@ -558,8 +549,7 @@ form.signin .textbox input {
 	border-right:1px solid #333;
 	border-top:1px solid #000;
 	color:#fff; 
-	-moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+	border-radius: 3px;
 	font:13px Arial, Helvetica, sans-serif;
 	padding:6px 6px 4px;
 }
@@ -583,8 +573,7 @@ form.signin .remb .remember {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f3f3f3', EndColorStr='#dddddd');
 	border-color:#000; 
 	border-width:1px;
-	-moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
+	border-radius: 4px;
 	color:#333;
 	cursor:pointer;
 	display:inline-block;
