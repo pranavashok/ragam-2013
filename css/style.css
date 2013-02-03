@@ -95,7 +95,7 @@ html {
 	color: #fff;
 }
 .nano { 
-	background: #4a42b5; 
+	background: #4a52b5; 
 	position:relative; 
 	width:100%;
 	height:90%;
@@ -107,13 +107,17 @@ html {
 .nano .slider { background: #111; }
 #content-content {
 	position:relative;
-	width:100%;
-	height:100%;
+	width:95%;
+	right:5%;
+	height:80%;
+	padding:30px;
 	display:block;
 	background:#4a52b5;
 	color: #fff;
 	left:0;
-	padding:15px;
+	line-height:1.5em;
+	top:5%;
+	outline:none;
 }
 #subsubmenu {
 	font-family: HelveticaThin;

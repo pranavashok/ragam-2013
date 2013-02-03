@@ -70,6 +70,7 @@ function setMenu(j) {
 								catlinks = catlinks + "<a href='/"+subDir+"/"+title+"/"+ele.name.replace(" ","")+"'><li>" + ele.name + "</li></a>";
 							});
 							$("#submenu-links").html(catlinks);
+//							$("#submenu-links a").trigger('mouseenter');
 							// load content to hidden div					
 						}
 					});
@@ -84,8 +85,9 @@ function setMenu(j) {
 						type: "POST",
 						success: function (d) {
 							$("#content-heading").text(d.name);
-							$("#content-content").html(d.longdesc);
-							$(".nano").nanoScroller();
+							$("#content-content").html(d.content);
+						//	$(".nano").nanoScroller();
+							$(".nano").nanoScroller({ scrollTop: '0px' });
 						}
 
 					});
