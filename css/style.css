@@ -18,6 +18,21 @@ html {
 	top:-100%;
 	left:-100%;
 }
+/* shortcut nav */
+#shortcut {
+	position:absolute;
+	height:100%;
+	width:100%;
+	z-index:20;
+	background-color:#f7f7f7;
+	display: none;
+}
+#sitemap {
+	position: absolute;
+	width:100%;
+	height:80%;
+}
+/* shortcut nav */
 #font-pane{
 	position:absolute;
 	height:100%;
