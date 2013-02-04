@@ -1,15 +1,25 @@
 html {
 	overflow: hidden;
 }
-@font-face
-{
-	font-family: HelveticaThin;
-	src: url('HelveticaNeueCyr-Thin.otf');
+@font-face {
+    font-family: HelveticaThin;
+    src: url('helveticaneuecyr-thin-webfont.eot');
+    src: url('helveticaneuecyr-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('helveticaneuecyr-thin-webfont.woff') format('woff'),
+         url('helveticaneuecyr-thin-webfont.ttf') format('truetype'),
+         url('helveticaneuecyr-thin-webfont.svg#helveticaneuecyrthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
-@font-face
-{
-	font-family: ProximaNova;
-	src: url('ProximaNova-Black.otf');
+@font-face {
+    font-family: ProximaNova;
+    src: url('proximanova-black-webfont.eot');
+    src: url('proximanova-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('proximanova-black-webfont.woff') format('woff'),
+         url('proximanova-black-webfont.ttf') format('truetype'),
+         url('proximanova-black-webfont.svg#proxima_novablack') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 #wrapper{
 	position:absolute;
