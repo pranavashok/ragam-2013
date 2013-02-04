@@ -418,19 +418,6 @@ html {
 	z-index: 20;
 	transform-origin: 36.7% -20%;
 }
-#login-pane {
-	height:100%;
-	width:100%;
-	background: #333;
-	bottom:101%;
-	left:0%;
-	z-index:30;
-	display: block;
-	position: absolute;
-	box-shadow: 0 0 10px #555;
-	z-index:30;
-	transform-origin: 36.7% -20%;
-}
 #arrow-up {
 	position:absolute;
 	width: 0; 

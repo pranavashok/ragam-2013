@@ -146,7 +146,6 @@ $("#arrow-up").click(function () {
 	$("#dark").attr("class", "overlayon");
 	$("#wrapper").attr("class", "support-up");
 	$("#support-pane").attr("class", "support-up");
-	$("#login-pane").attr("class", "move-up");
 });
 $(document).mouseup(function (e) {
 	var container = $("#support-pane");
@@ -166,8 +165,6 @@ $("#home-button").click(function () {
 });
 $('a#signin-link').click(function () {
 	if($("#signin-link").attr("class") == "cancel") {
-		$("#login-pane").attr("class", "move-up");
-		$("#wrapper").attr("class", "login-up");
 		$(this).html('<img src="/'+subDir+'/img/signup.png" />');
 		$("#signin-link").attr("class", "enabled");
 	}
@@ -176,14 +173,10 @@ $('a#signin-link').click(function () {
 		$("a#signin-link").attr("class", "cancel");
 		$("a#login-link").attr("class", "enabled");
 		$("a#login-link").html('<img src="/'+subDir+'/img/login.png" />');
-		$('#login-pane').attr('class', 'move-down');
-		$('#wrapper').attr('class', 'login-down');
 	}
 });
 $('a#login-link').click(function () {
 	if($("#login-link").attr("class") == "cancel") {
-		$("#login-pane").attr("class", "move-up");
-		$("#wrapper").attr("class", "login-up");
 		$(this).html('<img src="/'+subDir+'/img/login.png" />');
 		$("#login-link").attr("class", "enabled");
 	}
@@ -192,8 +185,6 @@ $('a#login-link').click(function () {
 		$("a#login-link").attr("class", "cancel");
 		$("a#signin-link").attr("class", "enabled");
 		$("a#signin-link").html('<img src="/'+subDir+'/img/signup.png" />');
-		$('#login-pane').attr('class', 'move-down');
-		$('#wrapper').attr('class', 'login-down');
 	}
 });
 });

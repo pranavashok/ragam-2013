@@ -29,24 +29,6 @@
 	<div  id="shortcut" >
 		<canvas id="sitemap"></canvas>
 	</div>
-	<div class="pane" id="login-pane">
-		<div id="loginform">
-			<form name="input" action="login.php" method="post">
-				<fieldset>
-					<legend>Personal Information:</legend>
-					<span "color:green">Name: </span><input type="text" name="name"><br>
-					Email id: <input type="email" name="email"><br>
-					Phone number: <input type="tel" name="ph_no"><br>
-					Password: <input type="password" name="pwd"><br>
-					Re-enter password: <input type="password" name="pwd"><br>
-					<input type="submit" value="Sign Up">
-
-
-				</div>
-			</fieldset>
-		</form> 
-	</div>
-</div>
 <div id="wrapper">
 	<div class="active-links">
 		<div id="session">
