@@ -285,4 +285,49 @@
 	border: 1px #00E4F5 solid;
 }
 
+@keyframes overlayon
+{
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:0.5;		
+	}
+}
+#dark.overlayon {
+	animation-name: overlayon;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-fill-mode:forwards;
+} 
+@keyframes overlayoff
+{
+	0% {
+		opacity:0.5;
+	}
+	100% {
+		opacity:0;		
+	}
+}
+#dark.overlayoff {
+	animation-name: overlayoff;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-fill-mode:forwards;
+}
+
+@keyframes font-pane-loading {
+	0% {
+		left: 33.33%;
+	}
+
+	70% {
+		left: 43.33%;
+		transform: rotate(0deg);	
+	}
+	100% {
+		left: 43.33%;
+		transform: rotate(-25deg); 
+	}
+}
 
