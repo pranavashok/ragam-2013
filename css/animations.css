@@ -207,7 +207,7 @@
 		transform:rotate(0deg);
 	}
 	100% {
-		top:-130%;
+		top:-60%;
 	}
 }
 
@@ -220,7 +220,7 @@
 
 @keyframes wrapper-login-up {
 	0% {
-		top:-130%;
+		top:-60%;
 	}
 	100% {
 		top:-100%;

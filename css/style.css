@@ -267,8 +267,8 @@ html {
 #logcancel {
 	z-index: 100;
 	position: absolute;
-	left: 10%;
-	top: 80%;
+	left: 95%;
+	top: 90%;
 	height: 32px;
 	width: 50px;
 }

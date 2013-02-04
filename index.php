@@ -17,10 +17,10 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/signin1.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.nanoscroller.min.js"></script>
-    <script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>
-    <script type="text/javascript" src="<?php echo $subDir; ?>js/arbor.js"></script>
-  	<script type="text/javascript" src="<?php echo $subDir; ?>js/arbor-tween.js"></script>
-  	<script type="text/javascript" src="<?php echo $subDir; ?>js/arbor-graphics.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/arbor.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/arbor-tween.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/arbor-graphics.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/shortcut.js"></script>
 </head>
 <body>
@@ -28,73 +28,77 @@
 		<canvas id="sitemap"></canvas>
 	</div>
 	<div class="pane" id="login-pane">
-		 <button id="logcancel" >Cancel</button> <!--<input type="button" value="Cancel" id="logcancel" /> -->  
+		<button id="logcancel" >Cancel</button> <!--<input type="button" value="Cancel" id="logcancel" /> -->  
 	</div>
-<div id="top-stuff">  
-    	<div id="topnav">
-        <div class="active-links">
-            <div id="session">
-            <a id="signin-link" href="#">
-            <strong>Sign in</strong>
-            </a>
-            </div>
-            	<div id="signin-dropdown">
-        	
-                <form method="post" class="signin" action="#">
-                <fieldset class="textbox">
-            	<label class="username">
-                <span>Username or email</span>
-                <input id="username" name="username" value="" type="text" autocomplete="on">
-                </label>
-                
-                <label class="password">
-                <span>Password</span>
-                <input id="password" name="password" value="" type="password">
-                </label>
-                </fieldset>
-                
-                <fieldset class="remb">
-                <label class="remember">
-                <input type="checkbox" value="1" name="remember_me" /> 
-                <span>Remember me</span>
-                </label>
-                <button class="submit button" type="button">Sign in</button>
-                </fieldset>
-                <p>
-                <a class="forgot" href="#">Forgot your password</a>
-                <br>
-                <a class="mobile" href="#">Register with Facebook.</a>
-                </p>
-                </form>
-         	</div>
-                </div>
-             </div>
-    	</div>
-    </div>
+	<div id="top-stuff">  
+		<div id="topnav">
+			<div class="active-links">
+				<div id="session">
+					<a id="signin-link" href="#">
+						<strong>Sign in</strong>
+					</a>
+				</div>
+				<div id="signin-dropdown">
+
+					<form method="post" class="signin" action="#">
+						<fieldset class="textbox">
+							<label class="username">
+								<span>Username or email</span>
+								<input id="username" name="username" value="" type="text" autocomplete="on">
+							</label>
+
+							<label class="password">
+								<span>Password</span>
+								<input id="password" name="password" value="" type="password">
+							</label>
+						</fieldset>
+
+						<fieldset class="remb">
+							<label class="remember">
+								<input type="checkbox" value="1" name="remember_me" /> 
+								<span>Remember me</span>
+							</label>
+							<button class="submit button" type="button">Sign in</button>
+						</fieldset>
+						<p>
+							<a class="forgot" href="#">Forgot your password</a>
+							<br>
+							<a class="mobile" href="#">Register with Facebook.</a>
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 </div>
 <div id="wrapper">
- <section class="pane" id="font-pane">
-  <div id="logo">
-   <canvas id="letterr"  width="1050" height="500" ></canvas>
-   <canvas id="lettera"  width="1050" height="500" ></canvas>
-   <canvas id="letterg"  width="1050" height="500" ></canvas>
-   <canvas id="lettera2"  width="1050" height="500" ></canvas>
-   <canvas id="letterm"  width="1050" height="500" ></canvas>
-   <script type="text/javascript" src="<?php echo $subDir; ?>js/logo.js"></script>
+	<section class="pane" id="font-pane">
+		<div id="logo">
+			<canvas id="letterr"  width="1050" height="500" ></canvas>
+			<canvas id="lettera"  width="1050" height="500" ></canvas>
+			<canvas id="letterg"  width="1050" height="500" ></canvas>
+			<canvas id="lettera2"  width="1050" height="500" ></canvas>
+			<canvas id="letterm"  width="1050" height="500" ></canvas>
+			<script type="text/javascript" src="<?php echo $subDir; ?>js/logo.js"></script>
 
-  </div>
- </section>
+		</div>
+	</section>
+
+	<section class="pane" id="login-pane">
+
+	</section>
 
 	<section class="pane" id="mainmenu-pane">
-			<nav id="mainlinks">
-				<ul>
-					<a href="Events"><li id="mainlink1" title="Events">events</li></a>
-					<a href="Proshows"><li id="mainlink2" title="Proshows">proshows</li></a>
-					<a href="Workshops"><li id="mainlink3" title="Workshops">workshops</li></a>
-					<a href="Showcase"><li id="mainlink4" title="Showcase">showcase</li></a>
-					<a href="Informals"><li id="mainlink5" title="Informals">informals</li></a>
-				</ul>
-			</nav>
+		<nav id="mainlinks">
+			<ul>
+				<a href="Events"><li id="mainlink1" title="Events">events</li></a>
+				<a href="Proshows"><li id="mainlink2" title="Proshows">proshows</li></a>
+				<a href="Workshops"><li id="mainlink3" title="Workshops">workshops</li></a>
+				<a href="Showcase"><li id="mainlink4" title="Showcase">showcase</li></a>
+				<a href="Informals"><li id="mainlink5" title="Informals">informals</li></a>
+			</ul>
+		</nav>
 	</section>
 	<section class="pane" id="inner-pane">
 		<div id="content-half">
