@@ -111,5 +111,11 @@
 
 	
 	<input id="searchBox" type="text" name="search" size="40">
+<div id="hidden-box">
+	<div id="hidden-submenu-links">
+	</div>
+	<div id="hidden-subsubmenu-links">
+	</div>
+</div>
 </body>
 </html>
