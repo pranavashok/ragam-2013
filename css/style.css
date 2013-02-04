@@ -435,7 +435,7 @@ html {
 	position:absolute;
 	right:33.33%;
 	top:33.33%;
-	z-index:14;
+	z-index:20;
 }
 .active-links a {
 	width:80px;

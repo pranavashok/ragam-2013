@@ -178,22 +178,26 @@ function setMenu(j) {
 			if ($("#signin-link").attr("class") == "cancel") {
 				$(this).html('<img src="/' + subDir + '/img/signup.png" />');
 				$("#signin-link").attr("class", "enabled");
+				$("#dark").attr("class", "overlayoff");
 			} else {
 				$(this).html('<img src="/' + subDir + '/img/cancel.png" />');
 				$("a#signin-link").attr("class", "cancel");
 				$("a#login-link").attr("class", "enabled");
 				$("a#login-link").html('<img src="/' + subDir + '/img/login.png" />');
+				$("#dark").attr("class", "overlayon");
 			}
 		});
 		$('a#login-link').click(function () {
 			if ($("#login-link").attr("class") == "cancel") {
 				$(this).html('<img src="/' + subDir + '/img/login.png" />');
 				$("#login-link").attr("class", "enabled");
+				$("#dark").attr("class", "overlayoff");
 			} else {
 				$(this).html('<img src="/' + subDir + '/img/cancel.png" />');
 				$("a#login-link").attr("class", "cancel");
 				$("a#signin-link").attr("class", "enabled");
 				$("a#signin-link").html('<img src="/' + subDir + '/img/signup.png" />');
+				$("#dark").attr("class", "overlayon");
 			}
 		});
 	});
