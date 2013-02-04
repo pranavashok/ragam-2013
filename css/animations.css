@@ -117,15 +117,15 @@
 }
 @keyframes inner-pane-moveright {
 	0% {
-		left: 10%;
+		left: 13%;
 		transfort:rotate(-25deg);
 	}
 	30% {
-		left: 10%;
+		left: 13%;
 		transfort:rotate(-25deg);
 	}
 	60% {
-		left: 10%;
+		left: 13%;
 		transform:rotate(0deg);
 	}
 	100% {
@@ -149,7 +149,7 @@
 		transform:rotate(-25deg);
 	}
 	100% {
-		left: 10%;
+		left: 13%;
 		transform:rotate(-25deg);
 	}
 }
