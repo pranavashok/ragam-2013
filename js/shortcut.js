@@ -34,9 +34,7 @@
       init:function(pSystem){
         sys = pSystem
          sys.screenSize(cWidth, cHeight);
-            sys.screenPadding(100);
-        //sys.screen({size:{width:dom.width(), height:dom.height()},
-                    //padding:[36,60,36,60]})
+         sys.screenPadding(100);
 
         $(window).resize(that.resize)
        // that.resize()
@@ -160,10 +158,7 @@
             var pos = $(canvas).offset();
             _mouseP = arbor.Point(e.pageX-pos.left, e.pageY-pos.top)
             nearest = sys.nearest(_mouseP);
-            //var theUI2;
-            // $.getJSON("http://localhost/magartest/manager/rsublinks2.php", function(theUI2) {})
-            //$.getJSON("http://localhost/magartest/manager/rsublinks2.php", null, function(theUI2){});
-           // alert(theUI2[1])
+
             if (!nearest.node) return false
                
 
@@ -177,7 +172,7 @@
                  dom.removeClass('linkable')
                  window.status = ''
               }
-            }else if ($.inArray(nearest.node.name,["Competitions","Workshops","Exhibition","Highlights","Online","Lectures","Nites","wheels","Ragam"]) >=0 ){
+            }else if ($.inArray(nearest.node.name,["Events","Workshops","Social Initiatives","Proshows","Ragam"]) >=0 ){
               if (nearest.node.name!=_section){
                 _section = nearest.node.name
                that.switchSection(_section)
@@ -401,13 +396,7 @@
         }
       }
     }*/
-//var theUI;
-//$.getJSON("http://localhost/magartest/manager/rsublinks2.php", null, function(data){theUI=data});//
-//var theUI = {"nodes":{"Events":{"color":"blue","shape":"dot","alpha":1},"Workshops":{"color":"blue","shape":"dot","alpha":1},"Proshows":{"color":"blue","shape":"dot","alpha":1},"Social Initiatives":{"color":"blue","shape":"dot","alpha":1},"General":{"color":"black","alpha":0},"Literary":{"color":"black","alpha":0},"Dance":{"color":"black","alpha":0},"Dramatics":{"color":"black","alpha":0},"Music":{"color":"black","alpha":0},"Fine Arts":{"color":"black","alpha":0},"Adventure":{"color":"black","alpha":0},"Quiz":{"color":"black","alpha":0},"Ragnarok":{"color":"black","alpha":0},"Online":{"color":"black","alpha":0},"Ragam":{"color":"red","shape":"dot","alpha":1}},"edges":{"Ragam":{"Events":{"length":0.8},"Workshops":{"length":0.8},"Proshows":{"length":0.8},"Social Initiatives":{"length":0.8}},"Events":{"General":[],"Literary":[],"Dance":[],"Dramatics":[],"Music":[],"Fine Arts":[],"Adventure":[],"Quiz":[],"Ragnarok":[],"Online":[]}}};
-var theUI=  {"nodes":{"Competitions":{"color":"blue","shape":"dot","alpha":1},"Workshops":{"color":"blue","shape":"dot","alpha":1},"Exhibition":{"color":"blue","shape":"dot","alpha":1},"Highlights":{"color":"blue","shape":"dot","alpha":1},"Envision":{"color":"black","alpha":0},"Online":{"color":"blue","shape":"dot","alpha":1},"General":{"color":"black","alpha":0},"Robotics":{"color":"black","alpha":0},"Blitzkrieg":{"color":"black","alpha":0},"Management":{"color":"black","alpha":0},"Mechanical":{"color":"black","alpha":0},"Electrical":{"color":"black","alpha":0},"Electronics":{"color":"black","alpha":0},"Computer Science":{"color":"black","alpha":0},"Civil":{"color":"black","alpha":0},"Chemical":{"color":"black","alpha":0},"pre-tathva":{"color":"black","alpha":0},"on-tathva":{"color":"black","alpha":0},"Lectures":{"color":"blue","shape":"dot","alpha":1},"Nites":{"color":"blue","shape":"dot","alpha":1},"Architecture":{"color":"black","alpha":0},"wheels":{"color":"blue","shape":"dot","alpha":1},"Ragam":{"color":"red","shape":"dot","alpha":1}}
-,"edges":
-{"Ragam":{"Competitions":{"length":0.8},"Workshops":{"length":0.8},"Exhibition":{"length":0.8},"Highlights":{"length":0.8},"Online":{"length":0.8},"Lectures":{"length":0.8},"Nites":{"length":0.8},"wheels":{"length":0.8}},"Competitions":{"Envision":{},"General":{},"Robotics":{},"Blitzkrieg":{},"Management":{},"Mechanical":{},"Electrical":{},"Electronics":{},"Computer Science":{},"Civil":{},"Chemical":{},"Architecture":{}},"Workshops":{"pre-tathva":{},"on-tathva":{}}}};//$.getJSON("http://localhost/magartest/manager/rsublinks2.php", null, function(data){var theUI = "{nodes:"+data+"}"});
-//var theUI=result
+    var theUI = {"nodes":{"Events":{"color":"blue","shape":"dot","alpha":1},"Workshops":{"color":"blue","shape":"dot","alpha":1},"Proshows":{"color":"blue","shape":"dot","alpha":1},"Social Initiatives":{"color":"blue","shape":"dot","alpha":1},"General":{"color":"black","alpha":0},"Literary":{"color":"black","alpha":0},"Dance":{"color":"black","alpha":0},"Dramatics":{"color":"black","alpha":0},"Music":{"color":"black","alpha":0},"Fine Arts":{"color":"black","alpha":0},"Adventure":{"color":"black","alpha":0},"Quiz":{"color":"black","alpha":0},"Ragnarok":{"color":"black","alpha":0},"Online":{"color":"black","alpha":0},"Ragam":{"color":"red","shape":"dot","alpha":1}},"edges":{"Ragam":{"Events":{"length":0.8},"Workshops":{"length":0.8},"Proshows":{"length":0.8},"Social Initiatives":{"length":0.8}},"Events":{"General":[],"Literary":[],"Dance":[],"Dramatics":[],"Music":[],"Fine Arts":[],"Adventure":[],"Quiz":[],"Ragnarok":[],"Online":[]}}};
 
 
     var sys = arbor.ParticleSystem()

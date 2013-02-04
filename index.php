@@ -85,7 +85,7 @@
 					<a href="Proshows"><li id="mainlink2" title="Proshows">proshows</li></a>
 					<a href="Workshops"><li id="mainlink3" title="Workshops">workshops</li></a>
 					<a href="Showcase"><li id="mainlink4" title="Showcase">showcase</li></a>
-					<a href="Informals"><li id="mainlink5" title="Informals">informals</li></a>
+					<a href="Sponsors"><li id="mainlink5" title="Sponsors">sponsors</li></a>
 				</ul>
 			</nav>
 		</section>
