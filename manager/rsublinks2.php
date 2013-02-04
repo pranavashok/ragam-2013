@@ -78,6 +78,6 @@ echo json_encode($data);
 	} while($event=$query2->fetch_assoc());*/
  
 	//$links_level1="<ul>".$links_level1."</ul>";
-	print_r ($main);
+	//print_r ($main);
 //print json_encode($main);
 ?>

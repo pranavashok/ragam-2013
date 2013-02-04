@@ -24,14 +24,10 @@ html {
 	height:100%;
 	width:100%;
 	z-index:20;
-	background-color:#f7f7f7;
+	background-color:#000000;
 	display: none;
 }
-#sitemap {
-	position: absolute;
-	width:100%;
-	height:80%;
-}
+
 /* shortcut nav */
 #font-pane{
 	position:absolute;
@@ -220,7 +216,7 @@ html {
 	position:absolute;
 	bottom:3px;
 	right:3px;
-	width:70px;
+	width:35px;
 	height:70px;
 	opacity:1;
 	transition:opacity 0.3s ease;
@@ -253,12 +249,15 @@ html {
 	opacity:0.2;
 	cursor:pointer;
 	position: absolute;
-	right:55px;
-	top:50px;
-	background: white url('../img/search.png') no-repeat 0px 0px;
+
+	right:37px;
+	top:600px;
+	background: white url('../img/search.png') no-repeat 20px 20px;
+
+	
 	border: 1px solid #999;
 	height: 32px;
-	width:32px;
+	width:1px;
 	color: transparent;
 	overflow:hidden;
 	transition:width 0.3s ease;
@@ -274,7 +273,7 @@ html {
 
 #searchBox:hover{
 	opacity: 1;
-	width: 220px;
+	width: -220px;
 	color: #444;
 	padding: 4px 4px 4px 34px;
 	transition: width 0.3s ease, opcaity 0.3s ease;
@@ -360,8 +359,8 @@ html {
 }
 #home-button{
 	position:absolute;
-	left:10px;
-	top:10px;
+	left:3px;
+	top:3px;
 	z-index:2;
 	font-size:20px;
 	cursor:hand;
@@ -458,7 +457,7 @@ html {
 
 .active-links {
 	position:absolute;
-	right:8px;
+	right:0px;
 	top:0;
 }
 #container {
@@ -475,6 +474,7 @@ html {
 	cursor:pointer;
 	display:inline-block;
 	height:20px;
+	right:3px;
 	padding:10px 12px;
 	vertical-align: top;
 	white-space: nowrap;
@@ -507,6 +507,9 @@ html {
 a#signin-link {
 	color:#bababa;
 	position:relative;
+	top:-7px;
+	right: -10px;
+
 }
 
 a#signin-link em {

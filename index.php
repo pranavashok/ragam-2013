@@ -1,3 +1,4 @@
+
 	<?php $subDir = "/magar/"?>
 	<html>
 	<head>
@@ -37,6 +38,7 @@
 						Password: <input type="password" name="pwd"><br>
 						Re-enter password: <input type="password" name="pwd"><br>
 						<input type="submit" value="Sign Up">
+
 
 					</div>
 				</fieldset>
@@ -112,21 +114,25 @@
 				<div id="painting">
 				</div>
 			</div>
-		</section>
+
+		</div>
+	</section>
+	
+</div>
+<div class="pane" id="support-pane">
+	<div id="arrow-up"></div>
+</div>
+<div id="home-button">
+	<img src="<?php echo $subDir; ?>img/back.png">
+</div>
+<aside id="followlinks">
+	<!--<a style="width:48px; height:48px; display:inline; opacity:0"><img src="<?php echo $subDir; ?>img/twitter.png"></a>
+	<!--<a href="facebook.com" target="blank" ><img src="<?php echo $subDir; ?>img/twitter.png"></a>-->
+	
+	<a href="youtube.com" target="blank"><img src="<?php echo $subDir; ?>img/youtube.png"></a>	
+	<a href="www.facebook.com/Ragam.nitc" target="blank"><img src="<?php echo $subDir; ?>img/facebook.png"></a>				</aside>
+
 		
-	</div>
-	<div class="pane" id="support-pane">
-		<div id="arrow-up"></div>
-	</div>
-	<div id="home-button">
-		<img src="<?php echo $subDir; ?>img/home.png">
-	</div>
-	<aside id="followlinks">
-		<a style="width:48px; height:48px; display:inline; opacity:0"><img src="<?php echo $subDir; ?>img/twitter.png"></a>
-		<a href="facebook.com" target="blank" ><img src="<?php echo $subDir; ?>img/twitter.png"></a>
-		<a href="youtube.com" target="blank"><img src="<?php echo $subDir; ?>img/youtube.png"></a>	
-		<a href="twitter.com" target="blank"><img src="<?php echo $subDir; ?>img/facebook.png"></a>				
-	</aside>
 	<input id="searchBox" type="text" name="search" size="40">
 </body>
 </html>
