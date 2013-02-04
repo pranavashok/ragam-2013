@@ -28,9 +28,25 @@
 		<canvas id="sitemap"></canvas>
 	</div>
 	<div class="pane" id="login-pane">
+		<div id="loginform">
+			<form name="input" action="logindetails.php" method="get">
+				First name: <input type="text" name="firstname"><br>
+				Last name: <input type="text" name="lastname"><br>
+				Password: <input type="password" name="pwd"><br>
+				Re-enter password: <input type="password" name="pwd">
+				<input type="radio" name="sex" value="male">Male
+				<input type="radio" name="sex" value="female">Female<br>
+				<input type="submit" value="Submit">
+			</div>
+
+
+		</form> 
+
+
 		<button id="logcancel" >Cancel</button> <!--<input type="button" value="Cancel" id="logcancel" /> -->  
 	</div>
-	<div id="top-stuff">  
+</div>
+	 <div id="top-stuff">  
 		<div id="topnav">
 			<div class="active-links">
 				<div id="session">
@@ -39,39 +55,10 @@
 					</a>
 				</div>
 				<div id="signin-dropdown">
-
-					<form method="post" class="signin" action="#">
-						<fieldset class="textbox">
-							<label class="username">
-								<span>Username or email</span>
-								<input id="username" name="username" value="" type="text" autocomplete="on">
-							</label>
-
-							<label class="password">
-								<span>Password</span>
-								<input id="password" name="password" value="" type="password">
-							</label>
-						</fieldset>
-
-						<fieldset class="remb">
-							<label class="remember">
-								<input type="checkbox" value="1" name="remember_me" /> 
-								<span>Remember me</span>
-							</label>
-							<button class="submit button" type="button">Sign in</button>
-						</fieldset>
-						<p>
-							<a class="forgot" href="#">Forgot your password</a>
-							<br>
-							<a class="mobile" href="#">Register with Facebook.</a>
-						</p>
-					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-</div>
 <div id="wrapper">
 	<section class="pane" id="font-pane">
 		<div id="logo">
@@ -83,10 +70,6 @@
 			<script type="text/javascript" src="<?php echo $subDir; ?>js/logo.js"></script>
 
 		</div>
-	</section>
-
-	<section class="pane" id="login-pane">
-
 	</section>
 
 	<section class="pane" id="mainmenu-pane">

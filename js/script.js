@@ -146,6 +146,8 @@ function setMenu(j) {
 		$("#arrow-up").click(function () {
 			$("#wrapper").attr("class", "support-up");
 			$("#support-pane").attr("class", "support-up");
+			$("#login-pane").attr("class", "move-up");
+			
 		});
 		$("#logcancel").click(function(e) {
 	    		$("#login-pane").attr("class", "move-up");
