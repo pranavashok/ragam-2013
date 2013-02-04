@@ -75,7 +75,7 @@ html {
 	z-index: 1;
 }
 #content-container {
-	width: 80%;
+	width: 78%;
 	height: 100%;
 	background: #4a52b5;
 	display: block;
@@ -134,7 +134,7 @@ html {
 #subsubmenu {
 	font-family: HelveticaThin;
 	text-transform: lowercase;
-	width: 300px;
+	width: 22%;
 	height: 100%;
 	background: #4a52b5;
 	display: block;
@@ -154,7 +154,6 @@ html {
 	text-decoration: none;
 	color:#fff;
 	display: block;
-	width:300px;
 	padding-right: 20px;
 }
 #subsubmenu-links a.selected {
