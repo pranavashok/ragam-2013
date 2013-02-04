@@ -55,7 +55,8 @@ function setMenu(j) {
 				if (relativeUrl[relativeUrl.length - 1] == '/') relativeUrl = relativeUrl.substr(0, relativeUrl.length - 1);
 				setCssL('#font-pane');
 				setCssR('#mainmenu-pane');
-				$("#inner-pane").attr("class", "pane"); //Reset the inner-pane just before opening
+				if($("#mainmenu-pane").attr("class")!="moveout")
+					$("#inner-pane").attr("class", "pane"); //Reset the inner-pane just before opening
 				$("#mainmenu-pane").attr("class", "moveout");
 				$("#font-pane").attr("class", "moveout");
 				$("#followlinks").animate({
@@ -149,7 +150,16 @@ function setMenu(j) {
 				$(this).attr("class", "notselected");
 			});
 			$(this).attr("class", "selected");
+			$("#hidden-submenu-links").html($("#submenu-links").html());
+			$("#hidden-subsubmenu-links").html($("#subsubmenu-links").html());
 			History.pushState(null, $(this).text() + " | Ragam 2013", $(this).attr("href"));
+		});
+		$("#content-container").mouseenter(function() {
+			if($("#inner-pane").attr("class")=="moveright")
+			{
+				$("#submenu-links").html($("#hidden-submenu-links").html());
+				$("#subsubmenu-links").html($("#hidden-subsubmenu-links").html());
+			}
 		});
 		$("#arrow-up").click(function () {
 			$("#dark").attr("class", "overlayon");
