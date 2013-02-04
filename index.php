@@ -44,28 +44,21 @@
 					</div>
 				</fieldset>
 			</form> 
-
-
-			<button id="logcancel" >Cancel</button> <!--<input type="button" value="Cancel" id="logcancel" /> -->  
-		</div>
-	</div>
-	<div id="top-stuff">  
-		<div id="topnav">
-			<div class="active-links">
-				<div id="session">
-					<a id="signin-link" href="#">
-						<img src="<?php echo $subDir; ?>img/login.png" />
-					</a>
-					<a id="signin-link" href="#">
-						<img src="<?php echo $subDir; ?>img/signup.png" />
-					</a>
-				</div>
-				<div id="signin-dropdown">
-				</div>
-			</div>
 		</div>
 	</div>
 	<div id="wrapper">
+		<div class="active-links">
+			<div id="session">
+				<a id="login-link" href="#">
+					<img src="<?php echo $subDir; ?>img/login.png" />
+				</a>
+				<a id="signin-link" href="#">
+					<img src="<?php echo $subDir; ?>img/signup.png" />
+				</a>
+			</div>
+			<div id="signin-dropdown">
+			</div>
+		</div>
 		<section class="pane" id="font-pane">
 			<div id="logo">
 			<!--<canvas id="letterr"  width="1050" height="500" ></canvas>

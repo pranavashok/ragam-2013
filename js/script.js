@@ -163,13 +163,37 @@ function setMenu(j) {
 			});
 			/* Code to reset level zero */
 		});
-		$('.active-links').click(function () {
-			$('#login-pane').attr('class', 'move-down');
-            $('#wrapper').attr('class', 'login-down');
+		$('a#signin-link').click(function () {
+			if($("#signin-link").attr("class") == "cancel") {
+				$("#login-pane").attr("class", "move-up");
+				$("#wrapper").attr("class", "login-up");
+				$(this).html('<img src="/'+subDir+'/img/signup.png" />');
+				$("#signin-link").attr("class", "enabled");
+			}
+			else {
+				$(this).html('<img src="/'+subDir+'/img/cancel.png" />');
+				$("a#signin-link").attr("class", "cancel");
+				$("a#login-link").attr("class", "enabled");
+				$("a#login-link").html('<img src="/'+subDir+'/img/login.png" />');
+				$('#login-pane').attr('class', 'move-down');
+				$('#wrapper').attr('class', 'login-down');
+			}
         });
-        $("#logcancel").click(function(e) {
-	    		$("#login-pane").attr("class", "move-up");
-	    		$("#wrapper").attr("class", "login-up");
-	   	});
+		$('a#login-link').click(function () {
+			if($("#login-link").attr("class") == "cancel") {
+				$("#login-pane").attr("class", "move-up");
+				$("#wrapper").attr("class", "login-up");
+				$(this).html('<img src="/'+subDir+'/img/login.png" />');
+				$("#login-link").attr("class", "enabled");
+			}
+			else {
+				$(this).html('<img src="/'+subDir+'/img/cancel.png" />');
+				$("a#login-link").attr("class", "cancel");
+				$("a#signin-link").attr("class", "enabled");
+				$("a#signin-link").html('<img src="/'+subDir+'/img/signup.png" />');
+				$('#login-pane').attr('class', 'move-down');
+				$('#wrapper').attr('class', 'login-down');
+			}
+        });
 	});
 })(window);
