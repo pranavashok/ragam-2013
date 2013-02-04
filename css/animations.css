@@ -295,6 +295,7 @@
 	}
 }
 #dark.overlayon {
+	z-index: 19;
 	animation-name: overlayon;
 	animation-duration: 1s;
 	animation-timing-function: ease;
@@ -310,6 +311,7 @@
 	}
 }
 #dark.overlayoff {
+	z-index: -20;
 	animation-name: overlayoff;
 	animation-duration: 1s;
 	animation-timing-function: ease;
