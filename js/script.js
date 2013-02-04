@@ -71,10 +71,10 @@ function setMenu(j) {
 							setMenu(d);
 							var catlinks = "";
 							d.forEach(function (ele) {
-								catlinks = catlinks + "<a href='/"+subDir+"/"+title+"/"+ele.name.replace(" ","")+"'><li>" + ele.name + "</li></a>";
+								catlinks = catlinks + "<a href='/"+subDir+"/"+title+"/"+ele.name.replace(/\ /g,"_")+"'><li>" + ele.name + "</li></a>";
 							});
 							$("#submenu-links").html(catlinks);
-//							$("#submenu-links a").trigger('mouseenter');
+							$("#submenu-links a").trigger('mouseenter');
 							// load content to hidden div					
 						}
 					});
@@ -118,7 +118,7 @@ function setMenu(j) {
 				for (ele in menu) {
 					if (menu[ele].name == $(this).text()) {
 						for(s in menu[ele]['sublinks']) {
-							sublinks = sublinks + "<li><a href='/"+subDir+"/"+title+"/"+menu[ele].name.replace(" ","")+"/"+menu[ele]['sublinks'][s].name.replace(" ","")+"'>" + menu[ele]['sublinks'][s].name + "</a></li>";
+							sublinks = sublinks + "<li><a href='/"+subDir+"/"+title+"/"+menu[ele].name.replace(/\ /g,"_")+"/"+menu[ele]['sublinks'][s].name.replace(/\ /g,"_")+"'>" + menu[ele]['sublinks'][s].name + "</a></li>";
 						}
 						break;
 					}
