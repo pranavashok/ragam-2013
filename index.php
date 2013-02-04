@@ -6,7 +6,8 @@
 		<link href="<?php echo $subDir; ?>css/style.css" rel="stylesheet"/>
 		<link href="<?php echo $subDir; ?>css/logo.css" rel="stylesheet"/>
 		<link href="<?php echo $subDir; ?>css/animations.css" rel="stylesheet"/>
-		<link rel="stylesheet" href="<?php echo $subDir; ?>css/nanoscroller.css"> 
+		<link href="<?php echo $subDir; ?>css/nanoscroller.css" rel="stylesheet" > 
+		<link href="<?php echo $subDir; ?>css/favicon.ico" rel="icon" type="image/x-icon" />
 		<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.min.js"></script>
 		<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
 		<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.jquery.js"></script>
