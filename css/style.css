@@ -673,14 +673,14 @@ form.signin .remb .remember {
 	position:absolute;
 	top:0px;
 	left:0px;
-	opacity:0.3;
+	opacity:0.9;
 }
 .spinner {
     /* Size and position */
     font-size: 100px; /* 1em */
-    width: 1em;
-    height: 1em;
-    margin: 100px auto;
+    width: 1.2em;
+    height: 1.2em;
+    margin: 150px auto;
     position: relative;
  
     /* Styles */
@@ -689,10 +689,11 @@ form.signin .remb .remember {
     border: .01em solid rgba(150,150,150,0.1); /* Subtle white line circling the dots */
     z-index: 100;
     display: block;
+    background: url('../img/loading.png') no-repeat center;
 }
 .spinner li {
-    width: .2em;
-    height: .2em;
+    width: .1em;
+    height: .1em;
     position: absolute;
     border-radius: 50%;
 }
