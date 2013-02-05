@@ -214,6 +214,10 @@ function loadArt() {
 				History.pushState(null, $(this).text() + " | Ragam 2013", $(this).attr("href"));
 			},
 			mouseenter: function(e) {
+				$("#subsubmenu-links a").each(function () {
+					$(this).attr("class", "notselected");
+				});
+				$(this).attr("class", "selected");
 				$(this).children(".shortdesc").show();
 			},
 			mouseleave: function(e) {
