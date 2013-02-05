@@ -554,7 +554,8 @@ form.signin .remb .remember {
     width: 200px;
     height: 32px;
     font-size: 18px;
-    margin-right: 20px;
+    /*margin-right: 20px;
+    margin-top: 25%;*/
     color:#555;
     border: none;
     background: #ccc url('../img/search.png') no-repeat;
@@ -568,6 +569,8 @@ form.signin .remb .remember {
     width: 200px;
     height: 32px;
     font-size: 18px;
+    margin-left: 20px;
+    margin-right: 0px;
     color:#555;
     background: #ccc;
     border: none;

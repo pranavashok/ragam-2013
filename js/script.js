@@ -246,7 +246,7 @@ function loadArt() {
 				$("#form-wrapper").fadeIn();
 			}
 		});
-		$('a#login-link').click(function () {
+		$('#login-link').click(function () {
 			if ($("#login-link").attr("class") == "cancel") {
 				$(this).html('<img src="/' + subDir + '/img/login.png" />');
 				$("#login-link").attr("class", "enabled");
@@ -260,6 +260,14 @@ function loadArt() {
 				$("#dark").attr("class", "overlayon");
 				$("#form-wrapper").fadeIn();
 			}
+		});
+		$('#dark').click(function () {
+			    $("#login-link").html('<img src="/' + subDir + '/img/login.png" />');
+			    $("#signin-link").html('<img src="/' + subDir + '/img/signup.png" />');
+			    $("#login-link").attr("class", "enabled");
+			    $("#dark").attr("class", "overlayoff");
+			    $("#form-wrapper").fadeOut();
+
 		});
 		loadArt();
 	});
