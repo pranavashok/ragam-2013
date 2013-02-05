@@ -1,4 +1,4 @@
-@keyframes font-pane-loading {
+﻿@keyframes font-pane-loading {
 	0% {
 		left: 33.33%;
 	}
@@ -161,10 +161,10 @@
 }
 @keyframes support-up {
 	0% {
-		top:101%;
+		bottom:-380px;
 	}
 	100% {
-		top:70%;
+		bottom:0px;
 	}
 }
 #support-pane.support-up {

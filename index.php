@@ -97,13 +97,31 @@
 			</div>
 		</div>
 
-	</div>
 </section>
 
 </div>
 <div class="pane" id="support-pane">
-	<div id="arrow-up"></div>
+	 <div id="arrow-up"></div>
+	 <div id="footer_inner">
+	
+		<div id="supportpane_top">
+			<span id="ticker"></span>	
+			<span id="social_panel">
+				<span class="social_button"></span>
+				<span class="social_button"></span>
+				<span class="social_button"></span>
+			</span>
+		</div>
+	
+		<div id="supportpane_bot">
+			<div id="menu_tab"></div>
+		
+		</div>	
+	
+	 </div>
+
 </div>
+
 <div id="home-button">
 	<img src="<?php echo $subDir; ?>img/back.png">
 </div>
