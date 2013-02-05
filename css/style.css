@@ -217,7 +217,8 @@
 	top: 30%;
 	left: 20%;
 	position: absolute;
-	background: url('/magar/img/fs.png') no-repeat;
+	/*background: url('/magar/img/fs.png') no-repeat;*/
+	background-repeat:no-repeat;
 }
 /* Follow Twitter, Facebook, Youtube  */
 #followlinks{

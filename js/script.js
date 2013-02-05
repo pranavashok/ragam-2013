@@ -43,6 +43,14 @@ function setCssL(a) {
 function setMenu(j) {
 	menu = j;
 }
+
+function loadArt() {
+	$("#hidden-art").append($("<img id='general'/>").attr("src", "/" + subDir + "/img/general.png"));
+	$("#hidden-art").append($("<img id='fine_arts'/>").attr("src", "/" + subDir + "/img/fine_arts.png"));
+	$("#hidden-art").append($("<img id='music'/>").attr("src", "/" + subDir + "/img/music.png"));
+	$("#hidden-art").append($("<img id='dance'/>").attr("src", "/" + subDir + "/img/dance.png"));
+	$("#hidden-art").append($("<img id='thematic'/>").attr("src", "/" + subDir + "/img/thematic.png"));
+}
 (function (window, undefined) {
 	var History = window.History;
 	if (!History.enabled) {
@@ -98,7 +106,7 @@ function setMenu(j) {
 								catlinks = catlinks + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "'><li>" + ele.name + "</li></a>";
 							});
 							$("#submenu-links").html(catlinks);
-							$("#submenu-links a").trigger('mouseenter');
+							//$("#submenu-links a").trigger('mouseenter');
 							// load content to hidden div					
 						}
 					});
@@ -158,6 +166,15 @@ function setMenu(j) {
 					}
 				}
 				$("#subsubmenu-links").html(sublinks);
+				var tmp = $(this).text();
+				tmp = tmp.replace(' ', '_');
+				//var currBg = $("#painting").css('background-image');
+        		//var newBg = $("img#"+tmp).attr("src"); 
+        		//currBgs = currBg.replace('url(','').replace(')','').split('/');
+        		//newBgs = newBg.split('/');
+        		//alert(currBg+' -- '+$("img#"+tmp).attr("src"));
+				//if(currBgs[currBgs.lenth-1]!=newBgs[newBgs.length-1])
+					$("#painting").css('background-image', 'url("'+ $("img#"+tmp).attr("src") + '")');
 				$("#submenu-links a").each(function () {
 					$(this).attr("class", "notselected");
 				});
@@ -243,5 +260,6 @@ function setMenu(j) {
 				$("#form-wrapper").fadeIn();
 			}
 		});
+		loadArt();
 	});
 })(window);
