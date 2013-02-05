@@ -31,6 +31,10 @@
 	    <li></li>
 	</ul>
 	<div id="dark"></div>
+	<div id="form-wrapper">
+		<input class="emailentry" type="email" name="email" title="email" value="email" onfocus="inputFocus(this)" onblur="inputBlur(this)" />
+		<input class="passwordentry" type="text" name="password" title="password" value="password" onfocus="inputFocusPass(this)" onblur="inputBlurPass(this)" />
+	</div>
 	<div  id="shortcut" >
 		<canvas id="sitemap"></canvas>
 	</div>
