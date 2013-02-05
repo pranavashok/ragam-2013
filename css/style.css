@@ -21,6 +21,14 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+    font-family: HelveticaLightCondensed;
+    src: url('helveticaneueltcom-ltcn.eot');
+    src: url('helveticaneueltcom-ltcn.eot') format('embedded-opentype'),
+         url('helveticaneueltcom-ltcn.woff') format('woff'),
+         url('helveticaneueltcom-ltcn.ttf') format('truetype'),
+         url('helveticaneueltcom-ltcn.svg#HelveticaNeueLTCom47LightCondensed') format('svg');
+}
 .shortdesc{
 	display:none;
 }
