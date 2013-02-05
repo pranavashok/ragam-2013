@@ -152,7 +152,7 @@ function setMenu(j) {
 				for (ele in menu) {
 					if (menu[ele].name == $(this).text()) {
 						for (s in menu[ele]['sublinks']) {
-							sublinks = sublinks + "<li><a href='/" + subDir + "/" + title + "/" + menu[ele].name.replace(/\ /g, "_") + "/" + menu[ele]['sublinks'][s].name.replace(/\ /g, "_") + "'>" + menu[ele]['sublinks'][s].name + "</a></li>";
+							sublinks = sublinks + "<li><a href='/" + subDir + "/" + title + "/" + menu[ele].name.replace(/\ /g, "_") + "/" + menu[ele]['sublinks'][s].name.replace(/\ /g, "_") + "'>" + menu[ele]['sublinks'][s].name+"<div class='shortdesc'>"+menu[ele]['sublinks'][s].shortdesc+"</div></a></li>";
 						}
 						break;
 					}
@@ -179,8 +179,11 @@ function setMenu(j) {
 				$("#hidden-subsubmenu-links").html($("#subsubmenu-links").html());
 				History.pushState(null, $(this).text() + " | Ragam 2013", $(this).attr("href"));
 			},
-			hover: function(e) {
-				//Hover code comes here
+			mouseenter: function(e) {
+				$(this).children(".shortdesc").slideToggle();
+			},
+			mouseleave: function(e) {
+				$(this).children(".shortdesc").slideToggle();
 			}
 		});
 		$("#content-container").mouseenter(function() {
