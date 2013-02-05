@@ -21,6 +21,9 @@
 	font-weight: normal;
 	font-style: normal;
 }
+.shortdesc{
+	display:none;
+}
 #wrapper{
 	position:absolute;
 	width:300%;

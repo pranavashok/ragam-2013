@@ -4,7 +4,7 @@ require_once("initdb.php");
 $event = $_POST['event'];
 
 $event = preg_replace('/_/', '$1 $2', $event);
-$query1=$mysqli->query("SELECT name,longdesc,contacts FROM events WHERE name='$event'");
+$query1=$mysqli->query("SELECT name,longdesc,contacts,shortdesc FROM events WHERE name='$event'");
 
 $eve = $query1->fetch_assoc();
 $data['name']=$eve['name'];
@@ -14,6 +14,6 @@ $data['content']=preg_replace("/\|\|ttl\|\|/","</strong><br/><br/>",$data['conte
 
 $data['content']=preg_replace("/\|\|@\|\|/","<br/>",$data['content']);
 $data['content']=preg_replace("/\|\|0\|\|/","@ragam.org.in",$data['content']);
-
+$data['shortdesc']=$eve['shortdesc'];
 echo json_encode($data);
 ?>
