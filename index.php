@@ -25,7 +25,12 @@
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/shortcut.js"></script>
 </head>
 <body>
-	<div id="dark"></div>
+	<div id="dark">
+	</div>
+	<div id="form-wrapper">
+		<input class="emailentry" type="email" name="email" title="email" value="email" onfocus="inputFocus(this)" onblur="inputBlur(this)" />
+		<input class="passwordentry" type="text" name="password" title="password" value="password" onfocus="inputFocusPass(this)" onblur="inputBlurPass(this)" />
+	</div>
 	<div  id="shortcut" >
 		<canvas id="sitemap"></canvas>
 	</div>
