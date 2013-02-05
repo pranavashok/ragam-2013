@@ -12,8 +12,9 @@ $data['content']=$eve['longdesc']."<br/><br/><strong>Contacts</strong><br/><br/>
 $data['content']=preg_replace("/\|\|sec\|\|/","<br/><br/><strong>",$data['content']);
 $data['content']=preg_replace("/\|\|ttl\|\|/","</strong><br/><br/>",$data['content']);
 
+$data['content']=preg_replace("/(.+)\|\|0\|\|\|\|@\|\|(.+)/", "$1||0||",$data['content']);
 $data['content']=preg_replace("/\|\|@\|\|/","<br/>",$data['content']);
-$data['content']=preg_replace("/\|\|0\|\|/","@ragam.org.in",$data['content']);
+$data['content']=preg_replace("/\|\|0\|\|/","@ragam.org.in <br/><br/>",$data['content']);
 $data['shortdesc']=$eve['shortdesc'];
 echo json_encode($data);
 ?>

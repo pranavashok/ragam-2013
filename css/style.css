@@ -31,6 +31,11 @@
 }
 .shortdesc{
 	display:none;
+	margin:0;
+	padding:0;
+	line-height: 1.25em;
+	font-size:16px;
+	color:#111;
 }
 #wrapper{
 	position:absolute;
@@ -107,7 +112,7 @@
 	font-family: HelveticaThin;
 	position: absolute;
 	width: 60%;
-	height: 27%;
+	height: 24%;
 	display: block;
 	background: #2a32a5;
 	right: 5%;
@@ -175,6 +180,7 @@
 	text-decoration: none;
 	color:#fff;
 	display: block;
+ 	padding-left: 10px;
 	padding-right: 20px;
 }
 #subsubmenu-links a.selected {
@@ -217,7 +223,7 @@
 	color:#fff;
 	background-color:#4a52b5;
 }
-#submen-links a.notselected {
+#submenu-links a.notselected {
 	color: #4a52b5;
 	background-color: #f7f7f7;
 }
@@ -547,22 +553,22 @@ form.signin .remb .remember {
 	display: none;
 }
 .emailentry {
-	padding-left: 20px;
+	padding-left: 35px;
 	z-index: 30;
 	position: relative;
     font-family: 'HelveticaThin';
     width: 200px;
     height: 32px;
     font-size: 18px;
-    /*margin-right: 20px;
-    margin-top: 25%;*/
+    margin-top: 10%;
     color:#555;
     border: none;
-    background: #ccc url('../img/search.png') no-repeat;
+    background: #ccc url('../img/iconsprite.png') 0px -32px no-repeat;
 }
 
 .passwordentry {
-	padding-left: 20px;
+	padding-left: 40px;
+	padding-bottom: 2px;
 	z-index: 30;
 	position: relative;
     font-family: 'HelveticaThin';
@@ -574,6 +580,7 @@ form.signin .remb .remember {
     color:#555;
     background: #ccc;
     border: none;
+    background: #ccc url('../img/iconsprite.png') 0px -64px no-repeat;
 }
 /* support pane modified */
 
@@ -648,6 +655,17 @@ form.signin .remb .remember {
 	background-color:gray;
 }
 /* Loading Animation */
+#light
+{
+	width:100%;
+	height:100%;
+	z-index:50;
+	background-color:white;
+	position:absolute;
+	top:0px;
+	left:0px;
+	opacity:0.3;
+}
 .spinner {
     /* Size and position */
     font-size: 100px; /* 1em */
@@ -661,7 +679,7 @@ form.signin .remb .remember {
     border-radius: 50%;
     border: .01em solid rgba(150,150,150,0.1); /* Subtle white line circling the dots */
     z-index: 100;
-    display: none;
+    display: block;
 }
 .spinner li {
     width: .2em;
