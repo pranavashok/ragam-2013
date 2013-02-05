@@ -44,6 +44,16 @@ function setMenu(j) {
 	menu = j;
 }
 
+function loadingAnimation(b) {
+	if(b){
+		$("#light").show();
+		$(".spinner").show();
+	}else{
+		$("#light").hide();
+		$(".spinner").hide();
+	}
+}
+
 function loadArt() {
 	$("#hidden-art").append($("<img id='general'/>").attr("src", "/" + subDir + "/img/general.png"));
 	$("#hidden-art").append($("<img id='fine_arts'/>").attr("src", "/" + subDir + "/img/fine_arts.png"));
@@ -107,7 +117,8 @@ function loadArt() {
 							});
 							$("#submenu-links").html(catlinks);
 							//$("#submenu-links a").trigger('mouseenter');
-							// load content to hidden div					
+							// load content to hidden div	
+							loadingAnimation(false);				
 						}
 					});
 				} else { //Its a second level url
@@ -132,6 +143,7 @@ function loadArt() {
 							$(".nano").nanoScroller({
 								scrollTop: '0px'
 							});
+							loadingAnimation(false);
 						}
 
 					});
@@ -153,6 +165,7 @@ function loadArt() {
 
 		$("#mainlinks li").click(function () {
 			title = $(this).attr('title');
+			loadingAnimation(true);
 			History.pushState({
 				timestamp: (new Date().getTime())
 			}, title + " | Ragam 2013", $(this).parent("a").attr("href"));
@@ -190,6 +203,7 @@ function loadArt() {
 		$("#subsubmenu-links a").live({
 			click: function (e) {
 				e.preventDefault();
+				loadingAnimation(true);
 				$("#painting").fadeOut();
 				$("#subsubmenu-links a").each(function () {
 					$(this).attr("class", "notselected");
@@ -274,5 +288,6 @@ function loadArt() {
 
 		});
 		loadArt();
+		loadingAnimation(false);
 	});
 })(window);

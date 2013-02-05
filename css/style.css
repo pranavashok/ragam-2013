@@ -646,6 +646,17 @@ form.signin .remb .remember {
 	background-color:gray;
 }
 /* Loading Animation */
+#light
+{
+	width:100%;
+	height:100%;
+	z-index:50;
+	background-color:white;
+	position:absolute;
+	top:0px;
+	left:0px;
+	opacity:0.3;
+}
 .spinner {
     /* Size and position */
     font-size: 100px; /* 1em */
@@ -659,7 +670,7 @@ form.signin .remb .remember {
     border-radius: 50%;
     border: .01em solid rgba(150,150,150,0.1); /* Subtle white line circling the dots */
     z-index: 100;
-    display: none;
+    display: block;
 }
 .spinner li {
     width: .2em;
