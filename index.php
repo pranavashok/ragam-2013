@@ -30,7 +30,7 @@
 	<ul class="spinner">
 	    <li></li>
 	    <li></li>
-	    <li></li>
+    	<li></li>
 	</ul>
 	<div id="dark"></div>
 
