@@ -87,9 +87,9 @@ function loadArt() {
 					$("#inner-pane").attr("class", "pane"); //Reset the inner-pane just before opening
 				$("#mainmenu-pane").attr("class", "moveout");
 				$("#font-pane").attr("class", "moveout");
-				$("#followlinks").animate({
+				/*$("#followlinks").animate({
 					opacity: '0'
-				});
+				});*/
 				if (relativeUrl.search("/") == -1) { //If it's a first level page
 					title = relativeUrl;
 					$.ajax({
@@ -207,8 +207,7 @@ function loadArt() {
 				$("#subsubmenu-links").html($("#hidden-subsubmenu-links").html());
 			}
 		});
-		$("#arrow-up").click(function () {
-			$("#dark").attr("class", "overlayon");
+		$("#support-pane").click(function () {
 			$("#wrapper").attr("class", "support-up");
 			$("#support-pane").attr("class", "support-up");
 		});
@@ -218,16 +217,15 @@ function loadArt() {
 				container.attr("class", "support-down");
 				$("#wrapper").attr("class", "support-down");
 				$(".support-puller").show();
-				$("#dark").attr("class", "overlayoff");
 			}
 		});
 		$("#home-button").click(function () {
 			History.pushState({
 				timestamp: (new Date().getTime())
 			}, "Ragam 2013", "/" + subDir + "/");
-			$("#followlinks").animate({
+			/*$("#followlinks").animate({
 				opacity: '1'
-			});
+			});*/
 			/* Code to reset level zero */
 		});
 		$('a#signin-link').click(function () {
