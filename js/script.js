@@ -113,6 +113,7 @@ function loadArt() {
 				} else { //Its a second level url
 					$("#painting").fadeOut();
 					$("#inner-pane").attr("class", "moveright");
+
 					var n = relativeUrl.split("/");
 					eve = relativeUrl.split("/")[n.length - 1];
 					$.ajax({
@@ -123,8 +124,10 @@ function loadArt() {
 						},
 						type: "POST",
 						success: function (d) {
+							
 							$("#content-heading").text(d.name);
 							$("#content-content").html(d.content);
+							$("#content-wrapper").fadeIn();
 							//	$(".nano").nanoScroller();
 							$(".nano").nanoScroller({
 								scrollTop: '0px'
@@ -223,6 +226,7 @@ function loadArt() {
 			History.pushState({
 				timestamp: (new Date().getTime())
 			}, "Ragam 2013", "/" + subDir + "/");
+			$("#content-wrapper").fadeOut();
 			/*$("#followlinks").animate({
 				opacity: '1'
 			});*/
