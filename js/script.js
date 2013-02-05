@@ -174,11 +174,11 @@ function setMenu(j) {
 				$("#hidden-submenu-links").html($("#submenu-links").html());
 				$("#hidden-subsubmenu-links").html($("#subsubmenu-links").html());
 				History.pushState(null, $(this).text() + " | Ragam 2013", $(this).attr("href"));
-			}
+			},
 			hover: function(e) {
 				//Hover code comes here
 			}
-		);
+		});
 		$("#content-container").mouseenter(function() {
 			if($("#inner-pane").attr("class")=="moveright")
 			{
