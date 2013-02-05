@@ -1,5 +1,7 @@
 var subDir = 'magar';
 var title = '';
+var aniSpd = 3000;
+var fadeSpd = 200;
 var menu;
 
 function setCssR(a) {
@@ -155,6 +157,16 @@ function loadArt() {
 				timestamp: (new Date().getTime())
 			}, "Ragam 2013", "");
 		});
+		var startIndex = 0;
+		var endIndex = $('#ticker div').length;
+		$('#ticker div:first').fadeIn(fadeSpd);
+
+		window.setInterval(function() {
+			$('#ticker div:eq(' + startIndex + ')').delay(fadeSpd).fadeOut(fadeSpd);
+			    startIndex++;
+			    $('#ticker div:eq(' + startIndex + ')').fadeIn(fadeSpd);
+		        if (endIndex == startIndex) startIndex = 0;
+	    }, aniSpd);
 		$(".nano").hover(function(){
 			$(this).nanoScroller();
 		});

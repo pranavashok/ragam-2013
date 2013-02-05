@@ -37,6 +37,7 @@
 	<div id="form-wrapper">
 		<input class="emailentry" type="email" name="email" title="email" value="email" onfocus="inputFocus(this)" onblur="inputBlur(this)" />
 		<input class="passwordentry" type="text" name="password" title="password" value="password" onfocus="inputFocusPass(this)" onblur="inputBlurPass(this)" />
+		<div id="tip">press enter to log in...</div>
 	</div>
 	<div  id="shortcut" >
 		<canvas id="sitemap"></canvas>
@@ -111,7 +112,11 @@
 	 <div id="footer_inner">
 	
 		<div id="supportpane_top">
-			<span id="ticker"></span>
+			<div id="ticker">
+		    	<div>Story 1</div>
+		    	<div>Story 2</div>
+		    	<div>Story 3</div>
+			</div>
 			<span id="social_panel">
 				<!--<a style="width:48px; height:48px; display:inline; opacity:0"><img src="<?php echo $subDir; ?>img/twitter.png"></a>
 				<!--<a href="facebook.com" target="blank" ><img src="<?php echo $subDir; ?>img/twitter.png"></a>-->

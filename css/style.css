@@ -549,38 +549,43 @@ form.signin .remb .remember {
 	height: 30%;
 	width: 430px;
 	margin: auto;
-	margin-top:20%;
+	margin-top:10%;
 	display: none;
 }
 .emailentry {
-	padding-left: 35px;
+	padding: 5px 0 0 40px;
 	z-index: 30;
 	position: relative;
-    font-family: 'HelveticaThin';
+    font-family: 'HelveticaLightCondensed';
     width: 200px;
     height: 32px;
     font-size: 18px;
-    margin-top: 10%;
+    margin-top: 20%;
     color:#555;
     border: none;
     background: #ccc url('../img/iconsprite.png') 0px -32px no-repeat;
 }
 
 .passwordentry {
-	padding-left: 40px;
-	padding-bottom: 2px;
+	padding: 5px 0 0 40px;
 	z-index: 30;
 	position: relative;
-    font-family: 'HelveticaThin';
+    font-family: 'HelveticaLightCondensed';
     width: 200px;
     height: 32px;
     font-size: 18px;
+    margin-top: 20%;
     margin-left: 20px;
     margin-right: 0px;
     color:#555;
-    background: #ccc;
     border: none;
     background: #ccc url('../img/iconsprite.png') 0px -64px no-repeat;
+}
+#tip {
+	font-family: 'HelveticaLightCondensed';
+	font-size: 20px;
+	color: rgb(131, 131, 131);
+	margin: 10% 30%;
 }
 /* support pane modified */
 
@@ -637,8 +642,12 @@ form.signin .remb .remember {
 	height:50px;
 	width:700px;
 	margin:10px 0 0 50px;
+	color: #fff;
 }
-
+#ticker div {
+	position: absolute;
+	display: none;
+}
 #supportpane_bot
 {
 	width:100%;
