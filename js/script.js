@@ -132,9 +132,13 @@ function setMenu(j) {
 				timestamp: (new Date().getTime())
 			}, "Ragam 2013", "");
 		});
+		$(".nano").hover(function(){
+			$(this).nanoScroller();
+		});
 		$("#mainlinks a").click(function (e) {
 			e.preventDefault();
 		});
+		
 
 		$("#mainlinks li").click(function () {
 			title = $(this).attr('title');
