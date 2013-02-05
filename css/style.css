@@ -545,22 +545,22 @@ form.signin .remb .remember {
 	display: none;
 }
 .emailentry {
-	padding-left: 20px;
+	padding-left: 35px;
 	z-index: 30;
 	position: relative;
     font-family: 'HelveticaThin';
     width: 200px;
     height: 32px;
     font-size: 18px;
-    /*margin-right: 20px;
-    margin-top: 25%;*/
+    margin-top: 10%;
     color:#555;
     border: none;
-    background: #ccc url('../img/search.png') no-repeat;
+    background: #ccc url('../img/iconsprite.png') 0px -32px no-repeat;
 }
 
 .passwordentry {
-	padding-left: 20px;
+	padding-left: 40px;
+	padding-bottom: 2px;
 	z-index: 30;
 	position: relative;
     font-family: 'HelveticaThin';
@@ -572,6 +572,7 @@ form.signin .remb .remember {
     color:#555;
     background: #ccc;
     border: none;
+    background: #ccc url('../img/iconsprite.png') 0px -64px no-repeat;
 }
 /* support pane modified */
 
