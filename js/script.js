@@ -113,6 +113,7 @@ function loadArt() {
 				} else { //Its a second level url
 					$("#painting").fadeOut();
 					$("#inner-pane").attr("class", "moveright");
+
 					var n = relativeUrl.split("/");
 					eve = relativeUrl.split("/")[n.length - 1];
 					$.ajax({
@@ -123,8 +124,10 @@ function loadArt() {
 						},
 						type: "POST",
 						success: function (d) {
+							
 							$("#content-heading").text(d.name);
 							$("#content-content").html(d.content);
+							$("#content-wrapper").fadeIn();
 							//	$(".nano").nanoScroller();
 							$(".nano").nanoScroller({
 								scrollTop: '0px'
@@ -160,7 +163,7 @@ function loadArt() {
 				for (ele in menu) {
 					if (menu[ele].name == $(this).text()) {
 						for (s in menu[ele]['sublinks']) {
-							sublinks = sublinks + "<li><a href='/" + subDir + "/" + title + "/" + menu[ele].name.replace(/\ /g, "_") + "/" + menu[ele]['sublinks'][s].name.replace(/\ /g, "_") + "'>" + menu[ele]['sublinks'][s].name+"<div class='shortdesc'>"+menu[ele]['sublinks'][s].shortdesc+"</div></a></li>";
+							sublinks = sublinks + "<li><a href='/" + subDir + "/" + title + "/" + menu[ele].name.replace(/\ /g, "_") + "/" + menu[ele]['sublinks'][s].name.replace(/\ /g, "_") + "'>" + menu[ele]['sublinks'][s].name+"<br/><span class='shortdesc'>"+menu[ele]['sublinks'][s].shortdesc+"</span></a></li>";
 						}
 						break;
 					}
@@ -197,10 +200,10 @@ function loadArt() {
 				History.pushState(null, $(this).text() + " | Ragam 2013", $(this).attr("href"));
 			},
 			mouseenter: function(e) {
-				$(this).children(".shortdesc").slideToggle();
+				$(this).children(".shortdesc").show();
 			},
 			mouseleave: function(e) {
-				$(this).children(".shortdesc").slideToggle();
+				$(this).children(".shortdesc").hide();
 			}
 		});
 		$("#content-container").mouseenter(function() {
@@ -226,6 +229,7 @@ function loadArt() {
 			History.pushState({
 				timestamp: (new Date().getTime())
 			}, "Ragam 2013", "/" + subDir + "/");
+			$("#content-wrapper").fadeOut();
 			/*$("#followlinks").animate({
 				opacity: '1'
 			});*/
@@ -246,7 +250,7 @@ function loadArt() {
 				$("#form-wrapper").fadeIn();
 			}
 		});
-		$('a#login-link').click(function () {
+		$('#login-link').click(function () {
 			if ($("#login-link").attr("class") == "cancel") {
 				$(this).html('<img src="/' + subDir + '/img/login.png" />');
 				$("#login-link").attr("class", "enabled");
@@ -260,6 +264,14 @@ function loadArt() {
 				$("#dark").attr("class", "overlayon");
 				$("#form-wrapper").fadeIn();
 			}
+		});
+		$('#dark').click(function () {
+			    $("#login-link").html('<img src="/' + subDir + '/img/login.png" />');
+			    $("#signin-link").html('<img src="/' + subDir + '/img/signup.png" />');
+			    $("#login-link").attr("class", "enabled");
+			    $("#dark").attr("class", "overlayoff");
+			    $("#form-wrapper").fadeOut();
+
 		});
 		loadArt();
 	});
