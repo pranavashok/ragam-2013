@@ -143,17 +143,22 @@ function setMenu(j) {
 				e.preventDefault();
 			}
 		});
-		$("#subsubmenu-links a").live('click', function (e) {
-			e.preventDefault();
-			$("#painting").fadeOut();
-			$("#subsubmenu-links a").each(function () {
-				$(this).attr("class", "notselected");
-			});
-			$(this).attr("class", "selected");
-			$("#hidden-submenu-links").html($("#submenu-links").html());
-			$("#hidden-subsubmenu-links").html($("#subsubmenu-links").html());
-			History.pushState(null, $(this).text() + " | Ragam 2013", $(this).attr("href"));
-		});
+		$("#subsubmenu-links a").live({
+			click: function (e) {
+				e.preventDefault();
+				$("#painting").fadeOut();
+				$("#subsubmenu-links a").each(function () {
+					$(this).attr("class", "notselected");
+				});
+				$(this).attr("class", "selected");
+				$("#hidden-submenu-links").html($("#submenu-links").html());
+				$("#hidden-subsubmenu-links").html($("#subsubmenu-links").html());
+				History.pushState(null, $(this).text() + " | Ragam 2013", $(this).attr("href"));
+			}
+			hover: function(e) {
+				//Hover code comes here
+			}
+		);
 		$("#content-container").mouseenter(function() {
 			if($("#inner-pane").attr("class")=="moveright")
 			{

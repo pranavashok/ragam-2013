@@ -644,3 +644,26 @@ form.signin .remb .remember {
 	width:800px;
 	background-color:gray;
 }
+/* Loading Animation */
+.spinner {
+    /* Size and position */
+    font-size: 100px; /* 1em */
+    width: 1em;
+    height: 1em;
+    margin: 100px auto;
+    position: relative;
+ 
+    /* Styles */
+    list-style: none;
+    border-radius: 50%;
+    border: .01em solid rgba(150,150,150,0.1); /* Subtle white line circling the dots */
+    z-index: 100;
+    display: none;
+}
+.spinner li {
+    width: .2em;
+    height: .2em;
+    position: absolute;
+    border-radius: 50%;
+}
+/* Loading Animation */

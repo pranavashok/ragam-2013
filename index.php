@@ -25,6 +25,11 @@
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/shortcut.js"></script>
 </head>
 <body>
+	<ul class="spinner">
+	    <li></li>
+	    <li></li>
+	    <li></li>
+	</ul>
 	<div id="dark"></div>
 	<div  id="shortcut" >
 		<canvas id="sitemap"></canvas>
