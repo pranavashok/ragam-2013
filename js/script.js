@@ -44,6 +44,16 @@ function setMenu(j) {
 	menu = j;
 }
 
+function loadingAnimation(b) {
+	if(b){
+		$("#light").show();
+		$(".spinner").show();
+	}else{
+		$("#light").hide();
+		$(".spinner").hide();
+	}
+}
+
 function loadArt() {
 	$("#hidden-art").append($("<img id='general'/>").attr("src", "/" + subDir + "/img/general.png"));
 	$("#hidden-art").append($("<img id='fine_arts'/>").attr("src", "/" + subDir + "/img/fine_arts.png"));
@@ -107,12 +117,14 @@ function loadArt() {
 							});
 							$("#submenu-links").html(catlinks);
 							//$("#submenu-links a").trigger('mouseenter');
-							// load content to hidden div					
+							// load content to hidden div	
+							loadingAnimation(false);				
 						}
 					});
 				} else { //Its a second level url
 					$("#painting").fadeOut();
 					$("#inner-pane").attr("class", "moveright");
+
 					var n = relativeUrl.split("/");
 					eve = relativeUrl.split("/")[n.length - 1];
 					$.ajax({
@@ -123,12 +135,15 @@ function loadArt() {
 						},
 						type: "POST",
 						success: function (d) {
+							
 							$("#content-heading").text(d.name);
 							$("#content-content").html(d.content);
+							$("#content-wrapper").fadeIn();
 							//	$(".nano").nanoScroller();
 							$(".nano").nanoScroller({
 								scrollTop: '0px'
 							});
+							loadingAnimation(false);
 						}
 
 					});
@@ -150,6 +165,7 @@ function loadArt() {
 
 		$("#mainlinks li").click(function () {
 			title = $(this).attr('title');
+			loadingAnimation(true);
 			History.pushState({
 				timestamp: (new Date().getTime())
 			}, title + " | Ragam 2013", $(this).parent("a").attr("href"));
@@ -160,7 +176,7 @@ function loadArt() {
 				for (ele in menu) {
 					if (menu[ele].name == $(this).text()) {
 						for (s in menu[ele]['sublinks']) {
-							sublinks = sublinks + "<li><a href='/" + subDir + "/" + title + "/" + menu[ele].name.replace(/\ /g, "_") + "/" + menu[ele]['sublinks'][s].name.replace(/\ /g, "_") + "'>" + menu[ele]['sublinks'][s].name+"<div class='shortdesc'>"+menu[ele]['sublinks'][s].shortdesc+"</div></a></li>";
+							sublinks = sublinks + "<li><a href='/" + subDir + "/" + title + "/" + menu[ele].name.replace(/\ /g, "_") + "/" + menu[ele]['sublinks'][s].name.replace(/\ /g, "_") + "'>" + menu[ele]['sublinks'][s].name+"<br/><span class='shortdesc'>"+menu[ele]['sublinks'][s].shortdesc+"</span></a></li>";
 						}
 						break;
 					}
@@ -187,6 +203,7 @@ function loadArt() {
 		$("#subsubmenu-links a").live({
 			click: function (e) {
 				e.preventDefault();
+				loadingAnimation(true);
 				$("#painting").fadeOut();
 				$("#subsubmenu-links a").each(function () {
 					$(this).attr("class", "notselected");
@@ -197,10 +214,10 @@ function loadArt() {
 				History.pushState(null, $(this).text() + " | Ragam 2013", $(this).attr("href"));
 			},
 			mouseenter: function(e) {
-				$(this).children(".shortdesc").slideToggle();
+				$(this).children(".shortdesc").show();
 			},
 			mouseleave: function(e) {
-				$(this).children(".shortdesc").slideToggle();
+				$(this).children(".shortdesc").hide();
 			}
 		});
 		$("#content-container").mouseenter(function() {
@@ -226,6 +243,7 @@ function loadArt() {
 			History.pushState({
 				timestamp: (new Date().getTime())
 			}, "Ragam 2013", "/" + subDir + "/");
+			$("#content-wrapper").fadeOut();
 			/*$("#followlinks").animate({
 				opacity: '1'
 			});*/
@@ -270,5 +288,6 @@ function loadArt() {
 
 		});
 		loadArt();
+		loadingAnimation(false);
 	});
 })(window);
