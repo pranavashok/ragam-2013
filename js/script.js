@@ -13,24 +13,8 @@ function setCssR(a) {
 	});
 }
 
-function inputFocus(i){
-    if(i.value==i.defaultValue)
-    	{ i.value=""; i.style.color="#000"; }
-}
-function inputFocusPass(i){
-	if(i.value = i.defaultValue) {
-    	i.type='password';
-    	i.value='';
-    }
-}
 function inputBlur(i){
-    if(i.value==""){ i.value=i.defaultValue; i.style.color="#888"; }
-}
-function inputBlurPass(i){
-    if(i.value=="") { 
-    	i.type='text';
-    	i.value=i.defaultValue; i.style.color="#888"; 
-    }
+    //validation
 }
 
 function setCssL(a) {
@@ -269,14 +253,15 @@ function loadArt() {
 				$(this).html('<img src="/' + subDir + '/img/signup.png" />');
 				$("#signin-link").attr("class", "enabled");
 				$("#dark").attr("class", "overlayoff");
-				$("#form-wrapper").fadeOut();
+				$("#signup-form-wrapper").fadeOut();
 			} else {
 				$(this).html('<img src="/' + subDir + '/img/cancel.png" />');
 				$("a#signin-link").attr("class", "cancel");
 				$("a#login-link").attr("class", "enabled");
 				$("a#login-link").html('<img src="/' + subDir + '/img/login.png" />');
 				$("#dark").attr("class", "overlayon");
-				$("#form-wrapper").fadeIn();
+				$("#login-form-wrapper").hide();
+				$("#signup-form-wrapper").fadeIn();
 			}
 		});
 		$('#login-link').click(function () {
@@ -284,14 +269,15 @@ function loadArt() {
 				$(this).html('<img src="/' + subDir + '/img/login.png" />');
 				$("#login-link").attr("class", "enabled");
 				$("#dark").attr("class", "overlayoff");
-				$("#form-wrapper").fadeOut();
+				$("#login-form-wrapper").fadeOut();
 			} else {
 				$(this).html('<img src="/' + subDir + '/img/cancel.png" />');
 				$("a#login-link").attr("class", "cancel");
 				$("a#signin-link").attr("class", "enabled");
 				$("a#signin-link").html('<img src="/' + subDir + '/img/signup.png" />');
 				$("#dark").attr("class", "overlayon");
-				$("#form-wrapper").fadeIn();
+				$("#signup-form-wrapper").hide();
+				$("#login-form-wrapper").fadeIn();
 			}
 		});
 		$('#dark').click(function () {
@@ -299,7 +285,8 @@ function loadArt() {
 			    $("#signin-link").html('<img src="/' + subDir + '/img/signup.png" />');
 			    $("#login-link").attr("class", "enabled");
 			    $("#dark").attr("class", "overlayoff");
-			    $("#form-wrapper").fadeOut();
+			    $("#login-form-wrapper").fadeOut();
+			    $("#signup-form-wrapper").fadeOut();
 
 		});
 		

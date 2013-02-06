@@ -34,10 +34,19 @@
 	</ul>
 	<div id="dark"></div>
 
-	<div id="form-wrapper">
-		<input class="emailentry" type="email" name="email" title="email" value="email" onfocus="inputFocus(this)" onblur="inputBlur(this)" />
-		<input class="passwordentry" type="text" name="password" title="password" value="password" onfocus="inputFocusPass(this)" onblur="inputBlurPass(this)" />
+	<div id="login-form-wrapper">
+		<input class="emailentry" type="email" name="email" title="email" placeholder="email" onblur="inputBlur(this)" />
+		<input class="passwordentry" type="password" name="password" title="password" placeholder="password" onblur="inputBlur(this)" />
 		<div id="tip">press enter to log in...</div>
+	</div>
+	<div id="signup-form-wrapper">
+		<input class="nameentry" type="text" name="fullname" title="Full Name" placeholder="full name" onblur="inputBlur(this)" />
+		<input class="emailentry" type="email" name="email" title="Email" placeholder="email" onblur="inputBlur(this)" />
+		<input class="passwordentry" type="password" name="password" title="Password" placeholder="password" onblur="inputBlur(this)" />
+		<input class="collegeentry" type="text" name="college" title="College" placeholder="college" />
+		<input class="phoneentry" type="text" name="phone" title="Phone" placeholder="phone" />
+
+		<div id="tip">press enter to register...</div>
 	</div>
 	<div  id="shortcut" >
 		<canvas id="sitemap"></canvas>
