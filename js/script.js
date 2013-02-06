@@ -315,6 +315,13 @@ function loadArt() {
 				}
     		}
 		});
+
+		$('[title]').mouseover(function () {
+        	$(this).data('title', $(this).attr('title'));
+        	$(this).attr('title', '');
+    	}).mouseout(function () {
+    	    $(this).attr('title', $(this).data('title'));
+    });
 		loadArt();
 	});
 })(window);
