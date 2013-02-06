@@ -161,10 +161,10 @@
 }
 @keyframes support-up {
 	0% {
-		top:94%;
+		top:90%;
 	}
 	100% {
-		top:34%;
+		top:40%;
 	}
 }
 #support-pane.support-up {
@@ -175,10 +175,10 @@
 }
 @keyframes support-down {
 	0% {
-		top:34%;
+		top:40%;
 	}
 	100% {
-		top:94%;
+		top:90%;
 	}
 }
 #support-pane.support-down {

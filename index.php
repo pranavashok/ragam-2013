@@ -121,8 +121,19 @@
 		</div>
 	
 		<div id="supportpane_bot">
-			<div id="menu_tab"></div>
-		
+			<div id="menu_tab">
+				<span class="menu_item">contacts</span>
+				<span class="menu_item">schedule</span>
+				<span class="menu_item">information</span>
+				<span class="menu_item">gallery</span>
+				<span class="menu_item">brochure</span>
+				<span class="menu_item">reach us</span>
+			</div>
+			<div id="menu_info">
+			
+			<!-- the php will come here -->
+			
+			</div>
 		</div>	
 	
 	 </div>
