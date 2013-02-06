@@ -83,9 +83,6 @@ function loadArt() {
 					$("#inner-pane").attr("class", "pane"); //Reset the inner-pane just before opening
 				$("#mainmenu-pane").attr("class", "moveout");
 				$("#font-pane").attr("class", "moveout");
-				/*$("#followlinks").animate({
-					opacity: '0'
-				});*/
 				if (relativeUrl.search("/") == -1) { //If it's a first level page
 					title = relativeUrl;
 					$.ajax({
@@ -102,8 +99,6 @@ function loadArt() {
 								catlinks = catlinks + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "'><li>" + ele.name + "</li></a>";
 							});
 							$("#submenu-links").html(catlinks);
-							//$("#submenu-links a").trigger('mouseenter');
-							// load content to hidden div
 							loadingAnimation(false);			
 						}
 					});
@@ -125,7 +120,6 @@ function loadArt() {
 							$("#content-heading").text(d.name);
 							$("#content-content").html(d.content);
 							$("#content-wrapper").fadeIn();
-							//	$(".nano").nanoScroller();
 							$(".nano").nanoScroller({
 								scrollTop: '0px'
 							});
@@ -243,10 +237,6 @@ function loadArt() {
 				timestamp: (new Date().getTime())
 			}, "Ragam 2013", "/" + subDir + "/");
 			$("#content-wrapper").fadeOut();
-			/*$("#followlinks").animate({
-				opacity: '1'
-			});*/
-			/* Code to reset level zero */
 		});
 		$('a#signin-link').click(function () {
 			if ($("#signin-link").attr("class") == "cancel") {

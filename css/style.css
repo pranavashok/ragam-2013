@@ -29,6 +29,28 @@
          url('helveticaneueltcom-ltcn.ttf') format('truetype'),
          url('helveticaneueltcom-ltcn.svg#HelveticaNeueLTCom47LightCondensed') format('svg');
 }
+#light
+{
+	width:100%;
+	height:100%;
+	z-index:50;
+	background-color:white;
+	position:absolute;
+	top:0px;
+	left:0px;
+	opacity:0.9;
+}
+#dark
+{
+	width:100%;
+	height:100%;
+	z-index:-20;
+	background-color:black;
+	position:absolute;
+	top:0px;
+	left:0px;
+	opacity:0;
+}
 .shortdesc{
 	display:none;
 	margin:0;
@@ -443,105 +465,6 @@ a#login-link {
 	top:-7px;
 	right: -10px;
 }
-#signin-dropdown {
-	background-color:#202020;
-	border-bottom-left-radius:5px;
-	border-bottom-right-radius:5px;
-	box-shadow:0 1px 2px #666666;
-	min-height:200px;
-	min-width:160px;
-	position:absolute;
-	right:0;
-	display:none;
-}
-
-#signin-dropdown form{
-	cursor:pointer;
-	padding:10px;
-	text-align:left;
-}
-
-#signin-dropdown .textbox span { color:#BABABA;}
-#signin-dropdown .textbox input { width:200px; }
-
-fieldset { 
-	border:none; 
-}
-
-form.signin .textbox label { 
-	display:block; 
-	padding-bottom:7px; 
-}
-
-form.signin .textbox span { 
-	display:block;
-}
-
-form.signin p, form.signin span { 
-	color:#999; 
-	font-size:11px; 
-	line-height:18px;
-} 
-
-form.signin .textbox input { 
-	background:#666666; 
-	border-bottom:1px solid #333;
-	border-left:1px solid #000;
-	border-right:1px solid #333;
-	border-top:1px solid #000;
-	color:#fff; 
-	border-radius: 3px;
-	font:13px Arial, Helvetica, sans-serif;
-	padding:6px 6px 4px;
-}
-
-form.signin .remb { 
-	padding:9px 0; 
-	position:relative; 
-	text-align:right;
-}
-
-form.signin .remb .remember { 
-	text-align:left; 
-	position:absolute; 
-	left:0;
-}
-
-.button { 
-	background: -moz-linear-gradient(center top, #f3f3f3, #dddddd);
-	background: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#dddddd));
-	background:  -o-linear-gradient(top, #f3f3f3, #dddddd);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f3f3f3', EndColorStr='#dddddd');
-	border-color:#000; 
-	border-width:1px;
-	border-radius: 4px;
-	color:#333;
-	cursor:pointer;
-	display:inline-block;
-	padding:4px 7px;
-	margin:0;
-	font:12px; 
-}
-
-.button:hover { background:#ddd; }
-
-#loginform{
-	position: relative;
-	left: 10%;
-	top: 75%;
-}
-
-#dark
-{
-	width:100%;
-	height:100%;
-	z-index:-20;
-	background-color:black;
-	position:absolute;
-	top:0px;
-	left:0px;
-	opacity:0;
-}
 
 #login-form-wrapper {
 	z-index: 25;
@@ -792,17 +715,7 @@ form.signin .remb .remember {
 }
 
 /* Loading Animation */
-#light
-{
-	width:100%;
-	height:100%;
-	z-index:50;
-	background-color:white;
-	position:absolute;
-	top:0px;
-	left:0px;
-	opacity:0.9;
-}
+
 .spinner {
     /* Size and position */
     font-size: 100px; /* 1em */
