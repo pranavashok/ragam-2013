@@ -301,7 +301,20 @@ function loadArt() {
 		}
 		});
 		
-		
+		$("#font-pane").bind('mousewheel', function(event) {
+    		if (event.originalEvent.wheelDelta >= 0) {
+        			if($("#wrapper").attr("class")!="support-down") {
+        				$("#wrapper").attr("class", "support-down");
+        				$("#support-pane").attr("class", "support-down");
+        			}
+    		}
+    		else {
+        		if($("#wrapper").attr("class")!="support-up"){
+        			$("#wrapper").attr("class", "support-up");
+					$("#support-pane").attr("class", "support-up");
+				}
+    		}
+		});
 		loadArt();
 	});
 })(window);
