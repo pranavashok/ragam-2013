@@ -651,6 +651,7 @@ a#login-link {
 	box-shadow: 0 2px 10px #555;
 }
 #ticker div {
+	text-align: center;
 	font-family: 'HelveticaThin';
 	font-weight: 400;
 	font-size: 15px;
@@ -659,7 +660,7 @@ a#login-link {
 	height:30px;
 	width:83%;
 	margin:5px 0 0 10%;
-	background-color:#333;
+	/*background-color:#333;*/
 }
 
 #supportpane_bot
