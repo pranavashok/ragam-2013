@@ -142,8 +142,8 @@ function loadArt() {
 		window.setInterval(function() {
 			$('#ticker div:eq(' + startIndex + ')').delay(fadeSpd).fadeOut(fadeSpd);
 			    startIndex++;
-			    $('#ticker div:eq(' + startIndex + ')').fadeIn(fadeSpd);
-		        if (endIndex == startIndex) startIndex = 0;
+			    $('#ticker div:eq(' + startIndex + ')').stop(true,true).fadeIn(fadeSpd);
+		        if (endIndex == startIndex) startIndex = -1;
 	    }, aniSpd);
 		$(".nano").hover(function(){
 			$(this).nanoScroller();
