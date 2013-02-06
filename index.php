@@ -33,6 +33,7 @@
 	    <li></li>
 	</ul>
 	<div id="dark"></div>
+	<div id="gallery"></div>
 
 	<div id="login-form-wrapper">
 		<input class="emailentry" type="email" name="email" title="email" placeholder="email" onblur="inputBlur(this)" />
@@ -139,8 +140,8 @@
 				<span class="menu_item menu_click">contacts</span>
 				<span class="menu_item menu_nonclick">schedule</span>
 				<span class="menu_item menu_click">information</span>
-				<span class="menu_item menu_nonclick">gallery</span>
-				<span class="menu_item menu_nonclick">brochure</span>
+				<span  class="menu_item menu_nonclick">gallery</span>
+				<span class="menu_item menu_nonclick gallery">brochure</span>
 				<span class="menu_item menu_click">reach us</span>
 			</div>
 			<div id="menu_info">
