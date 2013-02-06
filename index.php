@@ -30,7 +30,7 @@
 	<ul class="spinner">
 	    <li></li>
 	    <li></li>
-    	<li></li>
+	    <li></li>
 	</ul>
 	<div id="dark"></div>
 
@@ -113,9 +113,9 @@
 	
 		<div id="supportpane_top">
 			<div id="ticker">
-		    	<div>Story 1</div>
-		    	<div>Story 2</div>
-		    	<div>Story 3</div>
+				<div>The registrations will be open from 16th Feb 2013</div>
+	    		<div>The last date for submission of entries for the photography contest is 20th Feb 2013</div>
+    			<div>Shankar Mahadevan has confirmed to perform at Ragam 2013</div>
 			</div>
 			<span id="social_panel">
 				<!--<a style="width:48px; height:48px; display:inline; opacity:0"><img src="<?php echo $subDir; ?>img/twitter.png"></a>
@@ -126,8 +126,22 @@
 		</div>
 	
 		<div id="supportpane_bot">
-			<div id="menu_tab"></div>
-		
+			<div id="menu_tab">
+				<span class="menu_item">contacts</span>
+				<span class="menu_item">schedule</span>
+				<span class="menu_item">information</span>
+				<span class="menu_item">gallery</span>
+				<span class="menu_item">brochure</span>
+				<span class="menu_item">reach us</span>
+			</div>
+			<div id="menu_info">
+			
+			<!-- the php will come here -->
+			
+			</div>
+			<div id="menu_bot">
+				<div id="nitc_logo"></div>			
+			</div>
 		</div>	
 	
 	 </div>
