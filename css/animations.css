@@ -286,21 +286,21 @@
 }
 .spinner li:nth-child(1) {
     background: #0c9dc5; /* Blue */
-    top: 0;
-    left: 50%;
+    top: 5%;
+    left: 55%;
     margin-left: -.1em; /* Width/2 */
-    transform-origin: 50% 250%;
+    transform-origin: 50% 550%;
     animation: 
-        rota 1.13s linear infinite,
+        rota 1.4s linear infinite,
         opa 3.67s ease-in-out infinite alternate;
 }
  
 .spinner li:nth-child(2) {
     background: #cf100C; /* Red */
-    top: 50%; 
-    right: 0;
+    top: 55%; 
+    right: 5%;
     margin-top: -.1em; /* Height/2 */
-    transform-origin: -150% 50%;
+    transform-origin: -450% 50%;
     animation: 
         rota 1.86s linear infinite,
         opa 4.29s ease-in-out infinite alternate;
@@ -308,10 +308,10 @@
  
 .spinner li:nth-child(3) {
     background: #77bc21; /* Green */
-    bottom: 0;
-    left: 50%; 
+    bottom: 5%;
+    left: 55%; 
     margin-left: -.1em; /* Width/2 */
-    transform-origin: 50% -150%;
+    transform-origin: 50% -450%;
     animation: 
         rota 1.45s linear infinite,
         opa 5.12s ease-in-out infinite alternate;
