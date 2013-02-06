@@ -51,8 +51,8 @@ function loadingAnimation(b) {
 		$("#light").show();
 		$(".spinner").show();
 	}else{
-		$("#light").hide();
-		$(".spinner").hide();
+		$("#light").fadeOut();
+		$(".spinner").fadeOut();
 	}
 }
 
@@ -119,8 +119,8 @@ function loadArt() {
 							});
 							$("#submenu-links").html(catlinks);
 							//$("#submenu-links a").trigger('mouseenter');
-							// load content to hidden div	
-							loadingAnimation(false);				
+							// load content to hidden div
+							loadingAnimation(false);			
 						}
 					});
 				} else { //Its a second level url
@@ -145,7 +145,6 @@ function loadArt() {
 							$(".nano").nanoScroller({
 								scrollTop: '0px'
 							});
-							loadingAnimation(false);
 						}
 
 					});
@@ -155,7 +154,8 @@ function loadArt() {
 		$(window).bind('load', function () {
 			History.pushState({
 				timestamp: (new Date().getTime())
-			}, "Ragam 2013", "");
+			}, "Ragam 2013 | National Institute of Technology Calicut", "");
+			loadingAnimation(false);
 		});
 		var startIndex = 0;
 		var endIndex = $('#ticker div').length;
@@ -215,7 +215,6 @@ function loadArt() {
 		$("#subsubmenu-links a").live({
 			click: function (e) {
 				e.preventDefault();
-				loadingAnimation(true);
 				$("#painting").fadeOut();
 				$("#subsubmenu-links a").each(function () {
 					$(this).attr("class", "notselected");
@@ -304,6 +303,5 @@ function loadArt() {
 
 		});
 		loadArt();
-		loadingAnimation(false);
 	});
 })(window);
