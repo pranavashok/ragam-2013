@@ -134,6 +134,9 @@
 			<!-- the php will come here -->
 			
 			</div>
+			<div id="menu_bot">
+				<div id="nitc_logo"></div>			
+			</div>
 		</div>	
 	
 	 </div>

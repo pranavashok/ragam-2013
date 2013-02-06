@@ -287,6 +287,29 @@ function loadArt() {
 			    $("#form-wrapper").fadeOut();
 
 		});
+		
+		$('.menu_item').click(function()
+		{
+		$(this).siblings().css({"border-bottom":"0px solid white"});
+		$(this).siblings().removeClass("menu_select");
+		$(this).css({"border-bottom":"2px solid white"});
+		$(this).addClass("menu_select");
+		});
+
+		$('.menu_item').mouseover(function()
+		{
+			$(this).css({"border-bottom":"2px solid white"});
+		});
+		
+		$('.menu_item').mouseout(function()
+		{
+		if(!($(this).hasClass("menu_select")))
+		{
+			$(this).css({"border-bottom":"0px solid white"});
+		}
+		});
+		
+		
 		loadArt();
 		loadingAnimation(false);
 	});
