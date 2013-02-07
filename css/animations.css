@@ -115,7 +115,7 @@
 	animation-timing-function: ease;
 	animation-fill-mode:forwards;
 }
-@keyframes inner-pane-moveright {
+@keyframes inner-pane-events-moveright {
 	0% {
 		left: 13%;
 		transfort:rotate(-25deg);
@@ -133,13 +133,13 @@
 		transform:rotate(0deg);
 	}
 }
-#inner-pane.moveright {
-	animation-name: inner-pane-moveright;
+#inner-pane-events.moveright {
+	animation-name: inner-pane-events-moveright;
 	animation-duration: 2s;
 	animation-timing-function: ease;
 	animation-fill-mode:forwards;
 }
-@keyframes inner-pane-moveback {
+@keyframes inner-pane-events-moveback {
 	0% {
 		left: 25%;
 		transfort:rotate(0deg);
@@ -153,8 +153,8 @@
 		transform:rotate(-25deg);
 	}
 }
-#inner-pane.moveback {
-	animation-name: inner-pane-moveback;
+#inner-pane-events.moveback {
+	animation-name: inner-pane-events-moveback;
 	animation-duration: 2s;
 	animation-timing-function: ease;
 	animation-fill-mode:forwards;

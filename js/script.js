@@ -83,7 +83,7 @@ function loadArt() {
 				setCssL('#font-pane');
 				setCssR('#mainmenu-pane');
 				if($("#mainmenu-pane").attr("class")!="moveout")
-					$("#inner-pane").attr("class", "pane"); //Reset the inner-pane just before opening
+					$("#inner-pane-events").attr("class", "pane"); //Reset the inner-pane-events just before opening
 				$("#mainmenu-pane").attr("class", "moveout");
 				$("#font-pane").attr("class", "moveout");
 				if (relativeUrl.search("/") == -1) { //If it's a first level page
@@ -107,7 +107,7 @@ function loadArt() {
 					});
 				} else { //Its a second level url
 					$("#painting").fadeOut();
-					$("#inner-pane").attr("class", "moveright");
+					$("#inner-pane-events").attr("class", "moveright");
 
 					var n = relativeUrl.split("/");
 					eve = relativeUrl.split("/")[n.length - 1];
@@ -218,7 +218,7 @@ function loadArt() {
 			}
 		});
 		$("#content-container").mouseenter(function() {
-			if($("#inner-pane").attr("class")=="moveright")
+			if($("#inner-pane-events").attr("class")=="moveright")
 			{
 				$("#submenu-links").html($("#hidden-submenu-links").html());
 				$("#subsubmenu-links").html($("#hidden-subsubmenu-links").html());
