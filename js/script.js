@@ -230,7 +230,7 @@ function loadArt() {
 				$("#subsubmenu-links").html($("#hidden-subsubmenu-links").html());
 			}
 		});
-		$("#support-pane").click(function () {
+		$(".menu_click").click(function () {
 			$("#wrapper").attr("class", "support-up");
 			$("#support-pane").attr("class", "support-up");
 		});
@@ -239,9 +239,19 @@ function loadArt() {
 			if (container.has(e.target).length === 0 && $("#wrapper").attr("class") == "support-up") {
 				container.attr("class", "support-down");
 				$("#wrapper").attr("class", "support-down");
-				$(".support-puller").show();
+				$(".menu_item").css({"border-bottom":"0px solid white"});
 			}
 		});
+		
+		$(".menu_nonclick").click(function()
+		{
+				var container = $("#support-pane");
+				container.attr("class", "support-down");
+				$("#wrapper").attr("class", "support-down");
+				$(".menu_item").css({"border-bottom":"0px solid white"});
+			
+		});
+		
 		$("#home-button").click(function () {
 			History.pushState({
 				timestamp: (new Date().getTime())

@@ -122,12 +122,12 @@
 	
 		<div id="supportpane_bot">
 			<div id="menu_tab">
-				<span class="menu_item">contacts</span>
-				<span class="menu_item">schedule</span>
-				<span class="menu_item">information</span>
-				<span class="menu_item">gallery</span>
-				<span class="menu_item">brochure</span>
-				<span class="menu_item">reach us</span>
+				<span class="menu_item menu_click">contacts</span>
+				<span class="menu_item menu_nonclick">schedule</span>
+				<span class="menu_item menu_click">information</span>
+				<span class="menu_item menu_nonclick">gallery</span>
+				<span class="menu_item menu_nonclick">brochure</span>
+				<span class="menu_item menu_click">reach us</span>
 			</div>
 			<div id="menu_info">
 			
@@ -135,7 +135,15 @@
 			
 			</div>
 			<div id="menu_bot">
-				<div id="nitc_logo"></div>			
+				<div id="nitc_details">
+					<div id="nitc_logo"></div>
+					<div id="nitc_addr" style="color:white;">
+							<b>	NIT Calicut<br/> 
+							NIT Campus P. O.<br/> 
+							Calicut - 673601<br/></b> 
+							<a style="color:white;" target="_blank" href="http://www.nitc.ac.in">www.nitc.ac.in</a>	
+					</div>
+				</div>			
 			</div>
 		</div>	
 	
