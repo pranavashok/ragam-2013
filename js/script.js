@@ -101,12 +101,12 @@ function loadArt() {
 							d.forEach(function (ele) {
 								catlinks = catlinks + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "'><li>" + ele.name + "</li></a>";
 							});
-							$("#submenu-links").html(catlinks);
+							$("#submenu-links-events").html(catlinks);
 							loadingAnimation(false);			
 						}
 					});
 				} else { //Its a second level url
-					$("#painting").fadeOut();
+					$("#painting-events").fadeOut();
 					$("#inner-pane-events").attr("class", "moveright");
 
 					var n = relativeUrl.split("/");
@@ -120,9 +120,9 @@ function loadArt() {
 						type: "POST",
 						success: function (d) {
 							
-							$("#content-heading").text(d.name);
-							$("#content-content").html(d.content);
-							$("#content-wrapper").fadeIn();
+							$("#content-heading-events").text(d.name);
+							$("#content-content-events").html(d.content);
+							$("#content-wrapper-events").fadeIn();
 							$(".nano").nanoScroller({
 								scrollTop: '0px'
 							});
@@ -164,7 +164,7 @@ function loadArt() {
 				timestamp: (new Date().getTime())
 			}, title + " | Ragam 2013", $(this).parent("a").attr("href"));
 		});
-		$("#submenu-links a").live({
+		$("#submenu-links-events a").live({
 			mouseenter: function () {
 				var sublinks = "";
 				for (ele in menu) {
@@ -175,7 +175,7 @@ function loadArt() {
 						break;
 					}
 				}
-				$("#subsubmenu-links").html(sublinks);
+				$("#subsubmenu-links-events").html(sublinks);
 				var tmp = $(this).text();
 				tmp = tmp.replace(' ', '_');
 				//var currBg = $("#painting").css('background-image');
@@ -184,8 +184,8 @@ function loadArt() {
         		//newBgs = newBg.split('/');
         		//alert(currBg+' -- '+$("img#"+tmp).attr("src"));
 				//if(currBgs[currBgs.lenth-1]!=newBgs[newBgs.length-1])
-					$("#painting").css('background-image', 'url("'+ $("img#"+tmp).attr("src") + '")');
-				$("#submenu-links a").each(function () {
+					$("#painting-events").css('background-image', 'url("'+ $("img#"+tmp).attr("src") + '")');
+				$("#submenu-links-events a").each(function () {
 					$(this).attr("class", "notselected");
 				});
 				$(this).attr("class", "selected");
@@ -194,20 +194,20 @@ function loadArt() {
 				e.preventDefault();
 			}
 		});
-		$("#subsubmenu-links a").live({
+		$("#subsubmenu-links-events a").live({
 			click: function (e) {
 				e.preventDefault();
-				$("#painting").fadeOut();
-				$("#subsubmenu-links a").each(function () {
+				$("#painting-events").fadeOut();
+				$("#subsubmenu-links-events a").each(function () {
 					$(this).attr("class", "notselected");
 				});
 				$(this).attr("class", "selected");
-				$("#hidden-submenu-links").html($("#submenu-links").html());
-				$("#hidden-subsubmenu-links").html($("#subsubmenu-links").html());
+				$("#hidden-submenu-links").html($("#submenu-links-events").html());
+				$("#hidden-subsubmenu-links").html($("#subsubmenu-links-events").html());
 				History.pushState(null, $(this).text() + " | Ragam 2013", $(this).attr("href"));
 			},
 			mouseenter: function(e) {
-				$("#subsubmenu-links a").each(function () {
+				$("#subsubmenu-links-events a").each(function () {
 					$(this).attr("class", "notselected");
 				});
 				$(this).attr("class", "selected");
@@ -217,11 +217,11 @@ function loadArt() {
 				$(this).children(".shortdesc").hide();
 			}
 		});
-		$("#content-container").mouseenter(function() {
+		$("#content-container-events").mouseenter(function() {
 			if($("#inner-pane-events").attr("class")=="moveright")
 			{
-				$("#submenu-links").html($("#hidden-submenu-links").html());
-				$("#subsubmenu-links").html($("#hidden-subsubmenu-links").html());
+				$("#submenu-links-events").html($("#hidden-submenu-links").html());
+				$("#subsubmenu-links-events").html($("#hidden-subsubmenu-links").html());
 			}
 		});
 		$(".menu_click").click(function () {
@@ -254,7 +254,7 @@ function loadArt() {
 			History.pushState({
 				timestamp: (new Date().getTime())
 			}, "Ragam 2013", "/" + subDir + "/");
-			$("#content-wrapper").fadeOut();
+			$("#content-wrapper-events").fadeOut();
 		});
 		$('a#signin-link').click(function () {
 			if ($("#signin-link").attr("class") == "cancel") {

@@ -164,7 +164,7 @@
 
 	</section >
 
-	<section class="pane" id="inner-pane-workshops">
+	<!--<section class="pane" id="inner-pane-workshops">
 		<div id="content-half-workshops">
 			<div id="subsubmenu-workshops">
 				<ul id="subsubmenu-links-workshops">
@@ -189,7 +189,7 @@
 			<div id="painting-workshops">
 			</div>
 		</div>
-	</section>
+	</section>-->
 
 </div>
 <div class="pane" id="support-pane">
