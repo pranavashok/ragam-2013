@@ -105,7 +105,7 @@
 	right:66.67;
 	transform-origin:100% 50%;
 }
-#inner-pane {
+#inner-pane-events {
 	background: #4a52b5;
 	position: absolute;
 	width: 66.67%;

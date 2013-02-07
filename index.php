@@ -217,7 +217,7 @@
 	<img src="<?php echo $subDir; ?>img/back.png">
 </div>
 	
-	<input id="searchBox" type="text" name="search" size="40">
+	<!--<input id="searchBox" type="text" name="search" size="40">-->
 <div id="hidden-box">
 	<div id="hidden-submenu-links">
 	</div>
