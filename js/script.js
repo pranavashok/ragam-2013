@@ -41,11 +41,14 @@ function loadingAnimation(b) {
 }
 
 function loadArt() {
-	$("#hidden-art").append($("<img id='general'/>").attr("src", "/" + subDir + "/img/general.png"));
-	$("#hidden-art").append($("<img id='fine_arts'/>").attr("src", "/" + subDir + "/img/fine_arts.png"));
-	$("#hidden-art").append($("<img id='music'/>").attr("src", "/" + subDir + "/img/music.png"));
-	$("#hidden-art").append($("<img id='dance'/>").attr("src", "/" + subDir + "/img/dance.png"));
-	$("#hidden-art").append($("<img id='thematic'/>").attr("src", "/" + subDir + "/img/thematic.png"));
+	$("#hidden-art").append($("<img id='general'/>").attr("src", "/" + subDir + "/img/general.jpg"));
+	$("#hidden-art").append($("<img id='fine_arts'/>").attr("src", "/" + subDir + "/img/fine_arts.jpg"));
+	$("#hidden-art").append($("<img id='music'/>").attr("src", "/" + subDir + "/img/music.jpg"));
+	$("#hidden-art").append($("<img id='dance'/>").attr("src", "/" + subDir + "/img/dance.jpg"));
+	$("#hidden-art").append($("<img id='thematic'/>").attr("src", "/" + subDir + "/img/thematic.jpg"));
+	$("#hidden-art").append($("<img id='literary'/>").attr("src", "/" + subDir + "/img/literary.jpg"));
+	$("#hidden-art").append($("<img id='dramatics'/>").attr("src", "/" + subDir + "/img/dramatics.jpg"));
+
 }
 (function (window, undefined) {
 	var History = window.History;

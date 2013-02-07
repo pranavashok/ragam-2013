@@ -95,6 +95,7 @@
 
 		<div id="tip">press enter to register...</div>
 	</div>
+	
 	<div  id="shortcut" >
 		<canvas id="sitemap"></canvas>
 	</div>
