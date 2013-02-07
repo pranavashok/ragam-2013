@@ -597,7 +597,7 @@ a#login-link {
 	height:60%;
 	width:100%;
 	background: #383838;
-	top:90%;
+	top:92%;
 	z-index:20;
 	display: block;
 }
@@ -610,13 +610,13 @@ a#login-link {
 #supportpane_top
 {
 	width:100%;
-	height:40px;
+	height:26px;
 	background-color:#333;
 	
 }
 #social_panel
 {
-	height:32px;
+	height:26px;
 	width:auto;
 	position:absolute;
 	right:0px;
@@ -628,7 +628,6 @@ a#login-link {
 	width:26px;
 	height:26px;
 	margin-right:5px;
-	margin-top: 4px;
 }
 .social_button img{
 	opacity:0.5;
@@ -645,7 +644,7 @@ a#login-link {
 #ticker
 {
 	float:left;
-	height:36px;
+	height:26px;
 	width:100%;
 	/*margin:5px 0 0 50px;*/
 	color: #333;
