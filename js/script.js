@@ -148,6 +148,7 @@ function loadArt() {
 			    $('#ticker div:eq(' + startIndex + ')').stop(true,true).fadeIn(fadeSpd);
 		        if (endIndex == startIndex) startIndex = -1;
 	    }, aniSpd);
+	    
 		$(".nano").hover(function(){
 			$(this).nanoScroller();
 		});

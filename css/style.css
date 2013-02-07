@@ -597,7 +597,7 @@ a#login-link {
 	height:60%;
 	width:100%;
 	background: #383838;
-	top:92%;
+	top:91.5%;
 	z-index:20;
 	display: block;
 }
@@ -644,7 +644,7 @@ a#login-link {
 #ticker
 {
 	float:left;
-	height:26px;
+	height:28px;
 	width:100%;
 	/*margin:5px 0 0 50px;*/
 	color: #333;
@@ -690,8 +690,12 @@ a#login-link {
 	font-family: HelveticaThin;
 	margin:0 15px 0 15px;
 	cursor:pointer;
+	opacity:0.4;
 }
-
+.menu_item:hover {
+	opacity:1;
+	transition: all .2s ease;
+}
 #menu_info
 {
 	margin:auto;
