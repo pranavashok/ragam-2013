@@ -41,12 +41,12 @@
 	<div id="gallery">
 				<section class="pe-container">
 				<ul id="pe-thumbs" class="pe-thumbs">
-					<li><a href="#"><img src="img/thumbs/1.jpg" /><div class="pe-description"><h3>Time</h3><p>Since time, and his predestinated end</p></div></a></li>
-					<li><a href="#"><img src="img/thumbs/2.jpg" /><div class="pe-description"><h3>hopeful</h3><p>Abridged the circuit of his hopeful days</p></div></a></li>
-					<li><a href="#"><img src="img/thumbs/3.jpg" /><div class="pe-description"><h3>virtue</h3><p>Whiles both his youth and virtue did intend</p></div></a></li>
-					<li><a href="#"><img src="img/thumbs/4.jpg" /><div class="pe-description"><h3>endeavors</h3><p>The good endeavors of deserving praise</p></div></a></li>
-					<li><a href="#"><img src="img/thumbs/5.jpg" /><div class="pe-description"><h3>monument</h3><p>What memorable monument can last</p></div></a></li>
-					<li><a href="#"><img src="img/thumbs/6.jpg" /><div class="pe-description"><h3>name</h3><p>Whereon to build his never-blemished name</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/1.jpg" /><div class="pe-description"><h3>Music</h3><p>Dedicated, for its alluring elegance </p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/2.jpg" /><div class="pe-description"><h3>Ingress</h3><p>Even the wonderland needed an entrance, and here it is!!</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/3.jpg" /><div class="pe-description"><h3>Careen</h3><p>Whiles both his youth and virtue did intend</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/4.jpg" /><div class="pe-description"><h3>Brilliance</h3><p>He made it possible, its not a virtue, but an achievement</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/5.jpg" /><div class="pe-description"><h3>Determination</h3><p>Who has won the battles without a lifetime spoiled in coliseum</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/6.jpg" /><div class="pe-description"><h3>Fashion</h3><p>Get lost in the show of elegance</p></div></a></li>
 					<li><a href="#"><img src="img/thumbs/7.jpg" /><div class="pe-description"><h3>life was graced</h3><p>But his own worth, wherein his life was graced</p></div></a></li>
 					<li><a href="#"><img src="img/thumbs/8.jpg" /><div class="pe-description"><h3>the same</h3><p>Sith as that ever he maintained the same?</p></div></a></li>
 					<li><a href="#"><img src="img/thumbs/9.jpg" /><div class="pe-description"><h3>oblivion</h3><p>Oblivion in the darkest day to come</p></div></a></li>
