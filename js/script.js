@@ -227,6 +227,7 @@ function loadArt() {
 		$(".menu_click").click(function () {
 			$("#wrapper").attr("class", "support-up");
 			$("#support-pane").attr("class", "support-up");
+			$("#menu_tab").attr("class","up");
 		});
 		$(document).mouseup(function (e) {
 			var container = $("#support-pane");
@@ -239,11 +240,14 @@ function loadArt() {
 		
 		$(".menu_nonclick").click(function()
 		{
+			if($("#menu_tab").hasClass("up"))
+			{
 				var container = $("#support-pane");
 				container.attr("class", "support-down");
 				$("#wrapper").attr("class", "support-down");
 				$(".menu_item").css({"border-bottom":"0px solid white"});
-			
+				$("#menu_tab").removeClass("up");
+			}
 		});
 		
 		$("#home-button").click(function () {
