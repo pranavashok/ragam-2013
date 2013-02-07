@@ -316,3 +316,39 @@
         rota 1.45s linear infinite,
         opa 5.12s ease-in-out infinite alternate;
 }
+
+#gallery.overlayon {
+	z-index: 35;
+	animation-name: gallery-overlayon;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-fill-mode:forwards;
+} 
+
+#gallery.overlayoff {
+	z-index: -20;
+	animation-name: gallery-overlayoff;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-fill-mode:forwards;
+}
+
+@keyframes gallery-overlayon
+{
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:0.9;		
+	}
+}
+
+@keyframes gallery-overlayoff
+{
+	0% {
+		opacity:0.9;
+	}
+	100% {
+		opacity:0;		
+	}
+}

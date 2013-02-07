@@ -289,7 +289,14 @@ function loadArt() {
 			    $("#signup-form-wrapper").fadeOut();
 
 		});
-		
+		$(".gallery").click(function()
+		{
+				$("#gallery").attr("class", "overlayon");
+			
+		});
+		$("#gallery").click(function () {
+			$("#gallery").attr("class", "overlayoff");
+		});
 		$('.menu_item').click(function()
 		{
 		$(this).siblings().css({"border-bottom":"0px solid white"});

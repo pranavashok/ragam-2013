@@ -8,6 +8,8 @@
 	<link href="<?php echo $subDir; ?>css/animations.css" rel="stylesheet"/>
 	<link href="<?php echo $subDir; ?>css/nanoscroller.css" rel="stylesheet" > 
 	<link href="<?php echo $subDir; ?>css/favicon.ico" rel="icon" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/style2.css" />
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.jquery.js"></script>
@@ -23,6 +25,9 @@
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/arbor-tween.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/arbor-graphics.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/shortcut.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.proximity.js"></script>
+	<script type="text/javascript" src="js/j1.js"></script>
 </head>
 <body>
 	
@@ -33,7 +38,48 @@
 	    <li></li>
 	</ul>
 	<div id="dark"></div>
-	<div id="gallery"></div>
+	<div id="gallery">
+				<section class="pe-container">
+				<ul id="pe-thumbs" class="pe-thumbs">
+					<li><a href="#"><img src="img/thumbs/1.jpg" /><div class="pe-description"><h3>Time</h3><p>Since time, and his predestinated end</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/2.jpg" /><div class="pe-description"><h3>hopeful</h3><p>Abridged the circuit of his hopeful days</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/3.jpg" /><div class="pe-description"><h3>virtue</h3><p>Whiles both his youth and virtue did intend</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/4.jpg" /><div class="pe-description"><h3>endeavors</h3><p>The good endeavors of deserving praise</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/5.jpg" /><div class="pe-description"><h3>monument</h3><p>What memorable monument can last</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/6.jpg" /><div class="pe-description"><h3>name</h3><p>Whereon to build his never-blemished name</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/7.jpg" /><div class="pe-description"><h3>life was graced</h3><p>But his own worth, wherein his life was graced</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/8.jpg" /><div class="pe-description"><h3>the same</h3><p>Sith as that ever he maintained the same?</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/9.jpg" /><div class="pe-description"><h3>oblivion</h3><p>Oblivion in the darkest day to come</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/10.jpg" /><div class="pe-description"><h3>sin shall tread</h3><p>When sin shall tread on merit in the dust</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/11.jpg" /><div class="pe-description"><h3>lamentable tomb</h3><p>Cannot rase out the lamentable tomb</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/12.jpg" /><div class="pe-description"><h3>short-lived deserts</h3><p>Of his short-lived deserts; but still they must</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/13.jpg" /><div class="pe-description"><h3>hearts and memories</h3><p>Even in the hearts and memories of men</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/14.jpg" /><div class="pe-description"><h3>respect</h3><p>Claim fit respect, that they, in every limb</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/15.jpg" /><div class="pe-description"><h3>comfort</h3><p>Remembering what he was, with comfort then</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/16.jpg" /><div class="pe-description"><h3>pattern</h3><p>May pattern out one truly good, by him</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/17.jpg" /><div class="pe-description"><h3>truly good</h3><p>For he was truly good, if honest care</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/18.jpg" /><div class="pe-description"><h3>harmless conversation</h3><p>Of harmless conversation may commend</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/19.jpg" /><div class="pe-description"><h3>recompensed</h3><p>Ill recompensed only in his end</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/20.jpg" /><div class="pe-description"><h3>tongue</h3><p>Nor can the tongue of him who loved him least</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/21.jpg" /><div class="pe-description"><h3>superlative</h3><p>To one superlative above the rest</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/22.jpg" /><div class="pe-description"><h3>steady faith</h3><p>Of many men in steady faith reprove</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/23.jpg" /><div class="pe-description"><h3>constant temper</h3><p>His constant temper, in the equal weight</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/24.jpg" /><div class="pe-description"><h3>thankfulness</h3><p>Of thankfulness and kindness: Truth doth leave</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/25.jpg" /><div class="pe-description"><h3>proof</h3><p>Sufficient proof, he was in every right</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/26.jpg" /><div class="pe-description"><h3>thankful</h3><p>As kind to give, as thankful to receive.</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/27.jpg" /><div class="pe-description"><h3>curious eye</h3><p>The curious eye of a quick-brained survey</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/28.jpg" /><div class="pe-description"><h3>scantly find</h3><p>Could scantly find a mote amidst the sun</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/29.jpg" /><div class="pe-description"><h3>too-shortened days</h3><p>Of his too-shortened days, or make a prey</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/30.jpg" /><div class="pe-description"><h3>faulty errors</h3><p>Of any faulty errors he had done</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/31.jpg" /><div class="pe-description"><h3>spleenful sense</h3><p>Not that he was above the spleenful sense</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/32.jpg" /><div class="pe-description"><h3>spite of malice</h3><p>And spite of malice, but for that he had</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/33.jpg" /><div class="pe-description"><h3>innocence</h3><p>Warrant enough in his own innocence</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/34.jpg" /><div class="pe-description"><h3>nature</h3><p>Against the sting of some in nature bad</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/35.jpg" /><div class="pe-description"><h3>absolutely blest</h3><p>Yet who is he so absolutely blest</p></div></a></li>
+					<li><a href="#"><img src="img/thumbs/36.jpg" /><div class="pe-description"><h3>mortal frame</h3><p>That lives encompassed in a mortal frame</p></div></a></li>
+				</ul>
+			</section>
+		</div>
 
 	<div id="login-form-wrapper">
 		<input class="emailentry" type="email" name="email" title="email" placeholder="email" onblur="inputBlur(this)" />
@@ -140,8 +186,8 @@
 				<span class="menu_item menu_click">contacts</span>
 				<span class="menu_item menu_nonclick">schedule</span>
 				<span class="menu_item menu_click">information</span>
-				<span  class="menu_item menu_nonclick">gallery</span>
-				<span class="menu_item menu_nonclick gallery">brochure</span>
+				<span  class="menu_item menu_nonclick gallery">gallery</span>
+				<span class="menu_item menu_nonclick">brochure</span>
 				<span class="menu_item menu_click">reach us</span>
 			</div>
 			<div id="menu_info">
