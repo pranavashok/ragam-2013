@@ -728,7 +728,7 @@ a#login-link {
 	float:right;
 	height:100%;
 	width:35%;
-	background-image:url("../img/nitc_logo.png");
+	background-image:url("/magar/img/nitc_logo.png");
 	background-repeat:no-repeat;
 }
 
