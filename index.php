@@ -30,13 +30,23 @@
 	<ul class="spinner">
 	    <li></li>
 	    <li></li>
-    	<li></li>
+	    <li></li>
 	</ul>
 	<div id="dark"></div>
 
-	<div id="form-wrapper">
-		<input class="emailentry" type="email" name="email" title="email" value="email" onfocus="inputFocus(this)" onblur="inputBlur(this)" />
-		<input class="passwordentry" type="text" name="password" title="password" value="password" onfocus="inputFocusPass(this)" onblur="inputBlurPass(this)" />
+	<div id="login-form-wrapper">
+		<input class="emailentry" type="email" name="email" title="email" placeholder="email" onblur="inputBlur(this)" />
+		<input class="passwordentry" type="password" name="password" title="password" placeholder="password" onblur="inputBlur(this)" />
+		<div id="tip">press enter to log in...</div>
+	</div>
+	<div id="signup-form-wrapper">
+		<input class="nameentry" type="text" name="fullname" title="Full Name" placeholder="full name" onblur="inputBlur(this)" />
+		<input class="emailentry" type="email" name="email" title="Email" placeholder="email" onblur="inputBlur(this)" />
+		<input class="passwordentry" type="password" name="password" title="Password" placeholder="password" onblur="inputBlur(this)" />
+		<input class="collegeentry" type="text" name="college" title="College" placeholder="college" />
+		<input class="phoneentry" type="text" name="phone" title="Phone" placeholder="phone" />
+
+		<div id="tip">press enter to register...</div>
 	</div>
 	<div  id="shortcut" >
 		<canvas id="sitemap"></canvas>
@@ -111,7 +121,11 @@
 	 <div id="footer_inner">
 	
 		<div id="supportpane_top">
-			<span id="ticker"></span>
+			<div id="ticker">
+				<div>The registrations will be open from 16th Feb 2013</div>
+	    		<div>The last date for submission of entries for the photography contest is 20th Feb 2013</div>
+    			<div>Shankar Mahadevan has confirmed to perform at Ragam 2013</div>
+			</div>
 			<span id="social_panel">
 				<!--<a style="width:48px; height:48px; display:inline; opacity:0"><img src="<?php echo $subDir; ?>img/twitter.png"></a>
 				<!--<a href="facebook.com" target="blank" ><img src="<?php echo $subDir; ?>img/twitter.png"></a>-->

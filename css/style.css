@@ -21,6 +21,36 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+    font-family: HelveticaLightCondensed;
+    src: url('helveticaneueltcom-ltcn.eot');
+    src: url('helveticaneueltcom-ltcn.eot') format('embedded-opentype'),
+         url('helveticaneueltcom-ltcn.woff') format('woff'),
+         url('helveticaneueltcom-ltcn.ttf') format('truetype'),
+         url('helveticaneueltcom-ltcn.svg#HelveticaNeueLTCom47LightCondensed') format('svg');
+}
+#light
+{
+	width:100%;
+	height:100%;
+	z-index:50;
+	background-color:white;
+	position:absolute;
+	top:0px;
+	left:0px;
+	opacity:0.9;
+}
+#dark
+{
+	width:100%;
+	height:100%;
+	z-index:-20;
+	background-color:black;
+	position:absolute;
+	top:0px;
+	left:0px;
+	opacity:0;
+}
 .shortdesc{
 	display:none;
 	margin:0;
@@ -435,144 +465,129 @@ a#login-link {
 	top:-7px;
 	right: -10px;
 }
-#signin-dropdown {
-	background-color:#202020;
-	border-bottom-left-radius:5px;
-	border-bottom-right-radius:5px;
-	box-shadow:0 1px 2px #666666;
-	min-height:200px;
-	min-width:160px;
-	position:absolute;
-	right:0;
-	display:none;
-}
 
-#signin-dropdown form{
-	cursor:pointer;
-	padding:10px;
-	text-align:left;
-}
-
-#signin-dropdown .textbox span { color:#BABABA;}
-#signin-dropdown .textbox input { width:200px; }
-
-fieldset { 
-	border:none; 
-}
-
-form.signin .textbox label { 
-	display:block; 
-	padding-bottom:7px; 
-}
-
-form.signin .textbox span { 
-	display:block;
-}
-
-form.signin p, form.signin span { 
-	color:#999; 
-	font-size:11px; 
-	line-height:18px;
-} 
-
-form.signin .textbox input { 
-	background:#666666; 
-	border-bottom:1px solid #333;
-	border-left:1px solid #000;
-	border-right:1px solid #333;
-	border-top:1px solid #000;
-	color:#fff; 
-	border-radius: 3px;
-	font:13px Arial, Helvetica, sans-serif;
-	padding:6px 6px 4px;
-}
-
-form.signin .remb { 
-	padding:9px 0; 
-	position:relative; 
-	text-align:right;
-}
-
-form.signin .remb .remember { 
-	text-align:left; 
-	position:absolute; 
-	left:0;
-}
-
-.button { 
-	background: -moz-linear-gradient(center top, #f3f3f3, #dddddd);
-	background: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#dddddd));
-	background:  -o-linear-gradient(top, #f3f3f3, #dddddd);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f3f3f3', EndColorStr='#dddddd');
-	border-color:#000; 
-	border-width:1px;
-	border-radius: 4px;
-	color:#333;
-	cursor:pointer;
-	display:inline-block;
-	padding:4px 7px;
-	margin:0;
-	font:12px; 
-}
-
-.button:hover { background:#ddd; }
-
-#loginform{
-	position: relative;
-	left: 10%;
-	top: 75%;
-}
-
-#dark
-{
-	width:100%;
-	height:100%;
-	z-index:-20;
-	background-color:black;
-	position:absolute;
-	top:0px;
-	left:0px;
-	opacity:0;
-}
-
-#form-wrapper {
+#login-form-wrapper {
 	z-index: 25;
 	position: relative;
 	height: 30%;
 	width: 430px;
 	margin: auto;
-	margin-top:20%;
+	margin-top:10%;
 	display: none;
 }
-.emailentry {
-	padding-left: 35px;
+#login-form-wrapper input.emailentry {
+	padding: 5px 0 0 40px;
 	z-index: 30;
 	position: relative;
-    font-family: 'HelveticaThin';
+    font-family: 'HelveticaLightCondensed';
     width: 200px;
     height: 32px;
     font-size: 18px;
-    margin-top: 10%;
+    margin-top: 20%;
+    color:#555;
+    border: none;
+    background: #ccc url('../img/iconsprite.png') 0px -96px no-repeat;
+}
+#login-form-wrapper input.passwordentry {
+	padding: 5px 0 0 40px;
+	z-index: 30;
+	position: relative;
+    font-family: 'HelveticaLightCondensed';
+    width: 200px;
+    height: 32px;
+    font-size: 18px;
+    margin-top: 20%;
+    margin-left: 20px;
+    margin-right: 0px;
+    color:#555;
+    border: none;
+    background: #ccc url('../img/iconsprite.png') 0px -64px no-repeat;
+}
+#signup-form-wrapper {
+	z-index: 25;
+	position: relative;
+	height: 30%;
+	width: 250px;
+	margin: auto;
+	margin-top:10%;
+	display: none;
+}
+#signup-form-wrapper input.nameentry {
+	padding: 5px 0 0 40px;
+	z-index: 30;
+	position: relative;
+    font-family: 'HelveticaLightCondensed';
+    width: 200px;
+    height: 32px;
+    font-size: 18px;
+    margin-top: 20%;
     color:#555;
     border: none;
     background: #ccc url('../img/iconsprite.png') 0px -32px no-repeat;
 }
-
-.passwordentry {
-	padding-left: 40px;
-	padding-bottom: 2px;
+#signup-form-wrapper input.emailentry {
+	padding: 5px 0 0 40px;
 	z-index: 30;
 	position: relative;
-    font-family: 'HelveticaThin';
+    font-family: 'HelveticaLightCondensed';
     width: 200px;
     height: 32px;
     font-size: 18px;
-    margin-left: 20px;
-    margin-right: 0px;
+    margin-top: 10px;
     color:#555;
-    background: #ccc;
+    border: none;
+    background: #ccc url('../img/iconsprite.png') 0px -96px no-repeat;
+}
+#signup-form-wrapper input.passwordentry {
+	padding: 5px 0 0 40px;
+	z-index: 30;
+	position: relative;
+    font-family: 'HelveticaLightCondensed';
+    width: 200px;
+    height: 32px;
+    font-size: 18px;
+    margin-top: 10px;
+    color:#555;
     border: none;
     background: #ccc url('../img/iconsprite.png') 0px -64px no-repeat;
+}
+#signup-form-wrapper input.collegeentry {
+	padding: 5px 0 0 40px;
+	z-index: 30;
+	position: relative;
+    font-family: 'HelveticaLightCondensed';
+    width: 200px;
+    height: 32px;
+    font-size: 18px;
+    margin-top: 10px;
+    color:#555;
+    border: none;
+    background: #ccc url('../img/iconsprite.png') 0px 0px no-repeat;
+}
+#signup-form-wrapper input.phoneentry {
+	padding: 5px 0 0 40px;
+	z-index: 30;
+	position: relative;
+    font-family: 'HelveticaLightCondensed';
+    width: 200px;
+    height: 32px;
+    font-size: 18px;
+    margin-top: 10px;
+    color:#555;
+    border: none;
+    background: #ccc url('../img/iconsprite.png') 0px -128px no-repeat;
+}
+#login-form-wrapper #tip {
+	font-family: 'HelveticaLightCondensed';
+	font-size: 20px;
+	color: rgb(131, 131, 131);
+	margin: 10% 30%;
+}
+#signup-form-wrapper #tip {
+	font-family: 'HelveticaLightCondensed';
+	font-size: 20px;
+	color: rgb(131, 131, 131);
+	margin: 10% 5%;
 }
 /* support pane modified */
 
@@ -604,7 +619,7 @@ form.signin .remb .remember {
 	width:auto;
 	position:absolute;
 	right:0px;
-	margin-top:5px;
+	margin-top:1px;
 }
 .social_button
 {
@@ -628,6 +643,19 @@ form.signin .remb .remember {
 #ticker
 {
 	float:left;
+	height:36px;
+	width:100%;
+	/*margin:5px 0 0 50px;*/
+	color: #333;
+	background: #ccc;
+	box-shadow: 0 2px 10px #555;
+}
+#ticker div {
+	font-family: 'HelveticaThin';
+	font-weight: 400;
+	font-size: 15px;
+	position: absolute;
+	display: none;
 	height:30px;
 	width:83%;
 	margin:5px 0 0 10%;
@@ -706,17 +734,7 @@ form.signin .remb .remember {
 }
 
 /* Loading Animation */
-#light
-{
-	width:100%;
-	height:100%;
-	z-index:50;
-	background-color:white;
-	position:absolute;
-	top:0px;
-	left:0px;
-	opacity:0.9;
-}
+
 .spinner {
     /* Size and position */
     font-size: 100px; /* 1em */

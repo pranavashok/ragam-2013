@@ -1,5 +1,7 @@
 var subDir = 'magar';
 var title = '';
+var aniSpd = 3000;
+var fadeSpd = 200;
 var menu;
 
 function setCssR(a) {
@@ -11,24 +13,8 @@ function setCssR(a) {
 	});
 }
 
-function inputFocus(i){
-    if(i.value==i.defaultValue)
-    	{ i.value=""; i.style.color="#000"; }
-}
-function inputFocusPass(i){
-	if(i.value = i.defaultValue) {
-    	i.type='password';
-    	i.value='';
-    }
-}
 function inputBlur(i){
-    if(i.value==""){ i.value=i.defaultValue; i.style.color="#888"; }
-}
-function inputBlurPass(i){
-    if(i.value=="") { 
-    	i.type='text';
-    	i.value=i.defaultValue; i.style.color="#888"; 
-    }
+    //validation
 }
 
 function setCssL(a) {
@@ -97,9 +83,6 @@ function loadArt() {
 					$("#inner-pane").attr("class", "pane"); //Reset the inner-pane just before opening
 				$("#mainmenu-pane").attr("class", "moveout");
 				$("#font-pane").attr("class", "moveout");
-				/*$("#followlinks").animate({
-					opacity: '0'
-				});*/
 				if (relativeUrl.search("/") == -1) { //If it's a first level page
 					title = relativeUrl;
 					$.ajax({
@@ -116,8 +99,6 @@ function loadArt() {
 								catlinks = catlinks + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "'><li>" + ele.name + "</li></a>";
 							});
 							$("#submenu-links").html(catlinks);
-							//$("#submenu-links a").trigger('mouseenter');
-							// load content to hidden div
 							loadingAnimation(false);			
 						}
 					});
@@ -139,7 +120,6 @@ function loadArt() {
 							$("#content-heading").text(d.name);
 							$("#content-content").html(d.content);
 							$("#content-wrapper").fadeIn();
-							//	$(".nano").nanoScroller();
 							$(".nano").nanoScroller({
 								scrollTop: '0px'
 							});
@@ -155,6 +135,16 @@ function loadArt() {
 			}, "Ragam 2013 | National Institute of Technology Calicut", "");
 			loadingAnimation(false);
 		});
+		var startIndex = 0;
+		var endIndex = $('#ticker div').length;
+		$('#ticker div:first').fadeIn(fadeSpd);
+
+		window.setInterval(function() {
+			$('#ticker div:eq(' + startIndex + ')').delay(fadeSpd).fadeOut(fadeSpd);
+			    startIndex++;
+			    $('#ticker div:eq(' + startIndex + ')').fadeIn(fadeSpd);
+		        if (endIndex == startIndex) startIndex = 0;
+	    }, aniSpd);
 		$(".nano").hover(function(){
 			$(this).nanoScroller();
 		});
@@ -257,24 +247,21 @@ function loadArt() {
 				timestamp: (new Date().getTime())
 			}, "Ragam 2013", "/" + subDir + "/");
 			$("#content-wrapper").fadeOut();
-			/*$("#followlinks").animate({
-				opacity: '1'
-			});*/
-			/* Code to reset level zero */
 		});
 		$('a#signin-link').click(function () {
 			if ($("#signin-link").attr("class") == "cancel") {
 				$(this).html('<img src="/' + subDir + '/img/signup.png" />');
 				$("#signin-link").attr("class", "enabled");
 				$("#dark").attr("class", "overlayoff");
-				$("#form-wrapper").fadeOut();
+				$("#signup-form-wrapper").fadeOut();
 			} else {
 				$(this).html('<img src="/' + subDir + '/img/cancel.png" />');
 				$("a#signin-link").attr("class", "cancel");
 				$("a#login-link").attr("class", "enabled");
 				$("a#login-link").html('<img src="/' + subDir + '/img/login.png" />');
 				$("#dark").attr("class", "overlayon");
-				$("#form-wrapper").fadeIn();
+				$("#login-form-wrapper").hide();
+				$("#signup-form-wrapper").fadeIn();
 			}
 		});
 		$('#login-link').click(function () {
@@ -282,14 +269,15 @@ function loadArt() {
 				$(this).html('<img src="/' + subDir + '/img/login.png" />');
 				$("#login-link").attr("class", "enabled");
 				$("#dark").attr("class", "overlayoff");
-				$("#form-wrapper").fadeOut();
+				$("#login-form-wrapper").fadeOut();
 			} else {
 				$(this).html('<img src="/' + subDir + '/img/cancel.png" />');
 				$("a#login-link").attr("class", "cancel");
 				$("a#signin-link").attr("class", "enabled");
 				$("a#signin-link").html('<img src="/' + subDir + '/img/signup.png" />');
 				$("#dark").attr("class", "overlayon");
-				$("#form-wrapper").fadeIn();
+				$("#signup-form-wrapper").hide();
+				$("#login-form-wrapper").fadeIn();
 			}
 		});
 		$('#dark').click(function () {
@@ -297,7 +285,8 @@ function loadArt() {
 			    $("#signin-link").html('<img src="/' + subDir + '/img/signup.png" />');
 			    $("#login-link").attr("class", "enabled");
 			    $("#dark").attr("class", "overlayoff");
-			    $("#form-wrapper").fadeOut();
+			    $("#login-form-wrapper").fadeOut();
+			    $("#signup-form-wrapper").fadeOut();
 
 		});
 		
@@ -322,7 +311,27 @@ function loadArt() {
 		}
 		});
 		
-		
+		$("#font-pane").bind('mousewheel', function(event) {
+    		if (event.originalEvent.wheelDelta >= 0) {
+        			if($("#wrapper").attr("class")!="support-down") {
+        				$("#wrapper").attr("class", "support-down");
+        				$("#support-pane").attr("class", "support-down");
+        			}
+    		}
+    		else {
+        		if($("#wrapper").attr("class")!="support-up"){
+        			$("#wrapper").attr("class", "support-up");
+					$("#support-pane").attr("class", "support-up");
+				}
+    		}
+		});
+
+		$('[title]').mouseover(function () {
+        	$(this).data('title', $(this).attr('title'));
+        	$(this).attr('title', '');
+    	}).mouseout(function () {
+    	    $(this).attr('title', $(this).data('title'));
+    });
 		loadArt();
 	});
 })(window);
