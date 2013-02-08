@@ -15,7 +15,7 @@ $(function() {
 						// maxScale : maximum scale value the image will have
 						// minOpacity / maxOpacity : minimum (set in the CSS) and maximum values for the image's opacity
 						settings	= {
-							maxScale	: 2.0,
+							maxScale	: 1.4,
 							maxOpacity	: 0.9,
 							minOpacity	: Number( $elems.css('opacity') )
 						},
