@@ -136,33 +136,60 @@
 			</ul>
 		</nav>
 	</section>
-	<section class="pane" id="inner-pane">
-		<div id="content-half">
-			<div id="subsubmenu">
-				<ul id="subsubmenu-links">
+	<section class="pane" id="inner-pane-events">
+		<div id="content-half-events">
+			<div id="subsubmenu-events">
+				<ul id="subsubmenu-links-events">
 				</ul>
 			</div>
-			<div id="content-container">
-				<div id="content-wrapper">
-					<div id="content-heading">
+			<div id="content-container-events">
+				<div id="content-wrapper-events">
+					<div id="content-heading-events">
 					</div>
-					<div id="content-content-wrapper" class="nano">
-						<div id="content-content" class="content">
+					<div id="content-content-wrapper-events" class="nano">
+						<div id="content-content-events" class="content">
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="submenu-half">
-			<div id="submenu">
-				<ul id="submenu-links">
+		<div id="submenu-half-events">
+			<div id="submenu-events">
+				<ul id="submenu-links-events">
 				</ul>
 			</div>
-			<div id="painting">
+			<div id="painting-events">
 			</div>
 		</div>
 
-</section>
+	</section >
+
+	<!--<section class="pane" id="inner-pane-workshops">
+		<div id="content-half-workshops">
+			<div id="subsubmenu-workshops">
+				<ul id="subsubmenu-links-workshops">
+				</ul>
+			</div>
+			<div id="content-container-workshops">
+				<div id="content-wrapper-workshops">
+					<div id="content-heading-workshops">
+					</div>
+					<div id="content-content-wrapper-workshops" class="nano">
+						<div id="content-content-workshops" class="content">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="submenu-half-workshops">
+			<div id="submenu-workshops">
+				<ul id="submenu-links-workshops">
+				</ul>
+			</div>
+			<div id="painting-workshops">
+			</div>
+		</div>
+	</section>-->
 
 </div>
 <div class="pane" id="support-pane">
@@ -177,8 +204,8 @@
 			<span id="social_panel">
 				<!--<a style="width:48px; height:48px; display:inline; opacity:0"><img src="<?php echo $subDir; ?>img/twitter.png"></a>
 				<!--<a href="facebook.com" target="blank" ><img src="<?php echo $subDir; ?>img/twitter.png"></a>-->
-				<span class="social_button"><a href="youtube.com" target="blank"><img src="<?php echo $subDir; ?>img/youtube.png"></a></span>
-				<span class="social_button"><a href="www.facebook.com/Ragam.nitc" target="blank"><img src="<?php echo $subDir; ?>img/facebook.png"></a></span>
+				<span class="social_button"><a href="http://www.youtube.com/user/RagamCulfest" target="blank"><img src="<?php echo $subDir; ?>img/youtube.png"></a></span>
+				<span class="social_button"><a href="http://www.facebook.com/Ragam.nitc" target="blank"><img src="<?php echo $subDir; ?>img/facebook.png"></a></span>
 			</span>
 		</div>
 	
@@ -217,7 +244,7 @@
 	<img src="<?php echo $subDir; ?>img/back.png">
 </div>
 	
-	<input id="searchBox" type="text" name="search" size="40">
+	<!--<input id="searchBox" type="text" name="search" size="40">-->
 <div id="hidden-box">
 	<div id="hidden-submenu-links">
 	</div>

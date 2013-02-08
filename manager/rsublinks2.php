@@ -21,10 +21,17 @@ while($event_cats2=$query2->fetch_assoc())
 {
 	//$event_cats["name"]=array();
 	$edges["Ragam"][$event_cats2["name"]]=array('length'=>.8);;
-	$query3=$mysqli->query("SELECT name FROM event_cats WHERE par_cat='$event_cats2[cat_id]'");
+	$query3=$mysqli->query("SELECT name,cat_id FROM event_cats WHERE par_cat='$event_cats2[cat_id]'");
 	while($event_cats3=$query3->fetch_assoc())
 		{
 			$edges[$event_cats2["name"]][$event_cats3["name"]]=array();
+			$last=$event_cats3["name"];
+			$last = str_replace(' ', '_', $last);
+			$query4=$mysqli->query("SELECT name FROM events WHERE cat_id='$event_cats3[cat_id]'");
+			$k=$query4->fetch_assoc();
+			$last2=$k["name"];
+			$last2=str_replace(' ', '_', $last2);
+			$nodes[$event_cats3["name"]]["link"]="/magar/".$event_cats2["name"]."/".$last."/".$last2;
 		}
 
 }
