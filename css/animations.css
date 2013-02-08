@@ -291,7 +291,7 @@
     margin-left: -.1em; /* Width/2 */
     transform-origin: 50% 550%;
     animation: 
-        rota 1.4s linear infinite,
+        rota 1.50s linear infinite,
         opa 3.67s ease-in-out infinite alternate;
 }
  
@@ -302,7 +302,7 @@
     margin-top: -.1em; /* Height/2 */
     transform-origin: -450% 50%;
     animation: 
-        rota 1.86s linear infinite,
+        rota 1.4s linear infinite,
         opa 4.29s ease-in-out infinite alternate;
 }
  

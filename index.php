@@ -204,8 +204,8 @@
 			<span id="social_panel">
 				<!--<a style="width:48px; height:48px; display:inline; opacity:0"><img src="<?php echo $subDir; ?>img/twitter.png"></a>
 				<!--<a href="facebook.com" target="blank" ><img src="<?php echo $subDir; ?>img/twitter.png"></a>-->
-				<span class="social_button"><a href="youtube.com" target="blank"><img src="<?php echo $subDir; ?>img/youtube.png"></a></span>
-				<span class="social_button"><a href="www.facebook.com/Ragam.nitc" target="blank"><img src="<?php echo $subDir; ?>img/facebook.png"></a></span>
+				<span class="social_button"><a href="http://www.youtube.com/user/RagamCulfest" target="blank"><img src="<?php echo $subDir; ?>img/youtube.png"></a></span>
+				<span class="social_button"><a href="http://www.facebook.com/Ragam.nitc" target="blank"><img src="<?php echo $subDir; ?>img/facebook.png"></a></span>
 			</span>
 		</div>
 	
