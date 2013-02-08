@@ -210,6 +210,7 @@
 		</div>
 	
 		<div id="supportpane_bot">
+			<input id="searchBox" type="text" name="search" size="40">
 			<div id="menu_tab">
 				<span class="menu_item menu_click">contacts</span>
 				<span class="menu_item menu_nonclick">schedule</span>
@@ -244,7 +245,7 @@
 	<img src="<?php echo $subDir; ?>img/back.png">
 </div>
 	
-	<!--<input id="searchBox" type="text" name="search" size="40">-->
+	
 <div id="hidden-box">
 	<div id="hidden-submenu-links">
 	</div>
