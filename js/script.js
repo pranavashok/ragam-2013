@@ -105,6 +105,7 @@ function lookup(inputString) {
 					$("#mainmenu-pane").attr("class", "moveout");
 					$("#font-pane").attr("class", "moveout");
 					if (relativeUrl.search("/") == -1) { //If it's a first level page
+						$("#painting-events").fadeIn();
 						title = relativeUrl;
 						$.ajax({
 							dataType: "json",
@@ -165,6 +166,7 @@ function lookup(inputString) {
 					$("#mainmenu-pane").attr("class", "moveout");
 					$("#font-pane").attr("class", "moveout");
 					if (relativeUrl.search("/") == -1) { //If it's a first level page
+						$("#painting-workshops").fadeIn();
 						title = relativeUrl;
 						$.ajax({
 							dataType: "json",
