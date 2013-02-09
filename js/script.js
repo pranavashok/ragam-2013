@@ -82,53 +82,80 @@ function loadArt() {
 				if (relativeUrl[relativeUrl.length - 1] == '/') relativeUrl = relativeUrl.substr(0, relativeUrl.length - 1);
 				setCssL('#font-pane');
 				setCssR('#mainmenu-pane');
-				if($("#mainmenu-pane").attr("class")!="moveout")
-					$("#inner-pane-events").attr("class", "pane"); //Reset the inner-pane-events just before opening
-				$("#mainmenu-pane").attr("class", "moveout");
-				$("#font-pane").attr("class", "moveout");
-				if (relativeUrl.search("/") == -1) { //If it's a first level page
-					title = relativeUrl;
-					$.ajax({
-						dataType: "json",
-						url: "/" + subDir + "/manager/rsublinks.php",
-						data: {
-							"cat": title
-						},
-						type: "POST",
-						success: function (d) {
-							setMenu(d);
-							var catlinks = "";
-							d.forEach(function (ele) {
-								catlinks = catlinks + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "'><li>" + ele.name + "</li></a>";
-							});
-							$("#submenu-links-events").html(catlinks);
-							loadingAnimation(false);			
-						}
-					});
-				} else { //Its a second level url
-					$("#painting-events").fadeOut();
-					$("#inner-pane-events").attr("class", "moveright");
+				if(relativeUrl=="Events") { //Events section
+					if($("#mainmenu-pane").attr("class")!="moveout")
+						$("#inner-pane-events").attr("class", "pane"); //Reset the inner-pane-events just before opening
+					$("#mainmenu-pane").attr("class", "moveout");
+					$("#font-pane").attr("class", "moveout");
+					if (relativeUrl.search("/") == -1) { //If it's a first level page
+						title = relativeUrl;
+						$.ajax({
+							dataType: "json",
+							url: "/" + subDir + "/manager/rsublinks.php",
+							data: {
+								"cat": title
+							},
+							type: "POST",
+							success: function (d) {
+								setMenu(d);
+								var catlinks = "";
+								d.forEach(function (ele) {
+									catlinks = catlinks + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "'><li>" + ele.name + "</li></a>";
+								});
+								$("#submenu-links-events").html(catlinks);
+								loadingAnimation(false);			
+							}
+						});
+					} else { //Its a second level url
+						$("#painting-events").fadeOut();
+						$("#inner-pane-events").attr("class", "moveright");
 
-					var n = relativeUrl.split("/");
-					eve = relativeUrl.split("/")[n.length - 1];
-					$.ajax({
-						dataType: "json",
-						url: "/" + subDir + "/manager/content.php",
-						data: {
-							"event": eve
-						},
-						type: "POST",
-						success: function (d) {
-							
-							$("#content-heading-events").text(d.name);
-							$("#content-content-events").html(d.content);
-							$("#content-wrapper-events").fadeIn();
-							$(".nano").nanoScroller({
-								scrollTop: '0px'
-							});
-						}
+						var n = relativeUrl.split("/");
+						eve = relativeUrl.split("/")[n.length - 1];
+						$.ajax({
+							dataType: "json",
+							url: "/" + subDir + "/manager/content.php",
+							data: {
+								"event": eve
+							},
+							type: "POST",
+							success: function (d) {
+								
+								$("#content-heading-events").text(d.name);
+								$("#content-content-events").html(d.content);
+								$("#content-wrapper-events").fadeIn();
+								$(".nano").nanoScroller({
+									scrollTop: '0px'
+								});
+							}
 
-					});
+						});
+					}
+				} //Endif events
+				else if(relativeUrl=="Workshops") {
+					//Workshops code comes here
+					/* Stuff to do
+						1. Move out font and main panes
+						2. Check whether first level or second level and show appropriate page
+						3. If first level
+							- Fetch workshops list
+						4. If second level
+							- Fetch required workshop after extracting name from relativeurl.
+					*/
+
+
+				} //Endif workshops
+				else if(relativeUrl=="Proshows") {
+					//Proshows code
+				} //Endif proshows
+				else if(relativeUrl=="Showcase") {
+					//Showcase code
+				} //Endif showcase
+				else if(relativeUrl=="Sponsors") {
+					//Sponsors code
+				} //Endif sponsors
+				else {
+					//Go to 404
 				}
 			}
 		});
