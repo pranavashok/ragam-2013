@@ -3,7 +3,7 @@
    $count =0;
    // PHP5 Implementation - uses MySQLi.
    // mysqli('localhost', 'yourUsername', 'yourPassword', 'yourDatabase');
-   require_once("config.php");
+   require_once("manager/config.php");
    $db = mysql_connect($host, $db_user, $db_password);
    mysql_select_db($db_name, $db);
    if(!$db) {
