@@ -50,6 +50,21 @@ function loadArt() {
 	$("#hidden-art").append($("<img id='dramatics'/>").attr("src", "/" + subDir + "/img/dramatics.jpg"));
 
 }
+
+function lookup(inputString) {
+		if(inputString.length == 0) {
+			$('#suggestions').fadeOut(); // Hide the suggestions box
+		} 
+		else {
+			$('#suggestions').fadeIn(); // Show the suggestions box
+			$("#s-loader").show();
+			$.post("search.php", {queryString: ""+inputString+""}, function(data) { // Do an AJAX call
+				$('#suggestions').html(data); // Fill the suggestions box
+				$("#s-loader").hide();
+      			});
+   		}
+}
+
 (function (window, undefined) {
 	var History = window.History;
 	if (!History.enabled) {
