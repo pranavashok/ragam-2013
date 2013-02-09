@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
     font-family: 'BebasNeueRegular';
     src: url('fonts/BebasNeue-webfont.eot');
     src: url('fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
@@ -7,7 +7,7 @@
          url('fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
     font-weight: normal;
     font-style: normal;
-}
+}*/
 /* CSS reset */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
 	margin:0;
@@ -82,7 +82,7 @@ a{
     text-align: center;
 }
 .container > header h1{
-	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+	font-family: 'HelveticaLight', 'Arial Narrow', Arial, sans-serif;
 	font-size: 35px;
 	line-height: 35px;
 	position: relative;

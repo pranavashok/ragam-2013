@@ -252,9 +252,7 @@ function lookup(inputString) {
 		$("#mainlinks li").click(function () {
 			title = $(this).attr('title');
 			loadingAnimation(true);
-			History.pushState({
-				timestamp: (new Date().getTime())
-			}, title + " | Ragam 2013", $(this).parent("a").attr("href"));
+			History.pushState({timestamp: (new Date().getTime())}, title + " | Ragam 2013", $(this).parent("a").attr("href"));
 		});
 		$("#submenu-links-events a").live({
 			mouseenter: function () {
@@ -296,7 +294,7 @@ function lookup(inputString) {
 				$(this).attr("class", "selected");
 				$("#hidden-submenu-links").html($("#submenu-links-events").html());
 				$("#hidden-subsubmenu-links").html($("#subsubmenu-links-events").html());
-				History.pushState(null, $(this).text() + " | Ragam 2013", $(this).attr("href"));
+				History.pushState({timestamp: (new Date().getTime())}, $(this).text() + " | Ragam 2013", $(this).attr("href"));
 			},
 			mouseenter: function(e) {
 				$("#subsubmenu-links-events a").each(function () {
