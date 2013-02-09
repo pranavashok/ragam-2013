@@ -1,12 +1,11 @@
 <?php
 require_once("initdb.php");
 
-$par_cat=$_POST['cat'];
-if($par_cat == "Events")
-	$par_cat_id=1;
-else if($par_cat == "Proshows")
-	$par_cat_id=2;	
-$query1=$mysqli->query("SELECT name,cat_id FROM event_cats WHERE par_cat='$par_cat_id'");
+$par_name=$_POST['cat'];
+$query0=$mysqli->query("SELECT cat_id FROM event_cats WHERE name='$par_name'");
+$par_cat_id=$query0->fetch_assoc();
+$par_cat=$par_cat_id['cat_id'];
+$query1=$mysqli->query("SELECT name,cat_id FROM event_cats WHERE par_cat='$par_cat'");
 
 $i=0;
 

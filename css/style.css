@@ -106,6 +106,7 @@
 	transform-origin:100% 50%;
 }
 #inner-pane-events {
+	display: none;
 	background: #4a52b5;
 	position: absolute;
 	width: 66.67%;
@@ -250,6 +251,164 @@
 	background-color: #f7f7f7;
 }
 #painting-events {
+	transform: rotate(25deg);
+	width: 600px;
+	height: 600px;
+	top: 30%;
+	left: 20%;
+	position: absolute;
+	/*background: url('/magar/img/fs.png') no-repeat;*/
+	background-repeat:no-repeat;
+}
+
+/* testing css of workshops */
+#inner-pane-workshops {
+	display: none;
+	background: #4a52b5;
+	position: absolute;
+	width: 66.67%;
+	height: 100%;
+	top:16.67%;
+	left:13%;
+	transform:rotate(-25deg);
+	transform-origin:50% 50%;
+}
+#content-half-workshops {
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	float:left;
+	z-index: 1;
+}
+#content-container-workshops {
+	width: 78%;
+	height: 100%;
+	background: #4a52b5;
+	display: block;
+	position: relative;
+	float: right;
+}
+#content-wrapper-workshops {
+	font-family: HelveticaThin;
+	position: absolute;
+	width: 60%;
+	height: 24%;
+	display: block;
+	background: #2a32a5;
+	right: 5%;
+	top: 20%;
+}
+#content-heading-workshops {
+	position:relative;
+	width:100%;
+	height:5%;
+	display:block;
+	background: #4a52b5;
+	top:0;
+	left:0;
+	padding:10px;
+	font-size:30px;
+	text-transform:lowercase;
+	color: #fff;
+}
+.nano { 
+	background: #4a52b5; 
+	position:relative; 
+	width:100%;
+	height:90%;
+	left:0;
+	display:block;
+}
+.nano .content { padding: 10px; }
+.nano .pane   { background: #4a52b5; }
+.nano .slider { background: #111; }
+
+#content-content-workshops {
+	position:relative;
+	width:95%;
+	right:5%;
+	height:80%;
+	padding:30px;
+	display:block;
+	background:#4a52b5;
+	color: #fff;
+	left:0;
+	top:5%;
+	outline:none;
+	font-size: 15px;
+	line-height: 20px;
+}
+#subsubmenu-workshops {
+	font-family: HelveticaThin;
+	text-transform: lowercase;
+	width: 22%;
+	height: 100%;
+	background: #4a52b5;
+	display: block;
+	position: relative;
+	float: right;
+}
+#subsubmenu-links-workshops {
+	font-size: 30px;
+	line-height: 35px;
+	position: absolute;
+	top: 22%;
+	right: 0;
+	list-style: none;
+	text-align: right;
+}
+#subsubmenu-links-workshops a, #subsubmenu-links-workshops a.notselected {
+	text-decoration: none;
+	color:#fff;
+	display: block;
+ 	padding-left: 10px;
+	padding-right: 20px;
+}
+#subsubmenu-links-workshops a.selected {
+	color:#4a52b5;
+	background-color:#f7f7f7;
+}
+#subsubmenu-links-workshops a:hover {
+	color:#4a52b5;
+	background-color:#f7f7f7;	
+}
+#submenu-half-workshops {
+	font-family: HelveticaThin;
+	text-transform: lowercase;
+	position: relative;
+	float:right;
+	background: #f7f7f7;
+	height: 100%;
+	width: 50%;
+}
+#submenu-links-workshops {
+	font-size: 40px;
+	position:absolute;
+	top:22%;
+	left:-1px;
+	list-style:none;
+}
+#submenu-links-workshops li {
+	width:250px;
+	padding-left:20px;
+	display:block;
+}
+#submenu-links-workshops a {
+	text-decoration: none;
+	color: #4a52b5;
+	display:block;
+	width:250px;
+	background-color: #f7f7f7;
+}
+#submenu-links-workshops a.selected {
+	color:#fff;
+	background-color:#4a52b5;
+}
+#submenu-links-workshops a.notselected {
+	color: #4a52b5;
+	background-color: #f7f7f7;
+}
+#painting-workshops {
 	transform: rotate(25deg);
 	width: 600px;
 	height: 600px;

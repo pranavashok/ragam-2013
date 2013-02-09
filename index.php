@@ -136,60 +136,41 @@
 			</ul>
 		</nav>
 	</section>
-	<section class="pane" id="inner-pane-events">
-		<div id="content-half-events">
-			<div id="subsubmenu-events">
-				<ul id="subsubmenu-links-events">
+	<?php
+	$cat_type_array=array('events','workshops');
+	foreach($cat_type_array as $cat_type)
+	{
+	?>
+	<section class="pane" id="inner-pane-<?php echo $cat_type; ?>">
+		<div id="content-half-<?php echo $cat_type; ?>">
+			<div id="subsubmenu-<?php echo $cat_type; ?>">
+				<ul id="subsubmenu-links-<?php echo $cat_type; ?>">
 				</ul>
 			</div>
-			<div id="content-container-events">
-				<div id="content-wrapper-events">
-					<div id="content-heading-events">
+			<div id="content-container-<?php echo $cat_type; ?>">
+				<div id="content-wrapper-<?php echo $cat_type; ?>">
+					<div id="content-heading-<?php echo $cat_type; ?>">
 					</div>
-					<div id="content-content-wrapper-events" class="nano">
-						<div id="content-content-events" class="content">
+					<div id="content-content-wrapper-<?php echo $cat_type; ?>" class="nano">
+						<div id="content-content-<?php echo $cat_type; ?>" class="content">
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="submenu-half-events">
-			<div id="submenu-events">
-				<ul id="submenu-links-events">
+		<div id="submenu-half-<?php echo $cat_type; ?>">
+			<div id="submenu-<?php echo $cat_type; ?>">
+				<ul id="submenu-links-<?php echo $cat_type; ?>">
 				</ul>
 			</div>
-			<div id="painting-events">
+			<div id="painting-<?php echo $cat_type; ?>">
 			</div>
 		</div>
-
 	</section >
+	<?php
+	}
+	?>	
 
-	<!--<section class="pane" id="inner-pane-workshops">
-		<div id="content-half-workshops">
-			<div id="subsubmenu-workshops">
-				<ul id="subsubmenu-links-workshops">
-				</ul>
-			</div>
-			<div id="content-container-workshops">
-				<div id="content-wrapper-workshops">
-					<div id="content-heading-workshops">
-					</div>
-					<div id="content-content-wrapper-workshops" class="nano">
-						<div id="content-content-workshops" class="content">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="submenu-half-workshops">
-			<div id="submenu-workshops">
-				<ul id="submenu-links-workshops">
-				</ul>
-			</div>
-			<div id="painting-workshops">
-			</div>
-		</div>
-	</section>-->
 
 </div>
 <div class="pane" id="support-pane">

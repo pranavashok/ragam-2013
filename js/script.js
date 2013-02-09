@@ -98,6 +98,8 @@ function lookup(inputString) {
 				setCssL('#font-pane');
 				setCssR('#mainmenu-pane');
 				if(relativeUrl=="Events") { //Events section
+					$(".pane").hide();
+					$("#inner-pane-events").show();
 					if($("#mainmenu-pane").attr("class")!="moveout")
 						$("#inner-pane-events").attr("class", "pane"); //Reset the inner-pane-events just before opening
 					$("#mainmenu-pane").attr("class", "moveout");
@@ -124,7 +126,6 @@ function lookup(inputString) {
 					} else { //Its a second level url
 						$("#painting-events").fadeOut();
 						$("#inner-pane-events").attr("class", "moveright");
-
 						var n = relativeUrl.split("/");
 						eve = relativeUrl.split("/")[n.length - 1];
 						$.ajax({
@@ -157,7 +158,56 @@ function lookup(inputString) {
 						4. If second level
 							- Fetch required workshop after extracting name from relativeurl.
 					*/
+					$(".pane").hide();
+					$("#inner-pane-workshops").show();
+					if($("#mainmenu-pane").attr("class")!="moveout")
+						$("#inner-pane-workshops").attr("class", "pane"); //Reset the inner-pane-workshops just before opening
+					$("#mainmenu-pane").attr("class", "moveout");
+					$("#font-pane").attr("class", "moveout");
+					if (relativeUrl.search("/") == -1) { //If it's a first level page
+						title = relativeUrl;
+						$.ajax({
+							dataType: "json",
+							url: "/" + subDir + "/manager/rsublinks.php",
+							data: {
+								"cat": title
+							},
+							type: "POST",
+							success: function (d) {
+								setMenu(d);
+								var catlinks = "";
+								d.forEach(function (ele) {
+									catlinks = catlinks + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "'><li>" + ele.name + "</li></a>";
+								});
+								$("#submenu-links-workshops").html(catlinks);
+								loadingAnimation(false);			
+							}
+						});
+					} else { //Its a second level url
+						$("#painting-workshops").fadeOut();
+						$("#inner-pane-workshops").attr("class", "moveright");
 
+						var n = relativeUrl.split("/");
+						eve = relativeUrl.split("/")[n.length - 1];
+						$.ajax({
+							dataType: "json",
+							url: "/" + subDir + "/manager/content.php",
+							data: {
+								"event": eve
+							},
+							type: "POST",
+							success: function (d) {
+								
+								$("#content-heading-workshops").text(d.name);
+								$("#content-content-workshops").html(d.content);
+								$("#content-wrapper-workshops").fadeIn();
+								$(".nano").nanoScroller({
+									scrollTop: '0px'
+								});
+							}
+
+						});
+					}
 
 				} //Endif workshops
 				else if(relativeUrl=="Proshows") {
