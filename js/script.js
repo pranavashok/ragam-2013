@@ -81,7 +81,7 @@ function lookup(inputString) {
 			var State = History.getState(), // Note: We are using History.getState() instead of event.state
 				rootUrl = History.getRootUrl(),
 				relativeUrl = State.url.replace(rootUrl + subDir + '/', '');
-			History.log(State.data, State.title, State.url);
+			//History.log(State.data, State.title, State.url);
 			if (relativeUrl == "") {
 				if ($("#mainmenu-pane").attr("class") == "moveout") {
 					$("#mainmenu-pane").attr("class", "movein");
@@ -97,7 +97,7 @@ function lookup(inputString) {
 				if (relativeUrl[relativeUrl.length - 1] == '/') relativeUrl = relativeUrl.substr(0, relativeUrl.length - 1);
 				setCssL('#font-pane');
 				setCssR('#mainmenu-pane');
-				if(relativeUrl=="Events") { //Events section
+				if(relativeUrl.split("/")[0]=="Events") { //Events section
 					$(".pane").hide();
 					$("#inner-pane-events").show();
 					if($("#mainmenu-pane").attr("class")!="moveout")
@@ -148,7 +148,7 @@ function lookup(inputString) {
 						});
 					}
 				} //Endif events
-				else if(relativeUrl=="Workshops") {
+				else if(relativeUrl.split("/")[0]=="Workshops") {
 					//Workshops code comes here
 					/* Stuff to do
 						1. Move out font and main panes
@@ -210,13 +210,13 @@ function lookup(inputString) {
 					}
 
 				} //Endif workshops
-				else if(relativeUrl=="Proshows") {
+				else if(relativeUrl.split("/")[0]=="Proshows") {
 					//Proshows code
 				} //Endif proshows
-				else if(relativeUrl=="Showcase") {
+				else if(relativeUrl.split("/")[0]=="Showcase") {
 					//Showcase code
 				} //Endif showcase
-				else if(relativeUrl=="Sponsors") {
+				else if(relativeUrl.split("/")[0]=="Sponsors") {
 					//Sponsors code
 				} //Endif sponsors
 				else {
@@ -294,7 +294,7 @@ function lookup(inputString) {
 				$(this).attr("class", "selected");
 				$("#hidden-submenu-links").html($("#submenu-links-events").html());
 				$("#hidden-subsubmenu-links").html($("#subsubmenu-links-events").html());
-				History.pushState({timestamp: (new Date().getTime())}, $(this).text() + " | Ragam 2013", $(this).attr("href"));
+				History.pushState(null, $(this).text() + " | Ragam 2013", $(this).attr("href"));
 			},
 			mouseenter: function(e) {
 				$("#subsubmenu-links-events a").each(function () {
