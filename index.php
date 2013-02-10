@@ -196,6 +196,9 @@
 	    		<div>The last date for submission of entries for the photography contest is 20th Feb 2013</div>
     			<div>Shankar Mahadevan has confirmed to perform at Ragam 2013</div>
 			</div>
+			<div id="searchBox">
+	         <input id="searchBox" type="text" name="search" size="40">
+            </div>
 			<span id="social_panel">
 				<!--<a style="width:48px; height:48px; display:inline; opacity:0"><img src="<?php echo $subDir; ?>img/twitter.png"></a>
 				<!--<a href="facebook.com" target="blank" ><img src="<?php echo $subDir; ?>img/twitter.png"></a>-->
@@ -205,7 +208,6 @@
 		</div>
 	
 		<div id="supportpane_bot">
-			<input id="searchBox" type="text" name="search" size="40">
 			<div id="menu_tab">
 				<span class="menu_item menu_click">contacts</span>
 				<span class="menu_item menu_nonclick">schedule</span>
@@ -239,8 +241,6 @@
 <div id="home-button">
 	<img src="<?php echo $subDir; ?>img/back.png">
 </div>
-	
-	
 <div id="hidden-box">
 	<div id="hidden-submenu-links">
 	</div>
