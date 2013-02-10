@@ -208,27 +208,25 @@
 					<div>The last date for submission of entries for the photography contest is 20th Feb 2013</div>
 					<div>Shankar Mahadevan has confirmed to perform at Ragam 2013</div>
 				</div>
-				<div>
-					<form id="searchform" action="" method="">
-						<span id="search_panel">
-							<input id="searchBox" type="text" size="40" onkeyup="lookup(this.value);" name="q" autocomplete="off">
-						</span>
-						<div id ="suggestions"></div>
-					</form>
-				</div>
+				<form id="searchform" action="" method="">
+					<span id="search_panel">
+						<input id="searchBox" type="text" placeholder="type to search" onkeyup="lookup(this.value);" name="q" autocomplete="off">
+					</span>
+					<div id ="suggestions"></div>
+				</form>
 				<div id="social_panel">
 						<!--<a style="width:48px; height:48px; display:inline; opacity:0"><img src="<?php echo $subDir; ?>img/twitter.png"></a>
 						<!--<a href="facebook.com" target="blank" ><img src="<?php echo $subDir; ?>img/twitter.png"></a>-->
 						<span class="social_button"><a href="http://www.youtube.com/user/RagamCulfest" target="blank"><img src="<?php echo $subDir; ?>img/youtube.png"></a></span>
 						<span class="social_button"><a href="http://www.facebook.com/Ragam.nitc" target="blank"><img src="<?php echo $subDir; ?>img/facebook.png"></a></span>
 				</div>
-
+			</div>
 		<div id="supportpane_bot">
 			<div id="menu_tab">
 				<span class="menu_item menu_click">contacts</span>
 				<span class="menu_item menu_nonclick">schedule</span>
 				<span class="menu_item menu_click">faq</span>
-				<span  class="menu_item menu_nonclick gallery">gallery</span>
+				<span class="menu_item menu_nonclick gallery">gallery</span>
 				<span class="menu_item menu_nonclick">brochure</span>
 				<span class="menu_item menu_click">reach us</span>
 			</div>
