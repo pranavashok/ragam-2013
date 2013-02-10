@@ -77,7 +77,11 @@ function lookup(inputString) {
 		var h = $(window).height();
 		$("body").keydown(function (event) {
 			if (event.which == 27) $("#shortcut").hide();
-			if (event.which >= 37 && event.which <= 40) $("#shortcut").show();
+			if (event.which >= 37 && event.which <= 40) { //If direction keys press
+				$.getScript('/'+subDir+'/js/shortcut.js', function() {
+  					$("#shortcut").show();
+				});
+			}
 		});
 		History.Adapter.bind(window, 'statechange', function () { // Note: We are using statechange instead of popstate
 			var State = History.getState(), // Note: We are using History.getState() instead of event.state
