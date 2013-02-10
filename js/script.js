@@ -72,6 +72,7 @@ function lookup(inputString) {
 	}
 	$(function () {
 		$("#suggestions").fadeOut();
+		$("#feedback").fadeOut();
 		var w = $(window).width();
 		var h = $(window).height();
 		$("body").keydown(function (event) {
@@ -481,6 +482,15 @@ function lookup(inputString) {
 		{
 				$("#gallery").show();
 				$("#gallery").attr("class", "overlayon");
+		});
+		$(".feedback_link").click(function()
+		{
+				$("#feedback").show();
+				$("#feedback").attr("class", "overlayon");
+		});
+		$("#feedback").click(function () {
+				$("#feedback").hide();
+				$("#feedback").attr("class", "overlayoff");
 		});
 		$("#gallery").click(function () {
 				$("#gallery").hide();
