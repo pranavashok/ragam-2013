@@ -103,7 +103,7 @@
 				<img src="<?php echo $subDir; ?>img/login.png" />
 			</a>
 			<a id="signin-link" href="#">
-				<img src="<?php echo $subDir; ?>img/signup.ng" />
+				<img src="<?php echo $subDir; ?>img/signup.png" />
 			</a>
 		</div>
 		<div id="signin-dropdown">
@@ -210,12 +210,12 @@
 			</div>
 			<div>
 				<form id="searchform" action="" method="">
-			<span id="search_panel">
+				<span id="search_panel">
 	           <input id="searchBox" type="text" size="40" onkeyup="lookup(this.value);" name="q" autocomplete="off">
-			</span>
-			<div id ="suggestions"></div>
-		</form>
-		</div>
+				</span>
+				<div id ="suggestions"></div>
+				</form>
+			</div>
 		<div>
 			<span id="social_panel">
 				<!--<a style="width:48px; height:48px; display:inline; opacity:0"><img src="<?php echo $subDir; ?>img/twitter.png"></a>
@@ -294,13 +294,16 @@
 				</div>
 
 				<div id="reachus">
+
 				<form id="form" name="form" method="post" action="javascript:feedback()">
-				<p></p><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=nit+calicut&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=35.273162,79.013672&amp;vpsrc=0&amp;ie=UTF8&amp;hq=nit&amp;hnear=Kozhikode,+Kerala,+India&amp;t=m&amp;cid=14981244607500735704&amp;ll=11.321174,75.935268&amp;spn=0.058912,0.072956&amp;z=13&amp;iwloc=A" style="color:#ccc; float:left; text-decoration:none;text-align:right">View Larger Map</a></small><br>
+				<p></p><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=nit+calicut&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=35.273162,79.013672&amp;vpsrc=0&amp;ie=UTF8&amp;hq=nit&amp;hnear=Kozhikode,+Kerala,+India&amp;t=m&amp;cid=14981244607500735704&amp;ll=11.321174,75.935268&amp;spn=0.058912,0.072956&amp;z=13&amp;iwloc=A" style="color:#ccc; float:left; text-decoration:none;text-align:right">View Larger Map</a><br><br/>
 				<iframe width="400" style="float:left" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=nit+calicut&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=35.273162,79.013672&amp;vpsrc=0&amp;ie=UTF8&amp;hq=nit&amp;hnear=Kozhikode,+Kerala,+India&amp;t=m&amp;cid=14981244607500735704&amp;ll=11.321174,75.935268&amp;spn=0.058912,0.072956&amp;z=13&amp;iwloc=A&amp;output=embed"></iframe><br>
 				</form>
-				<div style="padding:20px 0px 0px 430px;">From Calicut Railway Station  (22 kms)<br><br>By Bus<br>  <i>Take a 10minute walk or get a rickshaw for a fare of ₹12 to Palayam bus stand  and board a bus to REC / NIT Calicut	<br><br>By Rickshaw<br>  Get a rickshaw from the Railway Station to NIT Calicut for a fare of ₹ 300 </i><br><br>By Taxi<br>  <i>You may get a taxi from the railway station to NIT Calicut for a fare of ₹450. </i><br><br><br>
-				<b>From Calicut Airport </b> <br><br> <small> Calicut Airport is located at Karipur, 27 Kms south-east of the city and it is  
-				45 kms  from NIT Calicut. You can reach NIT Calicut by taxi from the Calicut Airport and the taxi fare is 		approximately ₹ 800. </small> <br><br>
+				<div style="padding:0px 0px 0px 430px; align:right; font-size:10pt; ">
+
+				From Calicut Railway Station  (22 kms)<br><br>By Bus<br>  <i>Take a 10minute walk or get a rickshaw for a fare of INR 16 to Palayam bus stand  and board a bus to REC / NIT Calicut
+				<br><br>By Rickshaw<br>  Get a rickshaw from the Railway Station to NIT Calicut for a fare of INR 400 </i><br><br>By Taxi<br>  <i>You may get a taxi from the railway station to NIT Calicut for a fare of INR 500. </i><br><br><br>
+				<b>From Calicut Airport </b> <br><br>  Calicut Airport is located at Karipur, 27 Kms south-east of the city and it is  45 kms  from NIT Calicut. You can reach NIT Calicut by taxi from the Calicut Airport and the taxi fare is approximately ₹ 1000. <br><br>
 				</div>
 
 				</div>
