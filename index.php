@@ -154,7 +154,6 @@
 		</section >
 		<section class="pane" id="inner-pane-workshops">
 			<div id="content-half-workshops">
-
 				<div id="content-container-workshops">
 					<div id="content-wrapper-workshops">
 						<div id="content-heading-workshops">
@@ -175,11 +174,32 @@
 				</div>
 			</div>
 		</section >
+		<section class="pane" id="inner-pane-showcase">
+			<div id="content-half-showcase">
 
+				<div id="content-container-showcase">
+					<div id="content-wrapper-showcase">
+						<div id="content-heading-showcase">
+						</div>
+						<div id="content-content-wrapper-showcase" >
+							<div id="content-content-showcase" class="content">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="submenu-half-showcase">
+				<div id="submenu-showcase">
+					<ul id="submenu-links-showcase">
+					</ul>
+				</div>
+				<div id="painting-showcase">
+				</div>
+			</div>
+		</section >
 	</div>
 	<div class="pane" id="support-pane">
 		<div id="footer_inner">
-			
 			<div id="supportpane_top">
 				<div id="ticker">
 					<div>The registrations will be open from 16th Feb 2013</div>
@@ -194,14 +214,12 @@
 						<div id ="suggestions"></div>
 					</form>
 				</div>
-				<div>
-					<span id="social_panel">
-				<!--<a style="width:48px; height:48px; display:inline; opacity:0"><img src="<?php echo $subDir; ?>img/twitter.png"></a>
-				<!--<a href="facebook.com" target="blank" ><img src="<?php echo $subDir; ?>img/twitter.png"></a>-->
-				<span class="social_button"><a href="http://www.youtube.com/user/RagamCulfest" target="blank"><img src="<?php echo $subDir; ?>img/youtube.png"></a></span>
-				<span class="social_button"><a href="http://www.facebook.com/Ragam.nitc" target="blank"><img src="<?php echo $subDir; ?>img/facebook.png"></a></span>
-			</span>
-		</div>
+				<div id="social_panel">
+						<!--<a style="width:48px; height:48px; display:inline; opacity:0"><img src="<?php echo $subDir; ?>img/twitter.png"></a>
+						<!--<a href="facebook.com" target="blank" ><img src="<?php echo $subDir; ?>img/twitter.png"></a>-->
+						<span class="social_button"><a href="http://www.youtube.com/user/RagamCulfest" target="blank"><img src="<?php echo $subDir; ?>img/youtube.png"></a></span>
+						<span class="social_button"><a href="http://www.facebook.com/Ragam.nitc" target="blank"><img src="<?php echo $subDir; ?>img/facebook.png"></a></span>
+				</div>
 		
 		<div id="supportpane_bot">
 			<div id="menu_tab">
