@@ -394,11 +394,12 @@ function lookup(inputString) {
 		});
 		$(".gallery").click(function()
 		{
+				$("#gallery").show();
 				$("#gallery").attr("class", "overlayon");
-			
 		});
 		$("#gallery").click(function () {
-			$("#gallery").attr("class", "overlayoff");
+				$("#gallery").hide();
+				$("#gallery").attr("class", "overlayoff");
 		});
 		$('.menu_item').click(function()
 		{

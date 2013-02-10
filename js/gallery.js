@@ -1,4 +1,4 @@
-$(function() {
+$(function(){
 				
 				var Photo	= (function() {
 					
@@ -31,6 +31,9 @@ $(function() {
 							
 							});
 						
+						},
+						deinit		= function() {
+							$elems.off('proximity.Photo', function() { alert("gallery closed")});
 						},
 						// Get Value of CSS Scale through JavaScript:
 						// http://css-tricks.com/get-value-of-css-rotation-through-javascript/
@@ -152,7 +155,6 @@ $(function() {
 					};
 				
 				})();
-				
 				Photo.init();
 				
 			});
