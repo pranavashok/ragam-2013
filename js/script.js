@@ -74,7 +74,7 @@ function lookup(inputString) {
 		$("#suggestions").fadeOut();
 		var w = $(window).width();
 		var h = $(window).height();
-		$("body").keydown(function (event) {
+		$("body!:input").keydown(function (event) {
 			if (event.which == 27) $("#shortcut").hide();
 			if (event.which >= 37 && event.which <= 40) $("#shortcut").show();
 		});
@@ -469,29 +469,43 @@ function lookup(inputString) {
 			}
 		});
 		$('#dark').click(function () {
-			    $("#login-link").html('<img src="/' + subDir + '/img/login.png" />');
-			    $("#signin-link").html('<img src="/' + subDir + '/img/signup.png" />');
-			    $("#login-link").attr("class", "enabled");
-			    $("#dark").attr("class", "overlayoff");
-			    $("#login-form-wrapper").hide();
-			    $("#signup-form-wrapper").hide();
-
+		    $("#login-link").html('<img src="/' + subDir + '/img/login.png" />');
+		    $("#signin-link").html('<img src="/' + subDir + '/img/signup.png" />');
+		    $("#login-link").attr("class", "enabled");
+		    $("#dark").attr("class", "overlayoff");
+		    $("#login-form-wrapper").hide();
+		    $("#signup-form-wrapper").hide();
 		});
 		$(".gallery").click(function()
 		{
-				$("#gallery").show();
-				$("#gallery").attr("class", "overlayon");
+			$("#gallery").show();
+			$("#gallery").attr("class", "overlayon");
 		});
 		$("#gallery").click(function () {
-				$("#gallery").hide();
-				$("#gallery").attr("class", "overlayoff");
+			$("#gallery").hide();
+			$("#gallery").attr("class", "overlayoff");
 		});
 		$('.menu_item').click(function()
 		{
-		$(this).siblings().css({"border-bottom":"0px solid #444"});
-		$(this).siblings().removeClass("menu_select");
-		$(this).css({"border-bottom":"2px solid #444"});
-		$(this).addClass("menu_select");
+			$(this).siblings().css({"border-bottom":"0px solid #444"});
+			$(this).siblings().removeClass("menu_select");
+			$(this).css({"border-bottom":"2px solid #444"});
+			$(this).addClass("menu_select");
+			if($('.menu_select').text() == 'contacts') {
+				$("#info").hide();
+				$("#reachus").hide();
+				$("#contacts").fadeIn();
+			}
+			else if($('.menu_select').text() == 'reach us') {
+				$("#info").hide();
+				$("#contacts").hide();
+				$("#reachus").fadeIn();
+			}
+			else if($('.menu_select').text() == 'faq') {
+				$("#contacts").hide();
+				$("#reachus").hide();
+				$("#info").fadeIn();
+			}
 		});
 
 		$('.menu_item').mouseover(function()
