@@ -31,12 +31,11 @@
 }
 @font-face {
 	font-family: HelveticaInserat;
-	src: url('HelveticaLTStd-Comp.otf');
-	/*src: url('helveticainseratltstdroman.eot');
-	src: url('helveticainseratltstdroman.eot?#iefix') format('embedded-opentype'),
-			 url('helveticainseratltstdroman.woff') format('woff'),
-			 url('helveticainseratltstdroman.ttf') format('truetype'),
-			 url('helveticainseratltstdroman.svg#helveticainseratltstdroman') format('svg');*/
+	src: url('helveticaltstdcomp.eot');
+	src: url('helveticaltstdcomp.eot?#iefix') format('embedded-opentype'),
+			 url('helveticaltstdcomp.woff') format('woff'),
+			 url('helveticaltstdcomp.ttf') format('truetype'),
+			 url('helveticaltstdcomp.svg#helveticaltstdcomp') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
