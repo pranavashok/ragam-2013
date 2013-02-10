@@ -151,14 +151,6 @@ function lookup(inputString) {
 				} //Endif events
 				else if(relativeUrl.split("/")[0]=="Workshops") {
 					//Workshops code comes here
-					/* Stuff to do
-						1. Move out font and main panes
-						2. Check whether first level or second level and show appropriate page
-						3. If first level
-							- Fetch workshops list
-						4. If second level
-							- Fetch required workshop after extracting name from relativeurl.
-					*/
 					$(".pane").hide();
 					$("#inner-pane-workshops").show();
 					if($("#mainmenu-pane").attr("class")!="moveout")
@@ -177,11 +169,11 @@ function lookup(inputString) {
 							type: "POST",
 							success: function (d) {
 								setMenu(d);
-								var catlinks = "";
-								d.forEach(function (ele) {
-									catlinks = catlinks + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "'><li>" + ele.name + "</li></a>";
+								var links = "";
+								d[0].sublinks.forEach(function (ele) {
+									links = links + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "'><li>" + ele.name + "</li></a>";
 								});
-								$("#submenu-links-workshops").html(catlinks);
+								$("#submenu-links-workshops").html(links);
 								loadingAnimation(false);			
 							}
 						});
