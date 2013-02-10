@@ -278,7 +278,7 @@
 
 }
 #content-half-workshops {
-	height: 500px;
+	height: 41%;
 	width: 100%;
 	z-index: 1;
 	background: #f7f7f7;
@@ -378,7 +378,7 @@
 	width: 100%;
 }
 #submenu-workshops {
-	width:500px;
+	width:100%;
 	position: absolute;
 	display: block;
 	left:50%;
@@ -390,8 +390,8 @@
 }
 #submenu-links-workshops li {
 	width:250px;
-	padding-left:20px;
-	display:block;
+	padding:20px;
+	display:inline;
 }
 #submenu-links-workshops a {
 	text-decoration: none;
