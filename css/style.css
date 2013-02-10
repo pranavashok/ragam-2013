@@ -369,12 +369,19 @@
 	background-color:#f7f7f7;	
 }
 #submenu-half-workshops {
-font-family: HelveticaThin;
-text-transform: lowercase;
-position: relative;
-background: rgb(116, 40, 91);
-min-height: 600px;
-bottom: 0;
+	font-family: HelveticaThin;
+	text-transform: lowercase;
+	position: relative;
+	background: rgb(116, 40, 91);
+	min-height: 600px;
+	bottom: 0;
+	width: 100%;
+}
+#submenu-workshops {
+	width:500px;
+	position: absolute;
+	display: block;
+	left:50%;
 }
 #submenu-links-workshops {
 	font-size: 40px;

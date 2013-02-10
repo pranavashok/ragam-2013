@@ -75,7 +75,7 @@ function lookup(inputString) {
 		$("#feedback").fadeOut();
 		var w = $(window).width();
 		var h = $(window).height();
-		$("body!:input").keydown(function (event) {
+		$("body").keydown(function (event) {
 			if (event.which == 27) $("#shortcut").hide();
 			if (event.which >= 37 && event.which <= 40) $("#shortcut").show();
 		});
