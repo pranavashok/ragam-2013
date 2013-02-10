@@ -153,6 +153,23 @@
 				</div>
 			</div>
 		</section >
+		<section class="pane" id="inner-pane-proshows">
+			<div id="heading-proshows">
+				proshows
+			</div>
+			<div id="content-container-proshows">
+				<div id="content-wrapper-proshows">
+					<div id="content-heading-proshows">
+					</div>
+					<div id="content-content-wrapper-proshows" class="nano">
+						<div id="content-content-proshows" class="content">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="painting-proshows">
+			</div>
+		</section>
 		<section class="pane" id="inner-pane-workshops">
 			<div id="content-half-workshops">
 				<div id="content-container-workshops">
