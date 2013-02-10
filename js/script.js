@@ -351,12 +351,13 @@ function lookup(inputString) {
 			}, "Ragam 2013", "/" + subDir + "/");
 			$("#content-wrapper-events").fadeOut();
 		});
+
 		$('a#signin-link').click(function () {
 			if ($("#signin-link").attr("class") == "cancel") {
 				$(this).html('<img src="/' + subDir + '/img/signup.png" />');
 				$("#signin-link").attr("class", "enabled");
 				$("#dark").attr("class", "overlayoff");
-				$("#signup-form-wrapper").fadeOut();
+				$("#signup-form-wrapper").hide();
 			} else {
 				$(this).html('<img src="/' + subDir + '/img/cancel.png" />');
 				$("a#signin-link").attr("class", "cancel");
@@ -372,7 +373,7 @@ function lookup(inputString) {
 				$(this).html('<img src="/' + subDir + '/img/login.png" />');
 				$("#login-link").attr("class", "enabled");
 				$("#dark").attr("class", "overlayoff");
-				$("#login-form-wrapper").fadeOut();
+				$("#login-form-wrapper").hide();
 			} else {
 				$(this).html('<img src="/' + subDir + '/img/cancel.png" />');
 				$("a#login-link").attr("class", "cancel");
@@ -388,8 +389,8 @@ function lookup(inputString) {
 			    $("#signin-link").html('<img src="/' + subDir + '/img/signup.png" />');
 			    $("#login-link").attr("class", "enabled");
 			    $("#dark").attr("class", "overlayoff");
-			    $("#login-form-wrapper").fadeOut();
-			    $("#signup-form-wrapper").fadeOut();
+			    $("#login-form-wrapper").hide();
+			    $("#signup-form-wrapper").hide();
 
 		});
 		$(".gallery").click(function()
