@@ -9,7 +9,6 @@
 	<link href="<?php echo $subDir; ?>css/nanoscroller.css" rel="stylesheet" > 
 	<link href="<?php echo $subDir; ?>css/favicon.ico" rel="icon" type="image/x-icon" />
 	<link href="<?php echo $subDir; ?>css/demo.css" rel="stylesheet" />
-    <link href="<?php echo $subDir; ?>css/style2.css" rel="stylesheet" />
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.jquery.js"></script>
