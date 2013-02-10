@@ -425,21 +425,25 @@
 }
 /* Searchbox */
 
-
+#search_panel
+{
+	height:32px;
+	z-index: 50;
+	width:auto;
+	position:absolute;
+	right:70px;
+	margin-top:1px;
+}
 #searchBox {
-	z-index: 15;
+	z-index: 20;
 	opacity:0.2;
 	cursor:pointer;
-	position: absolute;
-
-	right:37px;
-	top:600px;
-	background: white url('../img/search.png') no-repeat 20px 20px;
-
-	
+	position: relative;
+    right:0px;
+	background: white url('../img/search.png') no-repeat 0px 0px;	
 	border: 1px solid #999;
 	height: 32px;
-	width:1px;
+	width:32px;
 	color: transparent;
 	overflow:hidden;
 	transition:width 0.3s ease;
@@ -482,12 +486,18 @@ border-radius: 15px;
 #loginlinks{
  float:right;
 }
-/*#suggestions{ 
-  //this will be defined as per the design requirement
-} 
-#s-loader {
-   //definition of loader
-} */
+#suggestions
+{
+	width:100%;
+	height:100%;
+	z-index:20;
+	background-color:white;
+	position:absolute;
+	top:-500px;
+	left:0px;
+	opacity:0.9;
+}
+ 
 
 #mainlinks{
 	position:absolute;
