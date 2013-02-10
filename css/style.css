@@ -339,7 +339,7 @@
 	height:80%;
 	padding:30px;
 	display:block;
-	color: b;acl
+	color: black;
 	left:0;
 	top:5%;
 	outline:none;
@@ -448,8 +448,12 @@
 	text-transform: uppercase;
 }
 #content-container-proshows {
+	width: 50%;
+	height: 50%;
 	display: block;
-	position: relative;
+	position: absolute;
+	top:10%;
+	left:20%;
 }
 #content-wrapper-proshows {
 	font-family: HelveticaThin;

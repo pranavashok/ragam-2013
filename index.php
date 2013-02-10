@@ -163,6 +163,7 @@
 					</div>
 					<div id="content-content-wrapper-proshows" class="nano">
 						<div id="content-content-proshows" class="content">
+							Proshow content comes here
 						</div>
 					</div>
 				</div>
