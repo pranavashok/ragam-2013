@@ -201,6 +201,9 @@
 		</section >
 	</div>
 	<div class="pane" id="support-pane">
+		<div id="feedback">
+        <input class="emailentry" type="email" name="email" title="email" placeholder="email" onblur="inputBlur(this)" />
+		</div>
 		<div id="footer_inner">
 			<div id="supportpane_top">
 				<div id="ticker">
@@ -308,7 +311,7 @@
 		<hr style="border-top: 1px dotted #ccc">
 			<div id="menu_bot">
 				<div id="nitc_details">
-				<span id="nitc_addr">National Institute of Technology Calicut.<a href="http://nitc.ac.in">http://nitc.ac.in</a></span><span id="menubotlinks"> <a href="#credits">Credits</a> | <a href="#feedback">Feedback</a> | <a href="#sitemap">Sitemap</a></span>
+				<span id="nitc_addr">National Institute of Technology Calicut.<a href="http://nitc.ac.in">http://nitc.ac.in</a></span><span id="menubotlinks"> <a href="#credits">Credits</a> | <span class="feedback_link">Feedback</span> | <a href="#sitemap">Sitemap</a></span>
 				</div>			
 			</div>
 	</div>
