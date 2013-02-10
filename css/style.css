@@ -278,20 +278,14 @@
 
 }
 #content-half-workshops {
-	position: absolute;
-	height: 100%;
-	width: 50%;
-	float:left;
+	height: 500px;
+	width: 100%;
 	z-index: 1;
 	background: #f7f7f7;
-	
 }
 #content-container-workshops {
-	width: 78%;
-	height: 100%;
 	display: block;
 	position: relative;
-	float: right;
 }
 #content-wrapper-workshops {
 	font-family: HelveticaThin;
@@ -335,7 +329,7 @@
 	height:80%;
 	padding:30px;
 	display:block;
-	color: #fff;
+	color: b;acl
 	left:0;
 	top:5%;
 	outline:none;
@@ -356,9 +350,6 @@
 #subsubmenu-links-workshops {
 	font-size: 30px;
 	line-height: 35px;
-	position: absolute;
-	top: 22%;
-	right: 0;
 	list-style: none;
 	text-align: right;
 }
@@ -378,19 +369,16 @@
 	background-color:#f7f7f7;	
 }
 #submenu-half-workshops {
-	font-family: HelveticaThin;
-	text-transform: lowercase;
-	position: relative;
-	float:right;
-	background: #cd1;
-	height: 100%;
-	width: 50%;
+font-family: HelveticaThin;
+text-transform: lowercase;
+position: relative;
+background: rgb(116, 40, 91);
+min-height: 600px;
+bottom: 0;
 }
 #submenu-links-workshops {
 	font-size: 40px;
-	position:absolute;
-	top:22%;
-	left:-1px;
+	width:100%;
 	list-style:none;
 }
 #submenu-links-workshops li {
@@ -1059,4 +1047,31 @@ a#login-link {
 	font-size: 11px;
 	font-style: italic;
 	border-top: 1px solid rgba(255,255,255,0.3);
+}
+#feedback
+{
+	width:30%;
+	height:85%;
+	margin-left: 35%;
+	margin-top: 10%;
+    z-index:-20;	
+	background-color:black;
+	position:absolute;
+	top:0px;
+	left:0px;
+	opacity:0.9;
+}
+#feedback input.emailentry {
+	padding: 5px 0 0 40px;
+	z-index: 30;
+	position: relative;
+    font-family: 'HelveticaLightCondensed';
+    width: 340px;
+    height: 32px;
+    font-size: 18px;
+    margin-top: 10%;
+    margin-left: 30%;
+    color:#555;
+    border: none;
+    background: #ccc url('../img/iconsprite.png') 0px -96px no-repeat;
 }
