@@ -94,6 +94,12 @@
 	top:43%;
 	height:325px;
 }
+#logo {
+    left:20px;
+    top:47%;
+	position: absolute;
+   	transform: scale(0.7,0.7);
+}
 #mainmenu-pane {
 	position:absolute;
 	height:100%;

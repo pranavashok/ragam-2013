@@ -69,7 +69,7 @@
 	}
 	100% {
 		right: 56.67%;
-		transform: rotate(-25deg); 
+		transform: rotate(-25deg);
 	}
 }
 #mainmenu-pane.loading {
@@ -161,7 +161,7 @@
 }
 @keyframes support-up {
 	0% {
-		top:90%;
+		top:91.5%;
 	}
 	100% {
 		top:40%;
@@ -178,7 +178,7 @@
 		top:40%;
 	}
 	100% {
-		top:90%;
+		top:91.5%;
 	}
 }
 #support-pane.support-down {
@@ -198,7 +198,7 @@
 		top:-100%;
 	}
 	100% {
-		top:-160%;
+		top:-151.5%;
 	}
 }
 #wrapper.support-down {
@@ -209,7 +209,7 @@
 }
 @keyframes wrapper-support-down {
 	0% {
-		top:-160%;
+		top:-151.5%;
 	}
 	100% {
 		top:-100%;
@@ -263,7 +263,7 @@
 	}
 	100% {
 		left: 43.33%;
-		transform: rotate(-25deg); 
+		transform: rotate(-25deg);
 	}
 }
 
