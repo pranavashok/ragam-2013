@@ -276,7 +276,10 @@ function lookup(inputString) {
         		//newBgs = newBg.split('/');
         		//alert(currBg+' -- '+$("img#"+tmp).attr("src"));
 				//if(currBgs[currBgs.lenth-1]!=newBgs[newBgs.length-1])
-					$("#painting-events").css('background-image', 'url("'+ $("img#"+tmp).attr("src") + '")');
+				$("#painting-events").hide();
+				$("#painting-events").css('background-image', 'url("'+ $("img#"+tmp).attr("src") + '")');	
+				$("#painting-events").stop(true,true).fadeIn(250);
+				
 				$("#submenu-links-events a").each(function () {
 					$(this).attr("class", "notselected");
 				});
