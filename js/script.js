@@ -58,7 +58,7 @@ function lookup(inputString) {
 		else {
 			$('#suggestions').fadeIn(); // Show the suggestions box
 			$("#s-loader").show();
-			$.post("search.php", {queryString: ""+inputString+""}, function(data) { // Do an AJAX call
+			$.post("search.php", {q: ""+inputString+""}, function(data) { // Do an AJAX call
 				$('#suggestions').html(data); // Fill the suggestions box
 				$("#s-loader").hide();
       			});
@@ -71,6 +71,7 @@ function lookup(inputString) {
 		return false;
 	}
 	$(function () {
+		$("#suggestions").fadeOut();
 		var w = $(window).width();
 		var h = $(window).height();
 		$("body").keydown(function (event) {
@@ -109,7 +110,7 @@ function lookup(inputString) {
 						title = relativeUrl;
 						$.ajax({
 							dataType: "json",
-							url: "/" + subDir + "/manager/rsublinks.php",
+							url: "/" + subDir + "/manager/fetchlinks.php",
 							data: {
 								"cat": title
 							},
@@ -151,14 +152,6 @@ function lookup(inputString) {
 				} //Endif events
 				else if(relativeUrl.split("/")[0]=="Workshops") {
 					//Workshops code comes here
-					/* Stuff to do
-						1. Move out font and main panes
-						2. Check whether first level or second level and show appropriate page
-						3. If first level
-							- Fetch workshops list
-						4. If second level
-							- Fetch required workshop after extracting name from relativeurl.
-					*/
 					$(".pane").hide();
 					$("#inner-pane-workshops").show();
 					if($("#mainmenu-pane").attr("class")!="moveout")
@@ -170,18 +163,18 @@ function lookup(inputString) {
 						title = relativeUrl;
 						$.ajax({
 							dataType: "json",
-							url: "/" + subDir + "/manager/rsublinks.php",
+							url: "/" + subDir + "/manager/fetchlinks.php",
 							data: {
 								"cat": title
 							},
 							type: "POST",
 							success: function (d) {
 								setMenu(d);
-								var catlinks = "";
+								var links = "";
 								d.forEach(function (ele) {
-									catlinks = catlinks + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "'><li>" + ele.name + "</li></a>";
+									links = links + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "'><li>" + ele.name + "</li></a>";
 								});
-								$("#submenu-links-workshops").html(catlinks);
+								$("#submenu-links-workshops").html(links);
 								loadingAnimation(false);			
 							}
 						});
@@ -217,6 +210,57 @@ function lookup(inputString) {
 				} //Endif proshows
 				else if(relativeUrl.split("/")[0]=="Showcase") {
 					//Showcase code
+					$(".pane").hide();
+					$("#inner-pane-showcase").show();
+					if($("#mainmenu-pane").attr("class")!="moveout")
+						$("#inner-pane-showcase").attr("class", "pane"); //Reset the inner-pane-showcase just before opening
+					$("#mainmenu-pane").attr("class", "moveout");
+					$("#font-pane").attr("class", "moveout");
+					if (relativeUrl.search("/") == -1) { //If it's a first level page
+						$("#painting-showcase").fadeIn();
+						title = relativeUrl;
+						$.ajax({
+							dataType: "json",
+							url: "/" + subDir + "/manager/fetchlinks.php",
+							data: {
+								"cat": title
+							},
+							type: "POST",
+							success: function (d) {
+								setMenu(d);
+								var links = "";
+								d.forEach(function (ele) {
+									links = links + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "'><li>" + ele.name + "</li></a>";
+								});
+								$("#submenu-links-showcase").html(links);
+								loadingAnimation(false);			
+							}
+						});
+					} else { //Its a second level url
+						$("#painting-showcase").fadeOut();
+						$("#inner-pane-showcase").attr("class", "moveright");
+
+						var n = relativeUrl.split("/");
+						eve = relativeUrl.split("/")[n.length - 1];
+						$.ajax({
+							dataType: "json",
+							url: "/" + subDir + "/manager/content.php",
+							data: {
+								"event": eve
+							},
+							type: "POST",
+							success: function (d) {
+								
+								$("#content-heading-showcase").text(d.name);
+								$("#content-content-showcase").html(d.content);
+								$("#content-wrapper-showcase").fadeIn();
+								$(".nano").nanoScroller({
+									scrollTop: '0px'
+								});
+							}
+
+						});
+					}
 				} //Endif showcase
 				else if(relativeUrl.split("/")[0]=="Sponsors") {
 					//Sponsors code
@@ -312,8 +356,6 @@ function lookup(inputString) {
 				$(this).children(".shortdesc").hide();
 			}
 		});
-
-
 		$("#content-container-events").mouseenter(function() {
 			if($("#inner-pane-events").attr("class")=="moveright")
 			{

@@ -103,7 +103,7 @@
 				<img src="<?php echo $subDir; ?>img/login.png" />
 			</a>
 			<a id="signin-link" href="#">
-				<img src="<?php echo $subDir; ?>img/signup.png" />
+				<img src="<?php echo $subDir; ?>img/signup.ng" />
 			</a>
 		</div>
 		<div id="signin-dropdown">
@@ -152,7 +152,7 @@
 			</div>
 		</div>
 	</section >
-		<section class="pane" id="inner-pane-workshops">
+	<section class="pane" id="inner-pane-workshops">
 		<div id="content-half-workshops">
 
 			<div id="content-container-workshops">
@@ -175,7 +175,29 @@
 			</div>
 		</div>
 	</section >
+	<section class="pane" id="inner-pane-showcase">
+		<div id="content-half-showcase">
 
+			<div id="content-container-showcase">
+				<div id="content-wrapper-showcase">
+					<div id="content-heading-showcase">
+					</div>
+					<div id="content-content-wrapper-showcase" >
+						<div id="content-content-showcase" class="content">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="submenu-half-showcase">
+			<div id="submenu-showcase">
+				<ul id="submenu-links-showcase">
+				</ul>
+			</div>
+			<div id="painting-showcase">
+			</div>
+		</div>
+	</section >
 </div>
 <div class="pane" id="support-pane">
 	 <div id="footer_inner">
@@ -186,6 +208,15 @@
 	    		<div>The last date for submission of entries for the photography contest is 20th Feb 2013</div>
     			<div>Shankar Mahadevan has confirmed to perform at Ragam 2013</div>
 			</div>
+			<div>
+				<form id="searchform" action="" method="">
+			<span id="search_panel">
+	           <input id="searchBox" type="text" size="40" onkeyup="lookup(this.value);" name="q" autocomplete="off">
+			</span>
+			<div id ="suggestions"></div>
+		</form>
+		</div>
+		<div>
 			<span id="social_panel">
 				<!--<a style="width:48px; height:48px; display:inline; opacity:0"><img src="<?php echo $subDir; ?>img/twitter.png"></a>
 				<!--<a href="facebook.com" target="blank" ><img src="<?php echo $subDir; ?>img/twitter.png"></a>-->
@@ -195,7 +226,6 @@
 		</div>
 	
 		<div id="supportpane_bot">
-			<input id="searchBox" type="text" name="search" size="40">
 			<div id="menu_tab">
 				<span class="menu_item menu_click">contacts</span>
 				<span class="menu_item menu_nonclick">schedule</span>
@@ -287,12 +317,11 @@
 	 </div>
 
 </div>
+</div>
 
 <div id="home-button">
 	<img src="<?php echo $subDir; ?>img/back.png">	
 </div>
-	
-	
 <div id="hidden-box">
 	<div id="hidden-submenu-links">
 	</div>

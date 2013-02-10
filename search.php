@@ -11,8 +11,8 @@
       echo 'ERROR: Could not connect to the database.';
    } else {
       // Is there a posted query string?
-      if(isset($_GET['q'])) {
-         $queryString = mysql_real_escape_string($_GET['q']);
+      if(isset($_POST['q'])) {
+         $queryString = mysql_real_escape_string($_POST['q']);
 
          // Is the string length greater than 0?
          if(strlen($queryString) >0) {
