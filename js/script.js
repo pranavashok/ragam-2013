@@ -331,7 +331,7 @@ function lookup(inputString) {
 			if (container.has(e.target).length === 0 && $("#wrapper").attr("class") == "support-up") {
 				container.attr("class", "support-down");
 				$("#wrapper").attr("class", "support-down");
-				$(".menu_item").css({"border-bottom":"0px solid white"});
+				$(".menu_item").css({"border-bottom":"0px solid #444"});
 			}
 		});
 		
@@ -382,7 +382,7 @@ function lookup(inputString) {
 				var container = $("#support-pane");
 				container.attr("class", "support-down");
 				$("#wrapper").attr("class", "support-down");
-				$(".menu_item").css({"border-bottom":"0px solid white"});
+				$(".menu_item").css({"border-bottom":"0px solid #444"});
 				$("#menu_tab").removeClass("up");
 			}
 		});
@@ -446,22 +446,22 @@ function lookup(inputString) {
 		});
 		$('.menu_item').click(function()
 		{
-		$(this).siblings().css({"border-bottom":"0px solid white"});
+		$(this).siblings().css({"border-bottom":"0px solid #444"});
 		$(this).siblings().removeClass("menu_select");
-		$(this).css({"border-bottom":"2px solid white"});
+		$(this).css({"border-bottom":"2px solid #444"});
 		$(this).addClass("menu_select");
 		});
 
 		$('.menu_item').mouseover(function()
 		{
-			$(this).css({"border-bottom":"2px solid white"});
+			$(this).css({"border-bottom":"2px solid #444"});
 		});
 		
 		$('.menu_item').mouseout(function()
 		{
 		if(!($(this).hasClass("menu_select")))
 		{
-			$(this).css({"border-bottom":"0px solid white"});
+			$(this).css({"border-bottom":"0px solid #444	"});
 		}
 		});
 		

@@ -789,7 +789,7 @@ a#login-link {
 	position: absolute;
 	height:60%;
 	width:100%;
-	background: #383838;
+	background: #efefef;
 	top:91.5%;
 	z-index:20;
 	display: block;
@@ -861,7 +861,12 @@ a#login-link {
 {
 	width:100%;
 	height:380px;
-	background-color:#383838;
+	
+}
+
+#support-pane a{
+	text-decoration: none;
+	color: rgb(82, 121, 179);
 }
 
 #menu_tab
@@ -877,7 +882,7 @@ a#login-link {
 	height:31px;
 	float:left;
 	display:block;
-	color:white;
+	color:#000;
 	text-align:center;
 	font-size:20px;
 	font-family: HelveticaThin;
@@ -885,51 +890,66 @@ a#login-link {
 	cursor:pointer;
 	opacity:0.6;
 }
+
 .menu_item:hover {
 	opacity:1;
-	transition: all .3s ease;
+ 	transition: all 0.3s ease;
+	
 }
+
+
 #menu_info
 {
 	margin:auto;
 	height:80%;
 	width:800px;
-	border-top:1px solid #555;
+	border-top:1px solid #ddd;
 }
 
-#nitc_details
-{
-	position:absolute;
-	bottom:0px;
-	right:0px;
-	height:22%;
-	width:20%;
-	background-color:#383838;
+#contacts{
+	padding:20px;
+	font-family:HelveticaThin;
+	display:none;
 }
+
+
+#info{
+	padding:20px;
+	font-family:HelveticaThin;
+	text-align:justify;
+	display:none;
+}
+
+#reachus{
+	padding:20px;
+	font-family:HelveticaThin;
+	text-align:justify;
+}
+
+
 
 #nitc_addr
 {
-	float:right;
-	width:50%;
-	height:100%;
-	padding-left:5%;
-	border-left:2px solid #555;
+	float:left;
 }
-
-#nitc_logo
+#menubotlinks	
 {
 	float:right;
-	height:100%;
-	width:35%;
-	background-image:url("/magar/img/nitc_logo.png");
-	background-repeat:no-repeat;
 }
+
 
 #menu_bot
 {
-	height:20%;
+	font-family:HelveticaThin;
+	bottom:0;
 	width:100%;
-	border-top:1px solid #555;
+	color:#555;	
+	font-size:10pt;
+}
+
+
+#nitc_logo{
+
 }
 
 /* Loading Animation */

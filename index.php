@@ -199,27 +199,90 @@
 			<div id="menu_tab">
 				<span class="menu_item menu_click">contacts</span>
 				<span class="menu_item menu_nonclick">schedule</span>
-				<span class="menu_item menu_click">information</span>
+				<span class="menu_item menu_click">faq</span>
 				<span  class="menu_item menu_nonclick gallery">gallery</span>
 				<span class="menu_item menu_nonclick">brochure</span>
 				<span class="menu_item menu_click">reach us</span>
 			</div>
 			<div id="menu_info">
+				<div id="contacts">	
+					<table width="100%">
+					<tbody><tr>
+					<td>
+					<span class="contactname" > V Nikhilesh Paliath</span> <br>
+					<span class="contacttitle" >Convener</span> <br>
+					<span class="contactphone">+91 980 993 5914</span> <br>
+					<span class="contactemail"><a href="mailto:convener@ragam.org.in">convener@ragam.org.in</a></span>  <br>
+					<br><br>
+					</td>
+					<td>
+					<span class="contactname" > Rojith Jones</span> <br>
+					<span class="contacttitle">General Secretary</span> <br>
+					<span class="contactphone">+91 949 730 8105</span> <br>
+					<span class="contactemail"><a  href="mailto:rojith@ragam.org.in">rojith@ragam.org.in</a></span>  <br>	
+					<br><br>
+					<td>
+					<span class="contactname" > Nitheesh K Pai</span> <br>
+					<span class="contacttitle" >Marketing Coordinator</span> <br>
+					<span class="contactphone">+91 989 568 9519</span> <br>
+					<span class="contactemail"><a  href="mailto:nitheeshkpai@ragam.org.in">nitheeshkpai@ragam.org.in</a></span>  <br>	
+					<br><br>
+					</td>
+					</tr>
+					<tr>
+					<td>
+					<span class="contactname" > Arun Sekhar</span> <br>
+					<span class="contacttitle" >Marketing Coordinator</span> <br>
+					<span class="contactphone">+91 944 658 0963</span> <br>
+					<span class="contactemail"><a  href="mailto:arunsekhar@ragam.org.in">arunsekhar@ragam.org.in</a></span>  <br>	
+					<br><br>
+					</td>
+					<td>
+					<span class="contactname" > Nitheesh K Pai</span> <br>
+					<span class="contacttitle" >Marketing Coordinator</span> <br>
+					<span class="contactphone">+91 989 568 9519</span> <br>
+					<span class="contactemail"><a  href="mailto:nitheeshkpai@ragam.org.in">nitheeshkpai@ragam.org.in</a></span>  <br>	
+					<br><br>
+					</td>
+					<td>
+					<span class="contactname" > Arun Sekhar</span> <br>
+					<span class="contacttitle" >Marketing Coordinator</span> <br>
+					<span class="contactphone">+91 944 658 0963</span> <br>
+					<span class="contactemail"><a  href="mailto:arunsekhar@ragam.org.in">arunsekhar@ragam.org.in</a></span>  <br>	
+					<br><br>
+					</td>
+					</tr>
+					</tbody></table>
+					</div>
+				<div id="info">
+				<b>Q1. What is question one? </b> <br/>
+				This is the answer to the question<br/><br/>
+				<b>Q2. What is question one? </b> <br/>
+				This is the answer to the question<br/><br/>
+				<b>Q3. What is question one? </b> <br/>
+				This is the answer to the question		<br/>	<br/>	
+				</div>
+
+				<div id="reachus">
+				<form id="form" name="form" method="post" action="javascript:feedback()">
+				<p></p><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=nit+calicut&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=35.273162,79.013672&amp;vpsrc=0&amp;ie=UTF8&amp;hq=nit&amp;hnear=Kozhikode,+Kerala,+India&amp;t=m&amp;cid=14981244607500735704&amp;ll=11.321174,75.935268&amp;spn=0.058912,0.072956&amp;z=13&amp;iwloc=A" style="color:#ccc; float:left; text-decoration:none;text-align:right">View Larger Map</a></small><br>
+				<iframe width="400" style="float:left" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=nit+calicut&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=35.273162,79.013672&amp;vpsrc=0&amp;ie=UTF8&amp;hq=nit&amp;hnear=Kozhikode,+Kerala,+India&amp;t=m&amp;cid=14981244607500735704&amp;ll=11.321174,75.935268&amp;spn=0.058912,0.072956&amp;z=13&amp;iwloc=A&amp;output=embed"></iframe><br>
+				</form>
+				<div style="padding:20px 0px 0px 430px;"><b>From Calicut Railway Station </b> (22 kms)<br><br>By Bus<br> <small> <i>Take a 10minute walk or get a rickshaw for a fare of ₹12 to <b>Palayam</b> bus stand  and board a bus to REC / NIT Calicut</i></small><br><br>By Rickshaw<br> <small> <i>Get a rickshaw from the Railway Station to NIT Calicut for a fare of ₹ 300 </i></small><br><br>By Taxi<br> <small> <i>You may get a taxi from the railway station to NIT Calicut for a fare of ₹450. </i></small><br><br><br>
+				<b>From Calicut Airport </b> <br><br> <small> <i>Calicut Airport is located at Karipur, 27 Kms south-east of the city and it is  
+				45 kms  from NIT Calicut. You can reach NIT Calicut by taxi from the Calicut Airport and the taxi fare is 
+				approximately ₹ 800. </i></small><br><br>
+				</div>
 			
-			<!-- the php will come here -->
-			
-			</div>
+				</div>
+		<hr style="border-top: 1px dotted #ccc">
 			<div id="menu_bot">
 				<div id="nitc_details">
-					<div id="nitc_logo"></div>
-					<div id="nitc_addr" style="color:white;">
-							<b>	NIT Calicut<br/> 
-							NIT Campus P. O.<br/> 
-							Calicut - 673601<br/></b> 
-							<a style="color:white;" target="_blank" href="http://www.nitc.ac.in">www.nitc.ac.in</a>	
-					</div>
+				<span id="nitc_addr">National Institute of Technology Calicut.<a href="http://nitc.ac.in">http://nitc.ac.in</a></span><span id="menubotlinks"> <a href="#credits">Credits</a> | <a href="#feedback">Feedback</a> | <a href="#sitemap">Sitemap</a></span>
 				</div>			
 			</div>
+	</div>
+
 		</div>	
 	
 	 </div>
@@ -227,7 +290,7 @@
 </div>
 
 <div id="home-button">
-	<img src="<?php echo $subDir; ?>img/back.png">
+	<img src="<?php echo $subDir; ?>img/back.png">	
 </div>
 	
 	
