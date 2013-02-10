@@ -175,7 +175,29 @@
 			</div>
 		</div>
 	</section >
+	<section class="pane" id="inner-pane-showcase">
+		<div id="content-half-showcase">
 
+			<div id="content-container-showcase">
+				<div id="content-wrapper-showcase">
+					<div id="content-heading-showcase">
+					</div>
+					<div id="content-content-wrapper-showcase" >
+						<div id="content-content-showcase" class="content">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="submenu-half-showcase">
+			<div id="submenu-showcase">
+				<ul id="submenu-links-showcase">
+				</ul>
+			</div>
+			<div id="painting-showcase">
+			</div>
+		</div>
+	</section >
 </div>
 <div class="pane" id="support-pane">
 	 <div id="footer_inner">
