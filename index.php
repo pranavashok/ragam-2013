@@ -18,14 +18,14 @@
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotate.2.2.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.history.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/script.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.nanoscroller.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/arbor.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/arbor-tween.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/arbor-graphics.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/shortcut.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.proximity.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/j1.js"></script>
 </head>
