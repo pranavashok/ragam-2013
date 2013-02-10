@@ -4,16 +4,15 @@
 <head>
 	<link href="<?php echo $subDir; ?>css/reset.css" rel="stylesheet"/>
 	<link href="<?php echo $subDir; ?>css/style.css" rel="stylesheet"/>
-	<link href="<?php echo $subDir; ?>css/logo.css" rel="stylesheet"/>
 	<link href="<?php echo $subDir; ?>css/animations.css" rel="stylesheet"/>
 	<link href="<?php echo $subDir; ?>css/nanoscroller.css" rel="stylesheet" > 
 	<link href="<?php echo $subDir; ?>css/favicon.ico" rel="icon" type="image/x-icon" />
-	<link href="<?php echo $subDir; ?>css/demo.css" rel="stylesheet" />
-    <link href="<?php echo $subDir; ?>css/style2.css" rel="stylesheet" />
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.jquery.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.dynamic-dom.min.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.proximity.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/gallery.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotate.2.2.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.history.js"></script>
@@ -26,8 +25,6 @@
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/arbor-graphics.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/shortcut.js"></script>
 	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.proximity.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/j1.js"></script>
 </head>
 <body>
 	
@@ -114,13 +111,6 @@
 	</div>
 	<section class="pane" id="font-pane">
 		<div id="logo">
-			<!--<canvas id="letterr"  width="1050" height="500" ></canvas>
-				<canvas id="lettera"  width="1050" height="500" ></canvas>
-				<canvas id="letterg"  width="1050" height="500" ></canvas>
-				<canvas id="lettera2"  width="1050" height="500" ></canvas>
-				<canvas id="letterm"  width="1050" height="500" ></canvas>
-				<script type="text/javascript" src="<?php echo $subDir; ?>js/logo.js"></script>
-			-->
 			<img src="<?php echo $subDir; ?>img/font.png" />
 		</div>
 	</section>

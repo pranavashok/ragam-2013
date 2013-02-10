@@ -312,6 +312,8 @@ function lookup(inputString) {
 				$(this).children(".shortdesc").hide();
 			}
 		});
+
+
 		$("#content-container-events").mouseenter(function() {
 			if($("#inner-pane-events").attr("class")=="moveright")
 			{
@@ -333,6 +335,46 @@ function lookup(inputString) {
 			}
 		});
 		
+
+
+
+	$("#submenu-links-workshops a").live({
+			mouseenter: function () {
+				var sublinks = "";
+				for (ele in menu) {
+					if (menu[ele].name == $(this).text()) {
+						for (s in menu[ele]['sublinks']) {
+							sublinks = sublinks + "<li><a href='/" + subDir + "/" + title + "/" + menu[ele].name.replace(/\ /g, "_") + "/" + menu[ele]['sublinks'][s].name.replace(/\ /g, "_") + "'>" + menu[ele]['sublinks'][s].name+"<br/><span class='shortdesc'>"+menu[ele]['sublinks'][s].shortdesc+"</span></a></li>";
+						}
+						break;
+					}
+				}
+				$("#subsubmenu-links-workshops").html(sublinks);
+				var tmp = $(this).text();
+				tmp = tmp.replace(' ', '_');
+				//var currBg = $("#painting").css('background-image');
+        		//var newBg = $("img#"+tmp).attr("src"); 
+        		//currBgs = currBg.replace('url(','').replace(')','').split('/');
+        		//newBgs = newBg.split('/');
+        		//alert(currBg+' -- '+$("img#"+tmp).attr("src"));
+				//if(currBgs[currBgs.lenth-1]!=newBgs[newBgs.length-1])
+				$("#painting-workshops").hide();
+				$("#painting-workshops").css('background-image', 'url("'+ $("img#"+tmp).attr("src") + '")');	
+				$("#painting-workshops").stop(true,true).fadeIn(250);
+				
+				$("#submenu-links-workshops a").each(function () {
+					$(this).attr("class", "notselected");
+				});
+				$(this).attr("class", "selected");
+			},
+			click: function (e) {
+				e.preventDefault();
+				History.pushState(null, $(this).text() + " | Ragam 2013", $(this).attr("href"));
+			}
+		});
+
+
+
 		$(".menu_nonclick").click(function()
 		{
 			if($("#menu_tab").hasClass("up"))
@@ -395,11 +437,12 @@ function lookup(inputString) {
 		});
 		$(".gallery").click(function()
 		{
+				$("#gallery").show();
 				$("#gallery").attr("class", "overlayon");
-			
 		});
 		$("#gallery").click(function () {
-			$("#gallery").attr("class", "overlayoff");
+				$("#gallery").hide();
+				$("#gallery").attr("class", "overlayoff");
 		});
 		$('.menu_item').click(function()
 		{
