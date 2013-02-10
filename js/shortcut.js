@@ -407,6 +407,6 @@
     var nav = Nav("#nav")
     $(sys.renderer).bind('navigate', nav.navigate)
     $(nav).bind('mode', sys.renderer.switchMode)
-    nav.init()
+    //nav.init()
   })
 })(this.jQuery)
