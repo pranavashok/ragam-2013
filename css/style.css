@@ -436,31 +436,32 @@
 }
 #searchBox {
 	z-index: 20;
-	opacity:0.5;
+	opacity:0.8;
 	cursor:pointer;
 	position: relative;
     right:0px;
-	background: white url('../img/search.png') no-repeat 0px 0px;	
-	border: 1px solid #999;
+	background: transparent url('../img/search.png') no-repeat 0px 0px;	
+	border: 0px solid #999;
 	height: 24px;
-	width: 26px;
+	width: 24px;
 	padding-left: 30px;
 	overflow:hidden;
 	transition:width 0.3s ease;
+	outline: none;
 }
 #searchBox:hover{
-	opacity: 0.55;
+	opacity: 1;
 	width: 220px;
-	color: #444;
+	color: #222;
 	padding-left: 30px;
 	transition: width 0.3s ease, opcaity 0.3s ease;
 
 }
 #searchBox:focus{
-	opacity: 0.6;
+	opacity: 1;
 	width: 220px;
-	color: #444;
-	border: 0;
+	color: #222;
+	background: #efefef url('../img/search.png') no-repeat 0px 0px;	
 }
 /* search results defined here*/
 #searchresults { 
