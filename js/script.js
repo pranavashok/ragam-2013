@@ -109,7 +109,7 @@ function lookup(inputString) {
 						title = relativeUrl;
 						$.ajax({
 							dataType: "json",
-							url: "/" + subDir + "/manager/rsublinks.php",
+							url: "/" + subDir + "/manager/fetchlinks.php",
 							data: {
 								"cat": title
 							},
@@ -162,7 +162,7 @@ function lookup(inputString) {
 						title = relativeUrl;
 						$.ajax({
 							dataType: "json",
-							url: "/" + subDir + "/manager/rsublinks.php",
+							url: "/" + subDir + "/manager/fetchlinks.php",
 							data: {
 								"cat": title
 							},
@@ -170,7 +170,7 @@ function lookup(inputString) {
 							success: function (d) {
 								setMenu(d);
 								var links = "";
-								d[0].sublinks.forEach(function (ele) {
+								d.forEach(function (ele) {
 									links = links + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "'><li>" + ele.name + "</li></a>";
 								});
 								$("#submenu-links-workshops").html(links);
@@ -209,6 +209,57 @@ function lookup(inputString) {
 				} //Endif proshows
 				else if(relativeUrl.split("/")[0]=="Showcase") {
 					//Showcase code
+					$(".pane").hide();
+					$("#inner-pane-showcase").show();
+					if($("#mainmenu-pane").attr("class")!="moveout")
+						$("#inner-pane-showcase").attr("class", "pane"); //Reset the inner-pane-showcase just before opening
+					$("#mainmenu-pane").attr("class", "moveout");
+					$("#font-pane").attr("class", "moveout");
+					if (relativeUrl.search("/") == -1) { //If it's a first level page
+						$("#painting-showcase").fadeIn();
+						title = relativeUrl;
+						$.ajax({
+							dataType: "json",
+							url: "/" + subDir + "/manager/fetchlinks.php",
+							data: {
+								"cat": title
+							},
+							type: "POST",
+							success: function (d) {
+								setMenu(d);
+								var links = "";
+								d.forEach(function (ele) {
+									links = links + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "'><li>" + ele.name + "</li></a>";
+								});
+								$("#submenu-links-showcase").html(links);
+								loadingAnimation(false);			
+							}
+						});
+					} else { //Its a second level url
+						$("#painting-showcase").fadeOut();
+						$("#inner-pane-showcase").attr("class", "moveright");
+
+						var n = relativeUrl.split("/");
+						eve = relativeUrl.split("/")[n.length - 1];
+						$.ajax({
+							dataType: "json",
+							url: "/" + subDir + "/manager/content.php",
+							data: {
+								"event": eve
+							},
+							type: "POST",
+							success: function (d) {
+								
+								$("#content-heading-showcase").text(d.name);
+								$("#content-content-showcase").html(d.content);
+								$("#content-wrapper-showcase").fadeIn();
+								$(".nano").nanoScroller({
+									scrollTop: '0px'
+								});
+							}
+
+						});
+					}
 				} //Endif showcase
 				else if(relativeUrl.split("/")[0]=="Sponsors") {
 					//Sponsors code

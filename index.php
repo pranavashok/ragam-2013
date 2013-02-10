@@ -103,7 +103,7 @@
 				<img src="<?php echo $subDir; ?>img/login.png" />
 			</a>
 			<a id="signin-link" href="#">
-				<img src="<?php echo $subDir; ?>img/signup.png" />
+				<img src="<?php echo $subDir; ?>img/signup.ng" />
 			</a>
 		</div>
 		<div id="signin-dropdown">
@@ -152,7 +152,7 @@
 			</div>
 		</div>
 	</section >
-		<section class="pane" id="inner-pane-workshops">
+	<section class="pane" id="inner-pane-workshops">
 		<div id="content-half-workshops">
 
 			<div id="content-container-workshops">

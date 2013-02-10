@@ -15,7 +15,6 @@ if($query1->fetch_assoc() != NULL) { //For two level menus like events
 			$cat['sublinks'][]=$cat2;
 		$links[]=$cat;
 	    $i++;
-
 	}
 }
 else { //For one level events
