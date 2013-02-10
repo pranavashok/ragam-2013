@@ -58,7 +58,7 @@ function lookup(inputString) {
 		else {
 			$('#suggestions').fadeIn(); // Show the suggestions box
 			$("#s-loader").show();
-			$.post("search.php", {queryString: ""+inputString+""}, function(data) { // Do an AJAX call
+			$.post("search.php", {q: ""+inputString+""}, function(data) { // Do an AJAX call
 				$('#suggestions').html(data); // Fill the suggestions box
 				$("#s-loader").hide();
       			});
@@ -71,6 +71,7 @@ function lookup(inputString) {
 		return false;
 	}
 	$(function () {
+		$("#suggestions").fadeOut();
 		var w = $(window).width();
 		var h = $(window).height();
 		$("body").keydown(function (event) {
@@ -312,8 +313,6 @@ function lookup(inputString) {
 				$(this).children(".shortdesc").hide();
 			}
 		});
-
-
 		$("#content-container-events").mouseenter(function() {
 			if($("#inner-pane-events").attr("class")=="moveright")
 			{
