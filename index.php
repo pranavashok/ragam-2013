@@ -250,7 +250,7 @@
 			<div id="supportpane_top">
 				<div id="ticker">
 					<div>The registrations will be open from 16th Feb 2013</div>
-					<div>The last date for submission of entries for the photography contest is 20th Feb 2013</div>
+					<div>Submissions for the online photography contest, 360 Degrees, are being accepted <a title="360 Degrees" href="https://www.facebook.com/photo.php?fbid=569659399712510&set=a.570315862980197.141603.307134539298332&type=1&relevant_count=1" target="_blank">here</a></div>
 					<div>Shankar Mahadevan has confirmed to perform at Ragam 2013</div>
 				</div>
 				<form id="searchform" action="" method="">
