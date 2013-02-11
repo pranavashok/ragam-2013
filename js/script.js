@@ -159,7 +159,7 @@ function lookup(inputString) {
 						//Load menu
 						title = relativeUrl.split('/')[0];
 						category = relativeUrl.split('/')[1];
-						subcategory = relativeUrl.split('/')[2];
+						subcategory = relativeUrl.split('/')[2].replace(/_/g," ");
 						$.ajax({
 							dataType: "json",
 							url: "/" + subDir + "/manager/fetchlinks.php",
@@ -402,8 +402,6 @@ function lookup(inputString) {
 					$(this).attr("class", "notselected");
 				});
 				$(this).attr("class", "selected");
-				$("#hidden-submenu-links").html($("#submenu-links-events").html());
-				$("#hidden-subsubmenu-links").html($("#subsubmenu-links-events").html());
 				title = $(this).html();
 				title = title.split('<br>')[0];
 				History.pushState(null, title + " | Ragam 2013", $(this).attr("href"));
