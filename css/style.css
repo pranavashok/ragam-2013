@@ -29,6 +29,16 @@
          url('helveticaneueltcom-ltcn.ttf') format('truetype'),
          url('helveticaneueltcom-ltcn.svg#HelveticaNeueLTCom47LightCondensed') format('svg');
 }
+@font-face {
+	font-family: HelveticaInserat;
+	src: url('helveticaltstdcomp.eot');
+	src: url('helveticaltstdcomp.eot?#iefix') format('embedded-opentype'),
+			 url('helveticaltstdcomp.woff') format('woff'),
+			 url('helveticaltstdcomp.ttf') format('truetype'),
+			 url('helveticaltstdcomp.svg#helveticaltstdcomp') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 #light
 {
 	width:100%;
@@ -40,6 +50,9 @@
 	left:0px;
 	opacity:0.9;
 }
+.blur {
+	-webkit-filter:blur(10px);
+}
 #dark
 {
 	width:100%;
@@ -50,6 +63,22 @@
 	top:0px;
 	left:0px;
 	opacity:0;
+}
+#construction {
+	font-family: HelveticaInserat;
+	font-size: 50px;
+	text-align: center;
+	width:100%;
+	height: 100%;
+	position: absolute;
+	padding-top:30%;
+	color:#78162e;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	text-transform: uppercase;
+	display: none;
+	background: rgba(255,255,255,0.2);
 }
 .shortdesc{
 	display:none;
@@ -329,7 +358,7 @@
 	height:80%;
 	padding:30px;
 	display:block;
-	color: b;acl
+	color: black;
 	left:0;
 	top:5%;
 	outline:none;
@@ -417,6 +446,161 @@
 	position: absolute;
 	/*background: url('/magar/img/fs.png') no-repeat;*/
 	background-repeat:no-repeat;
+}
+
+#inner-pane-proshows {
+	display: none;
+	position: absolute;
+	width: 66.67%;
+	height: 100%;
+	top:16.67%;
+	left:13%;
+	background: #f7f7f7;
+}
+#heading-proshows {
+	color:#ce100c;
+	position: absolute;
+	top:20%;
+	left:35%;
+	font-family: HelveticaInserat;
+	font-size: 70px;
+	text-transform: uppercase;
+	z-index: 9;
+}
+#content-container-proshows {
+	width: 50%;
+	height: 50%;
+	display: block;
+	position: absolute;
+	top:10%;
+	left:20%;
+}
+#content-wrapper-proshows {
+	font-family: HelveticaThin;
+	position: absolute;
+	width: 50%;
+	height: 40%;
+	display: block;
+	left:25%;
+	top: 30%;
+}
+#content-heading-proshows {
+	position:relative;
+	width:100%;
+	height:5%;
+	display:block;
+
+	top:0;
+	left:0;
+	padding:10px;
+	font-size:30px;
+	text-transform:lowercase;
+	color: #ce100c;
+}
+#content-content-proshows {
+	position:relative;
+	width:80%;
+	right:5%;
+	height:100%;
+	padding:30px;
+	display:block;
+	color: black;
+	left:0;
+	top:5%;
+	outline:none;
+	font-size: 18px;
+	line-height: 26px;
+	text-justify:justify;
+}
+#content-content-wrapper-proshows.nano {
+	background:transparent;
+	z-index: 9;
+}
+#painting-proshows {
+	background:#f7f7f7 url('../img/shankar.jpg') no-repeat 0px 0px;
+	position: absolute;
+	width:600px;
+	height:600px;
+	top:20%;
+	right:20%;
+	display: block;
+	transform: scale(1.2,1.2);
+}
+#mehendi {
+	background: rgba(238, 238, 238, 0) url("http://localhost/magar/css/../img/bgart1.png") no-repeat;
+	width: 1200px;
+	height: 1200px;
+	display: block;
+	position: absolute;
+	top: 13%;
+	left: 15%;
+	transform: scale(0.6,0.6) rotate(-40deg);
+	z-index: 8;
+	opacity: 0.1;
+}
+#inner-pane-sponsors {
+	display: none;
+	position: absolute;
+	width: 66.67%;
+	height: 100%;
+	top:16.67%;
+	left:13%;
+	background: #f7f7f7;
+}
+#heading-sponsors {
+	color:#77bc21;
+	position: absolute;
+	top:20%;
+	left:35%;
+	font-family: HelveticaInserat;
+	font-size: 70px;
+	text-transform: uppercase;
+}
+#content-container-sponsors {
+	display: block;
+	top:12%;
+	left:1%;
+	width:80%;
+	height: 50%;
+	position: absolute;
+}
+#content-wrapper-sponsors {
+	font-family: HelveticaThin;
+	position: absolute;
+	width: 50%;
+	height: 60%;
+	display: block;
+
+	right: 5%;
+	top: 20%;
+}
+#content-heading-sponsors {
+	position:relative;
+	width:100%;
+	height:5%;
+	display:block;
+
+	top:0;
+	left:0;
+	padding:10px;
+	font-size:30px;
+	text-transform:lowercase;
+	color: #ce100c;
+}
+#content-content-sponsors {
+	position:relative;
+	width:95%;
+	right:5%;
+	height:80%;
+	padding:30px;
+	display:block;
+	color: b;acl
+	left:0;
+	top:5%;
+	outline:none;
+	font-size: 15px;
+	line-height: 20px;
+
 }
 /* Searchbox */
 
@@ -995,6 +1179,7 @@ a#login-link {
 	position:absolute;
 	top:0px;
 	left:0px;
+	display:none;
 }
 .pe-thumbs{
 	width: 900px;
@@ -1081,4 +1266,7 @@ a#login-link {
     color:#555;
     border: none;
     background: #ccc url('../img/iconsprite.png') 0px -96px no-repeat;
+}
+#hidden-box {
+	display:none;
 }

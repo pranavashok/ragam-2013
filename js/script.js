@@ -1,4 +1,3 @@
-var subDir = 'magar';
 var title = '';
 var aniSpd = 3000;
 var fadeSpd = 200;
@@ -143,15 +142,57 @@ function lookup(inputString) {
 							},
 							type: "POST",
 							success: function (d) {
-								
-								$("#content-heading-events").text(d.name);
-								$("#content-content-events").html(d.content);
+
+								if(d.name!=null){
+									$("#content-heading-events").text(d.name);
+									$("#content-content-events").html(d.content);
+								}else{
+									$("#content-heading-events").text("Choose an event from right");
+								}
 								$("#content-wrapper-events").fadeIn();
 								$(".nano").nanoScroller({
 									scrollTop: '0px'
 								});
 							}
-
+						});
+						//Load menu
+						title = relativeUrl.split('/')[0];
+						category = relativeUrl.split('/')[1];
+						subcategory = relativeUrl.split('/')[2].replace(/_/g," ");
+						$.ajax({
+							dataType: "json",
+							url: "/" + subDir + "/manager/fetchlinks.php",
+							data: {
+								"cat": title
+							},
+							type: "POST",
+							success: function (d) {
+								setMenu(d);
+								var catlinks = "";
+								d.forEach(function (ele) {
+									if(ele.name == category)
+										catlinks = catlinks + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "' class='selected'><li>" + ele.name + "</li></a>";
+									else
+										catlinks = catlinks + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "' class='notselected'><li>" + ele.name + "</li></a>";
+								});
+								sublinks='';
+								for (ele in menu) {
+									if (menu[ele].name == category) {
+										for (s in menu[ele]['sublinks']) {
+											if(menu[ele]['sublinks'][s].name == subcategory)
+												sublinks = sublinks + "<li><a href='/" + subDir + "/" + title + "/" + menu[ele].name.replace(/\ /g, "_") + "/" + menu[ele]['sublinks'][s].name.replace(/\ /g, "_") + "' class='selected'>" + menu[ele]['sublinks'][s].name+"<br/><span class='shortdesc'>"+menu[ele]['sublinks'][s].shortdesc+"</span></a></li>";
+											else
+												sublinks = sublinks + "<li><a href='/" + subDir + "/" + title + "/" + menu[ele].name.replace(/\ /g, "_") + "/" + menu[ele]['sublinks'][s].name.replace(/\ /g, "_") + "' class='notselected'>" + menu[ele]['sublinks'][s].name+"<br/><span class='shortdesc'>"+menu[ele]['sublinks'][s].shortdesc+"</span></a></li>";
+										}
+										break;
+									}
+								}
+								$("#hidden-submenu-links").html(catlinks);
+								$("#hidden-subsubmenu-links").html(sublinks);
+								$("#submenu-links-events").html($("#hidden-submenu-links").html());
+								$("#subsubmenu-links-events").html($("#hidden-subsubmenu-links").html());
+								loadingAnimation(false);			
+							}
 						});
 					}
 				} //Endif events
@@ -212,6 +253,15 @@ function lookup(inputString) {
 				} //Endif workshops
 				else if(relativeUrl.split("/")[0]=="Proshows") {
 					//Proshows code
+					$(".pane").hide();
+					$("#inner-pane-proshows").show();
+					if($("#mainmenu-pane").attr("class")!="moveout")
+						$("#inner-pane-proshows").attr("class", "pane"); //Reset the inner-pane-proshows just before opening
+					$("#mainmenu-pane").attr("class", "moveout");
+					$("#font-pane").attr("class", "moveout");
+					$("#painting-proshows").fadeIn();
+					title = relativeUrl;
+					loadingAnimation(false);
 				} //Endif proshows
 				else if(relativeUrl.split("/")[0]=="Showcase") {
 					//Showcase code
@@ -269,6 +319,15 @@ function lookup(inputString) {
 				} //Endif showcase
 				else if(relativeUrl.split("/")[0]=="Sponsors") {
 					//Sponsors code
+					$(".pane").hide();
+					$("#inner-pane-sponsors").show();
+					if($("#mainmenu-pane").attr("class")!="moveout")
+						$("#inner-pane-sponsors").attr("class", "pane"); //Reset the inner-pane-sponsors just before opening
+					$("#mainmenu-pane").attr("class", "moveout");
+					$("#font-pane").attr("class", "moveout");
+					$("#painting-sponsors").fadeIn();
+					title = relativeUrl;
+					loadingAnimation(false);
 				} //Endif sponsors
 				else {
 					//Go to 404
@@ -298,12 +357,20 @@ function lookup(inputString) {
 		$("#mainlinks a").click(function (e) {
 			e.preventDefault();
 		});
-		
-
+		$("#construction").click(function() {
+			$("#construction").fadeOut();
+			$("#wrapper").attr("class", "");
+		});
 		$("#mainlinks li").click(function () {
-			title = $(this).attr('title');
-			loadingAnimation(true);
-			History.pushState({timestamp: (new Date().getTime())}, title + " | Ragam 2013", $(this).parent("a").attr("href"));
+			title = $(this).data('title');
+			if($(this).data('title') == "Workshops" || $(this).data('title') == "Showcase") {
+				$("#construction").show();
+				$("#wrapper").attr("class", "blur");
+			}
+			else {
+				loadingAnimation(true);
+				History.pushState({timestamp: (new Date().getTime())}, title + " | Ragam 2013", $(this).parent("a").attr("href"));
+			}
 		});
 		$("#submenu-links-events a").live({
 			mouseenter: function () {
@@ -319,15 +386,11 @@ function lookup(inputString) {
 				$("#subsubmenu-links-events").html(sublinks);
 				var tmp = $(this).text();
 				tmp = tmp.replace(' ', '_');
-				//var currBg = $("#painting").css('background-image');
-        		//var newBg = $("img#"+tmp).attr("src"); 
-        		//currBgs = currBg.replace('url(','').replace(')','').split('/');
-        		//newBgs = newBg.split('/');
-        		//alert(currBg+' -- '+$("img#"+tmp).attr("src"));
-				//if(currBgs[currBgs.lenth-1]!=newBgs[newBgs.length-1])
+				
 				$("#painting-events").hide();
-				$("#painting-events").css('background-image', 'url("'+ $("img#"+tmp).attr("src") + '")');	
-				$("#painting-events").stop(true,true).fadeIn(250);
+				$("#painting-events").css('background-image', 'url("'+ $("img#"+tmp).attr("src") + '")');
+				if($('#inner-pane-events').attr('class')!='moveright')	
+					$("#painting-events").stop(true,true).fadeIn(250);
 				
 				$("#submenu-links-events a").each(function () {
 					$(this).attr("class", "notselected");
@@ -346,9 +409,9 @@ function lookup(inputString) {
 					$(this).attr("class", "notselected");
 				});
 				$(this).attr("class", "selected");
-				$("#hidden-submenu-links").html($("#submenu-links-events").html());
-				$("#hidden-subsubmenu-links").html($("#subsubmenu-links-events").html());
-				History.pushState(null, $(this).text() + " | Ragam 2013", $(this).attr("href"));
+				title = $(this).html();
+				title = title.split('<br>')[0];
+				History.pushState(null, title + " | Ragam 2013", $(this).attr("href"));
 			},
 			mouseenter: function(e) {
 				$("#subsubmenu-links-events a").each(function () {
@@ -437,7 +500,10 @@ function lookup(inputString) {
 		$("#home-button").click(function () {
 			History.pushState({
 				timestamp: (new Date().getTime())
-			}, "Ragam 2013", "/" + subDir + "/");
+			}, "Ragam 2013 | National Institute of Technology Calicut", "/" + subDir + "/");
+			$("#font-pane").show();
+			$("#mainmenu-pane").show();
+			$("#support-pane").fadeIn();
 			$("#content-wrapper-events").fadeOut();
 		});
 
