@@ -358,12 +358,20 @@ function lookup(inputString) {
 		$("#mainlinks a").click(function (e) {
 			e.preventDefault();
 		});
-		
-
+		$("#construction").click(function() {
+			$("#construction").fadeOut();
+			$("#wrapper").attr("class", "");
+		});
 		$("#mainlinks li").click(function () {
 			title = $(this).data('title');
-			loadingAnimation(true);
-			History.pushState({timestamp: (new Date().getTime())}, title + " | Ragam 2013", $(this).parent("a").attr("href"));
+			if($(this).data('title') == "Workshops" || $(this).data('title') == "Showcase") {
+				$("#construction").show();
+				$("#wrapper").attr("class", "blur");
+			}
+			else {
+				loadingAnimation(true);
+				History.pushState({timestamp: (new Date().getTime())}, title + " | Ragam 2013", $(this).parent("a").attr("href"));
+			}
 		});
 		$("#submenu-links-events a").live({
 			mouseenter: function () {

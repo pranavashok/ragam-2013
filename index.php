@@ -29,6 +29,7 @@
 <body>
 	
 	<div id="light"></div>
+	<div id="construction">coming soon</div>
 	<ul class="spinner">
 		<li></li>
 		<li></li>
