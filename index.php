@@ -1,5 +1,5 @@
 
-<?php $subDir = "/magar/"?>
+<?php $subDir = "/2013/"?>
 <html>
 <head>
 	<link href="<?php echo $subDir; ?>css/reset.css" rel="stylesheet"/>
@@ -275,7 +275,8 @@
 				<span class="menu_item menu_nonclick">schedule</span>
 				<span class="menu_item menu_click">faq</span>
 				<span class="menu_item menu_nonclick gallery">gallery</span>
-				<span class="menu_item menu_nonclick">brochure</span>
+				<span class="menu_item menu_nonclick"><a href="<?php echo $subDir; ?>ragam-brochure.pdf" target="_blank" 
+style="text-decoration:none">brochure</a></span>
 				<span class="menu_item menu_click">reach us</span>
 			</div>
 			<div id="menu_info">
@@ -303,7 +304,7 @@
 					<br><br>
 					</td>
 					</tr>
-					<tr>
+					<!--<tr>
 					<td>
 					<span class="contactname" > Arun Sekhar</span> <br>
 					<span class="contacttitle" >Marketing Coordinator</span> <br>
@@ -325,16 +326,16 @@
 					<span class="contactemail"><a  href="mailto:arunsekhar@ragam.org.in">arunsekhar@ragam.org.in</a></span>  <br>	
 					<br><br>
 					</td>
-					</tr>
+					</tr>-->
 					</tbody></table>
 					</div>
 				<div id="info">
-				<b>Q1. What is question one? </b> <br/>
+				<!--<b>Q1. What is question one? </b> <br/>
 				This is the answer to the question<br/><br/>
 				<b>Q2. What is question one? </b> <br/>
 				This is the answer to the question<br/><br/>
 				<b>Q3. What is question one? </b> <br/>
-				This is the answer to the question		<br/>	<br/>	
+				This is the answer to the question		<br/>	<br/>	-->
 				</div>
 
 				<div id="reachus">

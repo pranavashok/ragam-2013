@@ -1,4 +1,4 @@
-var subDir = 'magar';
+var subDir = '2013';
 var title = '';
 var aniSpd = 3000;
 var fadeSpd = 200;
