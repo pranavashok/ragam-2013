@@ -498,6 +498,7 @@ function lookup(inputString) {
 			}, "Ragam 2013 | National Institute of Technology Calicut", "/" + subDir + "/");
 			$("#font-pane").show();
 			$("#mainmenu-pane").show();
+			$("#support-pane").fadeIn();
 			$("#content-wrapper-events").fadeOut();
 		});
 
