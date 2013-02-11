@@ -186,7 +186,7 @@
 						<div id="content-content-sponsors" class="content">
 						
 						<h3> Previous Sponsors </h3>
-						<img src="img/prevsponsors.jpg" width="960" >
+						<img src="img/prevsponsors.jpg" height="450px" >
 
 						</div>
 					</div>
