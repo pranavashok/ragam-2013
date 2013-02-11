@@ -143,15 +143,57 @@ function lookup(inputString) {
 							},
 							type: "POST",
 							success: function (d) {
-								
-								$("#content-heading-events").text(d.name);
-								$("#content-content-events").html(d.content);
+
+								if(d.name!=null){
+									$("#content-heading-events").text(d.name);
+									$("#content-content-events").html(d.content);
+								}else{
+									$("#content-heading-events").text("Choose an event from right");
+								}
 								$("#content-wrapper-events").fadeIn();
 								$(".nano").nanoScroller({
 									scrollTop: '0px'
 								});
 							}
-
+						});
+						//Load menu
+						title = relativeUrl.split('/')[0];
+						category = relativeUrl.split('/')[1];
+						subcategory = relativeUrl.split('/')[2];
+						$.ajax({
+							dataType: "json",
+							url: "/" + subDir + "/manager/fetchlinks.php",
+							data: {
+								"cat": title
+							},
+							type: "POST",
+							success: function (d) {
+								setMenu(d);
+								var catlinks = "";
+								d.forEach(function (ele) {
+									if(ele.name == category)
+										catlinks = catlinks + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "' class='selected'><li>" + ele.name + "</li></a>";
+									else
+										catlinks = catlinks + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "' class='notselected'><li>" + ele.name + "</li></a>";
+								});
+								sublinks='';
+								for (ele in menu) {
+									if (menu[ele].name == category) {
+										for (s in menu[ele]['sublinks']) {
+											if(menu[ele]['sublinks'][s].name == subcategory)
+												sublinks = sublinks + "<li><a href='/" + subDir + "/" + title + "/" + menu[ele].name.replace(/\ /g, "_") + "/" + menu[ele]['sublinks'][s].name.replace(/\ /g, "_") + "' class='selected'>" + menu[ele]['sublinks'][s].name+"<br/><span class='shortdesc'>"+menu[ele]['sublinks'][s].shortdesc+"</span></a></li>";
+											else
+												sublinks = sublinks + "<li><a href='/" + subDir + "/" + title + "/" + menu[ele].name.replace(/\ /g, "_") + "/" + menu[ele]['sublinks'][s].name.replace(/\ /g, "_") + "' class='notselected'>" + menu[ele]['sublinks'][s].name+"<br/><span class='shortdesc'>"+menu[ele]['sublinks'][s].shortdesc+"</span></a></li>";
+										}
+										break;
+									}
+								}
+								$("#hidden-submenu-links").html(catlinks);
+								$("#hidden-subsubmenu-links").html(sublinks);
+								$("#submenu-links-events").html($("#hidden-submenu-links").html());
+								$("#subsubmenu-links-events").html($("#hidden-subsubmenu-links").html());
+								loadingAnimation(false);			
+							}
 						});
 					}
 				} //Endif events
@@ -319,7 +361,7 @@ function lookup(inputString) {
 		
 
 		$("#mainlinks li").click(function () {
-			title = $(this).attr('title');
+			title = $(this).data('title');
 			loadingAnimation(true);
 			History.pushState({timestamp: (new Date().getTime())}, title + " | Ragam 2013", $(this).parent("a").attr("href"));
 		});
@@ -452,6 +494,8 @@ function lookup(inputString) {
 			History.pushState({
 				timestamp: (new Date().getTime())
 			}, "Ragam 2013", "/" + subDir + "/");
+			$("#font-pane").show();
+			$("#mainmenu-pane").show();
 			$("#content-wrapper-events").fadeOut();
 		});
 

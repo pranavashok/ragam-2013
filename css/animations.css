@@ -164,7 +164,7 @@
 		top:91.5%;
 	}
 	100% {
-		top:20%;
+		top:40%;
 	}
 }
 #support-pane.support-up {
@@ -175,7 +175,7 @@
 }
 @keyframes support-down {
 	0% {
-		top:20%;
+		top:40%;
 	}
 	100% {
 		top:91.5%;
@@ -198,7 +198,7 @@
 		top:-100%;
 	}
 	100% {
-		top:-171.5%;
+		top:-151.5%;
 	}
 }
 #wrapper.support-down {
@@ -209,7 +209,7 @@
 }
 @keyframes wrapper-support-down {
 	0% {
-		top:-171.5%;
+		top:-151.5%;
 	}
 	100% {
 		top:-100%;

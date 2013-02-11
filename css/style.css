@@ -1224,3 +1224,6 @@ a#login-link {
     border: none;
     background: #ccc url('../img/iconsprite.png') 0px -96px no-repeat;
 }
+#hidden-box {
+	display:none;
+}
