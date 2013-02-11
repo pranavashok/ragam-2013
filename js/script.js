@@ -212,6 +212,15 @@ function lookup(inputString) {
 				} //Endif workshops
 				else if(relativeUrl.split("/")[0]=="Proshows") {
 					//Proshows code
+					$(".pane").hide();
+					$("#inner-pane-proshows").show();
+					if($("#mainmenu-pane").attr("class")!="moveout")
+						$("#inner-pane-proshows").attr("class", "pane"); //Reset the inner-pane-proshows just before opening
+					$("#mainmenu-pane").attr("class", "moveout");
+					$("#font-pane").attr("class", "moveout");
+					$("#painting-proshows").fadeIn();
+					title = relativeUrl;
+					loadingAnimation(false);
 				} //Endif proshows
 				else if(relativeUrl.split("/")[0]=="Showcase") {
 					//Showcase code
@@ -269,6 +278,15 @@ function lookup(inputString) {
 				} //Endif showcase
 				else if(relativeUrl.split("/")[0]=="Sponsors") {
 					//Sponsors code
+					$(".pane").hide();
+					$("#inner-pane-sponsors").show();
+					if($("#mainmenu-pane").attr("class")!="moveout")
+						$("#inner-pane-sponsors").attr("class", "pane"); //Reset the inner-pane-sponsors just before opening
+					$("#mainmenu-pane").attr("class", "moveout");
+					$("#font-pane").attr("class", "moveout");
+					$("#painting-sponsors").fadeIn();
+					title = relativeUrl;
+					loadingAnimation(false);
 				} //Endif sponsors
 				else {
 					//Go to 404
