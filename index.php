@@ -163,12 +163,14 @@
 					</div>
 					<div id="content-content-wrapper-proshows" class="nano">
 						<div id="content-content-proshows" class="content">
-							Proshow content comes here
+							We give you: the Nite of the Year. <strong>Shankar Mahadevan</strong> at NIT Calicut. The National Award winning singer and music director is all set to leave the crowds <em>Breathless</em> at NIT Calicut. The creator of music for <em>Vishwaroopam</em>, <em>Zindagi Na Milegi Dobara</em> and more, the voice behind chart-toppers like <em>Kajra Re</em> and <em>Wake Up Sid</em>, this all-out entertainer will blow you away. So come prepared. Shankar Live. Only at Ragam '13.
 						</div>
 					</div>
 				</div>
 			</div>
 			<div id="painting-proshows">
+			</div>
+			<div id="mehendi">
 			</div>
 		</section>
 
