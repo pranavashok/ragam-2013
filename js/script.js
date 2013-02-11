@@ -337,15 +337,11 @@ function lookup(inputString) {
 				$("#subsubmenu-links-events").html(sublinks);
 				var tmp = $(this).text();
 				tmp = tmp.replace(' ', '_');
-				//var currBg = $("#painting").css('background-image');
-        		//var newBg = $("img#"+tmp).attr("src"); 
-        		//currBgs = currBg.replace('url(','').replace(')','').split('/');
-        		//newBgs = newBg.split('/');
-        		//alert(currBg+' -- '+$("img#"+tmp).attr("src"));
-				//if(currBgs[currBgs.lenth-1]!=newBgs[newBgs.length-1])
+				
 				$("#painting-events").hide();
-				$("#painting-events").css('background-image', 'url("'+ $("img#"+tmp).attr("src") + '")');	
-				$("#painting-events").stop(true,true).fadeIn(250);
+				$("#painting-events").css('background-image', 'url("'+ $("img#"+tmp).attr("src") + '")');
+				if($('#inner-pane-events').attr('class')!='moveright')	
+					$("#painting-events").stop(true,true).fadeIn(250);
 				
 				$("#submenu-links-events a").each(function () {
 					$(this).attr("class", "notselected");
