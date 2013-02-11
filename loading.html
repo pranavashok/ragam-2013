@@ -1,0 +1,151 @@
+<html>
+<head>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/prefixfree.min.js"></script>
+	<script type="text/javascript" src="js/prefixfree.jquery.js"></script>
+	<script type="text/javascript" src="js/prefixfree.dynamic-dom.min.js"></script>
+	<script type="text/javascript" src="js/pow.js"></script>
+	<style type="text/css">
+	@font-face {
+		font-family: HelveticaInserat;
+		src: url('css/helveticaltstdcomp.eot');
+		src: url('css/helveticaltstdcomp.eot?#iefix') format('embedded-opentype'),
+				 url('css/helveticaltstdcomp.woff') format('woff'),
+				 url('css/helveticaltstdcomp.ttf') format('truetype'),
+				 url('css/helveticaltstdcomp.svg#helveticaltstdcomp') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+	.spinner {
+	    /* Size and position */
+	    font-size: 120px; /* 1em */
+	    width: 1.2em;
+	    height: 1.2em;
+	    margin: 23% auto;
+	    position: relative;
+	 
+	    /* Styles */
+	    list-style: none;
+	    border-radius: 50%;
+	    display: block;
+	    background: url('img/loading.png') no-repeat center;
+	    transform: scale(1.5,1.5);
+	}
+	.spinner li {
+	    width: .1em;
+	    height: .1em;
+	    position: absolute;
+	    border-radius: 50%;
+	}
+	@keyframes rota {
+	    to { transform: rotate(360deg); }
+	}
+	 
+	@keyframes opa {
+	    12.0% { opacity: 0.80; }
+	    19.5% { opacity: 0.88; }
+	    37.2% { opacity: 0.64; }
+	    40.5% { opacity: 0.52; }
+	    52.7% { opacity: 0.69; }
+	    60.2% { opacity: 0.60; }
+	    66.6% { opacity: 0.52; }
+	    70.0% { opacity: 0.63; }
+	    79.9% { opacity: 0.60; }
+	    84.2% { opacity: 0.75; }
+	    91.0% { opacity: 0.87; }
+	}
+	.spinner li:nth-child(1) {
+	    background: #0c9dc5; /* Blue */
+	  2  top: 5%;
+	    left: 55%;
+	    margin-left: -.1em; /* Width/2 */
+	    transform-origin: 50% 550%;
+	    animation: 
+	        rota 1.50s linear infinite,
+	        opa 3.67s ease-in-out infinite alternate;
+	}
+	 
+	.spinner li:nth-child(2) {
+	    background: #cf100C; /* Red */
+	    top: 55%; 
+	    right: 10%;
+	    margin-top: -.1em; /* Height/2 */
+	    transform-origin: -450% 50%;
+	    animation: 
+	        rota 1.4s linear infinite,
+	        opa 4.29s ease-in-out infinite alternate;
+	}
+	 
+	.spinner li:nth-child(3) {
+	    background: #77bc21; /* Green */
+	    bottom: 5%;
+	    left: 55%; 
+	    margin-left: -.1em; /* Width/2 */
+	    transform-origin: 50% -450%;
+	    animation: 
+	        rota 1.45s linear infinite,
+	        opa 5.12s ease-in-out infinite alternate;
+	}
+	#countdown{
+		position:absolute;
+		font-family: HelveticaInserat;
+		left:48%;
+		top:40%;
+		font-size: 120px;
+		color: rgb(100,12,19);
+		display:none;
+	}
+	#launchButton{
+		position:absolute;
+		font-family: HelveticaInserat;
+		left:45%;
+		top:30%;
+		font-size: 50px;
+		color: #dd181f;
+		cursor: pointer;
+	}
+
+	</style>
+	<script type="text/javascript">
+	var min=0;
+	var max=5;
+	var loadUrl = 'http://localhost/magar'; //'http://www.ragam.org.in/';
+	function counter(w){
+		if(w>=min){
+			document.getElementById('countdown').innerHTML = w;
+			w=w-1;
+			setTimeout('counter('+w+')',1000);
+		}else{
+			window.location = loadUrl;
+		}
+	}
+	function startTimer(){
+		setTimeout('counter('+max+')',1000);
+		document.getElementById('launchButton').style.display = 'none';
+		document.getElementById('countdown').style.display = 'block';
+		document.getElementById('spinner').style.display = 'none';
+		$('body').pow({
+			rays: 40,
+			originX:'50%',
+			originY:'50%',
+			bgColorStart: 'rgb(228,218,222)',
+			rayColorStart: 'rgb(255,255,255)',
+			bgColorEnd: 'rgb(228,218,222)',
+			rayColorEnd: 'rgb(77,9,39)',
+			sizingRatio: 5
+		});
+	}
+	</script>
+</head>
+<body>
+	<div id="launchButton" onClick="startTimer();">
+		LAUNCH
+	</div>
+	<ul class="spinner" id="spinner">
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<div id="countdown"></div>
+</body>
+</html>
