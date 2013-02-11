@@ -404,7 +404,9 @@ function lookup(inputString) {
 				$(this).attr("class", "selected");
 				$("#hidden-submenu-links").html($("#submenu-links-events").html());
 				$("#hidden-subsubmenu-links").html($("#subsubmenu-links-events").html());
-				History.pushState(null, $(this).text() + " | Ragam 2013", $(this).attr("href"));
+				title = $(this).html();
+				title = title.split('<br>')[0];
+				History.pushState(null, title + " | Ragam 2013", $(this).attr("href"));
 			},
 			mouseenter: function(e) {
 				$("#subsubmenu-links-events a").each(function () {
@@ -493,7 +495,7 @@ function lookup(inputString) {
 		$("#home-button").click(function () {
 			History.pushState({
 				timestamp: (new Date().getTime())
-			}, "Ragam 2013", "/" + subDir + "/");
+			}, "Ragam 2013 | National Institute of Technology Calicut", "/" + subDir + "/");
 			$("#font-pane").show();
 			$("#mainmenu-pane").show();
 			$("#content-wrapper-events").fadeOut();
