@@ -1,4 +1,3 @@
-var subDir = 'magar';
 var title = '';
 var aniSpd = 3000;
 var fadeSpd = 200;

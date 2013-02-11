@@ -1,7 +1,6 @@
-
-<?php $subDir = "/magar/"?>
 <html>
 <head>
+	<?php include 'root.php' ?>
 	<link href="<?php echo $subDir; ?>css/reset.css" rel="stylesheet"/>
 	<link href="<?php echo $subDir; ?>css/style.css" rel="stylesheet"/>
 	<link href="<?php echo $subDir; ?>css/animations.css" rel="stylesheet"/>
