@@ -446,6 +446,7 @@
 	font-family: HelveticaInserat;
 	font-size: 70px;
 	text-transform: uppercase;
+	z-index: 9;
 }
 #content-container-proshows {
 	width: 50%;
@@ -458,12 +459,11 @@
 #content-wrapper-proshows {
 	font-family: HelveticaThin;
 	position: absolute;
-	width: 60%;
-	height: 24%;
+	width: 50%;
+	height: 40%;
 	display: block;
-
-	right: 5%;
-	top: 20%;
+	left:25%;
+	top: 30%;
 }
 #content-heading-proshows {
 	position:relative;
@@ -480,21 +480,45 @@
 }
 #content-content-proshows {
 	position:relative;
-	width:95%;
+	width:80%;
 	right:5%;
-	height:80%;
+	height:100%;
 	padding:30px;
 	display:block;
-	color: b;acl
+	color: black;
 	left:0;
 	top:5%;
 	outline:none;
-	font-size: 15px;
-	line-height: 20px;
-
+	font-size: 18px;
+	line-height: 26px;
+	text-justify:justify;
 }
-
-
+#content-content-wrapper-proshows.nano {
+	background:transparent;
+	z-index: 9;
+}
+#painting-proshows {
+	background:#f7f7f7 url('../img/shankar.jpg') no-repeat 0px 0px;
+	position: absolute;
+	width:600px;
+	height:600px;
+	top:20%;
+	right:20%;
+	display: block;
+	transform: scale(1.2,1.2);
+}
+#mehendi {
+	background: rgba(238, 238, 238, 0) url("http://localhost/magar/css/../img/bgart1.png") no-repeat;
+	width: 1200px;
+	height: 1200px;
+	display: block;
+	position: absolute;
+	top: 13%;
+	left: 15%;
+	transform: scale(0.6,0.6) rotate(-40deg);
+	z-index: 8;
+	opacity: 0.1;
+}
 #inner-pane-sponsors {
 	display: none;
 	position: absolute;
