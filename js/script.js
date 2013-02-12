@@ -105,12 +105,16 @@ function lookup(inputString) {
 				if(relativeUrl.split("/")[0]=="Events") { //Events section
 					$(".pane").hide();
 					$("#inner-pane-events").show();
+					$("#content-wrapper-events").fadeOut();
 					if($("#mainmenu-pane").attr("class")!="moveout")
 						$("#inner-pane-events").attr("class", "pane"); //Reset the inner-pane-events just before opening
 					$("#mainmenu-pane").attr("class", "moveout");
 					$("#font-pane").attr("class", "moveout");
 					if (relativeUrl.search("/") == -1) { //If it's a first level page
 						$("#painting-events").fadeIn();
+						if($("#inner-pane-events").attr("class")=="moveright")
+							$("#inner-pane-events").attr("class","moveback");
+
 						title = relativeUrl;
 						$.ajax({
 							dataType: "json",
