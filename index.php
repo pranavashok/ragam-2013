@@ -251,9 +251,10 @@
 		<div id="footer_inner">
 			<div id="supportpane_top">
 				<div id="ticker">
-					<div>The registrations will be open from 16th Feb 2013</div>
+					<div>Those interested to participate in <strong>Choreo Nite</strong> and <strong>Couture Boulevard</strong> are to mail their previous performances on or before March 1st</div>
 					<div>Submissions for the online photography contest, 360 Degrees, are being accepted <a title="360 Degrees" href="https://www.facebook.com/photo.php?fbid=569659399712510&set=a.570315862980197.141603.307134539298332&type=1&relevant_count=1" target="_blank">here</a></div>
 					<div>Shankar Mahadevan has confirmed to perform at Ragam 2013</div>
+					<div>Those interested to participate in <strong>Amplified</strong>, <strong>Acoustics</strong> and <strong>Swara Raaga</strong> are to mail their previous performances on or before March 1st</div>
 				</div>
 				<form id="searchform" action="" method="">
 					<span id="search_panel">
@@ -303,29 +304,29 @@ style="text-decoration:none">brochure</a></span>
 					<br><br>
 					</td>
 					</tr>
-					<!--<tr>
+					<tr>
 					<td>
-					<span class="contactname" > Arun Sekhar</span> <br>
-					<span class="contacttitle" >Marketing Coordinator</span> <br>
-					<span class="contactphone">+91 944 658 0963</span> <br>
-					<span class="contactemail"><a  href="mailto:arunsekhar@ragam.org.in">arunsekhar@ragam.org.in</a></span>  <br>	
+					<span class="contactname"> Vijeesh VN</span> <br>
+					<span class="contacttitle">Event Coordinator</span> <br>
+					<span class="contactphone">+91 974 659 4938</span> <br>
+					<span class="contactemail"><a  href="mailto:vijeesh@ragam.org.in">vijeesh@ragam.org.in</a></span>  <br>	
 					<br><br>
 					</td>
 					<td>
-					<span class="contactname" > Nitheesh K Pai</span> <br>
-					<span class="contacttitle" >Marketing Coordinator</span> <br>
-					<span class="contactphone">+91 989 568 9519</span> <br>
-					<span class="contactemail"><a  href="mailto:nitheeshkpai@ragam.org.in">nitheeshkpai@ragam.org.in</a></span>  <br>	
+					<span class="contactname"> Nitheesh I S</span> <br>
+					<span class="contacttitle">Event Coordinator</span> <br>
+					<span class="contactphone">+91 949 726 9030</span> <br>
+					<span class="contactemail"><a  href="mailto:nitheeshis@ragam.org.in">nitheeshis@ragam.org.in</a></span>  <br>	
 					<br><br>
 					</td>
 					<td>
-					<span class="contactname" > Arun Sekhar</span> <br>
-					<span class="contacttitle" >Marketing Coordinator</span> <br>
-					<span class="contactphone">+91 944 658 0963</span> <br>
-					<span class="contactemail"><a  href="mailto:arunsekhar@ragam.org.in">arunsekhar@ragam.org.in</a></span>  <br>	
+					<span class="contactname"> Benevant Mathew</span> <br>
+					<span class="contacttitle">Hospitality Coordinator</span> <br>
+					<span class="contactphone">+91 980 961 5184</span> <br>
+					<span class="contactemail"><a  href="mailto:benevant@ragam.org.in">benevant@ragam.org.in</a></span>  <br>	
 					<br><br>
 					</td>
-					</tr>-->
+					</tr>
 					</tbody></table>
 					</div>
 				<div id="info">

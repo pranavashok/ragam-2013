@@ -1,5 +1,5 @@
 var title = '';
-var aniSpd = 3000;
+var aniSpd = 5000;
 var fadeSpd = 200;
 var menu;
 
