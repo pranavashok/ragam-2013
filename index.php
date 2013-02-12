@@ -247,6 +247,8 @@
 	<div class="pane" id="support-pane">
 		<div id="feedback">
         <input class="emailentry" type="email" name="email" title="email" placeholder="email" onblur="inputBlur(this)" />
+		<textarea class="feedbackentry" name="feedback" title="feedback" placeholder="Please enter your feedback here." onblur="inputBlur(this)"></textarea>
+		<!--<input type="submit" "feedbacksubmit" value="Submit" />-->
 		</div>
 		<div id="footer_inner">
 			<div id="supportpane_top">
