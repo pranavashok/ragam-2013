@@ -1139,7 +1139,6 @@ a#login-link {
 	font-size:10pt;
 }
 
-
 #nitc_logo{
 
 }
@@ -1262,10 +1261,24 @@ a#login-link {
     height: 32px;
     font-size: 18px;
     margin-top: 10%;
-    margin-left: 30%;
+    margin-left: 10%;
     color:#555;
     border: none;
     background: #ccc url('../img/iconsprite.png') 0px -96px no-repeat;
+}
+#feedback textarea.feedbackentry {
+	padding: 5px;
+	z-index: 30;
+	position: relative;
+    font-family: 'HelveticaLightCondensed';
+    width: 340px;
+    height: 60%;
+    font-size: 18px;
+    margin-top:2%;
+    margin-left: 10%;
+    color:#555;
+    border: none;
+    background: #ccc;
 }
 #hidden-box {
 	display:none;

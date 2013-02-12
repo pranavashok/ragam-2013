@@ -105,12 +105,16 @@ function lookup(inputString) {
 				if(relativeUrl.split("/")[0]=="Events") { //Events section
 					$(".pane").hide();
 					$("#inner-pane-events").show();
+					$("#content-wrapper-events").fadeOut();
 					if($("#mainmenu-pane").attr("class")!="moveout")
 						$("#inner-pane-events").attr("class", "pane"); //Reset the inner-pane-events just before opening
 					$("#mainmenu-pane").attr("class", "moveout");
 					$("#font-pane").attr("class", "moveout");
 					if (relativeUrl.search("/") == -1) { //If it's a first level page
 						$("#painting-events").fadeIn();
+						if($("#inner-pane-events").attr("class")=="moveright")
+							$("#inner-pane-events").attr("class","moveback");
+
 						title = relativeUrl;
 						$.ajax({
 							dataType: "json",
@@ -142,7 +146,6 @@ function lookup(inputString) {
 							},
 							type: "POST",
 							success: function (d) {
-
 								if(d.name!=null){
 									$("#content-heading-events").text(d.name);
 									$("#content-content-events").html(d.content);
@@ -157,8 +160,9 @@ function lookup(inputString) {
 						});
 						//Load menu
 						title = relativeUrl.split('/')[0];
-						category = relativeUrl.split('/')[1];
-						subcategory = relativeUrl.split('/')[2].replace(/_/g," ");
+						category = relativeUrl.split('/')[1].replace(/_/g," ");
+						if(n.length>2)
+							subcategory = relativeUrl.split('/')[2].replace(/_/g," ");
 						$.ajax({
 							dataType: "json",
 							url: "/" + subDir + "/manager/fetchlinks.php",
@@ -176,15 +180,18 @@ function lookup(inputString) {
 										catlinks = catlinks + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "' class='notselected'><li>" + ele.name + "</li></a>";
 								});
 								sublinks='';
-								for (ele in menu) {
-									if (menu[ele].name == category) {
-										for (s in menu[ele]['sublinks']) {
-											if(menu[ele]['sublinks'][s].name == subcategory)
-												sublinks = sublinks + "<li><a href='/" + subDir + "/" + title + "/" + menu[ele].name.replace(/\ /g, "_") + "/" + menu[ele]['sublinks'][s].name.replace(/\ /g, "_") + "' class='selected'>" + menu[ele]['sublinks'][s].name+"<br/><span class='shortdesc'>"+menu[ele]['sublinks'][s].shortdesc+"</span></a></li>";
-											else
-												sublinks = sublinks + "<li><a href='/" + subDir + "/" + title + "/" + menu[ele].name.replace(/\ /g, "_") + "/" + menu[ele]['sublinks'][s].name.replace(/\ /g, "_") + "' class='notselected'>" + menu[ele]['sublinks'][s].name+"<br/><span class='shortdesc'>"+menu[ele]['sublinks'][s].shortdesc+"</span></a></li>";
+								if(n.length>2)
+								{
+									for (ele in menu) {
+										if (menu[ele].name == category) {
+											for (s in menu[ele]['sublinks']) {
+												if(menu[ele]['sublinks'][s].name == subcategory)
+													sublinks = sublinks + "<li><a href='/" + subDir + "/" + title + "/" + menu[ele].name.replace(/\ /g, "_") + "/" + menu[ele]['sublinks'][s].name.replace(/\ /g, "_") + "' class='selected'>" + menu[ele]['sublinks'][s].name+"<br/><span class='shortdesc'>"+menu[ele]['sublinks'][s].shortdesc+"</span></a></li>";
+												else
+													sublinks = sublinks + "<li><a href='/" + subDir + "/" + title + "/" + menu[ele].name.replace(/\ /g, "_") + "/" + menu[ele]['sublinks'][s].name.replace(/\ /g, "_") + "' class='notselected'>" + menu[ele]['sublinks'][s].name+"<br/><span class='shortdesc'>"+menu[ele]['sublinks'][s].shortdesc+"</span></a></li>";
+											}
+											break;
 										}
-										break;
 									}
 								}
 								$("#hidden-submenu-links").html(catlinks);
