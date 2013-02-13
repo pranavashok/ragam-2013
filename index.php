@@ -6,23 +6,28 @@
 	<link href="<?php echo $subDir; ?>css/animations.css" rel="stylesheet"/>
 	<link href="<?php echo $subDir; ?>css/nanoscroller.css" rel="stylesheet" > 
 	<link href="<?php echo $subDir; ?>css/favicon.ico" rel="icon" type="image/x-icon" />
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.min.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
+
+	<!-- gallery.js and shorcut.js only loads when initiated with their respective handler -->
+	<!-- prefixfree, proximity, easing, rotate, script, nanoscroller and address are minified -->
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.min.js"></script>-->
+	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.jquery.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.dynamic-dom.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.proximity.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/gallery.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotate.2.2.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotateCompressed.2.2.js"></script>-->
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.history.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/script.js"></script>
-	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/min.js"></script>
+	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/script.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.nanoscroller.min.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/arbor.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/arbor-tween.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/arbor-graphics.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>-->
+	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor.js"></script>
+	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-tween.js"></script>
+	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-graphics.js"></script>
 	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/shortcut.js"></script>-->
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
 	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
 </head>
 <body>

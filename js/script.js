@@ -556,8 +556,10 @@ function lookup(inputString) {
 		});
 		$(".gallery").click(function()
 		{
-			$("#gallery").show();
-			$("#gallery").attr("class", "overlayon");
+			$.getScript('/'+subDir+'/js/gallery.js', function() {
+  					$("#gallery").show();
+  					$("#gallery").attr("class", "overlayon");
+			});
 		});
 		$(".feedback_link").click(function()
 		{
