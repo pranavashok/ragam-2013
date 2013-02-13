@@ -6,6 +6,7 @@
 	<link href="<?php echo $subDir; ?>css/animations.css" rel="stylesheet"/>
 	<link href="<?php echo $subDir; ?>css/nanoscroller.css" rel="stylesheet" > 
 	<link href="<?php echo $subDir; ?>css/favicon.ico" rel="icon" type="image/x-icon" />
+	<link rel="search" type="application/opensearchdescription+xml" title="Search Ragam 2013 Website" href="/opensearch.xml">
 
 	<!-- gallery.js and shorcut.js only loads when initiated with their respective handler -->
 	<!-- prefixfree, proximity, easing, rotate, script, nanoscroller and address are minified -->

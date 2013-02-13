@@ -1,7 +1,0 @@
-<?php 
-	$subdir = "<Root of website here, eg. 2013>";
-	$subDir = "/".$subdir."/";
-?>
-<script>
-	var subDir = '<?php echo $subdir; ?>';
-</script>
