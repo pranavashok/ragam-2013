@@ -1,9 +1,9 @@
 <?php
 
 $host = 'localhost';
-$db_name = 'magar';
-$db_user = 'root';
-$db_password = '';
+$db_name = '<DB Name>';
+$db_user = '<DB User>';
+$db_password = '<DB Pass>';
 $start_page = 'signup.php';
 $mn_page = 'manager.php';
 $pr_page = 'proofreader.php';
