@@ -255,7 +255,7 @@
 				<div id="ticker">
 					<div>Those interested to participate in <strong>Choreo Nite</strong> and <strong>Couture Boulevard</strong> are to mail their previous performances on or before March 1st</div>
 					<div>Submissions for the online photography contest, 360 Degrees, are being accepted <a title="360 Degrees" href="https://www.facebook.com/photo.php?fbid=569659399712510&set=a.570315862980197.141603.307134539298332&type=1&relevant_count=1" target="_blank">here</a></div>
-					<div>Shankar Mahadevan has confirmed to perform at Ragam 2013</div>
+					<div>Shankar Mahadevan would be performing at Ragam 2013</div>
 					<div>Those interested to participate in <strong>Amplified</strong>, <strong>Acoustics</strong> and <strong>Swara Raaga</strong> are to mail their previous performances on or before March 1st</div>
 				</div>
 				<form id="searchform" action="" method="">
