@@ -1252,7 +1252,7 @@ a#login-link {
 	left:0px;
 	opacity:0.9;
 }
-#feedback input.emailentry {
+#feedback input.nameentry {
 	padding: 5px 0 0 40px;
 	z-index: 30;
 	position: relative;
@@ -1261,6 +1261,20 @@ a#login-link {
     height: 32px;
     font-size: 18px;
     margin-top: 10%;
+    margin-left: 10%;
+    color:#555;
+    border: none;
+    background: #ccc url('../img/iconsprite.png') 0px -32px no-repeat;
+}
+#feedback input.emailentry {
+	padding: 5px 0 0 40px;
+	z-index: 30;
+	position: relative;
+    font-family: 'HelveticaLightCondensed';
+    width: 340px;
+    height: 32px;
+    font-size: 18px;
+    margin-top: 2%;
     margin-left: 10%;
     color:#555;
     border: none;
@@ -1279,6 +1293,12 @@ a#login-link {
     color:#555;
     border: none;
     background: #ccc;
+}
+#feedback a#feedback-submit {
+	color:#bababa;
+	position:relative;
+	margin-top:2%;
+	margin-left:auto;
 }
 #hidden-box {
 	display:none;
