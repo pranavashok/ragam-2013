@@ -256,7 +256,8 @@
         <input class="emailentry" type="email" name="email" title="email" placeholder="email" onblur="inputBlur(this)" />
 		<textarea class="feedbackentry" name="feedback" title="feedback" placeholder="Please enter your feedback here." onblur="inputBlur(this)"></textarea><br/>
 		<a id="feedback-submit" href="#">
-					<img src="<?php echo $subDir; ?>img/submit.png" />
+			Submit
+				<!--	<img src="<?php echo $subDir; ?>img/submit.png" /> -->
 		</a>
 		</div>
 		<div id="footer_inner">
