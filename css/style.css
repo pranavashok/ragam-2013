@@ -1251,6 +1251,21 @@ a#login-link {
 	top:0px;
 	left:0px;
 	opacity:0.9;
+	display: none;
+}
+#feedback input.nameentry {
+	padding: 5px 0 0 40px;
+	z-index: 30;
+	position: relative;
+    font-family: 'HelveticaLightCondensed';
+    width: 340px;
+    height: 32px;
+    font-size: 18px;
+    margin-top: 10%;
+    margin-left: 10%;
+    color:#555;
+    border: none;
+    background: #ccc url('../img/iconsprite.png') 0px -32px no-repeat;
 }
 #feedback input.emailentry {
 	padding: 5px 0 0 40px;
@@ -1260,7 +1275,7 @@ a#login-link {
     width: 340px;
     height: 32px;
     font-size: 18px;
-    margin-top: 10%;
+    margin-top: 2%;
     margin-left: 10%;
     color:#555;
     border: none;
@@ -1279,6 +1294,38 @@ a#login-link {
     color:#555;
     border: none;
     background: #ccc;
+}
+#feedback a#feedback-submit {
+	background: rgb(0, 0, 0);
+	width: 80px;
+	height: 32px;
+	color: #bababa;
+	text-align: center;
+	display: block;
+	position: relative;
+	margin-top: 2%;
+	margin-left: 30%;
+	float: left;
+	padding-top: 10px;
+	text-transform: uppercase;
+	font-family: 'HelveticaInserat';
+	font-size: 20px;
+}
+#feedback a#feedback-cancel {
+	background: rgb(0, 0, 0);
+	width: 80px;
+	height: 32px;
+	color: #bababa;
+	text-align: center;
+	display: block;
+	position: relative;
+	float:left;
+	margin-top: 2%;
+	margin-left: 0;
+	padding-top: 10px;
+	text-transform: uppercase;
+	font-family: 'HelveticaInserat';
+	font-size: 20px;
 }
 #hidden-box {
 	display:none;

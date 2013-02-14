@@ -71,7 +71,7 @@ function lookup(inputString) {
 	}
 	$(function () {
 		$("#suggestions").fadeOut();
-		$("#feedback").fadeOut();
+		//$("#feedback").fadeOut();
 		var w = $(window).width();
 		var h = $(window).height();
 		$("body").keydown(function (event) {
@@ -566,10 +566,6 @@ function lookup(inputString) {
 				$("#feedback").show();
 				$("#feedback").attr("class", "overlayon");
 		});
-		$("#feedback").click(function () {
-				$("#feedback").hide();
-				$("#feedback").attr("class", "overlayoff");
-		});
 		$("#gallery").click(function () {
 			$("#gallery").hide();
 			$("#gallery").attr("class", "overlayoff");
@@ -609,7 +605,33 @@ function lookup(inputString) {
 			$(this).css({"border-bottom":"0px solid #444	"});
 		}
 		});
-		
+		$("#feedback-submit").click(function(){
+	      	$.ajax({
+				url: "/" + subDir + "/manager/feedback.php",
+				data: {
+					"name": $("#feedback input.nameentry").val(),
+					"email": $("#feedback input.emailentry").val(),
+					"feedback": $("#feedback textarea.feedbackentry").val()
+				},
+				type: "POST",
+				success: function (d) {
+					if(d==1) {
+						$("#fbmessgage").text("Thank You!");
+						alert("Thank You!")
+					}
+					else {
+						$("#fbmessgage").text("Sorry. Please try again.");
+						alert("Sorry. Please try again later.");
+					}
+					$("#feedback").hide();
+	      			$("#feedback").attr("class", "overlayoff");
+				}
+			});
+	    });
+	    $("#feedback-cancel").click(function(){
+	    	$("#feedback").hide();
+	      	$("#feedback").attr("class", "overlayoff");
+	    });
 		$("#font-pane").bind('mousewheel', function(event) {
     		if (event.originalEvent.wheelDelta >= 0) {
         			if($("#wrapper").attr("class")!="support-down") {
@@ -632,5 +654,5 @@ function lookup(inputString) {
     	    $(this).attr('title', $(this).data('title'));
     });
 		loadArt();
-	});
+	});    
 })(window);

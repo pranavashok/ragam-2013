@@ -260,9 +260,11 @@
 	</div>
 	<div class="pane" id="support-pane">
 		<div id="feedback">
+		<input class="nameentry" type="text" name="name" title="name" placeholder="name" onblur="inputBlur(this)" />
         <input class="emailentry" type="email" name="email" title="email" placeholder="email" onblur="inputBlur(this)" />
-		<textarea class="feedbackentry" name="feedback" title="feedback" placeholder="Please enter your feedback here." onblur="inputBlur(this)"></textarea>
-		<!--<input type="submit" "feedbacksubmit" value="Submit" />-->
+		<textarea class="feedbackentry" name="feedback" title="feedback" placeholder="Please enter your feedback here." onblur="inputBlur(this)"></textarea><br/>
+		<a id="feedback-submit" href="#">Submit</a>
+		<a id="feedback-cancel" href="#">Cancel</a>
 		</div>
 		<div id="footer_inner">
 			<div id="supportpane_top">
@@ -373,7 +375,7 @@ style="text-decoration:none">brochure</a></span>
 		<hr style="border-top: 1px dotted #ccc">
 			<div id="menu_bot">
 				<div id="nitc_details">
-				<span id="nitc_addr">National Institute of Technology Calicut.<a href="http://nitc.ac.in">http://nitc.ac.in</a></span><span id="menubotlinks"> <a href="#credits">Credits</a> | <span class="feedback_link">Feedback</span> | <a href="#sitemap">Sitemap</a></span>
+				<span id="nitc_addr">National Institute of Technology Calicut. <a href="http://nitc.ac.in">http://nitc.ac.in</a></span><span id="menubotlinks"> <a href="#credits">Credits</a> | <a class="feedback_link" href="#">Feedback</a> | <a href="#sitemap">Sitemap</a></span>
 				</div>			
 			</div>
 	</div>
