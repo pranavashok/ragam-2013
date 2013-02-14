@@ -13,17 +13,17 @@
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.min.js"></script>-->
-	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.jquery.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.dynamic-dom.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.proximity.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotateCompressed.2.2.js"></script>-->
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotateCompressed.2.2.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.history.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/min.js"></script>
-	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/script.js"></script>
+	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/min.js"></script>-->
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/script.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.nanoscroller.min.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>-->
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-tween.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-graphics.js"></script>
@@ -255,10 +255,8 @@
 		<input class="nameentry" type="text" name="name" title="name" placeholder="name" onblur="inputBlur(this)" />
         <input class="emailentry" type="email" name="email" title="email" placeholder="email" onblur="inputBlur(this)" />
 		<textarea class="feedbackentry" name="feedback" title="feedback" placeholder="Please enter your feedback here." onblur="inputBlur(this)"></textarea><br/>
-		<a id="feedback-submit" href="#">
-			Submit
-				<!--	<img src="<?php echo $subDir; ?>img/submit.png" /> -->
-		</a>
+		<a id="feedback-submit" href="#">Submit</a>
+		<a id="feedback-cancel" href="#">Cancel</a>
 		</div>
 		<div id="footer_inner">
 			<div id="supportpane_top">
@@ -369,7 +367,7 @@ style="text-decoration:none">brochure</a></span>
 		<hr style="border-top: 1px dotted #ccc">
 			<div id="menu_bot">
 				<div id="nitc_details">
-				<span id="nitc_addr">National Institute of Technology Calicut.<a href="http://nitc.ac.in">http://nitc.ac.in</a></span><span id="menubotlinks"> <a href="#credits">Credits</a> | <span class="feedback_link">Feedback</span> | <a href="#sitemap">Sitemap</a></span>
+				<span id="nitc_addr">National Institute of Technology Calicut. <a href="http://nitc.ac.in">http://nitc.ac.in</a></span><span id="menubotlinks"> <a href="#credits">Credits</a> | <a class="feedback_link" href="#">Feedback</a> | <a href="#sitemap">Sitemap</a></span>
 				</div>			
 			</div>
 	</div>

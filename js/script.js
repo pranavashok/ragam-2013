@@ -605,7 +605,32 @@ function lookup(inputString) {
 			$(this).css({"border-bottom":"0px solid #444	"});
 		}
 		});
-		
+		$("#feedback-submit").click(function(){
+			alert($("#feedback input.nameentry").val());
+			alert($("#feedback input.emailentry").val());
+			alert($("#feedback textarea.feedbackentry").val());
+	      	$.ajax({
+				url: "/" + subDir + "/manager/feedback.php",
+				data: {
+					"name": $("#feedback input.nameentry").val(),
+					"email": $("#feedback input.emailentry").val(),
+					"feedback": $("#feedback textarea.feedbackentry").val()
+				},
+				type: "POST",
+				success: function (d) {
+					if(d==1)
+						$("#fbmessgage").text("Thank You!");
+					else
+						$("#fbmessgage").text("Sorry. Please try again.");
+					$("#feedback").hide();
+	      			$("#feedback").attr("class", "overlayoff");
+				}
+			});
+	    });
+	    $("#feedback-cancel").click(function(){
+	    	$("#feedback").hide();
+	      	$("#feedback").attr("class", "overlayoff");
+	    });
 		$("#font-pane").bind('mousewheel', function(event) {
     		if (event.originalEvent.wheelDelta >= 0) {
         			if($("#wrapper").attr("class")!="support-down") {
@@ -628,27 +653,5 @@ function lookup(inputString) {
     	    $(this).attr('title', $(this).data('title'));
     });
 		loadArt();
-	});
-	$("#feedback-submit").click(function(){
-		alert("clicked submit");
-      	$.ajax({
-			url: "/" + subDir + "/manager/feedback.php",
-			data: {
-				"name": $("#feedback input.nameentry").text(),
-				"email": $("#feedback input.emailentry").text(),
-				"feedback": $("#feedback textarea.feedbackentry").text()
-			},
-			type: "POST",
-			success: function (d) {
-				if(d==1)
-					$("#fbmessgage").text("Thank You!");
-				else
-					$("#fbmessgage").text("Sorry. Please try again.");
-				$("#feedback").hide();
-      			$("#feedback").attr("class", "overlayoff");
-			}
-		});
-      	
-    });
-    
+	});    
 })(window);
