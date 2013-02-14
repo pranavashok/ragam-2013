@@ -30,6 +30,14 @@
 	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/shortcut.js"></script>-->
 	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
 	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+    <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+    <ShortName>Search </ShortName>
+    <Description>Search Ragam 2013</Description>
+    <Tags>ragam website events proshows</Tags>
+    <Contact>info@ragam.org.in</Contact>
+    <Url type="application/rss+xml" 
+        template="http://example.com/?q={searchTerms}&amp;pw={startPage?}&amp;format=rss"/>
+    </OpenSearchDescription>
 </head>
 <body>
 	
