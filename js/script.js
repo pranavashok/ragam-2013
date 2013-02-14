@@ -606,9 +606,6 @@ function lookup(inputString) {
 		}
 		});
 		$("#feedback-submit").click(function(){
-			alert($("#feedback input.nameentry").val());
-			alert($("#feedback input.emailentry").val());
-			alert($("#feedback textarea.feedbackentry").val());
 	      	$.ajax({
 				url: "/" + subDir + "/manager/feedback.php",
 				data: {
