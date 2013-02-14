@@ -36,7 +36,7 @@
     <Tags>ragam website events proshows</Tags>
     <Contact>info@ragam.org.in</Contact>
     <Url type="application/rss+xml" 
-        template="http://example.com/?q={searchTerms}&amp;pw={startPage?}&amp;format=rss"/>
+        template="http://www.ragam.org.in/2013/?q={searchTerms}&amp;pw={startPage?}&amp;format=rss"/>
     </OpenSearchDescription>
 </head>
 <body>
