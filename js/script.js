@@ -623,6 +623,7 @@ function lookup(inputString) {
 						$("#fbmessgage").text("Sorry. Please try again.");
 						alert("Sorry. Please try again later.");
 					}
+					alert(d);
 					$("#feedback").hide();
 	      			$("#feedback").attr("class", "overlayoff");
 				}
