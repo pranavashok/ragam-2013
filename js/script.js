@@ -615,10 +615,14 @@ function lookup(inputString) {
 				},
 				type: "POST",
 				success: function (d) {
-					if(d==1)
+					if(d==1) {
 						$("#fbmessgage").text("Thank You!");
-					else
+						alert("Thank You!")
+					}
+					else {
 						$("#fbmessgage").text("Sorry. Please try again.");
+						alert("Sorry. Please try again later.");
+					}
 					$("#feedback").hide();
 	      			$("#feedback").attr("class", "overlayoff");
 				}
