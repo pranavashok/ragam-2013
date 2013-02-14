@@ -649,6 +649,6 @@ function lookup(inputString) {
 			}
 		});
       	
-    )};
+    });
     
 })(window);
