@@ -8,7 +8,8 @@ $query1=$mysqli->query("SELECT name,longdesc,contacts,shortdesc FROM events WHER
 
 $eve = $query1->fetch_assoc();
 $data['name']=$eve['name'];
-$data['content']=$eve['longdesc']."<br/><br/><strong>Contacts</strong><br/><br/>".$eve['contacts'];
+$content = preg_replace("/<img[^>]+\>/i", "", $eve['longdesc']); 
+$data['content']=$content."<br/><br/><strong>Contacts</strong><br/><br/>".$eve['contacts'];
 $data['content']=preg_replace("/\|\|sec\|\|/","<br/><br/><strong>",$data['content']);
 $data['content']=preg_replace("/\|\|ttl\|\|/","</strong><br/><br/>",$data['content']);
 
