@@ -27,7 +27,6 @@
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-tween.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-graphics.js"></script>
-	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/shortcut.js"></script>-->
 	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
 	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
     <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
@@ -43,6 +42,7 @@
 	
 	<div id="light"></div>
 	<div id="construction">coming soon</div>
+	<div id="notfound">Sorry<br /><span class="small">The page you requested is unavailable. Go back to the homepage and try again.</span></div>
 	<ul class="spinner">
 		<li></li>
 		<li></li>
@@ -260,7 +260,7 @@
 
 		</section >
 	</div>
-	<div class="pane" id="support-pane">
+	<div id="support-pane">
 		<div id="feedback">
 		<input class="nameentry" type="text" name="name" title="name" placeholder="name" onblur="inputBlur(this)" />
         <input class="emailentry" type="email" name="email" title="email" placeholder="email" onblur="inputBlur(this)" />

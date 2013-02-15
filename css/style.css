@@ -64,7 +64,7 @@
 	left:0px;
 	opacity:0;
 }
-#construction {
+#construction, #notfound {
 	font-family: HelveticaInserat;
 	font-size: 50px;
 	text-align: center;
@@ -79,6 +79,12 @@
 	text-transform: uppercase;
 	display: none;
 	background: rgba(255,255,255,0.2);
+}
+#notfound {
+	padding-top: 20%;
+}
+#notfound span.small {
+	font-size:30px;
 }
 .shortdesc{
 	display:none;
