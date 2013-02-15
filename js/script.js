@@ -337,6 +337,8 @@ function lookup(inputString) {
 					loadingAnimation(false);
 				} //Endif sponsors
 				else {
+					$("#notfound").show();
+					$("#wrapper").attr("class", "blur");
 					//Go to 404
 				}
 			}
@@ -367,6 +369,13 @@ function lookup(inputString) {
 		$("#construction").click(function() {
 			$("#construction").fadeOut();
 			$("#wrapper").attr("class", "");
+		});
+		$("#notfound").click(function() {
+			$("#notfound").fadeOut();
+			History.pushState({
+				timestamp: (new Date().getTime())
+			}, "Ragam 2013 | National Institute of Technology Calicut", "/" + subDir + "/");
+			$("#wrapper").removeAttr("class", "blur");
 		});
 		$("#mainlinks li").click(function () {
 			title = $(this).data('title');
@@ -510,7 +519,7 @@ function lookup(inputString) {
 			}, "Ragam 2013 | National Institute of Technology Calicut", "/" + subDir + "/");
 			$("#font-pane").show();
 			$("#mainmenu-pane").show();
-			$("#support-pane").fadeIn();
+			//$("#support-pane").fadeIn();
 			$("#content-wrapper-events").fadeOut();
 		});
 
