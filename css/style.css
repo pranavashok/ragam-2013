@@ -960,6 +960,10 @@ a#login-link {
     border: none;
     background: #ccc url('../img/iconsprite.png') 0px -128px no-repeat;
 }
+.submit_login {
+	color:transparent;
+	visibility: hidden;
+}
 #login-form-wrapper #tip {
 	font-family: 'HelveticaLightCondensed';
 	font-size: 20px;

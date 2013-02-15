@@ -6,8 +6,8 @@
 	<link href="<?php echo $subDir; ?>css/animations.css" rel="stylesheet"/>
 	<link href="<?php echo $subDir; ?>css/nanoscroller.css" rel="stylesheet" > 
 	<link href="<?php echo $subDir; ?>css/favicon.ico" rel="icon" type="image/x-icon" />
-	<link rel="search" type="application/opensearchdescription+xml" title="Search Ragam 2013 Website" href="/opensearch.xml">
-	
+	<link rel="search" type="application/opensearchdescription+xml" title="Search Ragam 2013 Website" href="js/opensearch.xml">
+
 	<!-- gallery.js and shorcut.js only loads when initiated with their respective handler -->
 	<!-- prefixfree, proximity, easing, rotate, script, nanoscroller and address are minified -->
 
@@ -98,12 +98,14 @@
 		<div id="tip">press enter to log in...</div>
 	</div>
 	<div id="signup-form-wrapper">
+		<form action="register.php" method="post">
 		<input class="nameentry" type="text" name="fullname" title="Full Name" placeholder="full name" onblur="inputBlur(this)" />
 		<input class="emailentry" type="email" name="email" title="Email" placeholder="email" onblur="inputBlur(this)" />
 		<input class="passwordentry" type="password" name="password" title="Password" placeholder="password" onblur="inputBlur(this)" />
 		<input class="collegeentry" type="text" name="college" title="College" placeholder="college" />
 		<input class="phoneentry" type="text" name="phone" title="Phone" placeholder="phone" />
-
+		<input class="submit_login" type="submit" name="Submit" value="Submit" /> 
+        </form>
 		<div id="tip">press enter to register...</div>
 	</div>
 	
