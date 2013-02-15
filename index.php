@@ -6,6 +6,7 @@
 	<link href="<?php echo $subDir; ?>css/animations.css" rel="stylesheet"/>
 	<link href="<?php echo $subDir; ?>css/nanoscroller.css" rel="stylesheet" > 
 	<link href="<?php echo $subDir; ?>css/favicon.ico" rel="icon" type="image/x-icon" />
+	<meta name="description" content="Ragam `13-The annual inter-college fest conducted by the National Institute of Technology, Calicut.">
 	<link rel="search" type="application/opensearchdescription+xml" title="Search Ragam 2013 Website" href="js/opensearch.xml">
 
 	<!-- gallery.js and shorcut.js only loads when initiated with their respective handler -->
@@ -29,14 +30,6 @@
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-graphics.js"></script>
 	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
 	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
-    <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
-    <ShortName>Search </ShortName>
-    <Description>Search Ragam 2013</Description>
-    <Tags>ragam website events proshows</Tags>
-    <Contact>info@ragam.org.in</Contact>
-    <Url type="application/rss+xml" 
-        template="http://www.ragam.org.in/2013/?q={searchTerms}&amp;pw={startPage?}&amp;format=rss"/>
-    </OpenSearchDescription>
 </head>
 <body>
 	
