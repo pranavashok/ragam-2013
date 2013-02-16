@@ -127,11 +127,11 @@
 	position:absolute;
 	left:20px;
 	top:43%;
-	height:325px;
+	height:400px;
 }
 #logo {
     left:20px;
-    top:47%;
+    top:45%;
 	position: absolute;
    	transform: scale(0.7,0.7);
 }
@@ -954,6 +954,9 @@ a#login-link {
     border: none;
     background: #ccc url('../img/iconsprite.png') 0px 0px no-repeat;
 }
+.submit_login {
+	visibility: hidden;
+}
 #signup-form-wrapper input.phoneentry {
 	padding: 5px 0 0 40px;
 	z-index: 30;
@@ -966,10 +969,6 @@ a#login-link {
     color:#555;
     border: none;
     background: #ccc url('../img/iconsprite.png') 0px -128px no-repeat;
-}
-.submit_login {
-	color:transparent;
-	visibility: hidden;
 }
 #login-form-wrapper #tip {
 	font-family: 'HelveticaLightCondensed';
@@ -1067,7 +1066,7 @@ a#login-link {
 
 #support-pane a{
 	text-decoration: none;
-	color: #000;
+	color: rgb(82, 121, 179);
 }
 
 #menu_tab
