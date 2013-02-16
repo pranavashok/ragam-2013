@@ -15,22 +15,22 @@
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.min.js"></script>-->
-	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
+<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.jquery.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.dynamic-dom.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.proximity.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotateCompressed.2.2.js"></script>-->
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotateCompressed.2.2.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.history.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/min.js"></script>
-	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/script.js"></script>
+	<!-- <script type="text/javascript" src="<?php echo $subDir; ?>js/min.js"></script>-->
+	-<script type="text/javascript" src="<?php echo $subDir; ?>js/script.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.nanoscroller.min.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>-->
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-tween.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-graphics.js"></script>
-	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
-	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
 <body>
 	
@@ -168,9 +168,20 @@
 				proshows
 			</div>
 			<div id="content-container-proshows">
+
 				<div id="content-wrapper-proshows">
-					<div id="content-heading-proshows">
+				<div id="proshow-links">
+				<ul>
+				<li id="shankar">Shankar Mahadevan</li> |
+				<li id="tanvishah">Tanvi Shah</li> |
+				<li id="bennet">Bennet Band</li> |
+				<li id="haricharan">Hari Charan</li>
+				</ul>
+				</div>
+					<div id="content-heading-proshows">				
+
 					</div>
+
 					<div id="content-content-wrapper-proshows" class="nano">
 						<div id="content-content-proshows" class="content">
 							We give you: the Nite of the Year. <strong>Shankar Mahadevan</strong> at NIT Calicut. The National Award winning singer and music director is all set to leave the crowds <em>Breathless</em> at NIT Calicut. The creator of music for <em>Vishwaroopam</em>, <em>Zindagi Na Milegi Dobara</em> and more, the voice behind chart-toppers like <em>Kajra Re</em> and <em>Wake Up Sid</em>, this all-out entertainer will blow you away. So come prepared. Shankar Live. Only at Ragam '13.
@@ -180,8 +191,8 @@
 			</div>
 			<div id="painting-proshows">
 			</div>
-			<div id="mehendi">
-			</div>
+		<div id="mehendi">
+		</div> 
 		</section>
 
 

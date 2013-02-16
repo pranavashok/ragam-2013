@@ -490,6 +490,7 @@
 	display: block;
 	left:25%;
 	top: 30%;
+	z-index:9;
 }
 #content-heading-proshows {
 	position:relative;
@@ -542,9 +543,31 @@
 	top: 13%;
 	left: 15%;
 	transform: scale(0.6,0.6) rotate(-40deg);
-	z-index: 8;
+	z-index: 1;
 	opacity: 0.1;
 }
+
+#proshow-links{
+	 z-index:9;
+	 margin-left:10%;
+
+	 
+}
+#proshow-links ul{
+	list-style-type: none;
+}
+#proshow-links li{
+	cursor:hand;
+	font-size:15px;
+	color:#ce100c;
+	font-weight:bold;
+	display:inline;
+}
+
+
+
+
+
 #inner-pane-sponsors {
 	display: none;
 	position: absolute;
