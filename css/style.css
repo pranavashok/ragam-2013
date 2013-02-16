@@ -127,11 +127,11 @@
 	position:absolute;
 	left:20px;
 	top:43%;
-	height:325px;
+	height:400px;
 }
 #logo {
     left:20px;
-    top:47%;
+    top:45%;
 	position: absolute;
    	transform: scale(0.7,0.7);
 }
@@ -966,10 +966,6 @@ a#login-link {
     border: none;
     background: #ccc url('../img/iconsprite.png') 0px -128px no-repeat;
 }
-.submit_login {
-	color:transparent;
-	visibility: hidden;
-}
 #login-form-wrapper #tip {
 	font-family: 'HelveticaLightCondensed';
 	font-size: 20px;
@@ -1066,7 +1062,7 @@ a#login-link {
 
 #support-pane a{
 	text-decoration: none;
-	color: #000;
+	color: rgb(82, 121, 179);
 }
 
 #menu_tab
