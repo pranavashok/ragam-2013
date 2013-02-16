@@ -7,6 +7,7 @@
 	<link href="<?php echo $subDir; ?>css/nanoscroller.css" rel="stylesheet" > 
 	<link href="<?php echo $subDir; ?>css/favicon.ico" rel="icon" type="image/x-icon" />
 	<meta name="description" content="Ragam `13-The annual inter-college fest conducted by the National Institute of Technology, Calicut.">
+	<meta name="keywords" content="ragam, nitc, national institute of technology, cultural fest, cultural, fest, college,ragam, tathva, Ragam, shankar, mahadevan, shankar mahadevan, ">
 	<link rel="search" type="application/opensearchdescription+xml" title="Search Ragam 2013 Website" href="js/opensearch.xml">
 
 	<!-- gallery.js and shorcut.js only loads when initiated with their respective handler -->
@@ -92,11 +93,11 @@
 	</div>
 	<div id="signup-form-wrapper">
 		<form action="register.php" method="post">
-		<input class="nameentry" type="text" name="fullname" title="Full Name" placeholder="full name" onblur="inputBlur(this)" />
-		<input class="emailentry" type="email" name="email" title="Email" placeholder="email" onblur="inputBlur(this)" />
-		<input class="passwordentry" type="password" name="password" title="Password" placeholder="password" onblur="inputBlur(this)" />
-		<input class="collegeentry" type="text" name="college" title="College" placeholder="college" />
-		<input class="phoneentry" type="text" name="phone" title="Phone" placeholder="phone" />
+		<input class="nameentry" type="text" name="fullname" id="fullname" title="Full Name" placeholder="full name" onblur="inputBlur(this)" />
+		<input class="emailentry" type="email" name="email" title="Email" id="email" placeholder="email" onblur="inputBlur(this)" />
+		<input class="passwordentry" type="password" name="password" title="Password" id="password" placeholder="password" onblur="inputBlur(this)" />
+		<input class="collegeentry" type="text" name="college" title="College" id="college" placeholder="college" />
+		<input class="phoneentry" type="text" name="phone" title="Phone" id="phone" placeholder="phone" />
 		<input class="submit_login" type="submit" name="Submit" value="Submit" /> 
         </form>
 		<div id="tip">press enter to register...</div>

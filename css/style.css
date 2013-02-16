@@ -954,6 +954,9 @@ a#login-link {
     border: none;
     background: #ccc url('../img/iconsprite.png') 0px 0px no-repeat;
 }
+.submit_login {
+	visibility: hidden;
+}
 #signup-form-wrapper input.phoneentry {
 	padding: 5px 0 0 40px;
 	z-index: 30;
