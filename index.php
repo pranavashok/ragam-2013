@@ -15,22 +15,22 @@
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.min.js"></script>-->
-<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
+	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.jquery.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.dynamic-dom.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.proximity.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotateCompressed.2.2.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotateCompressed.2.2.js"></script>-->
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.history.js"></script>
-	<!-- <script type="text/javascript" src="<?php echo $subDir; ?>js/min.js"></script>-->
-	-<script type="text/javascript" src="<?php echo $subDir; ?>js/script.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/min.js"></script>
+	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/script.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.nanoscroller.min.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>-->
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-tween.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-graphics.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
 </head>
 <body>
 	
@@ -172,10 +172,10 @@
 				<div id="content-wrapper-proshows">
 				<div id="proshow-links">
 				<ul>
-				<li id="shankar">Shankar Mahadevan</li> |
+				<li id="shankar">Shankar Mahadevan</li> <!-- |
 				<li id="tanvishah">Tanvi Shah</li> |
 				<li id="bennet">Bennet Band</li> |
-				<li id="haricharan">Hari Charan</li>
+				<li id="haricharan">Hari Charan</li>-->
 				</ul>
 				</div>
 					<div id="content-heading-proshows">				
@@ -368,14 +368,14 @@ style="text-decoration:none">brochure</a></span>
 				<form id="form" name="form" method="post" action="javascript:feedback()">
 				</form>
 				
-				<!--<p></p><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=nit+calicut&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=35.273162,79.013672&amp;vpsrc=0&amp;ie=UTF8&amp;hq=nit&amp;hnear=Kozhikode,+Kerala,+India&amp;t=m&amp;cid=14981244607500735704&amp;ll=11.321174,75.935268&amp;spn=0.058912,0.072956&amp;z=13&amp;iwloc=A" style="color:#ccc; float:left; text-decoration:none;text-align:right">View Larger Map</a><br><br/>
-				<iframe width="400" style="float:left" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=nit+calicut&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=35.273162,79.013672&amp;vpsrc=0&amp;ie=UTF8&amp;hq=nit&amp;hnear=Kozhikode,+Kerala,+India&amp;t=m&amp;cid=14981244607500735704&amp;ll=11.321174,75.935268&amp;spn=0.058912,0.072956&amp;z=13&amp;iwloc=A&amp;output=embed"></iframe><br>
-				-->
+				<p></p><br /><br/><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=nit+calicut&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=35.273162,79.013672&amp;vpsrc=0&amp;ie=UTF8&amp;hq=nit&amp;hnear=Kozhikode,+Kerala,+India&amp;t=m&amp;cid=14981244607500735704&amp;ll=11.321174,75.935268&amp;spn=0.058912,0.072956&amp;z=13&amp;iwloc=A" target="_blank" style="color:#ccc; float:left; text-decoration:none;text-align:right">
+				<img src="http://maps.google.com/maps/api/staticmap?center=NIT%20Calicut%2C%20Kerala%2C%20India&zoom=10&format=png&maptype=roadmap&mobile=false&markers=|color:Red|label:NIT%20Calicut|NIT%20Calicut%20Rajpath&size=400x350&key=AIzaSyBnNV0YsOYcye7rJK7eJS4px9eBtR_WE44&sensor=false" title="NIT Calicut Map"/></a><br>
+			
 				<div style="padding:0px 0px 0px 430px; align:right; font-size:10pt; ">
 
 				From Calicut Railway Station  (22 kms)<br><br>By Bus<br>  <i>Take a 10minute walk or get a rickshaw for a fare of INR 16 to Palayam bus stand  and board a bus to REC / NIT Calicut
 				<br><br>By Rickshaw<br>  Get a rickshaw from the Railway Station to NIT Calicut for a fare of INR 400 </i><br><br>By Taxi<br>  <i>You may get a taxi from the railway station to NIT Calicut for a fare of INR 500. </i><br><br><br>
-				<b>From Calicut Airport </b> <br><br>  Calicut Airport is located at Karipur, 27 Kms south-east of the city and it is  45 kms  from NIT Calicut. You can reach NIT Calicut by taxi from the Calicut Airport and the taxi fare is approximately ₹ 1000. <br><br>
+				<b>From Calicut Airport </b> <br><br>  Calicut Airport is located at Karipur, 27 Kms south-east of the city and it is  45 kms  from NIT Calicut. You can reach NIT Calicut by taxi from the Calicut Airport and the taxi fare is approximately &#8377; 1000. <br><br>
 				</div>
 
 				</div>

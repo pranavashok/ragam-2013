@@ -74,12 +74,18 @@ function lookup(inputString) {
 		//$("#feedback").fadeOut();
 		var w = $(window).width();
 		var h = $(window).height();
+		var flag=0;
 		$("body").keydown(function (event) {
 			if (event.which == 27) $("#shortcut").hide();
 			if (event.which >= 37 && event.which <= 40) { //If direction keys press
-				$.getScript('/'+subDir+'/js/shortcut.js', function() {
-  					$("#shortcut").show();
-				});
+				if(flag==0){
+					$.getScript('/'+subDir+'/js/shortcut.js', function() {
+  						$("#shortcut").show();
+  						flag=1;
+  					});
+				}
+				else
+					$("#shortcut").show();
 			}
 		});
 		History.Adapter.bind(window, 'statechange', function () { // Note: We are using statechange instead of popstate
