@@ -376,43 +376,33 @@ function lookup(inputString) {
 	    
 		
 // Proshows Links
-		$("#shankar").click( function(){
+		$("#popularnite").click( function(){
 			$("#painting-proshows").hide();
 			$("#content-content-proshows").hide();
 			$("#painting-proshows").css('background-image', 'url(\'img/shankar.jpg\')');
-			$("#content-content-proshows").text("We give you: the Nite of the Year. Shankar Mahadevan at NIT Calicut. The National Award winning singer and music director is all set to leave the crowds Breathless at NIT Calicut. The creator of music for Vishwaroopam, Zindagi Na Milegi Dobara and more, the voice behind chart-toppers like Kajra Re and Wake Up Sid, this all-out entertainer will blow you away. So come prepared. Shankar Live. Only at Ragam '13.");	
+			$("#content-content-proshows").html("We give you: the Popular Nite of the Year. <strong>Shankar Mahadevan</strong> at NIT Calicut. The National Award winning singer and music director is all set to leave the crowds <em>Breathless</em> at NIT Calicut. The creator of music for <em>Vishwaroopam</em>, <em>Zindagi Na Milegi Dobara</em> and more, the voice behind chart-toppers like <em>Kajra Re</em> and <em>Wake Up Sid</em>, this all-out entertainer will blow you away. So come prepared. Shankar Live. Only at Ragam '13.");	
 			$("#painting-proshows").fadeIn();
 			$("#content-content-proshows").fadeIn();
 
 		});
-		$("#tanvishah").click( function(){
+		$("#combonite").click( function(){
 			$("#painting-proshows").hide();
 			$("#content-content-proshows").hide();
-			$("#painting-proshows").css('background-image', 'url(\'img/tanvishah.jpg\')');
-			$("#content-content-proshows").text("Tanvi Shah Tanvi ShahTanvi Shah Tanvi Shah Tanvi Shah Tanvi Shah Tanvi Shah Tanvi Shah");	
+			$("#painting-proshows").css('background-image', 'url(\'img/combo.jpg\')');
+			$("#content-content-proshows").html("<strong>Haricharan</strong><br /><br />Trained Carnatic musician and popular playback singer <em>Haricharan</em>, the singer of chart toppers like <em>Thuli Thuli</em> from <em>Paiya</em>, <em>Vathilil Aa Vathilil</em> from <em>Ustad Hotel</em> and more, comes to Ragam '13. The voice that has taken South India by storm is all set to conquer Kerala.<br /><br /><strong>Tanvi Shah</strong><br /><br />Her musical journey started with <em>Fanaa</em>, and scaled spectacular heights with a Grammy Award for <em>Jai Ho</em>. This versatile young artiste has collaborated with <em>AR Rahman</em> on a wide range of popular songs from <em>Slumdog Millionaire</em> to <em>Delhi-6</em>. Presenting the gorgeous Tanvi Shah, first time at a college fest - Only at Ragam '13. <br /><br /><strong>Bennet and the Band</strong><br /><br /><em>Bennet and the Band</em> comprises of highly talented session artists and musicians with roots in eclectic genres and revolves around the founder member <em>Bennet</em>, who has beem a music composer and a performer for over 15 years. A symphony of opposites, Indian classical and jazz with overtones of progressive Rock – The Ragam Stage awaits.");
 			$("#painting-proshows").fadeIn();
 			$("#content-content-proshows").fadeIn();
 
 		});
-		$("#bennet").click( function(){
+		$("#pepperfest").click( function(){
 			$("#painting-proshows").hide();
 			$("#content-content-proshows").hide();
-			$("#content-content-proshows").text("Bennet Band Bennet Band Bennet Band Bennet Band");			
-			$("#painting-proshows").css('background-image', 'url(\'img/bennet.jpg\')');
+			$("#content-content-proshows").html("True to its past history as one of the biggest platforms for rock music in India, Ragam introduces the <strong>Pepper Fest</strong> – the ultimate stage. Witness the up-and-coming and what's new in the world of music, as bands from all over the country take the stage at Ragam '13.");			
+			$("#painting-proshows").css('background-image', 'url(\'img/pepperfest.jpg\')');
 			$("#painting-proshows").fadeIn();
 			$("#content-content-proshows").fadeIn();
 
 		});
-		$("#haricharan").click( function(){
-			$("#painting-proshows").hide();
-			$("#content-content-proshows").hide();
-			$("#content-content-proshows").text("Haricharan Haricharan Hari Charan Haricharan");	
-			$("#painting-proshows").css('background-image', 'url(\'img/haricharan.jpg\')');
-			$("#painting-proshows").fadeIn();
-			$("#content-content-proshows").fadeIn();
-
-		});
-
 
 
 		$(".nano").hover(function(){

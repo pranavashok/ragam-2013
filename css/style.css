@@ -510,11 +510,11 @@
 	width:80%;
 	right:5%;
 	height:100%;
-	padding:30px;
+	/*padding:30px;*/
 	display:block;
 	color: black;
 	left:0;
-	top:5%;
+	/*top:5%;*/
 	outline:none;
 	font-size: 18px;
 	line-height: 26px;
@@ -523,6 +523,7 @@
 #content-content-wrapper-proshows.nano {
 	background:transparent;
 	z-index: 9;
+	height:87%;
 }
 #painting-proshows {
 	background:#f7f7f7 url('../img/shankar.jpg') no-repeat 0px 0px;

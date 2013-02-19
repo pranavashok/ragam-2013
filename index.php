@@ -172,10 +172,9 @@
 				<div id="content-wrapper-proshows">
 				<div id="proshow-links">
 				<ul>
-				<li id="shankar">Shankar Mahadevan</li> <!-- |
-				<li id="tanvishah">Tanvi Shah</li> |
-				<li id="bennet">Bennet Band</li> |
-				<li id="haricharan">Hari Charan</li>-->
+				<li id="popularnite">Popular Nite</li>  |
+				<li id="combonite">Combo Nite</li> |
+				<li id="pepperfest">Pepper Fest</li>
 				</ul>
 				</div>
 					<div id="content-heading-proshows">				
@@ -184,7 +183,7 @@
 
 					<div id="content-content-wrapper-proshows" class="nano">
 						<div id="content-content-proshows" class="content">
-							We give you: the Nite of the Year. <strong>Shankar Mahadevan</strong> at NIT Calicut. The National Award winning singer and music director is all set to leave the crowds <em>Breathless</em> at NIT Calicut. The creator of music for <em>Vishwaroopam</em>, <em>Zindagi Na Milegi Dobara</em> and more, the voice behind chart-toppers like <em>Kajra Re</em> and <em>Wake Up Sid</em>, this all-out entertainer will blow you away. So come prepared. Shankar Live. Only at Ragam '13.
+							We give you: the Popular Nite of the Year. <strong>Shankar Mahadevan</strong> at NIT Calicut. The National Award winning singer and music director is all set to leave the crowds <em>Breathless</em> at NIT Calicut. The creator of music for <em>Vishwaroopam</em>, <em>Zindagi Na Milegi Dobara</em> and more, the voice behind chart-toppers like <em>Kajra Re</em> and <em>Wake Up Sid</em>, this all-out entertainer will blow you away. So come prepared. Shankar Live. Only at Ragam '13.
 						</div>
 					</div>
 				</div>
@@ -332,14 +331,14 @@ style="text-decoration:none">brochure</a></span>
 					<tr>
 					<td>
 					<span class="contactname"> Vijeesh VN</span> <br>
-					<span class="contacttitle">Event Coordinator</span> <br>
+					<span class="contacttitle">Events Coordinator</span> <br>
 					<span class="contactphone">+91 974 659 4938</span> <br>
 					<span class="contactemail"><a  href="mailto:vijeesh@ragam.org.in">vijeesh@ragam.org.in</a></span>  <br>	
 					<br><br>
 					</td>
 					<td>
 					<span class="contactname"> Nitheesh I S</span> <br>
-					<span class="contacttitle">Event Coordinator</span> <br>
+					<span class="contacttitle">Events Coordinator</span> <br>
 					<span class="contactphone">+91 949 726 9030</span> <br>
 					<span class="contactemail"><a  href="mailto:nitheeshis@ragam.org.in">nitheeshis@ragam.org.in</a></span>  <br>	
 					<br><br>
@@ -355,12 +354,65 @@ style="text-decoration:none">brochure</a></span>
 					</tbody></table>
 					</div>
 				<div id="info">
-				<!--<b>Q1. What is question one? </b> <br/>
-				This is the answer to the question<br/><br/>
-				<b>Q2. What is question one? </b> <br/>
-				This is the answer to the question<br/><br/>
-				<b>Q3. What is question one? </b> <br/>
-				This is the answer to the question		<br/>	<br/>	-->
+				<ol>
+					<li><strong>What to do at Ragam '13?</strong></li> 
+
+					With over 5 lakhs to be won in 40+ events, this is the opportunity for you to make it big. Various workshops and exhibitions on art and art forms will be conducted throughout the 3 days. The icing on the cake will be the proshows by Shankar Mahadevan, a combo performance by Haricharan and Tanvi Shaha accompanied by Bennet and the band. For the first time ever we introduce 'Pepper Fest', the ultimate rock night by upcoming bands. 
+					<br /><br />
+					<li><strong>Where to register for Ragam '13?</strong></li> 
+
+					Online registration has already begun. You can sign up directly from this site (Home Page -> Sign Up). Registration can also be done at the Registration desk (MB 206) which will be functioning throughout the 3 days of Ragam. The certificates will also be issued at the Registration Desk.
+					<br /><br />
+					<li><strong>How to avail rooms for outsiders?</strong></li> 
+
+					We have a dedicated set of team that will ensure your pleasant stay. A Hospitality Desk will be working 24 hours a day during Ragam in MB 207. 
+
+					<br /><br />
+					<li><strong>To eat or not to eat?</strong></li> 
+
+					No Ragam is complete without its array of food stalls that serve all kinds of cuisine. In addition to all that, we have the Main Canteen which is right outside the Main Gate and also the Mini Canteen (which houses an AFC and Amul outlet among others). Apart from these, one could also try out the various restaurants in Kattangal, the nearest junction.
+					<br /><br />
+					<li><strong>Availability of ATMs?</strong></li> 
+
+					There are 4 ATMs within the campus. There is one ATM near the centre circle, within the college; another ATM next to the Main Ladies Hostel Gate; a Punjab National Bank ATM in the School of Management Studies campus and the farthest one is right next to SBI which is a 5 minutes' walk from the main gate.
+					 <br /><br />
+					<li><strong>Queries regarding events?</strong></li> 
+
+					The event description and rules are given in the Events section of the website. For any queries regarding individual events, feel free to contact the event co-ordinators which has been listed. It is highly recommended that you keep the contact numbers of the respective event co-ordinators so that any doubts regarding clash of events, schedule, etc. can be sorted out. An exclusive PC Room will be set up in MB 105, for further clarifications.
+
+
+					<br /><br />
+					<li><strong>Entries for proshow?</strong></li> 
+
+					For non-NIT students, tickets for the proshow will be sold during the 3 days of Ragam at the MB Lobby. This ticket along with your respective college ID card will be adequate. For NIT-C students, the college ID card and the Hostel ID card (or slip from Hostel Ofiice if you are a day scholar) will suffice.
+					 <br /><br />
+					<li><strong>Acronyms used that you can familiarise with?</strong></li> 
+
+					Every college has its own set of names that it associates with its buildings/spots. Here are our famous few:  
+					ELHC - Electronics Lecture Hall Complex 
+					NLHC - New Lecture Hall Complex 
+					MB - Main Building 
+					DB - Department Building 
+					CC - Central Computing Centre (yes, one C is missing, :D)
+					MC - Main Canteen 
+					Pits - the steps in front of the ELHC 
+					MBDH - MB Drawing Hall
+					AB - Academic Building, apart from the common few like the 
+					OAT - Open Air Theatre 
+					Audi - Auditorium etc.
+					<br /><br />
+					<li><strong>Places to see in and around Calicut?</strong></li> 
+
+					Since it is an opportunity you get to visit Calicut, why not make it a tour to remember? There are a lot of places one could visit- 
+					Calicut Beach 
+					Kappad Beach (THE Vasco da Gama beach)
+					Beypore
+					Sarovaram Bio-Park and you can even stopover at Wayanad which is a 1 hour drive from campus. 
+					<br /><br />
+					<li><strong>For further details?</strong></li> 
+
+					You can contact us at info@ragam.org.in, and even approach the Help Desk which will be located in the MB Lobby during Ragam.
+				</ol>
 				</div>
 
 				<div id="reachus">
