@@ -404,7 +404,13 @@ style="text-decoration:none">brochure</a></span>
 	<div id="hidden-subsubmenu-links">
 	</div>
 	<div id="hidden-art">
-		
+		<img id='general' />
+		<img id='fine_arts' />
+		<img id='music' />
+		<img id='dance' />
+		<img id='literary' />
+		<img id='dramatics' />
+		<img id='thematic' />
 	</div>
 </div>
 </body>
