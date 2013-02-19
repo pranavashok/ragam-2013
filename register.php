@@ -45,12 +45,19 @@ $college=$_POST['college'];
 
 $phone=$_POST['phone'];
 
+
+
  
 //=============To Encrypt Password===================
 $password    =    md5($password);
 //============New Variable of Password is Now with an Encrypted Value========
  
- $query = mysql_query("INSERT INTO participants (`ragID`, `name`, `email`, `password`, `fb_tocken`, `college`, `phone`, `accommodation`, `timestamp`, `ip`) VALUES ('', '$fullname', '$email', '$password', '', '$college', '$phone', '', '".date('d-m-Y')."', '".$_SERVER['REMOTE_ADDR']."')");
+ $query = mysql_query("SELECT ragID from participants ORDER BY ragID DESC LIMIT 1");
+
+ $row = mysql_fetch_assoc($query);
+$maxragid = $row['ragID'];
+$maxragid++;
+ $query = mysql_query("INSERT INTO participants (`ragID`, `name`, `email`, `password`, `fb_tocken`, `college`, `phone`, `accommodation`, `timestamp`, `ip`) VALUES ( '$maxragid', '$fullname', '$email', '$password', '', '$college', '$phone', '', '".date('d-m-Y')."', '".$_SERVER['REMOTE_ADDR']."')");
 //$query = mysql_query ("INSERT INTO participants (name, email, password, college, phone) VALUES( '$fullname', '$email', '$password', '$college', '$phone')"); 
 
 //mysql_query("query");
