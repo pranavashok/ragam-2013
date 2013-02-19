@@ -39,17 +39,6 @@ function loadingAnimation(b) {
 	}
 }
 
-function loadArt() {
-	$("#hidden-art").append($("<img id='general'/>").attr("src", "/" + subDir + "/img/general.jpg"));
-	$("#hidden-art").append($("<img id='fine_arts'/>").attr("src", "/" + subDir + "/img/fine_arts.jpg"));
-	$("#hidden-art").append($("<img id='music'/>").attr("src", "/" + subDir + "/img/music.jpg"));
-	$("#hidden-art").append($("<img id='dance'/>").attr("src", "/" + subDir + "/img/dance.jpg"));
-	$("#hidden-art").append($("<img id='thematic'/>").attr("src", "/" + subDir + "/img/thematic.jpg"));
-	$("#hidden-art").append($("<img id='literary'/>").attr("src", "/" + subDir + "/img/literary.jpg"));
-	$("#hidden-art").append($("<img id='dramatics'/>").attr("src", "/" + subDir + "/img/dramatics.jpg"));
-
-}
-
 function lookup(inputString) {
 		if(inputString.length == 0) {
 			$('#suggestions').fadeOut(); // Hide the suggestions box
@@ -449,7 +438,7 @@ function lookup(inputString) {
 				tmp = tmp.replace(' ', '_');
 				
 				$("#painting-events").hide();
-				$("#painting-events").css('background-image', 'url("'+ $("img#"+tmp).attr("src") + '")');
+				$("#painting-events").css('background', $("img#"+tmp).css("background"));
 				if($('#inner-pane-events').attr('class')!='moveright')	
 					$("#painting-events").stop(true,true).fadeIn(250);
 				
@@ -719,6 +708,5 @@ function lookup(inputString) {
     	}).mouseout(function () {
     	    $(this).attr('title', $(this).data('title'));
     });
-		loadArt();
 	});    
 })(window);

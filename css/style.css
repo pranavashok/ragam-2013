@@ -1090,7 +1090,7 @@ a#login-link {
 
 #support-pane a{
 	text-decoration: none;
-	color: rgb(82, 121, 179);
+	color: #000;
 }
 
 #menu_tab
@@ -1363,4 +1363,39 @@ a#login-link {
 }
 #hidden-box {
 	display:none;
+}
+#hidden-art #thematic{
+	height:623px;
+	width:576px;
+	background:url('../img/images-sprite.jpg') 0 0;
+}
+#hidden-art #dramatics{
+	height:623px;
+	width:576px;
+	background:url('../img/images-sprite.jpg') 0 623;
+}
+#hidden-art #dance{
+	height:623px;
+	width:576px;
+	background:url('../img/images-sprite.jpg') 0 1246;
+}
+#hidden-art #fine_arts{
+	height:623px;
+	width:576px;
+	background:url('../img/images-sprite.jpg') 0 1869;
+}
+#hidden-art #general{
+	height:623px;
+	width:576px;
+	background:url('../img/images-sprite.jpg') 0 2492;
+}
+#hidden-art #literary{
+	height:623px;
+	width:576px;
+	background:url('../img/images-sprite.jpg') 0 3115;
+}
+#hidden-art #music{
+	height:623px;
+	width:576px;
+	background:url('../img/images-sprite.jpg') 0 3738;
 }

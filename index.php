@@ -92,7 +92,7 @@
 		<div id="tip">press enter to log in...</div>
 	</div>
 	<div id="signup-form-wrapper">
-		<form id="signupform" action="register2.php" method="post">
+		<form id="signupform" action="register.php" method="post">
 		<input class="nameentry" type="text" name="fullname" id="fullname" title="Full Name" placeholder="full name" onblur="inputBlur(this)" />
 		<input class="emailentry" type="email" name="email" title="Email" id="email" placeholder="email" onblur="inputBlur(this)" />
 		<input class="passwordentry" type="password" name="password" title="Password" id="password" placeholder="password" onblur="inputBlur(this)" />
@@ -434,7 +434,7 @@ style="text-decoration:none">brochure</a></span>
 		<hr style="border-top: 1px dotted #ccc">
 			<div id="menu_bot">
 				<div id="nitc_details">
-				<span id="nitc_addr">National Institute of Technology Calicut. <a href="http://nitc.ac.in">http://nitc.ac.in</a></span><span id="menubotlinks"> <a href="#credits">Credits</a> | <a class="feedback_link" href="#">Feedback</a> | <a href="#sitemap">Sitemap</a></span>
+				<span id="nitc_addr">National Institute of Technology Calicut. <a target="_blank" href="http://nitc.ac.in">http://nitc.ac.in</a></span><span id="menubotlinks"> <a href="#credits">Credits</a> | <a class="feedback_link" href="#">Feedback</a> | <a href="#sitemap">Sitemap</a></span>
 				</div>			
 			</div>
 	</div>
@@ -456,7 +456,13 @@ style="text-decoration:none">brochure</a></span>
 	<div id="hidden-subsubmenu-links">
 	</div>
 	<div id="hidden-art">
-		
+		<img id='general' />
+		<img id='fine_arts' />
+		<img id='music' />
+		<img id='dance' />
+		<img id='literary' />
+		<img id='dramatics' />
+		<img id='thematic' />
 	</div>
 </div>
 </body>
