@@ -710,7 +710,19 @@ function lookup(inputString) {
 				}
     		}
 		});
+		$("#signupform").submit(function () {
+			alert("hi");
+	        $.ajax({
+	            type: 'POST',
+	            url: "/" + subDir + "/register2.php",
+	            data: $("#signupform").serializeArray(),
+	            success: function (data) {
+	                alert(data);
+	            }
+	        });
 
+	        return false;
+    	});
 		$('[title]').mouseover(function () {
         	$(this).data('title', $(this).attr('title'));
         	$(this).attr('title', '');

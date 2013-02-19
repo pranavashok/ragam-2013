@@ -92,7 +92,7 @@
 		<div id="tip">press enter to log in...</div>
 	</div>
 	<div id="signup-form-wrapper">
-		<form action="register.php" method="post">
+		<form id="signupform" action="register2.php" method="post">
 		<input class="nameentry" type="text" name="fullname" id="fullname" title="Full Name" placeholder="full name" onblur="inputBlur(this)" />
 		<input class="emailentry" type="email" name="email" title="Email" id="email" placeholder="email" onblur="inputBlur(this)" />
 		<input class="passwordentry" type="password" name="password" title="Password" id="password" placeholder="password" onblur="inputBlur(this)" />
