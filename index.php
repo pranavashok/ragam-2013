@@ -7,6 +7,7 @@
 	<link href="<?php echo $subDir; ?>css/nanoscroller.css" rel="stylesheet" > 
 	<link href="<?php echo $subDir; ?>css/favicon.ico" rel="icon" type="image/x-icon" />
 	<meta name="description" content="Ragam `13-The annual inter-college fest conducted by the National Institute of Technology, Calicut.">
+	<meta name="keywords" content="ragam, nitc, national institute of technology, cultural fest, cultural, fest, college,ragam, tathva, Ragam, shankar, mahadevan, shankar mahadevan, ">
 	<link rel="search" type="application/opensearchdescription+xml" title="Search Ragam 2013 Website" href="js/opensearch.xml">
 
 	<!-- gallery.js and shorcut.js only loads when initiated with their respective handler -->
@@ -28,8 +29,8 @@
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-tween.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-graphics.js"></script>
-	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
-	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
 </head>
 <body>
 	
@@ -92,11 +93,11 @@
 	</div>
 	<div id="signup-form-wrapper">
 		<form action="register.php" method="post">
-		<input class="nameentry" type="text" name="fullname" title="Full Name" placeholder="full name" onblur="inputBlur(this)" />
-		<input class="emailentry" type="email" name="email" title="Email" placeholder="email" onblur="inputBlur(this)" />
-		<input class="passwordentry" type="password" name="password" title="Password" placeholder="password" onblur="inputBlur(this)" />
-		<input class="collegeentry" type="text" name="college" title="College" placeholder="college" />
-		<input class="phoneentry" type="text" name="phone" title="Phone" placeholder="phone" />
+		<input class="nameentry" type="text" name="fullname" id="fullname" title="Full Name" placeholder="full name" onblur="inputBlur(this)" />
+		<input class="emailentry" type="email" name="email" title="Email" id="email" placeholder="email" onblur="inputBlur(this)" />
+		<input class="passwordentry" type="password" name="password" title="Password" id="password" placeholder="password" onblur="inputBlur(this)" />
+		<input class="collegeentry" type="text" name="college" title="College" id="college" placeholder="college" />
+		<input class="phoneentry" type="text" name="phone" title="Phone" id="phone" placeholder="phone" />
 		<input class="submit_login" type="submit" name="Submit" value="Submit" /> 
         </form>
 		<div id="tip">press enter to register...</div>
@@ -167,9 +168,20 @@
 				proshows
 			</div>
 			<div id="content-container-proshows">
+
 				<div id="content-wrapper-proshows">
-					<div id="content-heading-proshows">
+				<div id="proshow-links">
+				<ul>
+				<li id="shankar">Shankar Mahadevan</li> <!-- |
+				<li id="tanvishah">Tanvi Shah</li> |
+				<li id="bennet">Bennet Band</li> |
+				<li id="haricharan">Hari Charan</li>-->
+				</ul>
+				</div>
+					<div id="content-heading-proshows">				
+
 					</div>
+
 					<div id="content-content-wrapper-proshows" class="nano">
 						<div id="content-content-proshows" class="content">
 							We give you: the Nite of the Year. <strong>Shankar Mahadevan</strong> at NIT Calicut. The National Award winning singer and music director is all set to leave the crowds <em>Breathless</em> at NIT Calicut. The creator of music for <em>Vishwaroopam</em>, <em>Zindagi Na Milegi Dobara</em> and more, the voice behind chart-toppers like <em>Kajra Re</em> and <em>Wake Up Sid</em>, this all-out entertainer will blow you away. So come prepared. Shankar Live. Only at Ragam '13.
@@ -179,8 +191,8 @@
 			</div>
 			<div id="painting-proshows">
 			</div>
-			<div id="mehendi">
-			</div>
+		<div id="mehendi">
+		</div> 
 		</section>
 
 
@@ -356,14 +368,14 @@ style="text-decoration:none">brochure</a></span>
 				<form id="form" name="form" method="post" action="javascript:feedback()">
 				</form>
 				
-				<!--<p></p><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=nit+calicut&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=35.273162,79.013672&amp;vpsrc=0&amp;ie=UTF8&amp;hq=nit&amp;hnear=Kozhikode,+Kerala,+India&amp;t=m&amp;cid=14981244607500735704&amp;ll=11.321174,75.935268&amp;spn=0.058912,0.072956&amp;z=13&amp;iwloc=A" style="color:#ccc; float:left; text-decoration:none;text-align:right">View Larger Map</a><br><br/>
-				<iframe width="400" style="float:left" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=nit+calicut&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=35.273162,79.013672&amp;vpsrc=0&amp;ie=UTF8&amp;hq=nit&amp;hnear=Kozhikode,+Kerala,+India&amp;t=m&amp;cid=14981244607500735704&amp;ll=11.321174,75.935268&amp;spn=0.058912,0.072956&amp;z=13&amp;iwloc=A&amp;output=embed"></iframe><br>
-				-->
+				<p></p><br /><br/><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=nit+calicut&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=35.273162,79.013672&amp;vpsrc=0&amp;ie=UTF8&amp;hq=nit&amp;hnear=Kozhikode,+Kerala,+India&amp;t=m&amp;cid=14981244607500735704&amp;ll=11.321174,75.935268&amp;spn=0.058912,0.072956&amp;z=13&amp;iwloc=A" target="_blank" style="color:#ccc; float:left; text-decoration:none;text-align:right">
+				<img src="http://maps.google.com/maps/api/staticmap?center=NIT%20Calicut%2C%20Kerala%2C%20India&zoom=10&format=png&maptype=roadmap&mobile=false&markers=|color:Red|label:NIT%20Calicut|NIT%20Calicut%20Rajpath&size=400x350&key=AIzaSyBnNV0YsOYcye7rJK7eJS4px9eBtR_WE44&sensor=false" title="NIT Calicut Map"/></a><br>
+			
 				<div style="padding:0px 0px 0px 430px; align:right; font-size:10pt; ">
 
 				From Calicut Railway Station  (22 kms)<br><br>By Bus<br>  <i>Take a 10minute walk or get a rickshaw for a fare of INR 16 to Palayam bus stand  and board a bus to REC / NIT Calicut
 				<br><br>By Rickshaw<br>  Get a rickshaw from the Railway Station to NIT Calicut for a fare of INR 400 </i><br><br>By Taxi<br>  <i>You may get a taxi from the railway station to NIT Calicut for a fare of INR 500. </i><br><br><br>
-				<b>From Calicut Airport </b> <br><br>  Calicut Airport is located at Karipur, 27 Kms south-east of the city and it is  45 kms  from NIT Calicut. You can reach NIT Calicut by taxi from the Calicut Airport and the taxi fare is approximately ₹ 1000. <br><br>
+				<b>From Calicut Airport </b> <br><br>  Calicut Airport is located at Karipur, 27 Kms south-east of the city and it is  45 kms  from NIT Calicut. You can reach NIT Calicut by taxi from the Calicut Airport and the taxi fare is approximately &#8377; 1000. <br><br>
 				</div>
 
 				</div>

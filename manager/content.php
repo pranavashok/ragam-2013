@@ -16,6 +16,7 @@ $data['content']=preg_replace("/\|\|ttl\|\|/","</strong><br/><br/>",$data['conte
 $data['content']=preg_replace("/(.+)\|\|0\|\|\|\|@\|\|(.+)/", "$1||0||",$data['content']);
 $data['content']=preg_replace("/\|\|@\|\|/","<br/>",$data['content']);
 $data['content']=preg_replace("/\|\|0\|\|/","@ragam.org.in <br/><br/>",$data['content']);
+$data['content']=preg_replace('!<img.*?src=".+".*?/>!i', '', $data['content']);
 $data['shortdesc']=$eve['shortdesc'];
 echo json_encode($data);
 ?>

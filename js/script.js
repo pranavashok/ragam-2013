@@ -74,12 +74,18 @@ function lookup(inputString) {
 		//$("#feedback").fadeOut();
 		var w = $(window).width();
 		var h = $(window).height();
+		var flag=0;
 		$("body").keydown(function (event) {
 			if (event.which == 27) $("#shortcut").hide();
 			if (event.which >= 37 && event.which <= 40) { //If direction keys press
-				$.getScript('/'+subDir+'/js/shortcut.js', function() {
-  					$("#shortcut").show();
-				});
+				if(flag==0){
+					$.getScript('/'+subDir+'/js/shortcut.js', function() {
+  						$("#shortcut").show();
+  						flag=1;
+  					});
+				}
+				else
+					$("#shortcut").show();
 			}
 		});
 		History.Adapter.bind(window, 'statechange', function () { // Note: We are using statechange instead of popstate
@@ -266,10 +272,17 @@ function lookup(inputString) {
 						$("#inner-pane-proshows").attr("class", "pane"); //Reset the inner-pane-proshows just before opening
 					$("#mainmenu-pane").attr("class", "moveout");
 					$("#font-pane").attr("class", "moveout");
-					$("#painting-proshows").fadeIn();
-					title = relativeUrl;
-					loadingAnimation(false);
+					if (relativeUrl.search("/") == -1) { //If it's a first level page
+						$("#painting-proshows").fadeIn();
+						title = relativeUrl;
+						loadingAnimation(false);
+					} else { //Its a second level url
+						$("#painting-proshows").fadeOut();
+						var n = relativeUrl.split("/");
+						eve = relativeUrl.split("/")[n.length - 1];
+					}
 				} //Endif proshows
+
 				else if(relativeUrl.split("/")[0]=="Showcase") {
 					//Showcase code
 					$(".pane").hide();
@@ -343,6 +356,7 @@ function lookup(inputString) {
 				}
 			}
 		});
+
 		$(window).bind('load', function () {
 			History.pushState({
 				timestamp: (new Date().getTime())
@@ -360,6 +374,47 @@ function lookup(inputString) {
 		        if (endIndex == startIndex) startIndex = -1;
 	    }, aniSpd);
 	    
+		
+// Proshows Links
+		$("#shankar").click( function(){
+			$("#painting-proshows").hide();
+			$("#content-content-proshows").hide();
+			$("#painting-proshows").css('background-image', 'url(\'img/shankar.jpg\')');
+			$("#content-content-proshows").text("We give you: the Nite of the Year. Shankar Mahadevan at NIT Calicut. The National Award winning singer and music director is all set to leave the crowds Breathless at NIT Calicut. The creator of music for Vishwaroopam, Zindagi Na Milegi Dobara and more, the voice behind chart-toppers like Kajra Re and Wake Up Sid, this all-out entertainer will blow you away. So come prepared. Shankar Live. Only at Ragam '13.");	
+			$("#painting-proshows").fadeIn();
+			$("#content-content-proshows").fadeIn();
+
+		});
+		$("#tanvishah").click( function(){
+			$("#painting-proshows").hide();
+			$("#content-content-proshows").hide();
+			$("#painting-proshows").css('background-image', 'url(\'img/tanvishah.jpg\')');
+			$("#content-content-proshows").text("Tanvi Shah Tanvi ShahTanvi Shah Tanvi Shah Tanvi Shah Tanvi Shah Tanvi Shah Tanvi Shah");	
+			$("#painting-proshows").fadeIn();
+			$("#content-content-proshows").fadeIn();
+
+		});
+		$("#bennet").click( function(){
+			$("#painting-proshows").hide();
+			$("#content-content-proshows").hide();
+			$("#content-content-proshows").text("Bennet Band Bennet Band Bennet Band Bennet Band");			
+			$("#painting-proshows").css('background-image', 'url(\'img/bennet.jpg\')');
+			$("#painting-proshows").fadeIn();
+			$("#content-content-proshows").fadeIn();
+
+		});
+		$("#haricharan").click( function(){
+			$("#painting-proshows").hide();
+			$("#content-content-proshows").hide();
+			$("#content-content-proshows").text("Haricharan Haricharan Hari Charan Haricharan");	
+			$("#painting-proshows").css('background-image', 'url(\'img/haricharan.jpg\')');
+			$("#painting-proshows").fadeIn();
+			$("#content-content-proshows").fadeIn();
+
+		});
+
+
+
 		$(".nano").hover(function(){
 			$(this).nanoScroller();
 		});
