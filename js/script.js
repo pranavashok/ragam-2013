@@ -442,6 +442,7 @@ function lookup(inputString) {
 				
 				$("#painting-events").hide();
 				$("#painting-events").css('background', $("img#"+tmp).css("background"));
+				$("#painting-events").css('background-repeat', 'no-repeat repeat');
 				if($('#inner-pane-events').attr('class')!='moveright')	
 					$("#painting-events").stop(true,true).fadeIn(250);
 				
