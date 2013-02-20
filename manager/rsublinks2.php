@@ -1,5 +1,6 @@
 <?php
 require_once("initdb.php");
+require_once("../root.php");
 //$par_cat=$_POST['cat'];
 //if($par_cat == "Events")
 	//$par_cat_id=1;
@@ -31,7 +32,7 @@ while($event_cats2=$query2->fetch_assoc())
 			$k=$query4->fetch_assoc();
 			$last2=$k["name"];
 			$last2=str_replace(' ', '_', $last2);
-			$nodes[$event_cats3["name"]]["link"]="/magar/".$event_cats2["name"]."/".$last."/".$last2;
+			$nodes[$event_cats3["name"]]["link"]=$subDir.$event_cats2["name"]."/".$last."/".$last2;
 		}
 
 }
