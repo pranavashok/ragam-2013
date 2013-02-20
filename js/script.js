@@ -148,7 +148,7 @@ function lookup(inputString) {
 									$("#content-heading-events").text("Choose an event from right");
 								}
 								$("#content-wrapper-events").fadeIn();
-								$(".nano").nanoScroller({
+								$("#content-content-wrapper-events.nano").nanoScroller({
 									scrollTop: '0px'
 								});
 							}
@@ -244,7 +244,7 @@ function lookup(inputString) {
 								$("#content-heading-workshops").text(d.name);
 								$("#content-content-workshops").html(d.content);
 								$("#content-wrapper-workshops").fadeIn();
-								$(".nano").nanoScroller({
+								$("#content-content-wrapper-workshops.nano").nanoScroller({
 									scrollTop: '0px'
 								});
 							}
@@ -318,7 +318,7 @@ function lookup(inputString) {
 								$("#content-heading-showcase").text(d.name);
 								$("#content-content-showcase").html(d.content);
 								$("#content-wrapper-showcase").fadeIn();
-								$(".nano").nanoScroller({
+								$("#content-content-wrapper-proshows.nano").nanoScroller({
 									scrollTop: '0px'
 								});
 							}
@@ -394,7 +394,10 @@ function lookup(inputString) {
 		});
 
 
-		$(".nano").hover(function(){
+		$("#content-content-wrapper-events.nano").hover(function(){
+			$(this).nanoScroller();
+		});
+		$("#info-wrapper.nano").hover(function(){
 			$(this).nanoScroller();
 		});
 		$("#mainlinks a").click(function (e) {
@@ -620,19 +623,19 @@ function lookup(inputString) {
 			$(this).css({"border-bottom":"2px solid #444"});
 			$(this).addClass("menu_select");
 			if($('.menu_select').text() == 'contacts') {
-				$("#info").hide();
+				$("#info-wrapper.nano").hide();
 				$("#reachus").hide();
 				$("#contacts").fadeIn();
 			}
 			else if($('.menu_select').text() == 'reach us') {
-				$("#info").hide();
+				$("#info-wrapper.nano").hide();
 				$("#contacts").hide();
 				$("#reachus").fadeIn();
 			}
 			else if($('.menu_select').text() == 'faq') {
 				$("#contacts").hide();
 				$("#reachus").hide();
-				$("#info").fadeIn();
+				$("#info-wrapper.nano").fadeIn();
 			}
 		});
 
@@ -707,6 +710,10 @@ function lookup(inputString) {
         	$(this).attr('title', '');
     	}).mouseout(function () {
     	    $(this).attr('title', $(this).data('title'));
-    });
-	});    
+    	});
+    	$("#info-wrapper.nano").nanoScroller({
+			scrollTop: '0px'
+		});
+	});
+	    
 })(window);
