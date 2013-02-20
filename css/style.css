@@ -514,8 +514,27 @@
 	z-index: 9;
 	height:87%;
 }
-#painting-proshows {
+#painting-proshows.popularnite {
 	background:#f7f7f7 url('../img/shankar.jpg') no-repeat 0px 0px;
+	position: absolute;
+	width:600px;
+	height:600px;
+	top:20%;
+	right:20%;
+	display: block;
+	transform: scale(1.2,1.2);
+}
+#painting-proshows.combonite {
+	background:#f7f7f7 url('../img/combo.jpg') no-repeat 0px 0px;
+	position: absolute;
+	width:700px;
+	height:400px;
+	top:27%;
+	right:20%;
+	display: block;
+}
+#painting-proshows.pepperfest {
+	background:#f7f7f7 url('../img/combo.jpg') no-repeat 0px 0px;
 	position: absolute;
 	width:600px;
 	height:600px;

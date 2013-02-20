@@ -190,7 +190,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="painting-proshows">
+			<div id="painting-proshows" class="popularnite">
 			</div>
 		<div id="mehendi">
 		</div> 
