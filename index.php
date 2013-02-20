@@ -87,12 +87,13 @@
 	</section>
 
 	<div id="login-form-wrapper">
-		<input class="emailentry" type="email" name="email" title="email" placeholder="email" onblur="inputBlur(this)" />
+		<!--<input class="emailentry" type="email" name="email" title="email" placeholder="email" onblur="inputBlur(this)" />
 		<input class="passwordentry" type="password" name="password" title="password" placeholder="password" onblur="inputBlur(this)" />
-		<div id="tip">press enter to log in...</div>
+		<div id="tip">press enter to log in...</div>-->
+		<div id="tip">log in will be ready soon...</div>
 	</div>
 	<div id="signup-form-wrapper">
-		<form id="signupform" action="register.php" method="post">
+		<!--<form id="signupform" action="register.php" method="post">
 		<input class="nameentry" type="text" name="fullname" id="fullname" title="Full Name" placeholder="full name" onblur="inputBlur(this)" />
 		<input class="emailentry" type="email" name="email" title="Email" id="email" placeholder="email" onblur="inputBlur(this)" />
 		<input class="passwordentry" type="password" name="password" title="Password" id="password" placeholder="password" onblur="inputBlur(this)" />
@@ -100,7 +101,8 @@
 		<input class="phoneentry" type="text" name="phone" title="Phone" id="phone" placeholder="phone" />
 		<input class="submit_login" type="submit" name="Submit" value="Submit" /> 
         </form>
-		<div id="tip">press enter to register...</div>
+		<div id="tip">press enter to register...</div>-->
+		<div id="tip">registration will be up soon...</div>
 	</div>
 	
 	<div id="shortcut" >
