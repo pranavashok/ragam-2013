@@ -392,24 +392,24 @@ style="text-decoration:none">brochure</a></span>
 						<li><strong>Acronyms used that you can familiarise with?</strong></li> 
 
 						Every college has its own set of names that it associates with its buildings/spots. Here are our famous few:  
-						ELHC - Electronics Lecture Hall Complex 
-						NLHC - New Lecture Hall Complex 
-						MB - Main Building 
-						DB - Department Building 
-						CC - Central Computing Centre (yes, one C is missing, :D)
-						MC - Main Canteen 
-						Pits - the steps in front of the ELHC 
-						MBDH - MB Drawing Hall
-						AB - Academic Building, apart from the common few like the 
-						OAT - Open Air Theatre 
-						Audi - Auditorium etc.
+						<em>ELHC</em> - Electronics Lecture Hall Complex; 
+						<em>NLHC</em> - New Lecture Hall Complex;
+						<em>MB</em> - Main Building; 
+						<em>DB</em> - Department Building; 
+						<em>CC</em> - Central Computing Centre (yes, one C is missing, :D);
+						<em>MC</em> - Main Canteen; 
+						<em>Pits</em> - the steps in front of the ELHC; 
+						<em>MBDH</em> - MB Drawing Hall;
+						<em>AB</em> - Academic Building, apart from the common few like the 
+						<em>OAT</em> - Open Air Theatre; 
+						<em>Audi</em> - Auditorium etc.
 						<br /><br />
 						<li><strong>Places to see in and around Calicut?</strong></li> 
 
 						Since it is an opportunity you get to visit Calicut, why not make it a tour to remember? There are a lot of places one could visit- 
-						Calicut Beach 
-						Kappad Beach (THE Vasco da Gama beach)
-						Beypore
+						Calicut Beach, 
+						Kappad Beach (THE Vasco da Gama beach),
+						Beypore,
 						Sarovaram Bio-Park and you can even stopover at Wayanad which is a 1 hour drive from campus. 
 						<br /><br />
 						<li><strong>For further details?</strong></li> 
