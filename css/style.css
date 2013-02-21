@@ -204,7 +204,7 @@
 	left:0;
 	display:block;
 }
-#content-content-wrapper-events.nano .content { padding: 10px; }
+#content-content-wrapper-events.nano .content { padding: 10px 10px 10px 20px; }
 #content-content-wrapper-events.nano .pane   { background: #4a52b5; }
 #content-content-wrapper-events.nano .slider { background: #111; }
 #content-content-events {
