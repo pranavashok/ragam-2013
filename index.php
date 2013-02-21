@@ -85,26 +85,31 @@
 			</ul>
 		</div>
 	</section>
-
+	<?php 
+		session_start();
+		if (!isset($_SESSION['uname']) || !isset($_SESSION['ragID'])) {
+    ?>
 	<div id="login-form-wrapper">
-		<!--<input class="emailentry" type="email" name="email" title="email" placeholder="email" onblur="inputBlur(this)" />
-		<input class="passwordentry" type="password" name="password" title="password" placeholder="password" onblur="inputBlur(this)" />
-		<div id="tip">press enter to log in...</div>-->
-		<div id="tip">log in will be ready soon...</div>
+		<form id="loginform">
+		<input class="emailentry" type="email" name="email" title="email" placeholder="email" onblur="inputBlur(this)" autocomplete="off"/>
+		<input class="passwordentry" type="password" name="password" title="password" placeholder="password" onblur="inputBlur(this)" autocomplete="off"/>
+		</form>
+		<div id="tip">press enter to log in...</div>
+		<!--<div id="tip">log in will be ready soon...</div>-->
 	</div>
 	<div id="signup-form-wrapper">
-		<!--<form id="signupform" action="register.php" method="post">
-		<input class="nameentry" type="text" name="fullname" id="fullname" title="Full Name" placeholder="full name" onblur="inputBlur(this)" />
-		<input class="emailentry" type="email" name="email" title="Email" id="email" placeholder="email" onblur="inputBlur(this)" />
-		<input class="passwordentry" type="password" name="password" title="Password" id="password" placeholder="password" onblur="inputBlur(this)" />
-		<input class="collegeentry" type="text" name="college" title="College" id="college" placeholder="college" />
-		<input class="phoneentry" type="text" name="phone" title="Phone" id="phone" placeholder="phone" />
+		<form id="signupform" >
+		<input class="nameentry" type="text" name="fullname" id="fullname" title="Full Name" placeholder="full name" onblur="inputBlur(this)" autocomplete="off" />
+		<input class="emailentry" type="email" name="email" title="Email" id="email" placeholder="email" onblur="inputBlur(this)" autocomplete="off"/>
+		<input class="passwordentry" type="password" name="password" title="Password" id="password" placeholder="password" onblur="inputBlur(this)" autocomplete="off"/>
+		<input class="collegeentry" type="text" name="college" title="College" id="college" placeholder="college" autocomplete="off"/>
+		<input class="phoneentry" type="text" name="phone" title="Phone" id="phone" placeholder="phone" autocomplete="off"/>
 		<input class="submit_login" type="submit" name="Submit" value="Submit" /> 
         </form>
 		<div id="tip">press enter to register...</div>-->
-		<div id="tip">registration will be up soon...</div>
+		<!--<div id="tip">registration will be up soon...</div>-->
 	</div>
-	
+	<?php } ?>
 	<div id="shortcut" >
 		<canvas id="sitemap"></canvas>
 	</div>
@@ -112,12 +117,18 @@
 	<div id="wrapper">
 		<div class="active-links">
 			<div id="session">
+				<?php 
+					if (!isset($_SESSION['uname']) || !isset($_SESSION['ragID'])) {
+    			?>
 				<a id="login-link" href="#">
 					<img src="<?php echo $subDir; ?>img/login.png" />
 				</a>
 				<a id="signin-link" href="#">
 					<img src="<?php echo $subDir; ?>img/signup.png" />
 				</a>
+				<?php }else{ ?>
+				<div id="welcome">Hello <?php echo $_SESSION['uname']; ?></div>
+				<?php } ?>
 			</div>
 			<div id="signin-dropdown">
 			</div>

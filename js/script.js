@@ -694,18 +694,53 @@ function lookup(inputString) {
     		}
 		});
 		$("#signupform").submit(function () {
-			alert("hi");
 	        $.ajax({
+	        	dataType: 'json',
 	            type: 'POST',
-	            url: "/" + subDir + "/register2.php",
+	            url: "/" + subDir + "/manager/register.php",
 	            data: $("#signupform").serializeArray(),
 	            success: function (data) {
-	                alert(data);
+	            	if(data.success)
+					{
+						$("#signupform").slideUp();	           
+	            		$("#signup-form-wrapper #tip").text(data.msg);
+	            		$("#signup-form-wrapper #tip").css('color','#77b708');
+	            		$("#signup-form-wrapper #tip").css('font-size','28px');
+	            		setTimeout("$('a#signin-link.cancel').trigger('click');",7000);
+	            	}else
+	            	{
+	                	$("#signup-form-wrapper #tip").text(data.msg);
+	                	$("#signup-form-wrapper #tip").css('color','#dd181f');
+	                }
 	            }
 	        });
 
-	        return false;
+	        return false; 
     	});
+    	$("#loginform").submit(function () {
+	        $.ajax({
+	        	dataType: 'json',
+	            type: 'POST',
+	            url: "/" + subDir + "/manager/login.php",
+	            data: $("#loginform").serializeArray(),
+	            success: function (data) {
+	            	if(data.success)
+					{
+						$("#loginform").slideUp();	           
+						$("#login-form-wrapper #tip").text(data.msg);
+	                	$("#login-form-wrapper #tip").css('color','#77b708');
+	                	$("#login-form-wrapper #tip").css('font-size','28px');
+	            		setTimeout("$('a#login-link.cancel').trigger('click');",5000);
+						$("#session").text("<div id='welcome'>Hello "+data.uname+"</div>");
+	            	}else
+	            	{
+	                	$("#login-form-wrapper #tip").text(data.msg);
+	                	$("#login-form-wrapper #tip").css('color','#dd181f');
+	                }
+	            }
+	        });
+	        return false;
+	    });
 		$('[title]').mouseover(function () {
         	$(this).data('title', $(this).attr('title'));
         	$(this).attr('title', '');
