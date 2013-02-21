@@ -534,7 +534,7 @@
 	display: block;
 }
 #painting-proshows.pepperfest {
-	background:#f7f7f7 url('../img/combo.jpg') no-repeat 0px 0px;
+	background:#f7f7f7 no-repeat 0px 0px;
 	position: absolute;
 	width:600px;
 	height:600px;
