@@ -7,14 +7,20 @@ session_start();
     $user = $mysqli->real_escape_string($_POST["email"]);
     $pass = $mysqli->real_escape_string($_POST["password"]);
     $pass = md5($pass);
-    $result = $mysqli->query("SELECT ragID, name FROM participants WHERE email='$user' AND password='$pass'");
+    $result = $mysqli->query("SELECT ragID, name,active FROM participants WHERE email='$user' AND password='$pass'");
     
     if ($row = $result->fetch_assoc()) 
     {
-	   $_SESSION['ragID'] = $row['ragID'];
-	   $_SESSION['uname'] = $row['name'];
-	   $success = 1;
-       $msg = "Login successfull!";
+        if($row['active']==1)
+        {
+	       $_SESSION['ragID'] = $row['ragID'];
+	       $_SESSION['uname'] = $row['name'];
+	       $success = 1;
+           $msg = "Login successfull!";
+        }else
+        {
+            $msg = "Verify your account before logging in.";
+        }
     }else
     {
         $msg = "Invalid username / password.";
