@@ -706,7 +706,7 @@ function lookup(inputString) {
 	            		$("#signup-form-wrapper #tip").html(data.msg);
 	            		$("#signup-form-wrapper #tip").css('color','#77b708');
 	            		$("#signup-form-wrapper #tip").css('font-size','28px');
-	            		setTimeout("$('a#signin-link.cancel').trigger('click');",7000);
+	            		setTimeout("$('a#signin-link.cancel').trigger('click');",15000);
 	            	}else
 	            	{
 	                	$("#signup-form-wrapper #tip").html(data.msg);

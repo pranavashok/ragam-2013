@@ -53,8 +53,7 @@ Regards,
 Ragam \'13 Registration Team
 ';
 		if(mail($to, $subject, $message, $headers)){ // Send our email
-			$msg = $fullname.", you have been registered. <br/>";
-			$msg .= "Your Ragam ID is RAG".$maxragid."<br/>Please check your mail for confirmation";
+			$msg = $fullname.", your Ragam ID is <br/><strong>RAG".$maxragid."</strong><br/>Please check your mail for confirmation";
 		}else{
 			$msg = 'Sorry, the register feature is not working now. Try again later.'; 
 			$query = $mysqli->query("DELETE FROM participants WHERE ragID = '$maxragid';");
