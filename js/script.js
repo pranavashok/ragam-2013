@@ -743,8 +743,8 @@ function lookup(inputString) {
 	                	$("#login-form-wrapper #tip").css('font-size','28px');
 	                	$("#login-form-wrapper").fadeOut(2500,function() {
 	                		$("#dark").attr("class", "overlayoff");	
+	                		location.reload();
 	                	});
-						$("#session").html("<div id='welcome'>Hello "+data.uname+"<div id='login-options-wrapper' class='close'><ul id='login-options'><a href='#'><li id='logout-button'>Logout</li></a></ul></div></div>");
 	            	}else
 	            	{
 	                	$("#login-form-wrapper #tip").text(data.msg);
@@ -775,7 +775,20 @@ function lookup(inputString) {
 	    	click: function(){
 	    		$("#dark").attr("class","overlayon");
 	    		$("#eventreg-form-wrapper").show();
-	    		$("#multiname input").autoSuggest("manager/queryname.php",{minchars:2});
+	    		$("#multiname").autoSuggest("/"+subDir+ "/manager/queryname.php",{
+	    				minChars: 1, 
+	    				matchCase: false, 
+	    				selectedItemProp: 'name', 
+	    				selectedValuesProp: 'ragID', 
+	    				searchObjProps: 'name', 
+	    				retrieveLimit: 10, 
+	    				selectionLimit:30,
+	    				formatList: function(data, elem){
+							var new_elem = elem.html(data.name+' (RAG'+data.ragID+') - ' + data.college);
+							return new_elem;
+						},
+						preFill: [{"name": $("#hidden-name").text(), "ragID": $("#hidden-ragID").text(), "college": $("#hidden-college").text()}]
+	    		});
 	    	}
 	    })
 	    
