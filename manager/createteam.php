@@ -7,16 +7,16 @@ $teammemberlist = $mysqli->real_escape_string($_POST['teammembers']);
 $teammembers = $teammemberlist.split(",");
 
 $query = $mysqli->query("SELECT max(team_id) FROM team WHERE event_id='$event_id'");
-$row = $query->fetch_assoc();
+$row = $query->fetch_array();
 if($row)
-	$maxteamid = $row['max(team_id)'];
+	$maxteamid = $row[0];
 else
 	$maxteamid = 100;
 $maxteamid++;
 
 /* Creating query to insert into table */
-$string = "INSERT INTO `team` VALUES ('$event_id', '$maxteamid', '$teamleader_id', '$teammembers[0]')";
-for($i = 1; $i < count($teammembers); $i++) {
+$string = "INSERT INTO `team` VALUES ('$event_id', '$maxteamid', '$teamleader_id', '$teamleader_id')";
+for($i = 0; $i < count($teammembers); $i++) {
 	$string .= ", ('$event_id', '$maxteamid', '$teamleader_id', '$teammembers[$i]')";
 }
 $string .= ";"
