@@ -43,10 +43,11 @@ else
 		
 Thank You for signing up on Ragam \'13!
 Your account has been created! Please note down your Ragam ID for future reference.
-	------------------------
-	Your Name: '.$fullname.'
-	Ragam ID: RAG'.$maxragid.'
-	------------------------
+
+------------------------
+Your Name: '.$fullname.'
+Ragam ID: RAG'.$maxragid.'
+------------------------
 
 Regards,
 Ragam \'13 Registration Team

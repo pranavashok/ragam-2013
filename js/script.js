@@ -703,13 +703,13 @@ function lookup(inputString) {
 	            	if(data.success)
 					{
 						$("#signupform").slideUp();	           
-	            		$("#signup-form-wrapper #tip").text(data.msg);
+	            		$("#signup-form-wrapper #tip").html(data.msg);
 	            		$("#signup-form-wrapper #tip").css('color','#77b708');
 	            		$("#signup-form-wrapper #tip").css('font-size','28px');
 	            		setTimeout("$('a#signin-link.cancel').trigger('click');",7000);
 	            	}else
 	            	{
-	                	$("#signup-form-wrapper #tip").text(data.msg);
+	                	$("#signup-form-wrapper #tip").html(data.msg);
 	                	$("#signup-form-wrapper #tip").css('color','#dd181f');
 	                }
 	            }
