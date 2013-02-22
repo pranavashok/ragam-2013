@@ -1,0 +1,136 @@
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		var scroll_left_init=0;
+		var scroll_top_init=0;
+		$(document).ready(function()
+		{
+			$(document).scroll(function(){
+				var scroll_left_new=$(document).scrollLeft();
+				if(scroll_left_init!=scroll_left_new)
+				{
+					var scroll_top_forleft=$(document).scrollTop();
+					scroll_top_forleft-=33;
+					scroll_left_temp=-scroll_left_new;
+					$("#sch_left").show();
+					$("#sch_left").css({"top":10-scroll_top_forleft});
+					$("#sch_top").css({"left":scroll_left_temp});
+					scroll_left_init=scroll_left_new;
+				}
+				var scroll_top_new=$(document).scrollTop();
+				if(scroll_top_init!=scroll_top_new)
+				{
+					$("#sch_left").hide();
+					scroll_top_init=scroll_top_new;
+				}	
+				if(scroll_top_new!=0)
+				{
+					$("#sch_top").show();
+				}
+				else if(scroll_top_new==0)
+				{
+					$("#sch_top").hide();
+				}
+			});
+		});
+	</script>
+	<style>
+		@font-face {
+			font-family: ProximaNova;
+			src: url('css/proximanova-black-webfont.eot');
+			src: url('css/proximanova-black-webfont.eot?#iefix') format('embedded-opentype'),
+			url('css/proximanova-black-webfont.woff') format('woff'),
+			url('css/proximanova-black-webfont.ttf') format('truetype'),
+			url('css/proximanova-black-webfont.svg#proxima_novablack') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		*
+		{
+			margin:0;
+		}
+		#download {
+			position: fixed;
+			top:5px;
+			left:0;
+			height:20px;
+			text-align: center;
+			width: 100%;
+			text-transform: uppercase;
+			font-family: 'ProximaNova';
+		}
+		#download a {
+			text-decoration: none;
+			color:#644;
+		}
+		#download a span {
+			opacity: 0.7;
+			transition: all 0.4s;
+			-webkit-transition: all 0.4s;
+			-moz-transition: all 0.4s;
+			-o-transition: all 0.4s;
+		}
+		#download a span:hover {
+			opacity: 1;
+			transition: all 0.4s;
+			-webkit-transition: all 0.4s;
+			-moz-transition: all 0.4s;
+			-o-transition: all 0.4s;
+		}
+		#wrapper {
+			position:absolute;
+			margin-top:25px;
+		}
+		#sch_top
+		{
+			position:fixed;
+			top:0px;
+			width:1926px;
+			height:18px;
+			display:none;
+			background-image:url('img/sch_top.png');	
+		}
+
+		#sch_body
+		{
+			width:1926px;
+			height:1617px;
+		}
+
+		#sch_left
+		{
+			position:fixed;
+			top:18px;
+			left:0;
+			height:1617px;
+			width:235px;
+			display:none;
+			background:#fff url('img/sch_left.png') 0px 0px no-repeat;
+		}
+
+		#sch_right
+		{
+			margin-top: 18px;
+			height:1617px;
+			width:1926px;
+			overflow: auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="download">
+		<a href="Ragam13ScheduleEventwise.pdf" target="_blank"><span>Download Event-wise Schedule</span></a> | <a href="Ragam13ScheduleTimeline.pdf" target="_blank"><span>Download Timeline Schedule</span></a>
+	</div>
+<div id="wrapper">
+	<div id="sch_top">
+	</div>	
+	<div id="sch_body">	
+		<div id="sch_left">
+		</div>
+		<div id="sch_right">
+			<img src="img/sch_body.png"/>
+		</div>
+	</div>
+</div>
+</body>
+</html>

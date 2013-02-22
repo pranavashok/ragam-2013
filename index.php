@@ -6,7 +6,7 @@
 	<link href="<?php echo $subDir; ?>css/animations.css" rel="stylesheet"/>
 	<link href="<?php echo $subDir; ?>css/nanoscroller.css" rel="stylesheet" > 
 	<link href="<?php echo $subDir; ?>css/favicon.ico" rel="icon" type="image/x-icon" />
-	<meta name="description" content="Ragam `13-The annual inter-college fest conducted by the National Institute of Technology, Calicut.">
+	<meta name="description" content="Ragam '13 - The annual inter-college fest conducted by the National Institute of Technology, Calicut.">
 	<meta name="keywords" content="ragam, nitc, national institute of technology, cultural fest, cultural, fest, college,ragam, tathva, Ragam, shankar, mahadevan, shankar mahadevan, ">
 	<link rel="search" type="application/opensearchdescription+xml" title="Search Ragam 2013 Website" href="js/opensearch.xml">
 
@@ -309,11 +309,12 @@
 		<div id="supportpane_bot">
 			<div id="menu_tab">
 				<span class="menu_item menu_click">contacts</span>
-				<span class="menu_item menu_nonclick">schedule</span>
+				<span class="menu_item menu_nonclick"><a href="<?php echo $subDir; ?>schedule.html" target="_blank" 
+					style="text-decoration:none">schedule</a></span>
 				<span class="menu_item menu_click">faq</span>
 				<span class="menu_item menu_nonclick gallery">gallery</span>
 				<span class="menu_item menu_nonclick"><a href="<?php echo $subDir; ?>ragam-brochure.pdf" target="_blank" 
-style="text-decoration:none">brochure</a></span>
+					style="text-decoration:none">brochure</a></span>
 				<span class="menu_item menu_click">reach us</span>
 			</div>
 			<div id="menu_info">
