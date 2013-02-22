@@ -26,16 +26,41 @@ else
  	if($row)
 		$maxragid = $row['ragID'];
  	else
- 		$maxragid = 0;
+ 		$maxragid = 1000;
 	$maxragid++;
- 	$query = $mysqli->query("INSERT INTO participants (`ragID`, `name`, `email`, `password`, `fb_token`, `college`, `phone`, `accommodation`, `timestamp`, `ip`) VALUES ( '$maxragid', '$fullname', '$email', '$password', '', '$college', '$phone', '', '".date('d-m-Y')."', '".$_SERVER['REMOTE_ADDR']."')");
+ 	$query = $mysqli->query("INSERT INTO participants (`ragID`, `name`, `email`, `password`, `fb_token`, `college`, `phone`, `accommodation`, `ip`) VALUES ( '$maxragid', '$fullname', '$email', '$password', '', '$college', '$phone', '', '".$_SERVER['REMOTE_ADDR']."')");
 	if($query)
 	{
 		$msg = "Thank you for registering! Your ragam id is RAG".$maxragid.".";
 		$success = 1;
+		
+
+		/* Mail */
+		$headers = 'From:no-reply@ragam.org.in' . "\r\n"; // Set from headers
+		$to      = $email; // Send email to our user
+		$subject = 'Ragam \'13 Signup Confirmation'; // Give the email a subject
+		$message = '
+		
+Thank You for signing up on Ragam \'13!
+Your account has been created! Please note down your Ragam ID for future reference.
+
+------------------------
+Your Name: '.$fullname.'
+Ragam ID: RAG'.$maxragid.'
+------------------------
+
+Regards,
+Ragam \'13 Registration Team
+';
+		if(mail($to, $subject, $message, $headers)){ // Send our email
+			$msg = $fullname.", your Ragam ID is <br/><strong>RAG".$maxragid."</strong><br/>Please check your mail for confirmation";
+		}else{
+			$msg = 'Sorry, the register feature is not working now. Try again later.'; 
+			$query = $mysqli->query("DELETE FROM participants WHERE ragID = '$maxragid';");
+		}		
 	}
 	else
-		$msg="INSERT INTO participants (`ragID`, `name`, `email`, `password`, `fb_token`, `college`, `phone`, `accommodation`, `timestamp`, `ip`) VALUES ( '$maxragid', '$fullname', '$email', '$password', '', '$college', '$phone', '', '".date('d-m-Y')."', '".$_SERVER['REMOTE_ADDR']."')";//"Error. Please try again later.";
+		$msg = 'Sorry, the registration feature is unavailable as of now.'; //"Error. Please try again later.";
 }
 $result['success']=$success;
 $result['msg']=$msg;

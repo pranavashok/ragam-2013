@@ -107,7 +107,7 @@
 		<input class="phoneentry" type="text" name="phone" title="Phone" id="phone" placeholder="phone" autocomplete="off"/>
 		<input class="submit_login" type="submit" name="Submit" value="Submit" /> 
         </form>
-		<div id="tip">press enter to register...</div>-->
+		<div id="tip">press enter to register...</div>
 		<!--<div id="tip">registration will be up soon...</div>-->
 	</div>
 	<?php } ?>
