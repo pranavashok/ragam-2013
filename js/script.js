@@ -781,20 +781,27 @@ function lookup(inputString) {
 	    				selectionLimit:30,
 	    				neverSubmit: false,
 	    				formatList: function(data, elem){
-							var new_elem = elem.html(data.name+' (RAG'+data.ragID+') - ' + data.college);
+							new_elem = elem.html(data.name+' (RAG'+data.ragID+') - ' + data.college);
 							return new_elem;
 						},
-						preFill: [{"name": $("#hidden-name").text(), "ragID": $("#hidden-ragID").text(), "college": $("#hidden-college").text()}]
+						retrieveComplete: function(data){
+							var new_data=[];
+							for(i in data) {
+								if(data[i].ragID != $("#hidden-ragID").text())
+									new_data[i]=data[i];
+							}
+							return new_data;
+						}	
 	    		});
 	    	}
-	    })
+	    });
 	    $("#eventregform").submit(function () {
     		loadingAnimation(true);
 	        $.ajax({
 	        	dataType: 'json',
 	            type: 'POST',
 	            url: "/" + subDir + "/manager/createteam.php",
-	            data: { "event": evcode, "teammembers" : $("#as-values-evreg").val()},
+	            data: { "event": evcode, "teamleader" : $("hidden-ragID").text(), "teammembers" : $("#as-values-evreg").val()},
 	            success: function (data) {
 	            	loadingAnimation(false);
 	            	if(data.success)
