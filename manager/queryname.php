@@ -1,7 +1,7 @@
 <?php
 require_once("initdb.php");
 
-$queryParam = $mysqli->real_escape_string($_POST['q']);
+$queryParam = $mysqli->real_escape_string($_GET['q']);
 
 $query1=$mysqli->query("SELECT name, ragID, college FROM participants WHERE name LIKE '%$queryParam%'");
 
