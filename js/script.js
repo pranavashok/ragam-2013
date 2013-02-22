@@ -736,8 +736,10 @@ function lookup(inputString) {
 						$("#login-form-wrapper #tip").text(data.msg);
 	                	$("#login-form-wrapper #tip").css('color','#77b708');
 	                	$("#login-form-wrapper #tip").css('font-size','28px');
-	            		setTimeout("$('a#login-link.cancel').trigger('click');",5000);
-						$("#session").text("<div id='welcome'>Hello "+data.uname+"</div>");
+	                	$("#login-form-wrapper").fadeOut(2500,function() {
+	                		$("#dark").attr("class", "overlayoff");	
+	                	});
+						$("#session").html("<div id='welcome'>Hello "+data.uname+"<div id='login-options-wrapper' class='close'><ul id='login-options'><a href='#'><li id='logout-button'>Logout</li></a></ul></div></div>");
 	            	}else
 	            	{
 	                	$("#login-form-wrapper #tip").text(data.msg);
@@ -747,6 +749,24 @@ function lookup(inputString) {
 	        });
 	        return false;
 	    });
+	    $("#welcome").live({
+	    	click: function(){
+				$("#login-options-wrapper").slideToggle();
+			}
+	    });
+	    $("#logout-button").live({
+	    	click: function(){
+				$.ajax({
+				dataType: "json",
+	            type: 'POST',
+	            url: "/" + subDir + "/manager/rlogout.php",
+	            success: function (data) {
+					location.reload();						
+	            }
+	        	});
+			}	
+	    });
+
 		$('[title]').mouseover(function () {
         	$(this).data('title', $(this).attr('title'));
         	$(this).attr('title', '');
