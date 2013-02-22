@@ -779,6 +779,7 @@ function lookup(inputString) {
 	    				searchObjProps: 'name', 
 	    				retrieveLimit: 10, 
 	    				selectionLimit:30,
+	    				neverSubmit: false,
 	    				formatList: function(data, elem){
 							var new_elem = elem.html(data.name+' (RAG'+data.ragID+') - ' + data.college);
 							return new_elem;
