@@ -5,6 +5,7 @@
 	<link href="<?php echo $subDir; ?>css/style.css" rel="stylesheet"/>
 	<link href="<?php echo $subDir; ?>css/animations.css" rel="stylesheet"/>
 	<link href="<?php echo $subDir; ?>css/nanoscroller.css" rel="stylesheet" > 
+	<link href="<?php echo $subDir; ?>css/autoSuggest.css" rel="stylesheet" > 
 	<link href="<?php echo $subDir; ?>css/favicon.ico" rel="icon" type="image/x-icon" />
 	<meta name="description" content="Ragam '13 - The annual inter-college fest conducted by the National Institute of Technology, Calicut.">
 	<meta name="keywords" content="ragam, nitc, national institute of technology, cultural fest, cultural, fest, college,ragam, tathva, Ragam, shankar, mahadevan, shankar mahadevan, ">
@@ -97,7 +98,6 @@
 		<input class="submit_login" type="submit" name="Submit" value="Submit" /> 
 		</form>
 		<div id="tip">press enter to log in...</div>
-		<!--<div id="tip">log in will be ready soon...</div>-->
 	</div>
 	<div id="signup-form-wrapper">
 		<form id="signupform" >
@@ -109,7 +109,15 @@
 		<input class="submit_login" type="submit" name="Submit" value="Submit" /> 
         </form>
 		<div id="tip">press enter to register...</div>
-		<!--<div id="tip">registration will be up soon...</div>-->
+	</div>
+	<?php } else{ ?>
+	<div id="eventreg-form-wrapper">
+		<form id="eventregform">
+		<p style="color:white">Team Leader: <?php echo $_SESSION['uname']; ?></p> <br/>
+		<input type="text" name="multiname" id="multiname" placeholder="Enter the names of your team mates" onblur="inputBlur(this)" />
+		<input class="submit_eventreg" type="submit" name="Submit" value="Submit" /> 
+		</form>
+		<div id="tip">press enter to complete event registration...</div>
 	</div>
 	<?php } ?>
 	<div id="shortcut" >
@@ -162,6 +170,9 @@
 				<div id="content-container-events">
 					<div id="content-wrapper-events">
 						<div id="content-heading-events">
+						</div>
+						<div id="content-reg-events">
+							<div class="event-register">register</div>
 						</div>
 						<div id="content-content-wrapper-events" class="nano">
 							<div id="content-content-events" class="content">

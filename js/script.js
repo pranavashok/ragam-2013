@@ -605,6 +605,7 @@ function lookup(inputString) {
 		    $("#dark").attr("class", "overlayoff");
 		    $("#login-form-wrapper").hide();
 		    $("#signup-form-wrapper").hide();
+		    $("#eventreg-form-wrapper").hide();
 		});
 		$(".gallery").click(function()
 		{
@@ -770,7 +771,14 @@ function lookup(inputString) {
 	        	});
 			}	
 	    });
-
+	    $(".event-register").live({
+	    	click: function(){
+	    		$("#dark").attr("class","overlayon");
+	    		$("#eventreg-form-wrapper").show();
+	    		$("#multiname input").autoSuggest("manager/queryname.php",{minchars:2});
+	    	}
+	    })
+	    
 		$('[title]').mouseover(function () {
         	$(this).data('title', $(this).attr('title'));
         	$(this).attr('title', '');
