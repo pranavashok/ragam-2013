@@ -21,6 +21,7 @@ else if(strlen($phone)<9)
 else
 {
 	$password = md5($password);
+	$hash = md5( rand(0,1000) );
  	$query = $mysqli->query("SELECT ragID from participants ORDER BY ragID DESC LIMIT 1");
 	$row = $query->fetch_assoc();
  	if($row)
@@ -28,7 +29,7 @@ else
  	else
  		$maxragid = 1000;
 	$maxragid++;
- 	$query = $mysqli->query("INSERT INTO participants (`ragID`, `name`, `email`, `password`, `fb_token`, `college`, `phone`, `accommodation`, `ip`) VALUES ( '$maxragid', '$fullname', '$email', '$password', '', '$college', '$phone', '', '".$_SERVER['REMOTE_ADDR']."')");
+ 	$query = $mysqli->query("INSERT INTO participants (`ragID`, `name`, `email`, `password`, `fb_token`, `college`, `phone`, `accommodation`, `ip`, `hash`) VALUES ( '$maxragid', '$fullname', '$email', '$password', '', '$college', '$phone', '', '".$_SERVER['REMOTE_ADDR']."','$hash')");
 	if($query)
 	{
 		$msg = "Thank you for registering! Your ragam id is RAG".$maxragid.".";
@@ -48,6 +49,8 @@ Your account has been created! Please note down your Ragam ID for future referen
 Your Name: '.$fullname.'
 Ragam ID: RAG'.$maxragid.'
 ------------------------
+Please click this link to activate your account:
+http://www.ragam.org.in/2013/verify.php?email='.$email.'&hash='.$hash.'
 
 Regards,
 Ragam \'13 Registration Team

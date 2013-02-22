@@ -700,12 +700,14 @@ function lookup(inputString) {
 		});
 		$("#college").autocomplete(collegeList.split(":"));
 		$("#signupform").submit(function () {
+			loadingAnimation(true);
 	        $.ajax({
 	        	dataType: 'json',
 	            type: 'POST',
 	            url: "/" + subDir + "/manager/register.php",
 	            data: $("#signupform").serializeArray(),
 	            success: function (data) {
+	            	loadingAnimation(false);
 	            	if(data.success)
 					{
 						$("#signupform").slideUp();	           
@@ -724,12 +726,14 @@ function lookup(inputString) {
 	        return false; 
     	});
     	$("#loginform").submit(function () {
+    		loadingAnimation(true);
 	        $.ajax({
 	        	dataType: 'json',
 	            type: 'POST',
 	            url: "/" + subDir + "/manager/login.php",
 	            data: $("#loginform").serializeArray(),
 	            success: function (data) {
+	            	loadingAnimation(false);
 	            	if(data.success)
 					{
 						$("#loginform").slideUp();	           
