@@ -1,5 +1,4 @@
 <?php
-    require_once("root.php");
     require_once("manager/initdb.php");
     $user = $mysqli->real_escape_string($_GET["email"]);
     $hash = $mysqli->real_escape_string($_GET["hash"]);
@@ -8,5 +7,5 @@
     if ($row = $result->fetch_assoc()) 
 	   if($row['hash']===$hash)
             $res = $mysqli->query("UPDATE participants SET active=1 WHERE email='$user'");
-    header("Location:/$subdir");
+    header("Location: http://www.ragam.org.in/");
 ?>
