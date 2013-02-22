@@ -291,8 +291,10 @@
 		<div id="footer_inner">
 			<div id="supportpane_top">
 				<div id="ticker">
+					<div>The Ragam 2013 <strong><a href="<?php echo $subDir; ?>schedule.html">schedule</a></strong> has been published. Further changes will be notified.</div>
+					<div>Entries for the national short film contest, <strong><a href="<?php echo $subDir; ?>Events/General/Take_One">Take One</a></strong>, should be sent on or before March 5th</div>
+					<div>The prizes for the various events at Ragam 2013 have been updated in the respective pages.</div>
 					<div>Those interested in participating for <strong><a href="<?php echo $subDir; ?>Events/Dance/Choreo_Nite">Choreo Nite</a></strong> and <strong><a href="<?php echo $subDir; ?>Events/General/Couture_Boulevard">Couture Boulevard</a></strong> are to mail their previous performances on or before March 1st</div>
-					<div>Submissions for the online photography contest, 360 Degrees, are being accepted <a title="360 Degrees" href="https://www.facebook.com/photo.php?fbid=569659399712510&set=a.570315862980197.141603.307134539298332&type=1&relevant_count=1" target="_blank">here</a></div>
 					<div><strong><a href="<?php echo $subDir; ?>Proshows">Shankar Mahadevan</a></strong> would be performing at Ragam 2013</div>
 					<div>Those interested in participating for <strong><a href="<?php echo $subDir; ?>Events/Music/Amplified">Amplified</a></strong>, <strong><a href="<?php echo $subDir; ?>Events/Music/Acoustics">Acoustics</a></strong> and <strong><a href="<?php echo $subDir; ?>Events/Music/Swara_Raaga">Swara Raaga</a></strong> are to mail their previous performances on or before March 1st</div>
 				</div>
