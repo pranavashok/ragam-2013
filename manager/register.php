@@ -28,7 +28,7 @@ else
  	else
  		$maxragid = 1000;
 	$maxragid++;
- 	$query = $mysqli->query("INSERT INTO participants (`ragID`, `name`, `email`, `password`, `fb_token`, `college`, `phone`, `accommodation`, `timestamp`, `ip`) VALUES ( '$maxragid', '$fullname', '$email', '$password', '', '$college', '$phone', '', '".date('d-m-Y')."', '".$_SERVER['REMOTE_ADDR']."')");
+ 	$query = $mysqli->query("INSERT INTO participants (`ragID`, `name`, `email`, `password`, `fb_token`, `college`, `phone`, `accommodation`, `ip`) VALUES ( '$maxragid', '$fullname', '$email', '$password', '', '$college', '$phone', '', '".$_SERVER['REMOTE_ADDR']."')");
 	if($query)
 	{
 		$msg = "Thank you for registering! Your ragam id is RAG".$maxragid.".";
