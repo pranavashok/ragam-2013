@@ -26,6 +26,7 @@
 	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/script.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.nanoscroller.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>-->
+	<!--<script async type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autocomplete.min.js"></script>-->
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-tween.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-graphics.js"></script>
@@ -102,7 +103,7 @@
 		<input class="nameentry" type="text" name="fullname" id="fullname" title="Full Name" placeholder="full name" onblur="inputBlur(this)" autocomplete="off" />
 		<input class="emailentry" type="email" name="email" title="Email" id="email" placeholder="email" onblur="inputBlur(this)" autocomplete="off"/>
 		<input class="passwordentry" type="password" name="password" title="Password" id="password" placeholder="password" onblur="inputBlur(this)" autocomplete="off"/>
-		<input class="collegeentry" type="text" name="college" title="College" id="college" placeholder="college" autocomplete="off"/>
+		<input class="collegeentry" name="college" title="College" id="college" placeholder="college" autocomplete="off" />
 		<input class="phoneentry" type="text" name="phone" title="Phone" id="phone" placeholder="phone" autocomplete="off"/>
 		<input class="submit_login" type="submit" name="Submit" value="Submit" /> 
         </form>
