@@ -15,8 +15,8 @@ else
 $maxteamid++;
 
 /* Creating query to insert into table */
-$string = "INSERT INTO `team` VALUES ('$event_id', '$maxteamid', '$teamleader_id', '$teammembers[0]')";
-for($i = 1; $i < count($teammembers); $i++) {
+$string = "INSERT INTO `team` VALUES ('$event_id', '$maxteamid', '$teamleader_id', '$teamleader_id')";
+for($i = 0; $i < count($teammembers); $i++) {
 	$string .= ", ('$event_id', '$maxteamid', '$teamleader_id', '$teammembers[$i]')";
 }
 $string .= ";"
