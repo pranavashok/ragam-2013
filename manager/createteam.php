@@ -2,9 +2,9 @@
 require_once("initdb.php");
 
 $event_id = $mysqli->real_escape_string($_GET['event']);
-$teamleader_id = $mysqli->real_escape_string($_GET['teamleader']);
 $teammemberlist = $mysqli->real_escape_string($_GET['teammembers']);
 $teammembers = $teammemberlist.split(",");
+$teamleader_id = $teammembers[0];
 
 $query = $mysqli->query("SELECT max(team_id) FROM team WHERE event_id='$event_id'");
 $row = $query->fetch_assoc();
