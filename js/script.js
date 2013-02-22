@@ -743,8 +743,8 @@ function lookup(inputString) {
 	                	$("#login-form-wrapper #tip").css('font-size','28px');
 	                	$("#login-form-wrapper").fadeOut(2500,function() {
 	                		$("#dark").attr("class", "overlayoff");	
+	                		location.reload();
 	                	});
-						$("#session").html("<div id='welcome'>Hello "+data.uname+"<div id='login-options-wrapper' class='close'><ul id='login-options'><a href='#'><li id='logout-button'>Logout</li></a></ul></div></div>");
 	            	}else
 	            	{
 	                	$("#login-form-wrapper #tip").text(data.msg);
@@ -775,7 +775,7 @@ function lookup(inputString) {
 	    	click: function(){
 	    		$("#dark").attr("class","overlayon");
 	    		$("#eventreg-form-wrapper").show();
-	    		$("#multiname input").autoSuggest("manager/queryname.php",{minchars:2});
+	    		$("#multiname").autoSuggest("/"+subDir+ "/manager/queryname.php",{minChars: 2, matchCase: false, asHtmlID: 'reg', selectedValuesProp: 'reg_id', retrieveLimit: 10, searchObjProps: 'value', selectionLimit:30});
 	    	}
 	    })
 	    
