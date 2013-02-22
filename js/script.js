@@ -771,7 +771,8 @@ function lookup(inputString) {
 	    		$("#dark").attr("class","overlayon");
 	    		$("#eventreg-form-wrapper").show();
 	    		$("#multiname").autoSuggest("/"+subDir+ "/manager/queryname.php",{
-	    				minChars: 1, 
+	    				neverSubmit: false,
+	    				minChars: 2, 
 	    				matchCase: false, 
 	    				asHtmlID: 'evreg',
 	    				selectedItemProp: 'name', 
@@ -779,7 +780,6 @@ function lookup(inputString) {
 	    				searchObjProps: 'name', 
 	    				retrieveLimit: 10, 
 	    				selectionLimit:30,
-	    				neverSubmit: false,
 	    				formatList: function(data, elem){
 							new_elem = elem.html(data.name+' (RAG'+data.ragID+') - ' + data.college);
 							return new_elem;
@@ -801,7 +801,7 @@ function lookup(inputString) {
 	        	dataType: 'json',
 	            type: 'POST',
 	            url: "/" + subDir + "/manager/createteam.php",
-	            data: { "event": evcode, "teamleader" : $("hidden-ragID").text(), "teammembers" : $("#as-values-evreg").val()},
+	            data: { "event": evcode, "teamleader" : $("#hidden-ragID").text(), "teammembers" : $("#as-values-evreg").val()},
 	            success: function (data) {
 	            	loadingAnimation(false);
 	            	if(data.success)

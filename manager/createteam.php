@@ -7,19 +7,19 @@ $teammemberlist = $mysqli->real_escape_string($_POST['teammembers']);
 $teammembers = $teammemberlist.split(",");
 
 $query = $mysqli->query("SELECT max(team_id) FROM team WHERE event_id='$event_id'");
-$row = $query->fetch_array();
+$row = $query->fetch_assoc();
 if($row)
-	$maxteamid = $row[0];
+	$maxteamid = $row['team_id'];
 else
 	$maxteamid = 100;
 $maxteamid++;
 
 /* Creating query to insert into table */
 $string = "INSERT INTO `team` VALUES ('$event_id', '$maxteamid', '$teamleader_id', '$teamleader_id')";
-for($i = 0; $i < count($teammembers); $i++) {
+for($i = 0; $i < count($teammembers)-1; $i++) {
 	$string .= ", ('$event_id', '$maxteamid', '$teamleader_id', '$teammembers[$i]')";
 }
-$string .= ";"
+$string .= ";";
 if($mysqli->query($string)) {
 	$success = 1;
 	$msg = "Your team has been registered. Your Team ID is $event_id$maxteamid";

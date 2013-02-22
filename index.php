@@ -116,7 +116,7 @@
 		<form id="eventregform">
 		<p style="color:white">Team Leader : <?php echo $_SESSION['uname']; ?> </p> <br/>
 		<input type="text" name="multiname" id="multiname" onblur="inputBlur(this)" />
-		<input class="submit_eventreg" type="submit" name="Submit" value="Submit" /> 
+		<input class="submit" type="submit" name="Submit" value="Submit" /> 
 		</form>
 		<div id="tip">press enter to complete event registration...</div>
 	</div>
