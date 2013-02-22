@@ -775,7 +775,20 @@ function lookup(inputString) {
 	    	click: function(){
 	    		$("#dark").attr("class","overlayon");
 	    		$("#eventreg-form-wrapper").show();
-	    		$("#multiname").autoSuggest("/"+subDir+ "/manager/queryname.php",{minChars: 2, matchCase: false, asHtmlID: 'reg', selectedValuesProp: 'reg_id', retrieveLimit: 10, searchObjProps: 'value', selectionLimit:30});
+	    		$("#multiname").autoSuggest("/"+subDir+ "/manager/queryname.php",{
+	    				minChars: 1, 
+	    				matchCase: false, 
+	    				selectedItemProp: 'name', 
+	    				selectedValuesProp: 'ragID', 
+	    				searchObjProps: 'name', 
+	    				retrieveLimit: 10, 
+	    				selectionLimit:30,
+	    				formatList: function(data, elem){
+							var new_elem = elem.html(data.name+' (RAG'+data.ragID+') - ' + data.college);
+							return new_elem;
+						},
+						preFill: [{"name": $("#hidden-name").text(), "ragID": $("#hidden-ragID").text(), "college": $("#hidden-college").text()}]
+	    		});
 	    	}
 	    })
 	    

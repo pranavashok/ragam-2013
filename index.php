@@ -23,6 +23,7 @@
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotateCompressed.2.2.js"></script>-->
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.history.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autoSuggest.minified.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/min.js"></script>
 	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/script.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.nanoscroller.min.js"></script>
@@ -113,7 +114,6 @@
 	<?php } else{ ?>
 	<div id="eventreg-form-wrapper">
 		<form id="eventregform">
-		<p style="color:white">Team Leader: <?php echo $_SESSION['uname']; ?></p> <br/>
 		<input type="text" name="multiname" id="multiname" onblur="inputBlur(this)" />
 		<input class="submit_eventreg" type="submit" name="Submit" value="Submit" /> 
 		</form>
@@ -494,6 +494,17 @@
 		<img id='literary' />
 		<img id='dramatics' />
 		<img id='thematic' />
+	</div>
+	<div id="hidden-info">
+		<div id="hidden-name"><?php 
+		if (isset($_SESSION['uname']) && isset($_SESSION['ragID'])) {
+			echo $_SESSION['uname'];
+			echo '</div><div id="hidden-ragID">';
+			echo $_SESSION['ragID'];
+ 			echo '</div><div id="hidden-college">';
+			echo $_SESSION['college'];
+
+		}?></div>
 	</div>
 </div>
 </body>

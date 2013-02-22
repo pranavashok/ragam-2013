@@ -7,7 +7,7 @@ session_start();
     $user = $mysqli->real_escape_string($_POST["email"]);
     $pass = $mysqli->real_escape_string($_POST["password"]);
     $pass = md5($pass);
-    $result = $mysqli->query("SELECT ragID, name,active FROM participants WHERE email='$user' AND password='$pass'");
+    $result = $mysqli->query("SELECT ragID, name, college, active FROM participants WHERE email='$user' AND password='$pass'");
     
     if ($row = $result->fetch_assoc()) 
     {
@@ -15,6 +15,7 @@ session_start();
         {
 	       $_SESSION['ragID'] = $row['ragID'];
 	       $_SESSION['uname'] = $row['name'];
+           $_SESSION['college'] = $row['college'];
 	       $success = 1;
            $msg = "Login successfull!";
         }else
