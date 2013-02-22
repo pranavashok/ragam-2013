@@ -49,6 +49,7 @@ Your account has been created! Please note down your Ragam ID for future referen
 Your Name: '.$fullname.'
 Ragam ID: RAG'.$maxragid.'
 ------------------------
+
 Please click this link to activate your account:
 http://www.ragam.org.in/2013/verify.php?email='.$email.'&hash='.$hash.'
 
