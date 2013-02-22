@@ -93,6 +93,7 @@
 		<form id="loginform">
 		<input class="emailentry" type="email" name="email" title="email" placeholder="email" onblur="inputBlur(this)" autocomplete="off"/>
 		<input class="passwordentry" type="password" name="password" title="password" placeholder="password" onblur="inputBlur(this)" autocomplete="off"/>
+		<input class="submit_login" type="submit" name="Submit" value="Submit" /> 
 		</form>
 		<div id="tip">press enter to log in...</div>
 		<!--<div id="tip">log in will be ready soon...</div>-->
@@ -128,6 +129,7 @@
 				</a>
 				<?php }else{ ?>
 				<div id="welcome">Hello <?php echo $_SESSION['uname']; ?></div>
+				<div id='login-options-wrapper'><ul id='login-options'><a href='#'><li id='logout-button'>Logout</li></a></ul></div>
 				<?php } ?>
 			</div>
 			<div id="signin-dropdown">

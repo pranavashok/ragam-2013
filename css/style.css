@@ -1014,7 +1014,37 @@ a#login-link {
 	color: rgb(131, 131, 131);
 	margin: 10% 5%;
 }
-
+#welcome {
+	display:block;
+	color:#555;
+	font-family: 'HelveticaLightCondensed';
+	font-size: 20px;
+}
+#welcome:hover {
+	color:#000;
+}
+#login-options-wrapper {
+	display:none;
+	width:auto;
+	height:auto;
+	position:relative;
+	top:2px;
+}
+#login-options-wrapper ul {
+	list-style-type:none;
+}
+#login-options-wrapper ul a{
+	display:block;
+	padding:5px;
+	height:20px;
+	text-align:center;
+	background-color:#333;
+	color:#ccc;
+}
+#login-options-wrapper ul a:hover{
+	background-color:#000;
+	color:#fff;
+}
 /* support pane modified */
 
 #support-pane {
