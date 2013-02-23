@@ -106,10 +106,10 @@
 		<input class="emailentry" type="email" name="email" title="Email" id="email" placeholder="email" onblur="inputBlur(this)" autocomplete="off"/>
 		<input class="passwordentry" type="password" name="password" title="Password" id="password" placeholder="password" onblur="inputBlur(this)" autocomplete="off"/>
 		<input class="collegeentry" name="college" title="College" id="college" placeholder="college" autocomplete="off" />
-		<input class="phoneentry" type="text" name="phone" title="Phone" id="phone" placeholder="phone" autocomplete="off"/>
+		<input class="phoneentry" type="text" name="phone" title="Phone" id="phone" placeholder="phone" autocomplete="off"/><br/>
 		<input class="submit_login" type="submit" name="Submit" value="Submit" /> 
         </form>
-		<div id="tip">press enter to register...</div>
+		<div id="tip"></div>
 	</div>
 	<?php } else{ ?>
 	<div id="eventreg-form-wrapper">

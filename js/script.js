@@ -784,6 +784,8 @@ function lookup(inputString) {
 		            	}else
 		            	{
 		            		$("#eventregform").show();
+		            		$("#eventreg-form-wrapper #tip").text("");
+		                	$("#eventreg-form-wrapper #tip").css('color','#838383');
 		                }
 		            } 
 		        });
@@ -810,30 +812,33 @@ function lookup(inputString) {
 							return new_data;
 						}	
 	    		});
+	    		$(".as-selection-item").remove();
+	    		$(".as-result-item").remove();
+	    		$("#as-values-evreg").val("");
 	    	}
 	    });
 	    $("#eventregform").submit(function () {
-    		loadingAnimation(true);
-	        $.ajax({
-	        	dataType: 'json',
-	            type: 'POST',
-	            url: "/" + subDir + "/manager/createteam.php",
-	            data: { "event": evcode, "teamleader" : $("#hidden-ragID").text(), "teammembers" : $("#as-values-evreg").val()},
-	            success: function (data) {
-	            	loadingAnimation(false);
-	            	if(data.success)
-					{
-						$("#eventregform").hide();
-						$("#eventreg-form-wrapper #tip").text(data.msg);
-	                	$("#eventreg-form-wrapper #tip").css('color','#77b708');
-	            	}else
-	            	{
-	            		$("#eventregform").hide();
-	                	$("#eventreg-form-wrapper #tip").text(data.msg);
-	                	$("#eventreg-form-wrapper #tip").css('color','#dd181f');
-	                }
-	            }
-	        });
+	    	var r = confirm("Confirm your registration by clicking OK.");
+	    	if(r)
+	    	{
+	    		loadingAnimation(true);
+		        $.ajax({
+		        	dataType: 'json',
+		            type: 'POST',
+		            url: "/" + subDir + "/manager/createteam.php",
+		            data: { "event": evcode, "teamleader" : $("#hidden-ragID").text(), "teammembers" : $("#as-values-evreg").val()},
+		            success: function (data) {
+		            	loadingAnimation(false);
+		               	$("#eventreg-form-wrapper #tip").text(data.msg);
+		            	if(data.success)
+						{
+							$("#eventregform").hide();
+		                	$("#eventreg-form-wrapper #tip").css('color','#77b708');
+		            	}else
+		                	$("#eventreg-form-wrapper #tip").css('color','#dd181f');
+		            }
+		        });
+	    	}	
 	        return false;
 	    });
 		$('[title]').mouseover(function () {
