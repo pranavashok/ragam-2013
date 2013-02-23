@@ -22,8 +22,6 @@ for($i = 0; $i < count($teammembers)-1; $i++) {
 }
 $string .= ";";
 
-echo $string;
-
 if($mysqli->query($string)) {
 	$success = 1;
 	$msg = "Your team has been registered. Your Team ID is $event_id$maxteamid";

@@ -66,7 +66,7 @@ function lookup(inputString) {
 		var h = $(window).height();
 		var flag=0;
 		$("body").keydown(function (event) {
-			if(event.target.type=='text')
+			if(event.target.type=='text' || event.target.type=='email' || event.target.type=='password')
 				;
 			else {
 				if (event.which == 27) $("#shortcut").hide();
@@ -770,6 +770,23 @@ function lookup(inputString) {
 	    	click: function(){
 	    		$("#dark").attr("class","overlayon");
 	    		$("#eventreg-form-wrapper").show();
+	    		$.ajax({
+		        	dataType: 'json',
+		            type: 'POST',
+		            url: "/" + subDir + "/manager/teamcheck.php",
+		            data: { "event": evcode, "ragamid" : $("#hidden-ragID").text()},
+		            success: function (data) {
+		            	if(data.success)
+						{
+							$("#eventregform").hide();
+							$("#eventreg-form-wrapper #tip").text(data.msg);
+		                	$("#eventreg-form-wrapper #tip").css('color','#77b708');
+		            	}else
+		            	{
+		            		$("#eventregform").show();
+		                }
+		            } 
+		        });
 	    		$("#multiname").autoSuggest("/"+subDir+ "/manager/queryname.php",{
 	    				neverSubmit: false,
 	    				minChars: 2, 
@@ -806,10 +823,12 @@ function lookup(inputString) {
 	            	loadingAnimation(false);
 	            	if(data.success)
 					{
+						$("#eventregform").hide();
 						$("#eventreg-form-wrapper #tip").text(data.msg);
 	                	$("#eventreg-form-wrapper #tip").css('color','#77b708');
 	            	}else
 	            	{
+	            		$("#eventregform").hide();
 	                	$("#eventreg-form-wrapper #tip").text(data.msg);
 	                	$("#eventreg-form-wrapper #tip").css('color','#dd181f');
 	                }

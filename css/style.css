@@ -1523,3 +1523,7 @@ a#login-link {
 	width:576px;
 	background:url('../img/images-sprite.jpg') 0 3738;
 }
+#logout-button {
+	font-family: 'HelveticaLightCondensed';
+	padding-top: 2px;
+}
