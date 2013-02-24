@@ -114,8 +114,8 @@
 	<?php } else{ ?>
 	<div id="eventreg-form-wrapper">
 		<form id="eventregform">
-		<p style="color:white">Team Leader : <?php echo $_SESSION['uname']; ?> </p> <br/>
-		<input type="text" name="multiname" id="multiname" onblur="inputBlur(this)" />
+		<p style="color:white">Team Leader: <?php echo $_SESSION['uname']; ?> </p> <br/>
+		<span style="color:white">Team Members: </span> <input type="text" name="multiname" id="multiname" onblur="inputBlur(this)" />
 		<input class="submit" type="submit" name="Submit" value="Submit" /> 
 		</form>
 		<div id="tip">press enter to complete event registration...</div>
@@ -173,7 +173,11 @@
 						<div id="content-heading-events">
 						</div>
 						<div id="content-reg-events">
+							<?php 
+								if (isset($_SESSION['uname']) && isset($_SESSION['ragID'])) {
+    						?>
 							<div class="event-register">register</div>
+							<?php } ?>
 						</div>
 						<div id="content-content-wrapper-events" class="nano">
 							<div id="content-content-events" class="content">

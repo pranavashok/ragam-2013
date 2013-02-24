@@ -791,6 +791,7 @@ function lookup(inputString) {
 		        });
 	    		$("#multiname").autoSuggest("/"+subDir+ "/manager/queryname.php",{
 	    				neverSubmit: false,
+	    				startText: "",
 	    				minChars: 2, 
 	    				matchCase: false, 
 	    				asHtmlID: 'evreg',
@@ -810,11 +811,14 @@ function lookup(inputString) {
 									new_data[i]=data[i];
 							}
 							return new_data;
-						}	
+						},
+						selectionAdded: function(elem){
+							$(".as-results").empty();
+						}
 	    		});
 	    		$(".as-selection-item").remove();
 	    		$(".as-result-item").remove();
-	    		$("#as-values-evreg").val("");
+	    		$("#as-values-evreg").val(",");
 	    	}
 	    });
 	    $("#eventregform").submit(function () {
