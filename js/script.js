@@ -824,16 +824,24 @@ function lookup(inputString) {
 	    		$("#as-values-evreg").val(",");
 	    	}
 	    });
-	    $("#eventregform").submit(function () {
+	    $("#eventregform").submit(function (e) {
+	    	e.preventDefault();
 	    	var r = confirm("Confirm your registration by clicking OK.");
 	    	if(r)
 	    	{
+	    		var team = $("#as-values-evreg").val();
+	    		var members = team.split(',');
+	    		var inttest = /^[0-9]{4}$/;
+	    		team = '';
+	    		for (i in members)
+	    			if(inttest.test(members[i]))
+	    				team += members[i] + ',';
 	    		loadingAnimation(true);
 		        $.ajax({
 		        	dataType: 'json',
 		            type: 'POST',
 		            url: "/" + subDir + "/manager/createteam.php",
-		            data: { "event": evcode, "teamleader" : $("#hidden-ragID").text(), "teammembers" : $("#as-values-evreg").val()},
+		            data: { "event": evcode, "teamleader" : $("#hidden-ragID").text(), "teammembers" : team},
 		            success: function (data) {
 		            	loadingAnimation(false);
 		               	$("#eventreg-form-wrapper #tip").text(data.msg);
