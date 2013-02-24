@@ -109,14 +109,14 @@
 		<input class="phoneentry" type="text" name="phone" title="Phone" id="phone" placeholder="phone" autocomplete="off"/><br/>
 		<input class="submit_login" type="submit" name="Submit" value="Submit" /> 
         </form>
-		<div id="tip"></div>
+		<div id="tip">press enter to submit...</div>
 	</div>
 	<?php } else{ ?>
 	<div id="eventreg-form-wrapper">
 		<form id="eventregform">
 		<p style="color:white">Team Leader: <?php echo $_SESSION['uname']; ?> </p> <br/>
 		<span style="color:white">Team Members: </span> <input type="text" name="multiname" id="multiname" onblur="inputBlur(this)" />
-		<input class="submit" type="submit" name="Submit" value="Submit" /> 
+		<input class="submit_eventreg" type="submit" name="Submit" value="Submit" /> 
 		</form>
 		<div id="tip">press enter to complete event registration...</div>
 	</div>
@@ -138,8 +138,9 @@
 					<img src="<?php echo $subDir; ?>img/signup.png" />
 				</a>
 				<?php }else{ ?>
-				<div id="welcome">Hello <?php echo $_SESSION['uname']; ?></div>
+				<div id="welcome">Hello <?php echo $_SESSION['uname']; ?>
 				<div id='login-options-wrapper'><ul id='login-options'><a href='#'><li id='logout-button'>Logout</li></a></ul></div>
+				</div>
 				<?php } ?>
 			</div>
 			<div id="signin-dropdown">

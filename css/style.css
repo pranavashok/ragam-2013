@@ -207,6 +207,10 @@
 	font-size:20px;
 	color: #fff;
 	float:right;
+
+}
+.event-register{
+	cursor:pointer;
 }
 #content-content-wrapper-events.nano { 
 	background: #4a52b5; 

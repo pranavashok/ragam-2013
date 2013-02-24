@@ -750,8 +750,11 @@ function lookup(inputString) {
 	        return false;
 	    });
 	    $("#welcome").live({
-	    	click: function(){
-				$("#login-options-wrapper").slideToggle();
+	    	mouseenter: function(){
+				$("#login-options-wrapper").slideDown();
+			},
+			mouseleave: function(){
+				$("#login-options-wrapper").slideUp();	
 			}
 	    });
 	    $("#logout-button").live({
@@ -784,7 +787,7 @@ function lookup(inputString) {
 		            	}else
 		            	{
 		            		$("#eventregform").show();
-		            		$("#eventreg-form-wrapper #tip").text("");
+		            		$("#eventreg-form-wrapper #tip").text("pres enter to submit...");
 		                	$("#eventreg-form-wrapper #tip").css('color','#838383');
 		                }
 		            } 
