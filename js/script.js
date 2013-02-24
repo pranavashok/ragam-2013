@@ -601,6 +601,7 @@ function lookup(inputString) {
 		    $("#login-form-wrapper").hide();
 		    $("#signup-form-wrapper").hide();
 		    $("#eventreg-form-wrapper").hide();
+		    $("#myevents").hide();
 		});
 		$(".gallery").click(function()
 		{
@@ -755,6 +756,19 @@ function lookup(inputString) {
 			},
 			mouseleave: function(){
 				$("#login-options-wrapper").slideUp();	
+			},
+			click: function(){
+				$("#dark").attr("class","overlayon");
+				$("#myevents").show();
+				$.ajax({
+		        	dataType: 'json',
+		            type: 'GET',
+		            url: "/" + subDir + "/manager/myevents.php",
+		            data: { "id" : $("#hidden-ragID").text()},
+		            success: function (data) {
+		            	
+		            }
+				});
 			}
 	    });
 	    $("#logout-button").live({
