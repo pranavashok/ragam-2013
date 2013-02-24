@@ -1108,8 +1108,30 @@ a#login-link {
 	margin-top: 5%;
 	display:none;
 	position: relative;
-	background: #fff;
 	z-index: 22;
+	font-family: 'HelveticaLightCondensed';
+	font-size: 20px;
+	color: #eee;
+}
+#myevents-table{
+	width:80%;
+	margin:auto;
+	position:relative;
+	text-align:center;
+	border-collapse: collapse;
+	color: #eee;
+	letter-spacing:1px;
+}
+#myevents-table th{
+	height:40px;
+	padding:15px;
+	color:#77b708;
+}
+#myevents-table td{
+	height:40px;
+	vertical-align: bottom;	
+	padding:15px;
+	color:#fff;
 }
 #welcome {
 	display:block;

@@ -766,7 +766,20 @@ function lookup(inputString) {
 		            url: "/" + subDir + "/manager/myevents.php",
 		            data: { "id" : $("#hidden-ragID").text()},
 		            success: function (data) {
-		            	
+		            	var content = "<table id='myevents-table'><tr><th>Event</th><th>Team ID</th><th>Team Leader</th></tr>";
+		            	if(data.length==0)
+		            		content+="<tr>You have not registered for any events yet.</tr>";
+		            	else
+		            	{
+		            		data.forEach(function(ele){
+		            			if(ele.name == $("#hidden-name").text())
+		            				content+="<tr><td>"+ele.event_name+"</td><td>"+ele.event_id+ele.team_id+"</td><td>You</td></tr>";
+		            			else	
+		            				content+="<tr><td>"+ele.event_name+"</td><td>"+ele.event_id+ele.team_id+"</td><td>"+ele.name+"</td></tr>";
+		            		});
+		            	}
+		            	content+="</table>";
+		            	$("#myevents").html(content);
 		            }
 				});
 			}

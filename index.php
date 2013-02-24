@@ -129,13 +129,6 @@
 		if (isset($_SESSION['uname']) && isset($_SESSION['ragID'])) {
     ?>
 	<div id="myevents">
-		<table>
-			<th>
-				<td>Event</td>
-				<td>Team ID</td>
-				<td>Team Leader</td>
-			</th>
-		</table>
 	</div>
 	<?php } ?>
 	<div id="wrapper">
