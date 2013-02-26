@@ -114,7 +114,9 @@
 	</div>
 	<?php } else{ ?>
 	<div id="eventreg-form-wrapper">
-		<form id="eventregform">
+		<div id="sub">
+		</div>
+		<form id="eventregform">			
 		<p style="color:white">Team Leader: <?php echo $_SESSION['uname']; ?> </p> <br/>
 		<span style="color:white">Team Members: </span> <input type="text" name="multiname" id="multiname" onblur="inputBlur(this)" />
 		<input class="submit_eventreg" type="submit" name="Submit" value="Submit" /> 

@@ -796,6 +796,30 @@ function lookup(inputString) {
 	        	});
 			}	
 	    });
+	    $("#eventreg-form-wrapper #sub input[type=radio]").live({
+	    	click: function(){
+	    		evcode = $(this).val();
+	    		$.ajax({
+		        	dataType: 'json',
+		            type: 'POST',
+		            url: "/" + subDir + "/manager/teamcheck.php",
+		            data: { "event": evcode, "ragamid" : $("#hidden-ragID").text()},
+		            success: function (data) {
+		            	if(data.success==1)
+						{
+							$("#eventregform").hide();
+							$("#eventreg-form-wrapper #tip").text(data.msg);
+		                	$("#eventreg-form-wrapper #tip").css('color','#77b708');
+		            	}else if(data.success==0)
+		            	{
+		            		$("#eventregform").show();
+		            		$("#eventreg-form-wrapper #tip").text("press enter to submit...");
+		                	$("#eventreg-form-wrapper #tip").css('color','#838383');
+		                }
+		            } 
+		        });
+	    	}
+	    });
 	    $(".event-register").live({
 	    	click: function(){
 	    		$("#dark").attr("class","overlayon");
@@ -806,11 +830,14 @@ function lookup(inputString) {
 		            url: "/" + subDir + "/manager/teamcheck.php",
 		            data: { "event": evcode, "ragamid" : $("#hidden-ragID").text()},
 		            success: function (data) {
-		            	if(data.success)
+		            	if(data.success==1)
 						{
 							$("#eventregform").hide();
 							$("#eventreg-form-wrapper #tip").text(data.msg);
 		                	$("#eventreg-form-wrapper #tip").css('color','#77b708');
+		            	}else if(data.success==3)
+		            	{
+		            		$("#eventreg-form-wrapper #sub").html(data.sub);
 		            	}else
 		            	{
 		            		$("#eventregform").show();
