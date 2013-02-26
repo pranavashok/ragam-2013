@@ -814,7 +814,7 @@ function lookup(inputString) {
 		            	}else
 		            	{
 		            		$("#eventregform").show();
-		            		$("#eventreg-form-wrapper #tip").text("pres enter to submit...");
+		            		$("#eventreg-form-wrapper #tip").text("press enter to submit...");
 		                	$("#eventreg-form-wrapper #tip").css('color','#838383');
 		                }
 		            } 
