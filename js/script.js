@@ -593,6 +593,7 @@ function lookup(inputString) {
 				$("#login-form-wrapper").fadeIn();
 			}
 		});
+
 		$('#dark').click(function () {
 		    $("#login-link").html('<img src="/' + subDir + '/img/login.png" />');
 		    $("#signin-link").html('<img src="/' + subDir + '/img/signup.png" />');
@@ -722,7 +723,7 @@ function lookup(inputString) {
 
 	        return false; 
     	});
-    	$("#loginform").submit(function () {
+    	$("#form").submit(function () {
     		loadingAnimation(true);
 	        $.ajax({
 	        	dataType: 'json',
@@ -752,12 +753,15 @@ function lookup(inputString) {
 	    });
 	    $("#welcome").live({
 	    	mouseenter: function(){
-				$("#login-options-wrapper").slideDown();
+				$("#login-options-wrapper").stop().slideDown();
 			},
 			mouseleave: function(){
-				$("#login-options-wrapper").slideUp();	
-			},
-			click: function(){
+				$("#login-options-wrapper").stop().slideUp();	
+			}
+	    });
+ 
+	    $("#my-events").live({
+	    	click: function(){
 				$("#dark").attr("class","overlayon");
 				$("#myevents").show();
 				$.ajax({
@@ -783,7 +787,7 @@ function lookup(inputString) {
 		            }
 				});
 			}
-	    });
+		});
 	    $("#logout-button").live({
 	    	click: function(){
 				$.ajax({
@@ -820,7 +824,7 @@ function lookup(inputString) {
 		        });
 	    	}
 	    });
-	    $(".event-register").live({
+	    $("#after-login-register").live({
 	    	click: function(){
 	    		$("#dark").attr("class","overlayon");
 	    		$("#eventreg-form-wrapper").show();

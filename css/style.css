@@ -197,20 +197,28 @@
 	color: #fff;
 }
 #content-reg-events {
-	position:relative;
-	width:15%;
-	height:5%;
-	display:block;
-	top:-40px;
-	left:0px;
-	padding:10px;
-	font-size:20px;
+	position: relative;
+	width: 15%;
+	height: 5%;
+	display: block;
+	left: 0px;
+	padding: 10px;
+	font-size: 20px;
 	color: #fff;
-	float:right;
 
 }
 .event-register{
-	cursor:pointer;
+	cursor: pointer;
+	color: #555;
+	font-size: 15px;
+	background: #f7f7f7;
+	text-align: center;
+	padding: 5px;
+	font-family: 'HelveticaLightCondensed';
+	text-transform: uppercase;
+}
+.event-register:hover{
+	background: #fff;
 }
 #content-content-wrapper-events.nano { 
 	background: #4a52b5; 
@@ -222,7 +230,7 @@
 }
 #content-content-wrapper-events.nano .content { padding: 10px 10px 10px 20px; }
 #content-content-wrapper-events.nano .pane   { background: #4a52b5; }
-#content-content-wrapper-events.nano .slider { background: #111; }
+#content-content-wrapper-events.nano .slider { background: rgba(44,44,44,0.2) }
 #content-content-events {
 	position:relative;
 	width:95%;
@@ -1139,34 +1147,48 @@ a#login-link {
 	color:#fff;
 }
 #welcome {
-	display:block;
+	display:inline;
+	float: left;
+
 	color:#555;
 	font-family: 'HelveticaLightCondensed';
-	font-size: 20px;
+	font-size: 14px;
+	padding: 5px 2px;
 }
 #welcome:hover {
 	color:#000;
 }
+#welcome span{
+	line-height: 5px;
+	text-transform: uppercase;
+
+}
 #login-options-wrapper {
-	display:none;
-	width:auto;
-	height:auto;
-	position:relative;
-	top:2px;
+	font-size: 14px;
+	font-family: 'HelveticaLightCondensed';
+	margin-top: -5px;
+	width: 150px;
+	padding: 23px 5px 10px 5px;
+	z-index:5;
+	display: none;
+	position: absolute;
+	right:15px;
+	top: 18px;
+
 }
 #login-options-wrapper ul {
 	list-style-type:none;
 }
-#login-options-wrapper ul a{
+#login-options-wrapper ul li{
 	display:block;
-	padding:5px;
-	height:20px;
+	padding:10px;
+	height:17px;
 	text-align:center;
-	background-color:#333;
-	color:#ccc;
+	background: #eee;
+	
 }
-#login-options-wrapper ul a:hover{
-	background-color:#000;
+#login-options-wrapper ul li:hover{
+	background: rgb(136, 50, 163);
 	color:#fff;
 }
 /* support pane modified */
@@ -1565,6 +1587,16 @@ a#login-link {
 	background:url('../img/images-sprite.jpg') 0 3738;
 }
 #logout-button {
+	margin: 5px;
+	font-size: 13px;
 	font-family: 'HelveticaLightCondensed';
-	padding-top: 2px;
+	padding: 6px 10px 5px 10px;
+	background: #ccc;
+	color: #fff;
+	text-transform: uppercase;
+
+}
+
+#logout-button:hover{
+	background:black;
 }

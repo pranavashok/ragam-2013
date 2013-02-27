@@ -147,11 +147,15 @@
 					<img src="<?php echo $subDir; ?>img/signup.png" />
 				</a>
 				<?php }else{ ?>
-				<div id="welcome">Hello <?php echo $_SESSION['uname']; ?>
-				<div id='login-options-wrapper'><ul id='login-options'><a href='#'><li id='logout-button'>Logout</li></a></ul></div>
+			
+				<div id="welcome">
+					<span><?php echo $_SESSION['uname']; ?></span>
+					<div id='login-options-wrapper'><ul id='login-options'><li id="my-events">my events</li></ul></div>
 				</div>
-				<?php } ?>
+				
+				<a href='#' id='logout-button'>Logout</a><?php } ?>
 			</div>
+
 			<div id="signin-dropdown">
 			</div>
 		</div>
@@ -186,8 +190,11 @@
 							<?php 
 								if (isset($_SESSION['uname']) && isset($_SESSION['ragID'])) {
     						?>
-							<div class="event-register">register</div>
-							<?php } ?>
+							<div class="event-register" id="after-login-register">register</div>
+							<?php }
+								else {?>
+									<div class="event-register" id="before-login-register" onClick="$('#login-link').click();">register</div>
+									<?php } ?>
 						</div>
 						<div id="content-content-wrapper-events" class="nano">
 							<div id="content-content-events" class="content">
