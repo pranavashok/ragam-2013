@@ -11,7 +11,7 @@ $q1 = $mysqli->query("SELECT min_part, max_part FROM eventinfo WHERE event_id='$
 $r1 = $q1->fetch_assoc();
 
 
-if($numpart <= $r1['max_part'] && $numpart >= $r1['min_part'])
+if($numpart <= $r1['max_part'] && $numpart >= $r1['min_part'] || $r1['max_part'] == -1)
 {
 	$query = $mysqli->query("SELECT max(team_id) AS maxteamid FROM team WHERE event_id='$event_id'");
 	$row = $query->fetch_assoc();

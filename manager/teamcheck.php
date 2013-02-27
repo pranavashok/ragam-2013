@@ -14,7 +14,7 @@ if(count($evt)>1){
 	$success=3;
 	$sub='<form id="sub-events">';
 	foreach ($evt as $k => $v)
-		$sub.='<input type="radio" name="sub_event_id" value="'.$k.'">'.$v.'</input><br>';
+		$sub.='<input type="radio" name="sub_event_id" value="'.$k.'">'.$v.'</input><br />';
 
 	$sub.="</form>";
 }else{

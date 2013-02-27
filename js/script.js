@@ -723,7 +723,7 @@ function lookup(inputString) {
 
 	        return false; 
     	});
-    	$("#form").submit(function () {
+    	$("#loginform").submit(function () {
     		loadingAnimation(true);
 	        $.ajax({
 	        	dataType: 'json',

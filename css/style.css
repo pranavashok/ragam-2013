@@ -858,7 +858,7 @@ border-radius: 15px;
 	position:absolute;
 	right:33.33%;
 	top:33.33%;
-	z-index:20;
+	z-index:18;
 }
 .active-links a {
 	width:80px;
