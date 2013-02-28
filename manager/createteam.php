@@ -37,7 +37,9 @@ if($numpart <= $r1['max_part'] && $numpart >= $r1['min_part'] || $r1['max_part']
 		$msg = "Your team couldn't be created. Please ensure that none of the team members have been registered for the same event under a different team.";
 }else
 {
-	if($r1['min_part'] == $r1['max_part'])
+	if($r1['min_part'] == NULL)
+		$msg = "Please select an event from above before pressing enter";
+	else if($r1['min_part'] == $r1['max_part'])
 		$msg = "Number of team members should be ".$r1['min_part'];
 	else
 		$msg = "Number of team members should be between ".$r1['min_part']." and ".$r1['max_part'];

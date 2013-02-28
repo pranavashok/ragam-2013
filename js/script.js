@@ -763,6 +763,7 @@ function lookup(inputString) {
 	    $("#my-events").live({
 	    	click: function(){
 				$("#dark").attr("class","overlayon");
+				$("#eventregform").hide();
 				$("#myevents").show();
 				$.ajax({
 		        	dataType: 'json',
@@ -827,7 +828,7 @@ function lookup(inputString) {
 	    $("#after-login-register").live({
 	    	click: function(){
 	    		$("#dark").attr("class","overlayon");
-	    		$("#eventreg-form-wrapper").show();
+	    		$("#eventreg-form-wrapper").hide();
 	    		$.ajax({
 		        	dataType: 'json',
 		            type: 'POST',
@@ -838,18 +839,23 @@ function lookup(inputString) {
 						{
 							$("#eventregform").hide();
 							$("#eventreg-form-wrapper #tip").text(data.msg);
+							$("#eventreg-form-wrapper #sub").html("");
 		                	$("#eventreg-form-wrapper #tip").css('color','#77b708');
 		            	}else if(data.success==3)
 		            	{
 		            		$("#eventreg-form-wrapper #sub").html(data.sub);
+		            		$("#eventreg-form-wrapper #tip").text(data.msg);
+		            		$("#eventreg-form-wrapper #tip").css('color','#77b708');
 		            	}else
 		            	{
 		            		$("#eventregform").show();
 		            		$("#eventreg-form-wrapper #tip").text("press enter to submit...");
+		            		$("#eventreg-form-wrapper #sub").html("");
 		                	$("#eventreg-form-wrapper #tip").css('color','#838383');
 		                }
 		            } 
 		        });
+		        $("#eventreg-form-wrapper").show();
 	    		$("#multiname").autoSuggest("/"+subDir+ "/manager/queryname.php",{
 	    				neverSubmit: false,
 	    				startText: "",
@@ -880,6 +886,7 @@ function lookup(inputString) {
 	    		$(".as-selection-item").remove();
 	    		$(".as-result-item").remove();
 	    		$("#as-values-evreg").val(",");
+	    		$("#evreg").focus();
 	    	}
 	    });
 	    $("#eventregform").submit(function (e) {
