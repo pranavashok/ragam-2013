@@ -15,21 +15,21 @@
 	<!-- gallery.js and shorcut.js only loads when initiated with their respective handler -->
 	<!-- prefixfree, proximity, easing, rotate, script, nanoscroller and address are minified -->
 
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.jquery.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.dynamic-dom.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.proximity.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotateCompressed.2.2.js"></script>-->
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotateCompressed.2.2.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.history.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autoSuggest.minified.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/min.js"></script>
+	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/min.js"></script>-->
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autocomplete.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/script.js"></script>
-	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.nanoscroller.min.js"></script>-->
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.nanoscroller.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>
-	<script async type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autocomplete.min.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-tween.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-graphics.js"></script>
@@ -149,11 +149,11 @@
 				<?php }else{ ?>
 			
 				<div id="welcome">
-					<span><?php echo $_SESSION['uname']; ?></span>
-					<div id='login-options-wrapper'><ul id='login-options'><li id="my-events">my events</li></ul></div>
+					<span><?php echo $_SESSION['uname']; ?>&nbsp;&nbsp;</span><span class="symbol" id="settings-icon">V</span>
+					<div id='login-options-wrapper'><ul id='login-options'><li id="my-events">my events</li><li id="logout-button">logout</li></ul></div>
 				</div>
 				
-				<a href='#' id='logout-button'>Logout</a><?php } ?>
+				<?php } ?>
 			</div>
 
 			<div id="signin-dropdown">
@@ -184,17 +184,20 @@
 				</div>
 				<div id="content-container-events">
 					<div id="content-wrapper-events">
+
 						<div id="content-heading-events">
 						</div>
-						<div id="content-reg-events">
+						
 							<?php 
-								if (isset($_SESSION['uname']) && isset($_SESSION['ragID'])) {
-    						?>
-							<div class="event-register" id="after-login-register">register</div>
-							<?php }
-								else {?>
-									<div class="event-register" id="before-login-register" onClick="$('#login-link').click();">register</div>
-									<?php } ?>
+							if (isset($_SESSION['uname']) && isset($_SESSION['ragID'])) {
+						?>
+						<div class="symbol event-register" id="after-login-register">M</div>
+						<?php }
+							else {?>
+								<div class="symbol event-register" id="before-login-register" onClick="$('#login-link').click();">M</div>
+								<?php } ?>	
+						<div id="content-reg-events">
+				
 						</div>
 						<div id="content-content-wrapper-events" class="nano">
 							<div id="content-content-events" class="content">
@@ -349,10 +352,9 @@
 				<span class="menu_item menu_click">contacts</span>
 				<span class="menu_item menu_nonclick"><a href="<?php echo $subDir; ?>schedule.html" target="_blank" 
 					style="text-decoration:none">schedule</a></span>
-				<span class="menu_item menu_click">faq</span>
+				<span class="menu_item menu_click">faq</span>	
+				<span class="menu_item menu_nonclick">info</span>
 				<span class="menu_item menu_nonclick gallery">gallery</span>
-				<span class="menu_item menu_nonclick"><a href="<?php echo $subDir; ?>ragam-brochure.pdf" target="_blank" 
-					style="text-decoration:none">brochure</a></span>
 				<span class="menu_item menu_click">reach us</span>
 			</div>
 			<div id="menu_info">
@@ -405,8 +407,8 @@
 					</tr>
 					</tbody></table>
 					</div>
-				<div id="info-wrapper" class="nano">
-					<div id="info" class="content">
+				<div id="faq-wrapper" class="nano">
+					<div id="faq" class="content">
 					<ol>
 						<li><strong>What to do at Ragam '13?</strong></li> 
 

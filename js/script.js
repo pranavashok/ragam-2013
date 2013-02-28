@@ -478,10 +478,10 @@ function lookup(inputString) {
 					$(this).attr("class", "notselected");
 				});
 				$(this).attr("class", "selected");
-				$(this).children(".shortdesc").show();
+				/*$(this).children(".shortdesc").show();
 			},
 			mouseleave: function(e) {
-				$(this).children(".shortdesc").hide();
+				$(this).children(".shortdesc").hide();*/
 			}
 		});
 		$("#content-container-events").mouseenter(function() {
@@ -732,16 +732,16 @@ function lookup(inputString) {
 	            data: $("#loginform").serializeArray(),
 	            success: function (data) {
 	            	loadingAnimation(false);
-	            	if(data.success)
+	            	if(data.success==1)
 					{
 						$("#loginform").slideUp();	           
-						$("#login-form-wrapper #tip").text(data.msg);
+						/*$("#login-form-wrapper #tip").text(data.msg);
 	                	$("#login-form-wrapper #tip").css('color','#77b708');
 	                	$("#login-form-wrapper #tip").css('font-size','28px');
 	                	$("#login-form-wrapper").fadeOut(2500,function() {
-	                		$("#dark").attr("class", "overlayoff");	
+	                		$("#dark").attr("class", "overlayoff");	*/
 	                		location.reload();
-	                	});
+	                	//});
 	            	}else
 	            	{
 	                	$("#login-form-wrapper #tip").text(data.msg);
@@ -753,10 +753,14 @@ function lookup(inputString) {
 	    });
 	    $("#welcome").live({
 	    	mouseenter: function(){
-				$("#login-options-wrapper").stop().slideDown();
+	    		$("#settings-icon").css("background","#eee");
+	    		var width = $("#welcome").width()>115?$("#welcome").width():115;	    		
+				$("#login-options-wrapper").css("width",width+"px")
+				$("#login-options-wrapper").stop().show();
 			},
 			mouseleave: function(){
-				$("#login-options-wrapper").stop().slideUp();	
+				$("#settings-icon").css("background","");
+				$("#login-options-wrapper").stop().hide();	
 			}
 	    });
  
@@ -825,6 +829,13 @@ function lookup(inputString) {
 		        });
 	    	}
 	    });
+	 /*   $(".event-register").mouseover(function () {
+        	$("#tooltip_register").show();
+    	}).mouseout(function () {
+    	    $("#tooltip_register").hide();
+    	});
+*/
+
 	    $("#after-login-register").live({
 	    	click: function(){
 	    		$("#dark").attr("class","overlayon");
@@ -927,7 +938,7 @@ function lookup(inputString) {
     	}).mouseout(function () {
     	    $(this).attr('title', $(this).data('title'));
     	});
-    	$("#info-wrapper.nano").nanoScroller({
+    	$("#faq-wrapper.nano").nanoScroller({
 			scrollTop: '0px'
 		});
 	});

@@ -2,6 +2,10 @@
 	overflow: hidden;
 }
 @font-face {
+	font-family: PulsarJS;
+	src: url('pulsarjs.ttf');
+}
+@font-face {
 	font-family: HelveticaThin;
 	src: url('helveticaneuecyr-thin-webfont.eot');
 	src: url('helveticaneuecyr-thin-webfont.eot?#iefix') format('embedded-opentype'),
@@ -189,8 +193,8 @@
 	height:5%;
 	display:block;
 	background: #4a52b5;
-	top:0;
-	left:0;
+	top:22px;
+	left:0px;
 	padding:10px;
 	font-size:30px;
 	text-transform:lowercase;
@@ -208,17 +212,23 @@
 
 }
 .event-register{
+	margin-top: -3px;
+	width: 140px;
+	float: right;
+	font-size:25px;
 	cursor: pointer;
-	color: #555;
-	font-size: 15px;
-	background: #f7f7f7;
+	color: #e7e7e7;
+	font-size: 25px;
 	text-align: center;
 	padding: 5px;
 	font-family: 'HelveticaLightCondensed';
 	text-transform: uppercase;
 }
 .event-register:hover{
-	background: #fff;
+	color: #fff;
+}
+#tooltip_register{
+	display: none;
 }
 #content-content-wrapper-events.nano { 
 	background: #4a52b5; 
@@ -922,7 +932,7 @@ a#login-link {
 	display: none;
 }
 #login-form-wrapper input.emailentry {
-	padding: 5px 0 0 40px;
+	padding: 0px 0 0 35px;
 	z-index: 30;
 	position: relative;
     font-family: 'HelveticaLightCondensed';
@@ -935,7 +945,7 @@ a#login-link {
     background: #ccc url('../img/iconsprite.png') 0px -96px no-repeat;
 }
 #login-form-wrapper input.passwordentry {
-	padding: 5px 0 0 40px;
+	padding: 0px 0 0 35px;
 	z-index: 30;
 	position: relative;
     font-family: 'HelveticaLightCondensed';
@@ -1080,14 +1090,18 @@ a#login-link {
 #login-form-wrapper #tip {
 	font-family: 'HelveticaLightCondensed';
 	font-size: 20px;
+	text-align: center;
+	font-weight: bold;
 	color: rgb(131, 131, 131);
-	margin: 10% 30%;
+	margin: auto;
 }
 #signup-form-wrapper #tip {
 	font-family: 'HelveticaLightCondensed';
 	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
 	color: rgb(131, 131, 131);
-	margin: 10% 5%;
+	margin: auto;
 }
 #eventreg-form-wrapper {
 	font-family: 'HelveticaLightCondensed';
@@ -1109,7 +1123,9 @@ a#login-link {
 	font-family: 'HelveticaLightCondensed';
 	font-size: 20px;
 	color: rgb(131, 131, 131);
-	margin: 5% 5%;
+	text-align: center;
+	font-weight: bold;
+	margin: auto;
 }
 .submit_eventreg {
 	visibility: hidden;
@@ -1153,7 +1169,7 @@ a#login-link {
 	color:#555;
 	font-family: 'HelveticaLightCondensed';
 	font-size: 14px;
-	padding: 5px 2px;
+	padding: 5px 0px;
 }
 #welcome:hover {
 	color:#000;
@@ -1167,13 +1183,13 @@ a#login-link {
 	font-size: 14px;
 	font-family: 'HelveticaLightCondensed';
 	margin-top: -5px;
-	width: 150px;
-	padding: 23px 5px 10px 5px;
+	width: 100px;
+	padding: 23px 5px 5px 5px;
 	z-index:5;
 	display: none;
 	position: absolute;
-	right:15px;
-	top: 18px;
+	right:7px;
+	top: 8px;
 
 }
 #login-options-wrapper ul {
@@ -1181,14 +1197,14 @@ a#login-link {
 }
 #login-options-wrapper ul li{
 	display:block;
-	padding:10px;
+	padding:5px;
 	height:17px;
 	text-align:center;
 	background: #eee;
 	
 }
 #login-options-wrapper ul li:hover{
-	background: rgb(136, 50, 163);
+	background: #666;
 	color:#fff;
 }
 /* support pane modified */
@@ -1462,7 +1478,7 @@ a#login-link {
 }
 #feedback
 {
-	width:30%;
+	width:33%;
 	height:85%;
 	margin-left: 35%;
 	margin-top: 10%;
@@ -1586,6 +1602,7 @@ a#login-link {
 	width:576px;
 	background:url('../img/images-sprite.jpg') 0 3738;
 }
+/*
 #logout-button {
 	margin: 5px;
 	font-size: 13px;
@@ -1599,4 +1616,13 @@ a#login-link {
 
 #logout-button:hover{
 	background:black;
+}*/
+
+.symbol{
+	font-family: 'PulsarJS';
+}
+
+#settings-icon{
+	font-size:18px;
+	vertical-align: middle;
 }

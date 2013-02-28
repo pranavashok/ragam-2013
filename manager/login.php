@@ -1,7 +1,7 @@
 <?php
 require_once("initdb.php");
 $success=0;
-session_start();
+
 //if($_POST["email"])
 //{
     $user = $mysqli->real_escape_string($_POST["email"]);
@@ -17,22 +17,25 @@ session_start();
 	       $_SESSION['uname'] = $row['name'];
            $_SESSION['college'] = $row['college'];
 	       $success = 1;
+           $results['ragID'] = $_SESSION['ragID'];
+            $results['uname'] = $_SESSION['uname'];
            $msg = "Login successfull!";
         }else
         {
+            $success = 2;
             $msg = "Verify your account before logging in.";
         }
     }else
     {
-        $msg = "Invalid username / password.";
+        $success = 2;
+        $msg = "Invalid username or password.";
     }
 //}else
 //{
     //redirect
 //}
     
-$results['ragID'] = $_SESSION['ragID'];
-$results['uname'] = $_SESSION['uname'];
+
 $results['success'] = $success;
 $results['msg'] = $msg;
 echo json_encode($results);
