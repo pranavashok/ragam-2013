@@ -321,9 +321,9 @@
 		<div id="footer_inner">
 			<div id="supportpane_top">
 				<div id="ticker">
-					<div>The Ragam 2013 <strong><a href="<?php echo $subDir; ?>schedule.html">schedule</a></strong> has been published. Further changes will be notified.</div>
+					<div>The event registration has started. You can click on the <span class="symbol" style="vertical-align:middle">M</span> sign on the respective event page to register</div>
+					<div>The Ragam 2013 <strong><a href="<?php echo $subDir; ?>schedule.html">schedule</a></strong> has been updated on Feb 28th.</div>
 					<div>Entries for the national short film contest, <strong><a href="<?php echo $subDir; ?>Events/General/Take_One">Take One</a></strong>, should be sent on or before March 5th</div>
-					<div>The prizes for the various events at Ragam 2013 have been updated in the respective pages.</div>
 					<div>Those interested in participating for <strong><a href="<?php echo $subDir; ?>Events/Dance/Choreo_Nite">Choreo Nite</a></strong> and <strong><a href="<?php echo $subDir; ?>Events/General/Couture_Boulevard">Couture Boulevard</a></strong> are to mail their previous performances on or before March 1st</div>
 					<div><strong><a href="<?php echo $subDir; ?>Proshows">Shankar Mahadevan</a></strong> would be performing at Ragam 2013</div>
 					<div>Those interested in participating for <strong><a href="<?php echo $subDir; ?>Events/Music/Amplified">Amplified</a></strong>, <strong><a href="<?php echo $subDir; ?>Events/Music/Acoustics">Acoustics</a></strong> and <strong><a href="<?php echo $subDir; ?>Events/Music/Swara_Raaga">Swara Raaga</a></strong> are to mail their previous performances on or before March 1st</div>
