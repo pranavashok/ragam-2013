@@ -1297,13 +1297,13 @@ a#login-link {
 {
 	margin:auto;
 	height:33px;
-	width:900px;
+	width:910px;
 	padding-top: 5px;
 }
 
 .menu_item
 {
-	width:90px;
+	width:100px;
 	height:31px;
 	float:left;
 	display:block;
@@ -1510,6 +1510,9 @@ a#login-link {
 	top:20px;
 	margin-bottom:40px;
 }
+#feedback input {
+	border: 1px #ddd solid;
+}
 #feedback input.nameentry {
 	padding: 5px 0 0 40px;
 	z-index: 30;
@@ -1521,8 +1524,7 @@ a#login-link {
     margin-top: 10%;
     margin-left: 10%;
     color:#555;
-    border: none;
-    background: #ccc url('../img/iconsprite.png') 0px -32px no-repeat;
+    background: rgb(235, 235, 235) url('../img/iconsprite.png') 0px -32px no-repeat;
 }
 #feedback input.emailentry {
 	padding: 5px 0 0 40px;
@@ -1535,8 +1537,7 @@ a#login-link {
     margin-top: 2%;
     margin-left: 10%;
     color:#555;
-    border: none;
-    background: #ccc url('../img/iconsprite.png') 0px -96px no-repeat;
+    background: rgb(235, 235, 235) url('../img/iconsprite.png') 0px -96px no-repeat;
 }
 #feedback textarea.feedbackentry {
 	padding: 5px;
@@ -1544,24 +1545,22 @@ a#login-link {
 	position: relative;
     font-family: 'HelveticaLightCondensed';
     width: 340px;
-    height: 300px;
+    height: 150px;
     font-size: 18px;
     margin-top:2%;
     margin-left: 10%;
     color:#555;
-    border: none;
-    background: #ccc;
+    background: rgb(235, 235, 235);
 }
 #feedback a#feedback-submit {
-	background: rgb(0, 0, 0);
 	width: 80px;
 	height: 32px;
-	color: #bababa;
+	color: #666;
 	text-align: center;
 	display: block;
 	position: relative;
 	margin-top: 2%;
-	margin-left: 30%;
+	margin-left: 170px;
 	float: left;
 	padding-top: 10px;
 	text-transform: uppercase;
@@ -1570,10 +1569,9 @@ a#login-link {
 }
 #feedback a#feedback-cancel {
 	margin-left: 20px;
-	background: rgb(0, 0, 0);
 	width: 80px;
 	height: 32px;
-	color: #bababa;
+	color: #666;
 	text-align: center;
 	display: block;
 	position: relative;
