@@ -403,6 +403,9 @@ function lookup(inputString) {
 		$("#content-content-wrapper-events.nano").hover(function(){
 			$(this).nanoScroller();
 		});
+		$("#faq-wrapper.nano").hover(function(){
+			$(this).nanoScroller();
+		});	
 		$("#info-wrapper.nano").hover(function(){
 			$(this).nanoScroller();
 		});
@@ -611,11 +614,7 @@ function lookup(inputString) {
   					$("#gallery").attr("class", "overlayon");
 			});
 		});
-		$(".feedback_link").click(function()
-		{
-				$("#feedback").show();
-				$("#feedback").attr("class", "overlayon");
-		});
+
 		$("#gallery").click(function () {
 			$("#gallery").hide();
 			$("#gallery").attr("class", "overlayoff");
@@ -627,20 +626,41 @@ function lookup(inputString) {
 			$(this).css({"border-bottom":"2px solid #444"});
 			$(this).addClass("menu_select");
 			if($('.menu_select').text() == 'contacts') {
-				$("#info-wrapper.nano").hide();
 				$("#reachus").hide();
 				$("#contacts").fadeIn();
+				$("#faq-wrapper.nano").hide();
+				$("#info-wrapper.nano").hide();
+				$("#feedback").hide();
 			}
 			else if($('.menu_select').text() == 'reach us') {
-				$("#info-wrapper.nano").hide();
 				$("#contacts").hide();
 				$("#reachus").fadeIn();
+				$("#faq-wrapper.nano").hide();
+				$("#info-wrapper.nano").hide();
+				$("#feedback").hide();
 			}
 			else if($('.menu_select').text() == 'faq') {
 				$("#contacts").hide();
 				$("#reachus").hide();
-				$("#info-wrapper.nano").fadeIn();
+				$("#faq-wrapper.nano").fadeIn();
+				$("#info-wrapper.nano").hide();
+				$("#feedback").hide();
 			}
+			else if($('.menu_select').text() == 'info') {
+				$("#contacts").hide();
+				$("#reachus").hide();
+				$("#faq-wrapper.nano").hide();
+				$("#info-wrapper.nano").fadeIn();
+				$("#feedback").hide();
+			}
+			else if($('.menu_select').text() == 'feedback') {
+				$("#contacts").hide();
+				$("#reachus").hide();
+				$("#faq-wrapper.nano").hide();
+				$("#info-wrapper.nano").hide();
+				$("#feedback").show();
+
+			}	
 		});
 
 		$('.menu_item').mouseover(function()
@@ -939,6 +959,9 @@ function lookup(inputString) {
     	    $(this).attr('title', $(this).data('title'));
     	});
     	$("#faq-wrapper.nano").nanoScroller({
+			scrollTop: '0px'
+		});
+		$("#info-wrapper.nano").nanoScroller({
 			scrollTop: '0px'
 		});
 	});

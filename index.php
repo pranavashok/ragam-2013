@@ -317,13 +317,7 @@
 		</section >
 	</div>
 	<div id="support-pane">
-		<div id="feedback">
-		<input class="nameentry" type="text" name="name" title="name" placeholder="name" onblur="inputBlur(this)" />
-        <input class="emailentry" type="email" name="email" title="email" placeholder="email" onblur="inputBlur(this)" />
-		<textarea class="feedbackentry" name="feedback" title="feedback" placeholder="Please enter your feedback here." onblur="inputBlur(this)"></textarea><br/>
-		<a id="feedback-submit" href="#">Submit</a>
-		<a id="feedback-cancel" href="#">Cancel</a>
-		</div>
+		
 		<div id="footer_inner">
 			<div id="supportpane_top">
 				<div id="ticker">
@@ -353,10 +347,10 @@
 				<span class="menu_item menu_nonclick"><a href="<?php echo $subDir; ?>schedule.html" target="_blank" 
 					style="text-decoration:none">schedule</a></span>
 				<span class="menu_item menu_click">faq</span>	
-				<span class="menu_item menu_nonclick">info</span>
+				<span class="menu_item menu_click">info</span>
 				<span class="menu_item menu_nonclick gallery">gallery</span>
 				<span class="menu_item menu_click">reach us</span>
-			</div>
+				<span class="menu_item menu_click">feedback</span>		
 			<div id="menu_info">
 				<div id="contacts">	
 					<table width="100%">
@@ -407,6 +401,13 @@
 					</tr>
 					</tbody></table>
 					</div>
+				<div id="feedback">
+				<input class="nameentry" type="text" name="name" title="name" placeholder="name" onblur="inputBlur(this)" />
+		        <input class="emailentry" type="email" name="email" title="email" placeholder="email" onblur="inputBlur(this)" />
+				<textarea class="feedbackentry" name="feedback" title="feedback" placeholder="Please enter your feedback here." onblur="inputBlur(this)"></textarea><br/>
+				<a id="feedback-submit" href="#">Submit</a>&nbsp;
+				<a id="feedback-cancel" href="#">Cancel</a>
+				</div>
 				<div id="faq-wrapper" class="nano">
 					<div id="faq" class="content">
 					<ol>
@@ -470,6 +471,35 @@
 					</ol>
 					</div>
 				</div>
+				<div id="info-wrapper" class="nano">
+					<div id="info" class="content">
+					<strong>Rules and Regulations</strong>
+					<ol>
+						<li>All the participants are required to bring their college ID cards (or proof of college identity).Participation or stay in the campus during Ragam  shall not be permitted without the same.</li>
+						<li>All the participants are required to pre-register in the official Ragam website for Ragam ID and specify if accommodation is required as per the directions in the website. Online registration is compulsory so as to avail accommodation and it will be provided strictly on a first-come-first-serve basis.</li>
+						<li> Each college is expected to have a team captain and he/she should ensure that only members from his /her college participate under the respective college name. Any attempt to include outsiders in the team shall lead to the disqualification of the college.</li>
+						<li>In the event of discovery of malpractice or misbehavior of any kind, the decision of the Ragam team shall be final.</li>
+					</ol><br/>
+					<strong>Hospitality & Registration Procedure</strong>
+						<ol>
+						<li>Event Registrations should be done by the team captain on behalf of all the members from the 
+						college, after arriving at the campus.</li>
+						<li>Team Captain is advised to maintain a list of participants and their corresponding events at the
+						time of registration to reduce the delay at the registration desk.</li>
+						<li> All Certificates and prizes, won by a college, will be handed over only to the team captain at the	time of de-registration. The participants will have to collect the same from their respective team captains.</li>
+						<li> The Ragam organizing team reserves the right to deduct from the caution deposit or from the
+						prize money, for any loss/damage caused by the participants.</li>
+						</ol>
+						<br>
+						<b>For the special attention of the participants coming in groups:</b>
+						<br/>
+						<ol>
+						<li>A member of the group should be assigned as the group leader and he/she must have a list of all group members along with their RAGAM ID's at the time of check in. Carrying such a list can considerably reduce the delay at the registration desk.</li>
+						<li>A representative from each group is strongly advised to contact the Hospitality Manager prior to their arrival at the campus to avoid delays in registration, for confirmation of accommodation and to avail transportation facilities during odd hours from the Calicut city.
+						</li>
+
+					</div>
+				</div>
 				<div id="reachus">
 
 				<form id="form" name="form" method="post" action="javascript:feedback()">
@@ -486,10 +516,11 @@
 				</div>
 
 				</div>
-		<hr style="border-top: 1px dotted #ccc">
+		
 			<div id="menu_bot">
+				<hr style="border-top: 1px dotted #ccc">
 				<div id="nitc_details">
-				<span id="nitc_addr">National Institute of Technology Calicut. <a target="_blank" href="http://nitc.ac.in">http://nitc.ac.in</a></span><span id="menubotlinks"> <a href="#credits">Credits</a> | <a class="feedback_link" href="#">Feedback</a> | <a href="#sitemap">Sitemap</a></span>
+				<span id="nitc_addr">National Institute of Technology Calicut. <a target="_blank" href="http://nitc.ac.in">http://nitc.ac.in</a></span><span id="menubotlinks"> <a href="#credits">Credits</a> | <a href="#sitemap">Sitemap</a></span>
 				</div>			
 			</div>
 	</div>

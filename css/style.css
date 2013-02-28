@@ -1297,13 +1297,13 @@ a#login-link {
 {
 	margin:auto;
 	height:33px;
-	width:800px;
+	width:900px;
 	padding-top: 5px;
 }
 
 .menu_item
 {
-	width:100px;
+	width:90px;
 	height:31px;
 	float:left;
 	display:block;
@@ -1327,7 +1327,7 @@ a#login-link {
 {
 	margin:auto;
 	height:80%;
-	width:800px;
+	width:900px;
 	border-top:1px solid #ddd;
 }
 
@@ -1337,6 +1337,19 @@ a#login-link {
 	display:none;
 }
 
+
+#faq-wrapper.nano{
+	padding:20px;
+	font-family:HelveticaThin;
+	text-align:justify;
+	display:none;
+	width:auto !important;
+	top:20px;
+	margin-bottom:40px;
+}
+#faq-wrapper.nano .content { padding: 25px 25px 25px 45px; }
+#faq-wrapper.nano .pane   { background: #efefef; }
+#faq-wrapper.nano .slider { background: #111; }
 
 #info-wrapper.nano{
 	padding:20px;
@@ -1350,6 +1363,8 @@ a#login-link {
 #info-wrapper.nano .content { padding: 25px 25px 25px 45px; }
 #info-wrapper.nano .pane   { background: #efefef; }
 #info-wrapper.nano .slider { background: #111; }
+
+
 
 #reachus{
 	padding:20px;
@@ -1374,6 +1389,7 @@ a#login-link {
 	width:100%;
 	color:#555;	
 	font-size:10pt;
+
 }
 
 #nitc_logo{
@@ -1476,19 +1492,23 @@ a#login-link {
 	font-style: italic;
 	border-top: 1px solid rgba(255,255,255,0.3);
 }
+
+	
+
+
+
 #feedback
-{
-	width:33%;
-	height:85%;
-	margin-left: 35%;
-	margin-top: 10%;
-    z-index:-20;	
-	background-color:black;
-	position:absolute;
-	top:0px;
-	left:0px;
-	opacity:0.9;
-	display: none;
+{	
+	width:900px;
+	height:400px;
+	margin-left: 18%;
+	padding:20px;
+	font-family:HelveticaThin;
+	text-align:justify;
+	display:none;
+	width:auto !important;
+	top:20px;
+	margin-bottom:40px;
 }
 #feedback input.nameentry {
 	padding: 5px 0 0 40px;
@@ -1524,7 +1544,7 @@ a#login-link {
 	position: relative;
     font-family: 'HelveticaLightCondensed';
     width: 340px;
-    height: 60%;
+    height: 300px;
     font-size: 18px;
     margin-top:2%;
     margin-left: 10%;
@@ -1549,6 +1569,7 @@ a#login-link {
 	font-size: 20px;
 }
 #feedback a#feedback-cancel {
+	margin-left: 20px;
 	background: rgb(0, 0, 0);
 	width: 80px;
 	height: 32px;
