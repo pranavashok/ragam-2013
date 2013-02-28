@@ -686,21 +686,16 @@ function lookup(inputString) {
 				type: "POST",
 				success: function (d) {
 					if(d==1) {
-						$("#fbmessgage").text("Thank You!");
-						alert("Thank You!")
+						$("#feedback form").hide();
+						$("#feedback #tip").text("Thank you for your feedback! :)");
 					}
 					else {
-						$("#fbmessgage").text("Sorry. Please try again.");
-						alert("Sorry. Please try again later.");
+						$("#feedback #tip").text("Sorry. Please try again later.");
 					}
-					$("#feedback").hide();
-	      			$("#feedback").attr("class", "overlayoff");
+					//$("#feedback").hide();
+	      			//$("#feedback").attr("class", "overlayoff");
 				}
 			});
-	    });
-	    $("#feedback-cancel").click(function(){
-	    	$("#feedback").hide();
-	      	$("#feedback").attr("class", "overlayoff");
 	    });
 		$("#font-pane").bind('mousewheel', function(event) {
     		if (event.originalEvent.wheelDelta >= 0) {

@@ -403,11 +403,13 @@
 					</tbody></table>
 					</div>
 				<div id="feedback">
-				<input class="nameentry" type="text" name="name" title="name" placeholder="name" onblur="inputBlur(this)" />
-		        <input class="emailentry" type="email" name="email" title="email" placeholder="email" onblur="inputBlur(this)" />
-				<textarea class="feedbackentry" name="feedback" title="feedback" placeholder="Please enter your feedback here." onblur="inputBlur(this)"></textarea><br/>
-				<a id="feedback-submit" href="#">Submit</a>&nbsp;
-				<a id="feedback-cancel" href="#">Cancel</a>
+				<form>
+					<input class="nameentry" type="text" name="name" title="name" placeholder="name" onblur="inputBlur(this)" />
+			        <input class="emailentry" type="email" name="email" title="email" placeholder="email" onblur="inputBlur(this)" />
+					<textarea class="feedbackentry" name="feedback" title="feedback" placeholder="Please enter your feedback here." onblur="inputBlur(this)"></textarea><br/>
+					<a id="feedback-submit" href="#">Submit</a>
+				</form>
+				<div id="tip"></div>
 				</div>
 				<div id="faq-wrapper" class="nano">
 					<div id="faq" class="content">
