@@ -108,7 +108,7 @@
 		<input class="collegeentry" name="college" title="College" id="college" placeholder="college" autocomplete="off" />
 		<input class="phoneentry" type="text" name="phone" title="Phone" id="phone" placeholder="phone" autocomplete="off"/><br/>
 		<div class="styled-select"> </a>
-		<select class = "accomodationentry">
+		<select class = "accomodationentry" onChange="$(this).css('color','black')">
 			<option value="none" selected disabled id="first">accommodation</option>
 		    <option value="yes">Yes</option>
 		    <option value="no">No</option>
