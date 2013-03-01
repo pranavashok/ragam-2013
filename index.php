@@ -24,7 +24,7 @@
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotateCompressed.2.2.js"></script>-->
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.history.js"></script>
-	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autoSuggest.minified.js"></script>-->
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autoSuggest.minified.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/min.js"></script>
 	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autocomplete.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/script.js"></script>
