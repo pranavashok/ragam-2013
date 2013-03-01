@@ -106,14 +106,14 @@
 		<input class="emailentry" type="email" name="email" title="Email" id="email" placeholder="email" onblur="inputBlur(this)" autocomplete="off"/>
 		<input class="passwordentry" type="password" name="password" title="Password" id="password" placeholder="password" onblur="inputBlur(this)" autocomplete="off"/>
 		<input class="collegeentry" name="college" title="College" id="college" placeholder="college" autocomplete="off" />
-		<input class="phoneentry" type="text" name="phone" title="Phone" id="phone" placeholder="phone" autocomplete="off"/><br/>
-		<div class="styled-select"> </a>
-		<select class = "accomodationentry" onChange="$(this).css('color','black')">
+		<div class="styled-select">
+		<select class = "accomodationentry" onChange="$(this).css('color','black')" name="accomodation">
 			<option value="none" selected disabled id="first">accommodation</option>
-		    <option value="yes">Yes</option>
-		    <option value="no">No</option>
+		    <option value="1">Yes</option>
+		    <option value="0">No</option>
 		</select>
 		</div>
+		<input class="phoneentry" type="text" name="phone" title="Phone" id="phone" placeholder="phone" autocomplete="off"/><br/>
 		<input class="submit_login" type="submit" name="Submit" value="Submit" /> 
         </form>
 		<div id="tip">press enter to submit...</div>
