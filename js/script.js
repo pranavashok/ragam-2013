@@ -66,7 +66,7 @@ function lookup(inputString) {
 		var h = $(window).height();
 		var flag=0;
 		$("body").keydown(function (event) {
-			if(event.target.type=='text' || event.target.type=='email' || event.target.type=='password' || event.target.name=='accomodation')
+			if(event.target.type=='text' || event.target.type=='email' || event.target.type=='password' || event.target.name=='accommodation')
 				;
 			else {
 				if (event.which == 27) $("#shortcut").hide();

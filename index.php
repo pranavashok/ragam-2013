@@ -107,7 +107,7 @@
 		<input class="passwordentry" type="password" name="password" title="Password" id="password" placeholder="password" onblur="inputBlur(this)" autocomplete="off"/>
 		<input class="collegeentry" name="college" title="College" id="college" placeholder="college" autocomplete="off" />
 		<div class="styled-select">
-		<select class = "accomodationentry" onChange="$(this).css('color','black')" name="accomodation">
+		<select class = "accommodationentry" onChange="$(this).css('color','black')" name="accommodation">
 			<option value="none" selected disabled id="first">accommodation</option>
 		    <option value="1">Yes</option>
 		    <option value="0">No</option>

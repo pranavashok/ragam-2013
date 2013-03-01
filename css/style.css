@@ -1024,7 +1024,7 @@ a#login-link {
 
 }
 
-#signup-form-wrapper select.accomodationentry {
+#signup-form-wrapper select.accommodationentry {
 	height: 31px;
 	width: 200px;
 	margin-top: 10px;
@@ -1042,17 +1042,17 @@ a#login-link {
 	color:#a9a9a9;
 	
 }
-#signup-form-wrapper select.accomodationentry option:checked{
+#signup-form-wrapper select.accommodationentry option:checked{
 	background: #ccc url("http://localhost/magar/css/../img/iconsprite.png") 0px -160px no-repeat;
 	color:black;
 
 }
-#signup-form-wrapper select.accomodationentry option #first{
+#signup-form-wrapper select.accommodationentry option #first{
 	background: transparent url("http://localhost/magar/css/../img/iconsprite.png") 0px -160px no-repeat;
 	color:#a9a9a9;
 
 }
-#signup-form-wrapper select.accomodationentry:focus{
+#signup-form-wrapper select.accommodationentry:focus{
 
 	color:black;
 

@@ -5,7 +5,7 @@ $email = $mysqli->real_escape_string($_POST['email']);
 $password = $mysqli->real_escape_string($_POST['password']);
 $college = $mysqli->real_escape_string($_POST['college']);
 $phone = $mysqli->real_escape_string($_POST['phone']);
-$accommodation = $mysqli->real_escape_string($_POST['accomodation']);
+$accommodation = $mysqli->real_escape_string($_POST['accommodation']);
 
 $success = 0;
 $msg = "";
