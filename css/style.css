@@ -962,7 +962,7 @@ a#login-link {
 #signup-form-wrapper {
 	z-index: 25;
 	position: relative;
-	height: 30%;
+	height: 40%;
 	width: 250px;
 	margin: auto;
 	margin-top:10%;
@@ -1019,6 +1019,43 @@ a#login-link {
     color:#555;
     border: none;
     background: #ccc url('../img/iconsprite.png') 0px 0px no-repeat;
+}
+#signup-form-wrapper .styled-select{
+
+}
+
+#signup-form-wrapper select.accomodationentry {
+	height: 31px;
+	width: 200px;
+	margin-top: 10px;
+	padding: 0px 0 0 0px;
+	background: #ccc url("http://localhost/magar/css/../img/iconsprite.png") 0px -160px no-repeat;
+	outline: none;
+
+	padding: 1px 0px 0px 35px;
+	z-index: 33;
+	font-family: 'HelveticaLightCondensed';
+	width: 200px;
+	font-size: 18px;
+	-webkit-appearance: none;
+	border: none;
+	color:#a9a9a9;
+	
+}
+#signup-form-wrapper select.accomodationentry option:checked{
+	background: #ccc url("http://localhost/magar/css/../img/iconsprite.png") 0px -160px no-repeat;
+	color:black;
+
+}
+#signup-form-wrapper select.accomodationentry option #first{
+	background: transparent url("http://localhost/magar/css/../img/iconsprite.png") 0px -160px no-repeat;
+	color:#a9a9a9;
+
+}
+#signup-form-wrapper select.accomodationentry:focus{
+
+	color:black;
+
 }
 /* Autocomplete */
 .ac_results {
@@ -1099,7 +1136,6 @@ a#login-link {
 	font-family: 'HelveticaLightCondensed';
 	font-size: 20px;
 	font-weight: bold;
-	text-align: center;
 	color: rgb(131, 131, 131);
 	margin: auto;
 }
