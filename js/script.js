@@ -885,7 +885,7 @@ function lookup(inputString) {
 	    		$("#multiname").autoSuggest("/"+subDir+ "/manager/queryname.php",{
 	    				neverSubmit: false,
 	    				startText: "",
-	    				minChars: 2, 
+	    				minChars: 1, 
 	    				matchCase: false, 
 	    				asHtmlID: 'evreg',
 	    				selectedItemProp: 'name', 
