@@ -31,7 +31,7 @@ if(isset($_GET['e'])) {
 	    	$j++;
 		}
 		echo "</table>";
-		echo "Total $j";
+		echo "Total participants: $j";
 	}
 	else {
 		//Couldn't run query	
@@ -57,7 +57,7 @@ else if(isset($_GET['id'])) {
 }
 else {
 	//Returns list of Event Name, Team ID and Teamleader ID of $ragamid
-	$query = $mysqli->query("SELECT DISTINCT `team`.`event_id`,  `eventinfo`.`event_name` , COUNT( teamleader_id ) FROM  `team` ,  `eventinfo` WHERE  `team`.`event_id` =  `eventinfo`.`event_id` GROUP BY `teamleader_id`, `event_id`, `team_id`;");
+	$query = $mysqli->query("SELECT a.event_id, a.event_name, count(*) FROM (SELECT `team`.`event_id`,  `eventinfo`.`event_name` , COUNT( * ) FROM  `team` ,  `eventinfo` WHERE  `team`.`event_id` =  `eventinfo`.`event_id` GROUP BY `event_id`, `team_id`) a GROUP BY a.event_id");
 	if($query) {
 		$list = array();
 		while($l = $query->fetch_assoc()) {
@@ -67,17 +67,20 @@ else {
 		$j = 0;
 		foreach($list as $a) {
 		    echo "<tr>";
+		    $i = 0;
 	        foreach($a as $v) {
-	        	if(strlen($v)==3 || strlen($v)==4)
+	        	if($i==0)
 	        		echo "<td><a href='getdetails.php?e=$v'>$v</a></td>";	
 	        	else
 	        		echo "<td>$v</td>";
+	        	if($i==2)
+	        		$j+=$v;
+	        	$i++;
 	        }
 	    	echo "</tr>";
-	    	$j++;
 		}
 		echo "</table>";
-		echo "Total $j";
+		echo "Total registered teams: $j";
 	}
 	else {
 		//Couldn't run query	
