@@ -1,3 +1,10 @@
 RewriteEngine On
 RewriteRule ^([\(\)A-Za-z0-9\ \/_-]+)/$ #$1 [L]
 RewriteRule ^([\(\)A-Za-z0-9\ \/_-]+)[^/]$ #$1 [L]
+
+<IfModule mod_deflate.c>
+DeflateCompressionLevel 9
+SetOutputFilter DEFLATE
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/x-javascript application/x-httpd-php
+AddOutputFilter DEFLATE js css
+</IfModule>
