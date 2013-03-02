@@ -717,38 +717,82 @@
 }
 /* search results defined here*/
 #searchresults { 
-margin-top:5px;
-border-width:1px; border-color:#919191; border-style:solid; width:340px; background-color:#a0a0a0; font-size:10px; line-height:14px; 
--webkit-border-radius: 15px;
--moz-border-radius: 15px;
-border-radius: 15px;
+	width: 340px;
+	font-size: 10px;
+	line-height: 14px;
+	bottom: 8.5%;
+	left: 5px;
+	position: absolute;
+	font-family: 'HelveticaThin';
 }
-#searchresults a { display:block; background-color:#e4e4e4; clear:left; height:56px; text-decoration:none; }
-#searchresults a:hover { background-color:#b7b7b7; color:#ffffff; }
-#searchresults a img { float:left; padding:5px 10px; }
-#searchresults a span.searchheading { display:block; font-weight:bold; padding-top:5px; color:#191919; }
-#searchresults a:hover span.searchheading { color:#ffffff; }
-#searchresults a span { color:#555555; }
-#searchresults a:hover span { color:#f1f1f1; }
-#searchresults span.category { font-size:11px; margin:5px; display:block; color:#ffffff; text-align:center; font-weight:bold;}
-#searchresults span.nomatch { font-size:13px; margin:2px; display:block; color:#ffffff; text-align:center; font-weight:bold;}
-#searchresults span.seperator { float:right; padding-right:15px; margin-right:5px;
-      background-image:url(images/shortcuts_arrow.gif); background-repeat:no-repeat; background-position:right; }
-#searchresults span.seperator a { background-color:transparent; display:block; margin:5px; height:auto; color:#ffffff; }
-
+#searchresults a { 
+	display:block;  
+	clear:left; 
+	min-height:56px; 
+	padding: 5px 5px 5px 10px;
+	text-decoration:none; 
+}
+#searchresults a:hover { 
+	background-color:#b7b7b7; 
+	color:#ffffff; 
+}
+#searchresults a img { 
+	float:left; 
+	padding:5px 10px; 
+}
+#searchresults a span.searchheading { 
+	display: block;
+	font-weight: bold;
+	font-size: 17px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #111;
+}
+#searchresults a:hover span.searchheading { 
+	color:#ffffff; 
+}
+#searchresults a span { 
+	font-size: 14px;
+	color:#333; 
+}
+#searchresults a:hover span { 
+	color:#f1f1f1; 
+}
+#searchresults span.nomatch { 
+	font-size:13px; 
+	margin:2px; 
+	display:block; 
+	color:#ffffff; 
+	text-align:center; 
+	font-weight:bold;
+}
+#searchresults span.seperator { 
+	float:right; 
+	padding-right:15px; 
+	margin-right:5px;
+	background-image:url(images/shortcuts_arrow.gif); 
+	background-repeat:no-repeat; 
+	background-position:right; 
+}
+#searchresults span.seperator a { 
+	background-color:transparent; 
+	display:block; 
+	margin:5px; 
+	height:auto; 
+	color:#ffffff; 
+}
 #loginlinks{
- float:right;
+	float:right;
 }
-#suggestions
-{
+#suggestions {
 	width:100%;
-	height:500%;
+	height:100%;
 	z-index:20;
 	background-color:white;
 	position:absolute;
-	top:-610px;
+	top:0;
 	left:0px;
-	opacity:0.9;
+	opacity:0.95;
 }
  
 

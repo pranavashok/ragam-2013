@@ -322,8 +322,8 @@
 
 		</section >
 	</div>
+	<div id ="suggestions"></div>
 	<div id="support-pane">
-		
 		<div id="footer_inner">
 			<div id="supportpane_top">
 				<div id="ticker">
@@ -337,7 +337,6 @@
 					<span id="search_panel">
 						<input id="searchBox" type="text" placeholder="type to search" onkeyup="lookup(this.value);" name="q" autocomplete="off">
 					</span>
-					<div id ="suggestions"></div>
 				</form>
 				<div id="social_panel">
 						<!--<a style="width:48px; height:48px; display:inline; opacity:0"><img src="<?php echo $subDir; ?>img/twitter.png"></a>

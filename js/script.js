@@ -47,7 +47,7 @@ function lookup(inputString) {
 		else {
 			$('#suggestions').fadeIn(); // Show the suggestions box
 			$("#s-loader").show();
-			$.post("search.php", {q: ""+inputString+""}, function(data) { // Do an AJAX call
+			$.post('/'+subDir+'/search.php', {q: ""+inputString+""}, function(data) { // Do an AJAX call
 				$('#suggestions').html(data); // Fill the suggestions box
 				$("#s-loader").hide();
       			});
