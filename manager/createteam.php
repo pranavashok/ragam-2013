@@ -22,7 +22,7 @@ if($numpart <= $r1['max_part'] && $numpart >= $r1['min_part'] || ($numpart >= $r
 	$maxteamid++;
 
 	/* Creating query to insert into table */
-	$string = "INSERT INTO `team` VALUES ('$event_id', '$maxteamid', '$teamleader_id', '$teamleader_id')";
+	$string = "INSERT INTO `team` (`event_id`, `team_id`, `teamleader_id`, `teammember_id`) VALUES ('$event_id', '$maxteamid', '$teamleader_id', '$teamleader_id')";
 
 	for($i = 0; $i < $numpart-1; $i++) {
 		$string .= ", ('$event_id', '$maxteamid', '$teamleader_id', '$teammembers[$i]')";
