@@ -135,7 +135,7 @@ else if(isset($_GET['participants'])) {
 			    $i = 0;
 		        foreach($a as $v) {
 		        	if($i==0)
-		        		echo "<td><a href='getdetails.php?participants=$v'>$v</a></td>";	
+		        		echo "<td><a href='getdetails.php?participants=".urlencode($v)."'>$v</a></td>";	
 		        	else
 		        		echo "<td>$v</td>";
 		        	$i++;
