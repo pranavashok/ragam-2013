@@ -469,38 +469,34 @@
 #inner-pane-workshops {
 	display: none;
 	position: absolute;
-	width: 66.67%;
-	height: 100%;
-	top:16.67%;
-	left:13%;
+	position: absolute;
+	width: 33.33%;
+	height: 33.33%;
+	top: 33.33%;
+	left: 33.33%;
 	background: #f7f7f7;
 }
 #heading-workshops {
 	color:#78162e;
 	position: absolute;
-	top:20%;
-	left:40%;
+	top:12%;
+	left:18%;
 	font-family: HelveticaInserat;
 	font-size: 70px;
 	text-transform: uppercase;
 	z-index: 9;
 }
 #content-container-workshops {
-	width: 50%;
-	height: 50%;
+	width: 60%;
+	height: 60%;
 	display: block;
 	position: absolute;
-	top:10%;
-	left:20%;
+	top: 25%;
+	left: 18%;
 }
 #content-wrapper-workshops {
 	font-family: HelveticaThin;
-	position: absolute;
-	width: 75%;
-	height: 40%;
 	display: block;
-	left:35%;
-	top: 30%;
 	z-index:9;
 }
 #content-heading-workshops {
@@ -517,10 +513,8 @@
 	color: #78162e;
 }
 #content-content-workshops {
-	position:relative;
-	width:80%;
-	right:5%;
-	height:100%;
+	position:absolute;
+	width:100%;
 	/*padding:30px;*/
 	display:block;
 	color: black;
@@ -539,9 +533,7 @@
 
 #workshop-links{
 	 z-index:9;
-	 margin-left:10%;
-
-	 
+	 padding-bottom: 30px;
 }
 #workshop-links ul{
 	list-style-type: none;
