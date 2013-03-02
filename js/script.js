@@ -216,47 +216,11 @@ function lookup(inputString) {
 					if (relativeUrl.search("/") == -1) { //If it's a first level page
 						$("#painting-workshops").fadeIn();
 						title = relativeUrl;
-						$.ajax({
-							dataType: "json",
-							url: "/" + subDir + "/manager/fetchlinks.php",
-							data: {
-								"cat": title
-							},
-							type: "POST",
-							success: function (d) {
-								setMenu(d);
-								var links = "";
-								d.forEach(function (ele) {
-									links = links + "<a href='/" + subDir + "/" + title + "/" + ele.name.replace(/\ /g, "_") + "'><li>" + ele.name + "</li></a>";
-								});
-								$("#submenu-links-workshops").html(links);
-								loadingAnimation(false);			
-							}
-						});
+						loadingAnimation(false);
 					} else { //Its a second level url
 						$("#painting-workshops").fadeOut();
-						$("#inner-pane-workshops").attr("class", "moveright");
-
 						var n = relativeUrl.split("/");
 						eve = relativeUrl.split("/")[n.length - 1];
-						$.ajax({
-							dataType: "json",
-							url: "/" + subDir + "/manager/content.php",
-							data: {
-								"event": eve
-							},
-							type: "POST",
-							success: function (d) {
-								
-								$("#content-heading-workshops").text(d.name);
-								$("#content-content-workshops").html(d.content);
-								$("#content-wrapper-workshops").fadeIn();
-								$("#content-content-wrapper-workshops.nano").nanoScroller({
-									scrollTop: '0px'
-								});
-							}
-
-						});
 					}
 
 				} //Endif workshops
@@ -399,9 +363,38 @@ function lookup(inputString) {
 			$("#content-content-proshows").fadeIn();
 
 		});
+// Workshop Links
+		$("#happyfeetstudio").click( function(){
+			//$("#painting-workshops").hide();
+			$("#content-content-workshops").hide();
+			//$("#painting-workshops").attr("class", "popularnite");
+			$("#content-content-workshops").html("<strong>Bachata</strong><br/>Bachata is a dance full of sensuality and musicality inspired by the soulful melodic rhythms of guitars. Dive deep into this dance and you'll find a freedom unlike any other. Transport yourself onto a steamy Latin street this Ragam and lose yourself in the playful steps and the sensuous movements of Bachata. <br/>Entry Fee: INR 400 per couple.<br/><br/> <strong>Salsa</strong><br/>Salsa is a lively and passionate dance form. Sway to the fiery tunes under the spell of the music and feel the romance and connection. Learn to move with confidence and grace and show off the hot new steps that you can master at the Salsa workshop, only at Ragam '13.<br/>Entry Fee: INR 400 per couple.<br/><br/>Combo Offer (Bachata + Salsa): INR 600 per couple.<br/><hr/><br/>Conducted by: <br/><em>George Jacob</em><br/> - International Performer and Choreographer for the last 15 years with expertise in styles like Salsa, Cha Cha, Bollywood, Merengue and Bachata.<br/> - Assistant choreographer for Bollywood movies like Hum Tum, Mangal Pandey, Page 3 etc.<br/> - Official Choreographer of Miss Mauritius 2009 and Miss Mauritius 2010.<br/><br/>");	
+			//$("#painting-workshops").fadeIn();
+			$("#content-content-workshops").fadeIn();
 
+
+		});
+		$("#shuttercraft").click( function(){
+			//$("#painting-workshops").hide();
+			$("#content-content-workshops").hide();
+			//$("#painting-workshops").attr("class", "popularnite");
+			$("#content-content-workshops").html("South India's largest Nikon certified photography workshop<br/><br/><strong>Digital Photography</strong><br/>Always wanted to try out that awesome DSLR camera, but not quite sure how to go about it? Then this is just the place for all you prospective hot shot photographers. Get creative inspiration, expert tips and advice at our Photography workshop, from the giants NIKON themselves. Then get out there and click some mind blowing pictures!<br/>Entry Fee: INR 200<br/><br/>Conducted by: <br/> <em>Nikon India Private Limited</em><br/>Nikon India is a 100 % subsidiary of Nikon Corporation, a Multinational Corporation headquartered in Tokyo, Japan, specializing in optics and imaging. For more info, visit <a target='_blank' href='http://www.nikon.co.in'>website</a><br/><br/><strong>Street Photography</strong><br/>Street photographers strive to capture the life and culture of city streets, featuring their subjects in candid poses and searching for those special moments that can make an incredible photograph. Attend our workshop on street photography and then unleash yourself onto the streets and capture some amazing shots.<br/>Entry Fee: INR 200<br/><br/><strong>Macro Photography</strong><br/>Macro and close-up photography can take the viewer to new and seldom seen vantage points. Here is your chance to learn how to take some super cool larger than life photos at Ragam '13. <br/>Entry Fee: INR 200<br/><br/>Conducted by: <br/><em>Aroon Kalandy</em><br/> - Recipient of many awards from prestigious groups like Times Photo Journal, Photos trope and from online photographic giants like Flickr and Red Bubble.<br/> - With a high number of sales of macro photographs to his credit from Red Bubbles and Sen6, Aroon have had his macros published in top Indian Magazines like 'Better Photography' and 'Smart Photography'.<br/> - In 2010, one of his images was selected by Penguin Australia to be featured as the cover for an Australian Author, Fiona Macintosh.<br/><br/>Combo Offer: Join all the photography workshops for INR 500 and be a Nikon certified photographer.<br/><br/>");	
+			//$("#painting-workshops").fadeIn();
+			$("#content-content-workshops").fadeIn();
+		});
+		$("#other-workshops").click( function(){
+			//$("#painting-workshops").hide();
+			$("#content-content-workshops").hide();
+			//$("#painting-workshops").attr("class", "popularnite");
+			$("#content-content-workshops").html("<strong>Self Grooming Workshop</strong><br/>Everyone knows the importance of first impressions. You get only one chance to make it or break it! Hence be it in your personal or professional capacity, it is important to look your best at every possible opportunity. In this Grooming Workshop handled by professionals held exclusively for ladies, you will learn the basics of how you can get your hair-style, clothes and make-up really work their magic for you. Feel good about yourself and let the world know it.<br/>Entry Fee: INR 200<br/><br/>Conducted By:<br/><em>Queens Innovations:</em><br/>Queens Beauty Parlor is a creative innovation of Mrs. Thahira Nizar's lifelong passion for beauty.<br/>A thorough professional and a recipient of many international awards form internationally celebrated brands like L’Oreal Paris and Women’s World International; Mrs Thahira Nizar pioneered the concept of innovative beauty solutions in Kerala.<br/>Under the umbrella of Queens Innovation, Mrs. Thahira Nizar has held customized workshops and seminars in Maldives, Singapore and Malaysia.<br/><a target='_blank' href='http://www.queensbeautyparlour.com/'>Website</a><br/><br/>Contacts<br/>Ganesh +91 989 547 8995<br/>Mahesh +91 889 178 1730<br/><br/>");	
+			//$("#painting-workshops").fadeIn();
+			$("#content-content-workshops").fadeIn();
+		});
 
 		$("#content-content-wrapper-events.nano").hover(function(){
+			$(this).nanoScroller();
+		});
+		$("#content-content-wrapper-workshops.nano").hover(function(){
 			$(this).nanoScroller();
 		});
 		$("#faq-wrapper.nano").hover(function(){
@@ -426,7 +419,7 @@ function lookup(inputString) {
 		});
 		$("#mainlinks li").click(function () {
 			title = $(this).data('title');
-			if($(this).data('title') == "Workshops" || $(this).data('title') == "Showcase") {
+			if($(this).data('title') == "Showcase") {
 				$("#construction").show();
 				$("#wrapper").attr("class", "blur");
 			}
