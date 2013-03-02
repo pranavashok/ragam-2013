@@ -714,7 +714,6 @@ function lookup(inputString) {
 		$("#college").autocomplete(collegeList.split(":"));
 		$("#signupform").submit(function () {
 			loadingAnimation(true);
-			alert($("#signupform").serializeArray());
 	        $.ajax({
 	        	dataType: 'json',
 	            type: 'POST',
