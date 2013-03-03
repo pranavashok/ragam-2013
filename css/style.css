@@ -446,7 +446,7 @@
 	left: 15%;
 	transform: scale(0.6,0.6) rotate(-40deg);
 	z-index: 1;
-	opacity: 0.1;
+	opacity: 0.05;
 }
 
 #proshow-links{
