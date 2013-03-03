@@ -476,16 +476,16 @@
 						<li>In the event of discovery of malpractice or misbehavior of any kind, the decision of the Ragam team shall be final.</li>
 			
 					</ol><br/>
-					<strong>Hospitality & Registration Procedure</strong>
+					<strong>Registration and Hospitality details</strong>
 						<ol>
-						<li>Event Registrations should be done by the team captain on behalf of all the members from the 
-						college, after arriving at the campus.</li>
-						<li>Team Captain is advised to maintain a list of participants and their corresponding events at the
-						time of registration to reduce the delay at the registration desk.</li>
-						<li> All Certificates and prizes, won by a college, will be handed over only to the team captain at the	time of de-registration. The participants will have to collect the same from their respective team captains.</li>
-						<li> The Ragam organizing team reserves the right to deduct from the caution deposit or from the
-						prize money, for any loss/damage caused by the participants.</li>
-						<li>Participants should have a confirmed Ragam ID for participating in any event, attending workshop or to avail accommodation. The online registered Ragam ID should be confirmed at the registration desk for the same. Participants should bring a valid college ID as the proof for identity. All the events for which the participant has registered online will be confirmed once the registration procedure is completed. On the spot registration for Ragam ID as well as Events will be provided at the registration desk. Once registered, participant can take part in any event or free workshop of Ragam. Only those with Ragam ID will be given accomodation. Prizes and certificates can be collected from the Registration Desk, once the results are out. For team events, prizes will be handed over to the EVENT TEAM CAPTAIN</li>
+						<li>Participants should have a confirmed Ragam ID for participating in any event, attending workshop or to avail accommodation. The online registered Ragam ID should be confirmed at the registration desk for the same.</li>
+						<li>Participants should bring a valid college ID as the proof for identity. </li>
+						<li>All the events for which the participant has registered online will be confirmed once the registration procedure is completed. </li>
+						<li>On the spot registration for Ragam ID as well as Events will be provided at the registration desk. </li>
+						<li>Once registered, participant can take part in any event or free workshop of Ragam. </li>
+						<li>Only those with Ragam ID will be given accomodation. </li>
+						<li> Prizes and certificates can be collected from the Registration Desk, once the results are out. For team events, prizes will be handed over to the EVENT TEAM CAPTAIN</li>
+	
 						<li>Registration fees: Rs.150</li>
 						<li>Hospitality fees:Rs.50 (caution deposit of Rs.50 will also be collected, which will be refunded at the return of utilities provided)</li>
 						<li>Workshops: As per the stipulated fee(No other registration fee required</li>
