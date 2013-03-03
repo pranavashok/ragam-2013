@@ -337,147 +337,6 @@
 	background-repeat:no-repeat;
 	}
 
-/* testing css of workshops */
-#inner-pane-workshops {
-	display: none;
-	position: absolute;
-	width: 66.67%;
-	height: 100%;
-	top:16.67%;
-	left:13%;
-
-}
-#content-half-workshops {
-	height: 41%;
-	width: 100%;
-	z-index: 1;
-	background: #f7f7f7;
-}
-#content-container-workshops {
-	display: block;
-	position: relative;
-}
-#content-wrapper-workshops {
-	font-family: HelveticaThin;
-	position: absolute;
-	width: 60%;
-	height: 24%;
-	display: block;
-
-	right: 5%;
-	top: 20%;
-}
-#content-heading-workshops {
-	position:relative;
-	width:100%;
-	height:5%;
-	display:block;
-
-	top:0;
-	left:0;
-	padding:10px;
-	font-size:30px;
-	text-transform:lowercase;
-	color: #fff;
-}
-
-#content-content-workshops {
-	position:relative;
-	width:95%;
-	right:5%;
-	height:80%;
-	padding:30px;
-	display:block;
-	color: black;
-	left:0;
-	top:5%;
-	outline:none;
-	font-size: 15px;
-	line-height: 20px;
-
-}
-#subsubmenu-workshops {
-	font-family: HelveticaThin;
-	text-transform: lowercase;
-	width: 22%;
-	height: 100%;
-	background: #4a52b5;
-	display: block;
-	position: relative;
-	float: right;
-}
-#subsubmenu-links-workshops {
-	font-size: 30px;
-	line-height: 35px;
-	list-style: none;
-	text-align: right;
-}
-#subsubmenu-links-workshops a, #subsubmenu-links-workshops a.notselected {
-	text-decoration: none;
-	color:#fff;
-	display: block;
- 	padding-left: 10px;
-	padding-right: 20px;
-}
-#subsubmenu-links-workshops a.selected {
-	color:#4a52b5;
-	background-color:#f7f7f7;
-}
-#subsubmenu-links-workshops a:hover {
-	color:#4a52b5;
-	background-color:#f7f7f7;	
-}
-#submenu-half-workshops {
-	font-family: HelveticaThin;
-	text-transform: lowercase;
-	position: relative;
-	background: rgb(116, 40, 91);
-	min-height: 600px;
-	bottom: 0;
-	width: 100%;
-}
-#submenu-workshops {
-	width:100%;
-	position: absolute;
-	display: block;
-	left:50%;
-}
-#submenu-links-workshops {
-	font-size: 40px;
-	width:100%;
-	list-style:none;
-}
-#submenu-links-workshops li {
-	width:250px;
-	padding:20px;
-	display:inline;
-}
-#submenu-links-workshops a {
-	text-decoration: none;
-	color: #4a52b5;
-	display:block;
-	width:250px;
-	background-color: #f7f7f7;
-}
-#submenu-links-workshops a.selected {
-	color:#fff;
-	background-color:#4a52b5;
-}
-#submenu-links-workshops a.notselected {
-	color: #4a52b5;
-	background-color: #f7f7f7;
-}
-#painting-workshops {
-	transform: rotate(25deg);
-	width: 600px;
-	height: 600px;
-	top: 30%;
-	left: 20%;
-	position: absolute;
-	/*background: url('/magar/img/fs.png') no-repeat;*/
-	background-repeat:no-repeat;
-}
-
 #inner-pane-proshows {
 	display: none;
 	position: absolute;
@@ -578,7 +437,7 @@
 	transform: scale(1.2,1.2);
 }
 #mehendi {
-	background: rgba(238, 238, 238, 0) url("http://localhost/magar/css/../img/bgart1.png") no-repeat;
+	background: rgba(238, 238, 238, 0) url("../img/bgart1.png") no-repeat;
 	width: 1200px;
 	height: 1200px;
 	display: block;
@@ -607,7 +466,100 @@
 	display:inline;
 }
 
+#inner-pane-workshops {
+	display: none;
+	position: absolute;
+	position: absolute;
+	width: 33.33%;
+	height: 33.33%;
+	top: 33.33%;
+	left: 33.33%;
+	background: #f7f7f7;
+}
+#heading-workshops {
+	color:#78162e;
+	position: absolute;
+	top:12%;
+	left:18%;
+	font-family: HelveticaInserat;
+	font-size: 70px;
+	text-transform: uppercase;
+	z-index: 9;
+}
+#content-container-workshops {
+	width: 60%;
+	height: 60%;
+	display: block;
+	position: absolute;
+	top: 25%;
+	left: 18%;
+}
+#content-wrapper-workshops {
+	font-family: HelveticaThin;
+	display: block;
+	z-index:9;
+}
+#content-heading-workshops {
+	position:relative;
+	width:100%;
+	height:5%;
+	display:block;
 
+	top:0;
+	left:0;
+	padding:10px;
+	font-size:30px;
+	text-transform:lowercase;
+	color: #78162e;
+}
+#content-content-workshops {
+	position:absolute;
+	width:100%;
+	/*padding:30px;*/
+	display:block;
+	color: black;
+	left:0;
+	/*top:5%;*/
+	outline:none;
+	font-size: 18px;
+	line-height: 26px;
+	text-justify:justify;
+}
+#content-content-wrapper-workshops.nano {
+	background:transparent;
+	z-index: 9;
+	height:87%;
+}
+
+#workshop-links{
+	 z-index:9;
+	 padding-bottom: 30px;
+}
+#workshop-links ul{
+	list-style-type: none;
+}
+#workshop-links li{
+	cursor:hand;
+	font-size:15px;
+	color:#78162e;
+	font-weight:bold;
+	display:inline;
+}
+#workshop-sublinks{
+	 z-index:9;
+	 margin-left:10%;	
+	 display:none; 
+}
+#workshop-sublinks ul{
+	list-style-type: none;
+}
+#workshop-sublinks li{
+	cursor:hand;
+	font-size:12px;
+	color:#78162e;
+	font-weight:bold;
+	display:inline;
+}
 
 
 
@@ -717,38 +669,82 @@
 }
 /* search results defined here*/
 #searchresults { 
-margin-top:5px;
-border-width:1px; border-color:#919191; border-style:solid; width:340px; background-color:#a0a0a0; font-size:10px; line-height:14px; 
--webkit-border-radius: 15px;
--moz-border-radius: 15px;
-border-radius: 15px;
+	width: 340px;
+	font-size: 10px;
+	line-height: 14px;
+	bottom: 8.5%;
+	left: 5px;
+	position: absolute;
+	font-family: 'HelveticaThin';
 }
-#searchresults a { display:block; background-color:#e4e4e4; clear:left; height:56px; text-decoration:none; }
-#searchresults a:hover { background-color:#b7b7b7; color:#ffffff; }
-#searchresults a img { float:left; padding:5px 10px; }
-#searchresults a span.searchheading { display:block; font-weight:bold; padding-top:5px; color:#191919; }
-#searchresults a:hover span.searchheading { color:#ffffff; }
-#searchresults a span { color:#555555; }
-#searchresults a:hover span { color:#f1f1f1; }
-#searchresults span.category { font-size:11px; margin:5px; display:block; color:#ffffff; text-align:center; font-weight:bold;}
-#searchresults span.nomatch { font-size:13px; margin:2px; display:block; color:#ffffff; text-align:center; font-weight:bold;}
-#searchresults span.seperator { float:right; padding-right:15px; margin-right:5px;
-      background-image:url(images/shortcuts_arrow.gif); background-repeat:no-repeat; background-position:right; }
-#searchresults span.seperator a { background-color:transparent; display:block; margin:5px; height:auto; color:#ffffff; }
-
+#searchresults a { 
+	display:block;  
+	clear:left; 
+	min-height:56px; 
+	padding: 5px 5px 5px 10px;
+	text-decoration:none; 
+}
+#searchresults a:hover { 
+	background-color:#b7b7b7; 
+	color:#ffffff; 
+}
+#searchresults a img { 
+	float:left; 
+	padding:5px 10px; 
+}
+#searchresults a span.searchheading { 
+	display: block;
+	font-weight: bold;
+	font-size: 17px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #111;
+}
+#searchresults a:hover span.searchheading { 
+	color:#ffffff; 
+}
+#searchresults a span { 
+	font-size: 14px;
+	color:#333; 
+}
+#searchresults a:hover span { 
+	color:#f1f1f1; 
+}
+#searchresults span.nomatch { 
+	font-size:13px; 
+	margin:2px; 
+	display:block; 
+	color:#ffffff; 
+	text-align:center; 
+	font-weight:bold;
+}
+#searchresults span.seperator { 
+	float:right; 
+	padding-right:15px; 
+	margin-right:5px;
+	background-image:url(images/shortcuts_arrow.gif); 
+	background-repeat:no-repeat; 
+	background-position:right; 
+}
+#searchresults span.seperator a { 
+	background-color:transparent; 
+	display:block; 
+	margin:5px; 
+	height:auto; 
+	color:#ffffff; 
+}
 #loginlinks{
- float:right;
+	float:right;
 }
-#suggestions
-{
+#suggestions {
 	width:100%;
-	height:500%;
+	height:100%;
 	z-index:20;
 	background-color:white;
 	position:absolute;
-	top:-610px;
+	top:0;
 	left:0px;
-	opacity:0.9;
+	opacity:0.95;
 }
  
 
@@ -1024,7 +1020,7 @@ a#login-link {
 
 }
 
-#signup-form-wrapper select.accomodationentry {
+#signup-form-wrapper select.accommodationentry {
 	height: 31px;
 	width: 200px;
 	margin-top: 10px;
@@ -1042,17 +1038,17 @@ a#login-link {
 	color:#a9a9a9;
 	
 }
-#signup-form-wrapper select.accomodationentry option:checked{
+#signup-form-wrapper select.accommodationentry option:checked{
 	background: #ccc url("http://localhost/magar/css/../img/iconsprite.png") 0px -160px no-repeat;
 	color:black;
 
 }
-#signup-form-wrapper select.accomodationentry option #first{
+#signup-form-wrapper select.accommodationentry option #first{
 	background: transparent url("http://localhost/magar/css/../img/iconsprite.png") 0px -160px no-repeat;
 	color:#a9a9a9;
 
 }
-#signup-form-wrapper select.accomodationentry:focus{
+#signup-form-wrapper select.accommodationentry:focus{
 
 	color:black;
 

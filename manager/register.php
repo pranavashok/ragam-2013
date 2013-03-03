@@ -5,6 +5,7 @@ $email = $mysqli->real_escape_string($_POST['email']);
 $password = $mysqli->real_escape_string($_POST['password']);
 $college = $mysqli->real_escape_string($_POST['college']);
 $phone = $mysqli->real_escape_string($_POST['phone']);
+$accommodation = $mysqli->real_escape_string($_POST['accommodation']);
 
 $success = 0;
 $msg = "";
@@ -29,7 +30,7 @@ else
  	else
  		$maxragid = 1000;
 	$maxragid++;
- 	$query = $mysqli->query("INSERT INTO participants (`ragID`, `name`, `email`, `password`, `fb_token`, `college`, `phone`, `accommodation`, `ip`, `hash`) VALUES ( '$maxragid', '$fullname', '$email', '$password', '', '$college', '$phone', '', '".$_SERVER['REMOTE_ADDR']."','$hash')");
+ 	$query = $mysqli->query("INSERT INTO participants (`ragID`, `name`, `email`, `password`, `fb_token`, `college`, `phone`, `accommodation`, `ip`, `hash`) VALUES ( '$maxragid', '$fullname', '$email', '$password', '', '$college', '$phone', '$accommodation', '".$_SERVER['REMOTE_ADDR']."','$hash')");
 	if($query)
 	{
 		$msg = "Thank you for registering! Your ragam id is RAG".$maxragid.".";
