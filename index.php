@@ -24,7 +24,9 @@
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotateCompressed.2.2.js"></script>-->
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.history.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autoSuggest.minified.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery-ui-1.10.1.custom.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/min.js"></script>
+
 	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autocomplete.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/script.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.nanoscroller.min.js"></script>
@@ -157,7 +159,7 @@
 							<?php 
 							if (isset($_SESSION['uname']) && isset($_SESSION['ragID'])) {
 						?>
-						<div class="symbol event-register" id="after-login-register">M</div>
+						<div class="symbol event-register" id="after-login-register" title="register">M</div>
 						<?php }
 							else {?>
 								<div class="symbol event-register" id="before-login-register" onClick="$('#login-link').click();">M</div>
@@ -248,6 +250,7 @@
 							<li id="other-workshops">Others</li>
 						</ul>
 					</div>
+						
 					<div id="content-content-wrapper-workshops" class="nano">
 						<div id="content-content-workshops" class="content">
 							<strong>Bachata</strong><br/>Bachata is a dance full of sensuality and musicality inspired by the soulful melodic rhythms of guitars. Dive deep into this dance and you'll find a freedom unlike any other. Transport yourself onto a steamy Latin street this Ragam and lose yourself in the playful steps and the sensuous movements of Bachata. <br/>Entry Fee: INR 400 per couple.<br/><br/> <strong>Salsa</strong><br/>Salsa is a lively and passionate dance form. Sway to the fiery tunes under the spell of the music and feel the romance and connection. Learn to move with confidence and grace and show off the hot new steps that you can master at the Salsa workshop, only at Ragam '13.<br/>Entry Fee: INR 400 per couple.<br/><br/>Combo Offer (Bachata + Salsa): INR 600 per couple.<br/><hr/><br/>Conducted by: <br/><em>George Jacob</em><br/> - International Performer and Choreographer for the last 15 years with expertise in styles like Salsa, Cha Cha, Bollywood, Merengue and Bachata.<br/> - Assistant choreographer for Bollywood movies like Hum Tum, Mangal Pandey, Page 3 etc.<br/> - Official Choreographer of Miss Mauritius 2009 and Miss Mauritius 2010.<br/><br/>
