@@ -451,6 +451,7 @@
 						<li>All the participants are required to pre-register in the official Ragam website for Ragam ID and specify if accommodation is required as per the directions in the website. Online registration is compulsory so as to avail accommodation and it will be provided strictly on a first-come-first-serve basis.</li>
 						<li> Each college is expected to have a team captain and he/she should ensure that only members from his /her college participate under the respective college name. Any attempt to include outsiders in the team shall lead to the disqualification of the college.</li>
 						<li>In the event of discovery of malpractice or misbehavior of any kind, the decision of the Ragam team shall be final.</li>
+			
 					</ol><br/>
 					<strong>Hospitality & Registration Procedure</strong>
 						<ol>
@@ -461,15 +462,27 @@
 						<li> All Certificates and prizes, won by a college, will be handed over only to the team captain at the	time of de-registration. The participants will have to collect the same from their respective team captains.</li>
 						<li> The Ragam organizing team reserves the right to deduct from the caution deposit or from the
 						prize money, for any loss/damage caused by the participants.</li>
+						<li>Participants should have a confirmed Ragam ID for participating in any event, attending workshop or to avail accommodation. The online registered Ragam ID should be confirmed at the registration desk for the same. Participants should bring a valid college ID as the proof for identity. All the events for which the participant has registered online will be confirmed once the registration procedure is completed. On the spot registration for Ragam ID as well as Events will be provided at the registration desk. Once registered, participant can take part in any event or free workshop of Ragam. Only those with Ragam ID will be given accomodation. Prizes and certificates can be collected from the Registration Desk, once the results are out. For team events, prizes will be handed over to the EVENT TEAM CAPTAIN</li>
+						<li>Registration fees: Rs.150</li>
+						<li>Hospitality fees:Rs.50 (caution deposit of Rs.50 will also be collected, which will be refunded at the return of utilities provided)</li>
+						<li>Workshops: As per the stipulated fee(No other registration fee required</li>
 						</ol>
+						
 						<br>
 						<b>For the special attention of the participants coming in groups:</b>
 						<br/>
 						<ol>
-						<li>A member of the group should be assigned as the group leader and he/she must have a list of all group members along with their RAGAM ID's at the time of check in. Carrying such a list can considerably reduce the delay at the registration desk.</li>
-						<li>A representative from each group is strongly advised to contact the Hospitality Manager prior to their arrival at the campus to avoid delays in registration, for confirmation of accommodation and to avail transportation facilities during odd hours from the Calicut city.
-						</li>
-
+							<li>A member of the group should be assigned as the group leader and he/she must have a list of all group members along with their RAGAM ID's at the time of check in. Carrying such a list can considerably reduce the delay at the registration desk.</li>
+							<li>A representative from each group is strongly advised to contact the Hospitality Manager prior to their arrival at the campus to avoid delays in registration, for confirmation of accommodation and to avail transportation facilities during odd hours from the Calicut city.
+							</li>
+						</ol>
+						<br/>
+						<strong>NOTE:</strong>
+						<ol>
+							<li>Online provided Ragam ID becomes valid only when it is confirmed at the Registration Desk</li>
+							<li>The Ragam Registration Committee reserves the right to deduct from the caution deposit or from the prize money, for any loss/damage caused by the participants.</li>
+							<li>The Ragam Registration Committee will have the sole right to disqualify any team engaged in any form of malpractice during Registration</li>
+							</ol>	
 					</div>
 				</div>
 				<div id="reachus">
