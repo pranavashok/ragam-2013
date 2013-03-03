@@ -852,7 +852,7 @@ function lookup(inputString) {
 		        });
 	    	}
 	    });
-		$( ".symbol" ).tooltip({
+		$( ".event-register" ).tooltip({
       		position: {
         		my: "center bottom-10",
         		at: "center top",
