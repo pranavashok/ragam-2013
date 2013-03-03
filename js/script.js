@@ -217,6 +217,7 @@ function lookup(inputString) {
 					$('#content-content-wrapper-workshops.nano').nanoScroller({
 						scrollTop: '0px'
 					});
+					loadingAnimation(false);
 					/*if (relativeUrl.search("/") == -1) { //If it's a first level page
 						$("#painting-workshops").fadeIn();
 						title = relativeUrl;
@@ -851,12 +852,20 @@ function lookup(inputString) {
 		        });
 	    	}
 	    });
-	 /*   $(".event-register").mouseover(function () {
-        	$("#tooltip_register").show();
-    	}).mouseout(function () {
-    	    $("#tooltip_register").hide();
+		$( ".symbol" ).tooltip({
+      		position: {
+        		my: "center bottom-10",
+        		at: "center top",
+        		using: function( position, feedback ) {
+          			$( this ).css( position );
+          			$( "<div>" )
+            		.addClass( "arrow" )
+            		.addClass( feedback.vertical )
+            		.addClass( feedback.horizontal )
+            		.appendTo( this );
+        		}
+      		}
     	});
-*/
 
 	    $('#after-login-register').live({
 	    	click: function() {

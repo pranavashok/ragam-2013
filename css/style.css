@@ -219,7 +219,8 @@
 	cursor: pointer;
 	color: #e7e7e7;
 	font-size: 25px;
-	text-align: center;
+	text-align: left;
+	position:relative;
 	padding: 5px;
 	font-family: 'HelveticaLightCondensed';
 	text-transform: uppercase;
@@ -465,7 +466,22 @@
 	font-weight:bold;
 	display:inline;
 }
-
+.workshop-register{
+	margin-top: -3px;
+	width: 140px;
+	float: right;
+	font-size:25px;
+	cursor: pointer;
+	color: #666;
+	font-size: 25px;
+	text-align: center;
+	padding: 5px;
+	font-family: 'HelveticaLightCondensed';
+	text-transform: uppercase;
+}
+.workshop-register:hover{
+	color: #000;
+}
 #inner-pane-workshops {
 	display: none;
 	position: absolute;
@@ -1659,8 +1675,58 @@ a#login-link {
 
 .symbol{
 	font-family: 'PulsarJS';
+	text-align:center;
+}
+.ui-tooltip, .arrow:after {
+    background: black;
+  }
+.ui-tooltip {
+	padding: 3px;
+	position: absolute;
+	z-index: 9999;
+	max-width: 200px;
+	/*box-shadow: 0 0 5px #aaa;*/
+	background-color: #000;
+	box-shadow: 0 0 5px #aaa;
+	font-family: 'HelveticaThin';
+	color:#fff;
+	border-radius: 20px;
 }
 
+  .arrow {
+    width: 70px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+  }
+  .arrow.top {
+    top: -16px;
+    bottom: auto;
+  }
+  .arrow.left {
+    left: 20%;
+  }
+  .arrow:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 25px;
+    height: 25px;
+    box-shadow: 6px 5px 9px -9px black;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    tranform: rotate(45deg);
+  }
+  .arrow.top:after {
+    bottom: -20px;
+    top: auto;
+  }
 #settings-icon{
 	font-size:18px;
 	vertical-align: middle;
