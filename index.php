@@ -369,6 +369,29 @@
 					<br><br>
 					</td>
 					</tr>
+					<tr>
+					<td>
+					<span class="contactname"> Anoob Joseph</span> <br>
+					<span class="contacttitle">Registration Coordinator</span> <br>
+					<span class="contactphone">+91 889 172 5651</span> <br>
+					<span class="contactemail"><a  href="mailto:anoobjoseph@ragam.org.in">anoobjoseph@ragam.org.in</a></span>  <br>	
+					<br><br>
+					</td>
+					<td>
+					<span class="contactname"> Sandeep K P</span> <br>
+					<span class="contacttitle">Workshops Coordinator</span> <br>
+					<span class="contactphone">+91 953 933 4067</span> <br>
+					<span class="contactemail"><a  href="mailto:sandeepkp@ragam.org.in">sandeepkp@ragam.org.in</a></span>  <br>	
+					<br><br>
+					</td>
+					<td>
+					<span class="contactname"> Rosemary Toms</span> <br>
+					<span class="contacttitle">Hospitality Coordinator</span> <br>
+					<span class="contactphone">+91 949 736 8866</span> <br>
+					<span class="contactemail"><a  href="mailto:rosemary@ragam.org.in">rosemary@ragam.org.in</a></span>  <br>	
+					<br><br>
+					</td>
+					</tr>					
 					</tbody></table>
 					</div>
 				<div id="feedback">
