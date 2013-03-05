@@ -15,22 +15,22 @@
 	<!-- gallery.js and shorcut.js only loads when initiated with their respective handler -->
 	<!-- prefixfree, proximity, easing, rotate, script, nanoscroller and address are minified -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.min.js"></script>-->
-	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.jquery.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.dynamic-dom.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.proximity.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotateCompressed.2.2.js"></script>-->
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotateCompressed.2.2.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.history.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autoSuggest.minified.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery-ui-1.10.1.custom.min.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/min.js"></script>
+	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/min.js"></script>-->
 
-	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autocomplete.min.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autocomplete.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/script.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.nanoscroller.min.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>-->
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-tween.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-graphics.js"></script>
@@ -194,7 +194,7 @@
 				<ul>
 				<li id="popularnite">Popular Nite</li>  |
 				<li id="combonite">Combo Nite</li> |
-				<li id="pepperfest">Pepper Fest</li>
+				<li id="pepperfest">Pepperfest</li>
 				</ul>
 				</div>
 					<div id="content-heading-proshows">				
@@ -294,7 +294,7 @@
 				<div id="ticker">
 					<div>The event registration has started. You can click on the <span class="symbol" style="vertical-align:middle">M</span> sign on the respective event page to register</div>
 					<div>The Ragam 2013 <strong><a href="<?php echo $subDir; ?>schedule.html">schedule</a></strong> has been updated on Feb 28th.</div>
-					<div>Entries for the national short film contest, <strong><a href="<?php echo $subDir; ?>Events/General/Take_One">Take One</a></strong>, should be sent on or before March 10th</div>
+					<div>Entries for the national short film contest, <strong><a href="<?php echo $subDir; ?>Events/General/Take_One">Take One</a></strong>, should be sent on or before March 5th</div>
 					<div>Those interested in participating for <strong><a href="<?php echo $subDir; ?>Events/Dance/Choreo_Nite">Choreo Nite</a></strong> and <strong><a href="<?php echo $subDir; ?>Events/General/Couture_Boulevard">Couture Boulevard</a></strong> are to mail their previous performances on or before March 7th</div>
 					<div>Those interested in participating for <strong><a href="<?php echo $subDir; ?>Events/Music/Amplified">Amplified</a></strong>, <strong><a href="<?php echo $subDir; ?>Events/Music/Acoustics">Acoustics</a></strong> and <strong><a href="<?php echo $subDir; ?>Events/Music/Swara_Raaga">Swara Raaga</a></strong> are to mail their previous performances on or before March 7th</div>
 				</div>
