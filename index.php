@@ -15,22 +15,22 @@
 	<!-- gallery.js and shorcut.js only loads when initiated with their respective handler -->
 	<!-- prefixfree, proximity, easing, rotate, script, nanoscroller and address are minified -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.min.js"></script>-->
-	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.jquery.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.dynamic-dom.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.proximity.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotateCompressed.2.2.js"></script>-->
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotateCompressed.2.2.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.history.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autoSuggest.minified.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery-ui-1.10.1.custom.min.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/min.js"></script>
+	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/min.js"></script>-->
 
-	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autocomplete.min.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autocomplete.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/script.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.nanoscroller.min.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>-->
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-tween.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-graphics.js"></script>
@@ -294,7 +294,7 @@
 				<div id="ticker">
 					<div>The event registration has started. You can click on the <span class="symbol" style="vertical-align:middle">M</span> sign on the respective event page to register</div>
 					<div>The Ragam 2013 <strong><a href="<?php echo $subDir; ?>schedule.html">schedule</a></strong> has been updated on Feb 28th.</div>
-					<div>Entries for the national short film contest, <strong><a href="<?php echo $subDir; ?>Events/General/Take_One">Take One</a></strong>, should be sent on or before March 10th</div>
+					<div>Entries for the national short film contest, <strong><a href="<?php echo $subDir; ?>Events/General/Take_One">Take One</a></strong>, should be sent on or before March 5th</div>
 					<div>Those interested in participating for <strong><a href="<?php echo $subDir; ?>Events/Dance/Choreo_Nite">Choreo Nite</a></strong> and <strong><a href="<?php echo $subDir; ?>Events/General/Couture_Boulevard">Couture Boulevard</a></strong> are to mail their previous performances on or before March 7th</div>
 					<div>Those interested in participating for <strong><a href="<?php echo $subDir; ?>Events/Music/Amplified">Amplified</a></strong>, <strong><a href="<?php echo $subDir; ?>Events/Music/Acoustics">Acoustics</a></strong> and <strong><a href="<?php echo $subDir; ?>Events/Music/Swara_Raaga">Swara Raaga</a></strong> are to mail their previous performances on or before March 7th</div>
 				</div>
@@ -485,11 +485,12 @@
 						<li>Once registered, participant can take part in any event or free workshop of Ragam. </li>
 						<li>Only those with Ragam ID will be given accomodation. </li>
 						<li> Prizes and certificates can be collected from the Registration Desk, once the results are out. For team events, prizes will be handed over to the EVENT TEAM CAPTAIN</li>
-	
+						</ol> <br/><br/>
+						<ul>
 						<li>Registration fees: Rs.150</li>
 						<li>Hospitality fees:Rs.50 (caution deposit of Rs.50 will also be collected, which will be refunded at the return of utilities provided)</li>
 						<li>Workshops: As per the stipulated fee(No other registration fee required</li>
-						</ol>
+						</ul>
 						
 						<br>
 						<b>For the special attention of the participants coming in groups:</b>
@@ -505,6 +506,7 @@
 							<li>Online provided Ragam ID becomes valid only when it is confirmed at the Registration Desk</li>
 							<li>The Ragam Registration Committee reserves the right to deduct from the caution deposit or from the prize money, for any loss/damage caused by the participants.</li>
 							<li>The Ragam Registration Committee will have the sole right to disqualify any team engaged in any form of malpractice during Registration</li>
+							<li>  Ragam'13 Registration Desk will be open from 6.00 PM, 14th March to 9.00AM, 18th March. In case of early arrival at NIT Campus, contact the hospitality manager to avail temporary accomodation</li>
 							</ol>	
 					</div>
 				</div>

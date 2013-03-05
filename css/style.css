@@ -1423,9 +1423,10 @@ a#login-link {
 
 
 #reachus{
-	padding:20px;
+	padding-left:10px;
 	font-family:HelveticaThin;
 	text-align:justify;
+	height:400px;
 }
 
 #nitc_addr
