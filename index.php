@@ -194,7 +194,7 @@
 				<ul>
 				<li id="popularnite">Popular Nite</li>  |
 				<li id="combonite">Combo Nite</li> |
-				<li id="pepperfest">Pepper Fest</li>
+				<li id="pepperfest">Pepperfest</li>
 				</ul>
 				</div>
 					<div id="content-heading-proshows">				
