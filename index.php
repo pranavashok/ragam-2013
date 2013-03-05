@@ -470,12 +470,7 @@
 					<div id="info" class="content">
 					<strong>Rules and Regulations</strong>
 					<ol>
-						<li>All the participants are required to bring their college ID cards (or proof of college identity).Participation or stay in the campus during Ragam  shall not be permitted without the same.</li>
-						<li>All the participants are required to pre-register in the official Ragam website for Ragam ID and specify if accommodation is required as per the directions in the website. Online registration is compulsory so as to avail accommodation and it will be provided strictly on a first-come-first-serve basis.</li>
-						<li> Each college is expected to have a team captain and he/she should ensure that only members from his /her college participate under the respective college name. Any attempt to include outsiders in the team shall lead to the disqualification of the college.</li>
-						<li>In the event of discovery of malpractice or misbehavior of any kind, the decision of the Ragam team shall be final.</li>
-			
-					</ol><br/>
+					
 					<strong>Registration and Hospitality details</strong>
 						<ol>
 						<li>Participants should have a confirmed Ragam ID for participating in any event, attending workshop or to avail accommodation. The online registered Ragam ID should be confirmed at the registration desk for the same.</li>
@@ -485,7 +480,7 @@
 						<li>Once registered, participant can take part in any event or free workshop of Ragam. </li>
 						<li>Only those with Ragam ID will be given accomodation. </li>
 						<li> Prizes and certificates can be collected from the Registration Desk, once the results are out. For team events, prizes will be handed over to the EVENT TEAM CAPTAIN</li>
-						</ol> <br/><br/>
+						</ol> <br/><br/>	
 						<ul>
 						<li>Registration fees: Rs.150</li>
 						<li>Hospitality fees:Rs.50 (caution deposit of Rs.50 will also be collected, which will be refunded at the return of utilities provided)</li>
