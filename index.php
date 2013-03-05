@@ -485,11 +485,12 @@
 						<li>Once registered, participant can take part in any event or free workshop of Ragam. </li>
 						<li>Only those with Ragam ID will be given accomodation. </li>
 						<li> Prizes and certificates can be collected from the Registration Desk, once the results are out. For team events, prizes will be handed over to the EVENT TEAM CAPTAIN</li>
-	
+						</ol> <br/><br/>
+						<ul>
 						<li>Registration fees: Rs.150</li>
 						<li>Hospitality fees:Rs.50 (caution deposit of Rs.50 will also be collected, which will be refunded at the return of utilities provided)</li>
 						<li>Workshops: As per the stipulated fee(No other registration fee required</li>
-						</ol>
+						</ul>
 						
 						<br>
 						<b>For the special attention of the participants coming in groups:</b>
@@ -505,6 +506,7 @@
 							<li>Online provided Ragam ID becomes valid only when it is confirmed at the Registration Desk</li>
 							<li>The Ragam Registration Committee reserves the right to deduct from the caution deposit or from the prize money, for any loss/damage caused by the participants.</li>
 							<li>The Ragam Registration Committee will have the sole right to disqualify any team engaged in any form of malpractice during Registration</li>
+							<li>  Ragam'13 Registration Desk will be open from 6.00 PM, 14th March to 9.00AM, 18th March. In case of early arrival at NIT Campus, contact the hospitality manager to avail temporary accomodation</li>
 							</ol>	
 					</div>
 				</div>
