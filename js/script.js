@@ -362,7 +362,7 @@ function lookup(inputString) {
 		$('#pepperfest').click(function() {
 			$('#painting-proshows').hide();
 			$('#content-content-proshows').hide();
-			$('#content-content-proshows').html("True to its past history as one of the biggest platforms for rock music in India, Ragam introduces the <strong>Pepper Fest</strong> – the ultimate stage. Witness the up-and-coming and what's new in the world of music, as bands from all over the country take the stage at Ragam '13.");
+			$('#content-content-proshows').html("<p> Pepper Fest aims at going beyond the standard definition of a concert by bringing the music off stage and involving each of the 13,000 attendees of Ragam. With open ground jamming sessions through the day and diverse music all around, Pepper Fest is an attempt to integrate the best of every genre into the feel of this musical feast. </p><p>With  Pepper Fest we hope to inculcate a fresh interpretation of music on campus, to give the talented independant indian bands a place to perform, and to get the audience to play as much music as the bands on stage. Pepper Fest 2013 will play host to Skrat and Jhanu, two very talented rock bands from Chennai.</p>");
 			$('#painting-proshows').attr('class', 'pepperfest');
 			$('#painting-proshows').fadeIn();
 			$('#content-content-proshows').fadeIn();
