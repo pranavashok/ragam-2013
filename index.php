@@ -468,8 +468,7 @@
 				</div>
 				<div id="info-wrapper" class="nano">
 					<div id="info" class="content">
-					<strong>Rules and Regulations</strong>
-					<ol>
+					
 					
 					<strong>Registration and Hospitality details</strong>
 						<ol>
