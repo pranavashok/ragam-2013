@@ -362,7 +362,7 @@ function lookup(inputString) {
 		$('#pepperfest').click(function() {
 			$('#painting-proshows').hide();
 			$('#content-content-proshows').hide();
-			$('#content-content-proshows').html("<p> Pepperfest aims at going beyond the standard definition of a concert by bringing the music off stage and involving each of the 13,000 attendees of Ragam. With open ground jamming sessions through the day and diverse music all around, Pepperfest is an attempt to integrate the best of every genre into the feel of this musical feast. </p><br/><p>With  Pepperfest we hope to inculcate a fresh interpretation of music on campus, to give the talented independant indian bands a place to perform, and to get the audience to play as much music as the bands on stage. Pepperfest 2013 will play host to Skrat and Jhanu, two very talented rock bands from Chennai.</p>");
+			$('#content-content-proshows').html("<p><strong>Pepperfest</strong> aims at going beyond the standard definition of a concert by bringing the music off stage and involving each of the 13,000 attendees of Ragam. With open ground jamming sessions through the day and diverse music all around, Pepperfest is an attempt to integrate the best of every genre into the feel of this musical feast. </p><br /><p>With the Pepperfest we hope to inculcate a fresh interpretation of music on campus, to give the talented independant indian bands a place to perform, and to get the audience to play as much music as the bands on stage. Pepperfest 2013 will play host to <strong>Skrat</strong> and <strong>Jhanu</strong>, two very talented rock bands from Chennai.</p>");
 			$('#painting-proshows').attr('class', 'pepperfest');
 			$('#painting-proshows').fadeIn();
 			$('#content-content-proshows').fadeIn();
