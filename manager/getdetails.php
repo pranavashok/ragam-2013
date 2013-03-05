@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Get Details</title>
+  <title>Ragam 2013 - Get Participant and Event Details</title>
   <meta name="viewport" content = "width = device-width, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no" />
   
+  <link href="css/favicon.ico" rel="icon" type="image/x-icon" />
   <link href="css/footable-0.1.css" rel="stylesheet" type="text/css" />
   <link href="css/footable.sortable-0.1.css" rel="stylesheet" type="text/css" />
   
