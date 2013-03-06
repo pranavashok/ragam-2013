@@ -1,3 +1,6 @@
+<?php
+require_once("initdb.php");
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -20,7 +23,6 @@
 </head>
 <body>
 <?php
-require_once("initdb.php");
 
 if(isset($_GET['e'])) {
 	$event_id = $mysqli->real_escape_string($_GET['e']);
