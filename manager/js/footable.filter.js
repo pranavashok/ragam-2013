@@ -21,7 +21,7 @@
       input: '.footable-filter',
       timeout: 300,
       minimum: 2,
-      disableEnter: false
+      disableEnter: true
     }
   };
 

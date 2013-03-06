@@ -38,7 +38,7 @@
 .footable > tbody > tr > td, .footable > thead > tr > th {
   border-left: 1px solid #ccc;
   border-top: 1px solid #ccc;
-  padding: 10px;
+  padding: 5px;
   text-align: left;
 }
 
@@ -100,4 +100,49 @@
 
 .footable > tbody img {
   vertical-align:middle;
+}
+
+/* Sortable */
+
+.footable > thead > tr > th > span.footable-sort-indicator {
+  width: 16px;
+  height: 16px;
+  display: block;
+  float:right;
+  background: url('img/sorting_sprite.png') no-repeat top left;
+}
+
+.footable > thead > tr > th.footable-sortable:hover {
+  cursor:pointer;
+}
+
+.footable > thead > tr > th.footable-sortable > span {
+  
+}
+
+.footable > thead > tr > th.footable-sorted > span.footable-sort-indicator {
+  background-position: 0 -16px;
+}
+
+.footable > thead > tr > th.footable-sorted-desc > span.footable-sort-indicator {
+  background-position: 0 -32px;
+}
+
+/* Custom CSS */
+
+h3 {
+  font-family: Helvetica, Arial;
+  color:#222;
+  padding:0;
+  margin:0;
+}
+
+#filter {
+  padding: 3px;
+  width: 99.5%;
+  margin-bottom: 20px;
+  height: 20px;
+  border:1px #ccc solid;
+  border-radius: 3px;
+  outline:0;
 }

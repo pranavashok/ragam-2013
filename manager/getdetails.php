@@ -9,7 +9,6 @@ require_once("initdb.php");
   
   <link href="css/favicon.ico" rel="icon" type="image/x-icon" />
   <link href="css/footable-0.1.css" rel="stylesheet" type="text/css" />
-  <link href="css/footable.sortable-0.1.css" rel="stylesheet" type="text/css" />
   
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
   <script src="js/footable-0.1.js" type="text/javascript"></script>
@@ -32,8 +31,8 @@ if(isset($_GET['e'])) {
 		while($l = $query->fetch_assoc()) {
 			$list[] = $l;
 		}
-		echo 'Filter:<input id="filter" type="text" /><br />';
-		echo "<table class='footable'>";
+		echo '<input id="filter" type="text" placeholder="filter" /><br />';
+		echo "<table data-filter='#filter' class='footable'>";
 		echo '
 		<thead>
         <tr>
@@ -83,7 +82,7 @@ else if(isset($_GET['id'])) {
 	$query = $mysqli->query("SELECT `ragID`, `name`, `email`, `college`, `phone`, `accommodation`, `timestamp` FROM `participants` WHERE `ragID` = $ragam_id;");
 	if($query) {
 		$p = $query->fetch_assoc();
-		echo "<table class='footable'>";
+		echo "<table data-filter='#filter' class='footable'>";
 		echo "<thead><th data-sort-initial='true'>ID</th><th>Name</th><th>E-Mail</th><th>College</th><th>Phone</th><th>Accommodation</th><th>Timestamp</th></thead>";
 		echo "<tr>";
 		foreach($p as $v) {
@@ -106,8 +105,8 @@ else if(isset($_GET['participants'])) {
 				$list[] = $l;
 			}
 			echo "<h3>All Active Participants</h3><br />";
-			echo 'Filter:<input id="filter" type="text" /><br />';
-			echo "<table class='footable'>";
+			echo '<input id="filter" type="text" placeholder="filter" /><br />';
+			echo "<table data-filter='#filter' class='footable'>";
 			echo "<thead><th data-sort-initial='true'>ID</th><th>Name</th><th>E-Mail</th><th>College</th><th>Phone</th></thead>";
 			$j = 0;
 			foreach($list as $a) {
@@ -138,8 +137,8 @@ else if(isset($_GET['participants'])) {
 				$list[] = $l;
 			}
 			echo "<h3>NON-NIT Participants</h3><br />";
-			echo 'Filter:<input id="filter" type="text" /><br />';
-			echo "<table class='footable'>";
+			echo '<input id="filter" type="text" placeholder="filter" /><br />';
+			echo "<table data-filter='#filter' class='footable'>";
 			echo "<thead><th>ID</th><th>Name</th><th>E-Mail</th><th>College</th><th>Phone</th></thead>";
 			$j = 0;
 			foreach($list as $a) {
@@ -170,8 +169,8 @@ else if(isset($_GET['participants'])) {
 				$list[] = $l;
 			}
 			echo "<h3>College-wise Participants</h3><br />";
-			echo 'Filter:<input id="filter" type="text" /><br />';
-			echo "<table class='footable'>";
+			echo '<input id="filter" type="text" placeholder="filter" /><br />';
+			echo "<table data-filter='#filter' class='footable'>";
 			echo "<thead><th>College</th><th>Participants</th></thead>";
 			$j = 0;
 			foreach($list as $a) {
@@ -202,8 +201,8 @@ else if(isset($_GET['participants'])) {
 				$list[] = $l;
 			}
 			echo "<h3>Participants from $participants</h3><br />";
-			echo 'Filter:<input id="filter" type="text" /><br />';
-			echo "<table class='footable'>";
+			echo '<input id="filter" type="text" placeholder="filter" /><br />';
+			echo "<table data-filter='#filter' class='footable'>";
 			echo "<thead><th>ID</th><th>Name</th><th>E-Mail</th><th>College</th><th>Phone</th></thead>";
 			$j = 0;
 			foreach($list as $a) {
@@ -236,8 +235,8 @@ else if(isset($_GET['events'])) {
 			$list[] = $l;
 		}
 		echo "<h3>Event Registration</h3><br />";
-		echo 'Filter:<input id="filter" type="text" /><br />';
-		echo "<table class='footable'>";
+		echo '<input id="filter" type="text" placeholder="filter" /><br />';
+		echo "<table data-filter='#filter' class='footable'>";
 		echo "<thead><th>Event ID</th><th>Event Name</th><th>Teams</th></thead>";
 		$j = 0;
 		foreach($list as $a) {
