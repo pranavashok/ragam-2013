@@ -21,8 +21,19 @@ require_once("initdb.php");
   </script>
 </head>
 <body>
+	<?php if(isset($_GET['stats'])) { ?>
+	<h3>Registration Detais</h3><br />
+	<table class="footable" style="width:400px">
+		<thead><th>Quick Links</th></thead>
+		<tr><td><a href="?participants=all">All Active Participants</a></td></tr>
+		<tr><td><a href="?participants=nonnit">Non-NIT Active Participants</a></td></tr>
+		<tr><td><a href="?participants=collegewise">College-wise Participants</a></td></tr>
+		<tr><td><a href="?events=all">All Events Registrations</a></td></tr>
+		<tr><td><a href="?events=nonnit">Non-NIT Events Registrations</a></td></tr>
+	</table>
+	<br /><br />
+	<?php } ?>
 <?php
-
 if(isset($_GET['e'])) {
 	$event_id = $mysqli->real_escape_string($_GET['e']);
 	$query = $mysqli->query("SELECT team_id, teamleader_id, teammember_id, college FROM team, participants WHERE team.teamleader_id = participants.ragID AND event_id = '$event_id';");
@@ -300,12 +311,12 @@ else if(isset($_GET['stats'])) {
 	echo "<h3>Statistics</h3><br />";
 	echo "<table class='footable' style='width:400px'>";
 	echo "<thead><th>Stats</th><th>Count</th></thead>";
-	echo "<tr><td> Total Sign Ups</td><td>";
+	echo "<tr><td>Total Sign Ups</td><td>";
 	$query = $mysqli->query("SELECT count(*) FROM `participants`"); //registrations
 	if($query) $count = $query->fetch_assoc();
 	echo $count['count(*)'];
 	
-	echo "</td></tr><tr><td>Total Active Accounts</td><td>";
+	echo "</td></tr><tr><td><a href='?participants=all'>Total Active Accounts</a></td><td>";
 	$query = $mysqli->query("SELECT count(*) FROM `participants` WHERE active = 1"); //active registrations
 	if($query) $count = $query->fetch_assoc();
 	echo $count['count(*)'];
@@ -315,7 +326,7 @@ else if(isset($_GET['stats'])) {
 	if($query) $count = $query->fetch_assoc();
 	echo $count['count(*)'];
 	
-	echo "</td></tr><tr><td>Non-NIT Active Accounts</td><td>";
+	echo "</td></tr><tr><td><a href='?participants=nonnit'>Non-NIT Active Accounts</a></td><td>";
 	$query = $mysqli->query("SELECT count(*) FROM `participants` WHERE college NOT LIKE 'NIT, Calicut' AND active = 1"); //active non-nit registrations
 	if($query) $count = $query->fetch_assoc();
 	echo $count['count(*)'];
