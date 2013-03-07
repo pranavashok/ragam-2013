@@ -32,6 +32,8 @@ require_once("initdb.php");
 		<tr><td><a href="?events=nonnit">Non-NIT Events Registrations</a></td></tr>
 	</table>
 	<br /><br />
+	<?php } else { ?>
+		<a href="?stats">Go Back</a><br /><br />
 	<?php } ?>
 <?php
 if(isset($_GET['e'])) {
@@ -93,18 +95,57 @@ else if(isset($_GET['id'])) {
 	$query = $mysqli->query("SELECT `ragID`, `name`, `email`, `college`, `phone`, `accommodation`, `timestamp` FROM `participants` WHERE `ragID` = $ragam_id;");
 	if($query) {
 		$p = $query->fetch_assoc();
+		echo "<h3>User Details</h3><br />";
 		echo "<table data-filter='#filter' class='footable'>";
 		echo "<thead><th data-sort-initial='true'>ID</th><th>Name</th><th>E-Mail</th><th>College</th><th>Phone</th><th>Accommodation</th><th>Timestamp</th></thead>";
 		echo "<tr>";
+		$i = 0;
 		foreach($p as $v) {
-	        echo "<td>$v</td>";
+			if($i == 3)
+				echo "<td><a href=?participants=".urlencode($v).">$v</td>";
+			else
+	        	echo "<td>$v</td>";
+	        $i++;
 	    }
 	    echo "</tr></table>";
 	}
 	else {
 
 	}
+	$query = $mysqli->query("SELECT event_name, team.event_id, team_id FROM `team`, `eventinfo` WHERE `team`.event_id = `eventinfo`.event_id AND teammember_id=$ragam_id;");
+	if($query) {
+		$list = array();
+		while($l = $query->fetch_assoc()) {
+			$list[] = $l;
+		}
+		echo "<br /><h3>Events Registered</h3><br />";
+		echo "<table data-filter='#filter' class='footable' style='width:400px'>";
+		echo "<thead><th>Event Name</th><th>Team ID</th></thead>";
+		echo "<tr>";
+		$j = 0;
+		foreach($list as $a) {
+		    echo "<tr>";
+			$i = 0;
+			foreach($a as $v) {
+				if($i==1) {
+					$code = $v;
+				}
+				else if($i==2)
+					$team = $v;
+				else
+		        	$event = $v;
+		        $i++;
+		    }
+		    echo "<td><a href=?e=$code>$event</a></td><td>$code$team</td>";
+	    	echo "</tr>";
+	    	$j++;
+		}
 
+	    echo "</table>";
+	}
+	else {
+
+	}
 }
 else if(isset($_GET['participants'])) {
 	$participants = $mysqli->real_escape_string($_GET['participants']);
@@ -331,12 +372,12 @@ else if(isset($_GET['stats'])) {
 	if($query) $count = $query->fetch_assoc();
 	echo $count['count(*)'];
 	
-	echo "</td></tr><tr><td>Total Registered for Events</td><td>";
+	echo "</td></tr><tr><td><a href='?events=all'>Total Registered for Events</a></td><td>";
 	$query = $mysqli->query("SELECT count(DISTINCT teammember_id) AS count FROM `team`"); //people who have registered for some event
 	if($query) $count = $query->fetch_assoc();
 	echo $count['count'];
 	
-	echo "</td></tr><tr><td>Non-NIT Registered for Events</td><td>";
+	echo "</td></tr><tr><td><a href='?events=nonnit'>Non-NIT Registered for Events</a></td><td>";
 	$query = $mysqli->query("SELECT count(DISTINCT teammember_id) AS count FROM `team`, `participants` WHERE `team`.`teammember_id` = `participants`.`ragID` AND `participants`.`college` NOT LIKE 'NIT, Calicut'"); //non-nit people who have registered for some event
 	if($query) $count = $query->fetch_assoc();
 	echo $count['count'];
