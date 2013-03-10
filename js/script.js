@@ -66,7 +66,7 @@ function lookup(inputString) {
 		var w = $(window).width();
 		var h = $(window).height();
 		var flag = 0;
-		$('body').keydown(function(event) {
+		/*$('body').keydown(function(event) {
 			if (event.target.type == 'text' || event.target.type == 'email' || event.target.type == 'password' || event.target.name == 'accommodation')
 ;
 			else {
@@ -82,7 +82,7 @@ function lookup(inputString) {
 						$('#shortcut').show();
 				}
 			}
-		});
+		});*/
 		History.Adapter.bind(window, 'statechange', function() { // Note: We are using statechange instead of popstate
 			var State = History.getState(), // Note: We are using History.getState() instead of event.state
 				rootUrl = History.getRootUrl(),
