@@ -639,6 +639,7 @@ function lookup(inputString) {
 				$('#faq-wrapper.nano').hide();
 				$('#info-wrapper.nano').hide();
 				$('#feedback').hide();
+				$("#credits").hide();
 			}
 			else if ($('.menu_select').text() == 'reach us') {
 				$('#contacts').hide();
@@ -646,6 +647,7 @@ function lookup(inputString) {
 				$('#faq-wrapper.nano').hide();
 				$('#info-wrapper.nano').hide();
 				$('#feedback').hide();
+				$("#credits").hide();
 			}
 			else if ($('.menu_select').text() == 'faq') {
 				$('#contacts').hide();
@@ -653,6 +655,7 @@ function lookup(inputString) {
 				$('#faq-wrapper.nano').fadeIn();
 				$('#info-wrapper.nano').hide();
 				$('#feedback').hide();
+				$("#credits").hide();
 			}
 			else if ($('.menu_select').text() == 'info') {
 				$('#contacts').hide();
@@ -660,6 +663,7 @@ function lookup(inputString) {
 				$('#faq-wrapper.nano').hide();
 				$('#info-wrapper.nano').fadeIn();
 				$('#feedback').hide();
+				$("#credits").hide();
 			}
 			else if ($('.menu_select').text() == 'feedback') {
 				$('#contacts').hide();
@@ -667,10 +671,10 @@ function lookup(inputString) {
 				$('#faq-wrapper.nano').hide();
 				$('#info-wrapper.nano').hide();
 				$('#feedback').show();
-
+				$("#credits").hide();
 			}
 		});
-
+		
 		$('.menu_item').mouseover(function()
 		{
 			$(this).css({'border-bottom': '2px solid #444'});
@@ -682,6 +686,14 @@ function lookup(inputString) {
 		{
 			$(this).css({'border-bottom': '0px solid #444	'});
 		}
+		});
+		$("#credits-button").click(function(){
+			$('#contacts').hide();
+			$('#reachus').hide();
+			$('#faq-wrapper.nano').hide();
+			$('#info-wrapper.nano').hide();
+			$('#feedback').hide();
+			$('#credits').show();
 		});
 		$('#feedback-submit').click(function() {
 	      	$.ajax({

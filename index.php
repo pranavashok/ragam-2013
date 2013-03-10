@@ -394,6 +394,51 @@
 					</tr>					
 					</tbody></table>
 					</div>
+				<div id="credits">	
+					<table width="100%">
+					<tbody>
+					<tr>
+					<td>
+					<span class="creditsname">Pranav Ashok</span><br>
+					<span class="credititle">Designer</span><br>
+					<span class="creditsmail">pranav@ragam.org.in</span><br>
+					<br><br>
+					</td>
+					<td>
+					<span class="creditsname">Shamil CM</span><br>
+					<span class="credititle">Designer</span><br>
+					<span class="creditsmail">shamil@ragam.org.in</span><br>
+					<br><br>
+					</td>
+					<td>
+					<span class="creditsname">Sachin Krishnan T V</span><br>
+					<span class="credititle">Developer</span><br>
+					<span class="creditsmail">sachin@ragam.org.in</span><br>
+					<br><br>
+					</td>
+					</tr>
+					<tr>
+					<td>
+					<span class="creditsname">Pratham Karnik</span><br>
+					<span class="credititle">Artist</span><br>
+					<span class="creditsmail">pratham@ragam.org.in</span><br>
+					<br><br>
+					</td>
+					<td>
+					<span class="creditsname">Hashin Jithu</span><br>
+					<span class="credititle">Developer</span><br>
+					<span class="creditsmail">hashin@ragam.org.in</span><br>
+					<br><br>
+					</td>
+					<td>
+					<span class="creditsname">Nithin Mohan</span><br>
+					<span class="credititle">Developer</span><br>
+					<span class="creditsmail">nithin@ragam.org.in</span><br>
+					<br><br>
+					</td>
+					</tr>					
+					</tbody></table>
+				</div>
 				<div id="feedback">
 				<form>
 					<input class="nameentry" type="text" name="name" title="name" placeholder="name" onblur="inputBlur(this)" />
@@ -524,7 +569,7 @@
 			<div id="menu_bot">
 				<hr style="border-top: 1px dotted #ccc">
 				<div id="nitc_details">
-				<span id="nitc_addr">National Institute of Technology Calicut. <a target="_blank" href="http://nitc.ac.in">http://nitc.ac.in</a></span><span id="menubotlinks"> <a href="#credits">Credits</a> | <a href="#sitemap">Sitemap</a></span>
+				<span id="nitc_addr">National Institute of Technology Calicut. <a target="_blank" href="http://nitc.ac.in">http://nitc.ac.in</a></span><span id="menubotlinks"> <span id="credits-button">Credits</span> | <a href="#sitemap">Sitemap</a></span>
 				</div>			
 			</div>
 	</div>

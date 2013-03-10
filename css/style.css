@@ -1392,7 +1392,21 @@ a#login-link {
 	font-family:HelveticaThin;
 	display:none;
 }
-
+#contacts td{
+	padding-left:5%;
+}
+#credits{
+	padding:20px;
+	font-family:HelveticaThin;
+	display:none;
+}
+#credits td{
+	padding-left:5%;
+}
+#credits-button{
+	cursor:pointer;
+	color:black;
+}
 
 #faq-wrapper.nano{
 	padding:20px;
