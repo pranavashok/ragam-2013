@@ -1,4 +1,6 @@
-<?php require_once('root.php'); ?>
+<?php 
+session_start();
+require_once('root.php'); ?>
 <html>
 <head>
 	<title>Ragam 2013 | National Institute of Technology, Calicut</title>
