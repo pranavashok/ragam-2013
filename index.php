@@ -26,7 +26,6 @@
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autoSuggest.minified.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery-ui-1.10.1.custom.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/min.js"></script>
-
 	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autocomplete.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/script.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.nanoscroller.min.js"></script>
@@ -48,8 +47,8 @@
 		<li></li>
 	</ul>
 	<div id="dark"></div>
-	<section id="gallery">
-	</section>
+	<div id="gallery">
+	</div>
 	<?php 
 		session_start();
 		if (!isset($_SESSION['uname']) || !isset($_SESSION['ragID'])) {

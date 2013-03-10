@@ -617,10 +617,16 @@ function lookup(inputString) {
 		});
 		$('.gallery').click(function() {
 			$('#gallery').html(gallery);
-			$.getScript('/' + subDir + '/js/gallery.js', function() {
-  					$('#gallery').show();
-  					$('#gallery').attr('class', 'overlayon');
+			$('#gallery').show();
+  			$('#gallery').attr('class', 'overlayon');
+			$.ajax({
+				url: '/' + subDir + '/js/gallery.js',
+				dataType: 'script',
+				success: function(){
+					
+				}
 			});
+			
 		});
 
 		$('#gallery').click(function() {
