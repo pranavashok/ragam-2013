@@ -50,7 +50,6 @@
 	<div id="gallery">
 	</div>
 	<?php 
-		session_start();
 		if (!isset($_SESSION['uname']) || !isset($_SESSION['ragID'])) {
     ?>
 	<div id="login-form-wrapper">
