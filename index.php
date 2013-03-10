@@ -1,7 +1,7 @@
+<?php require_once('root.php'); ?>
 <html>
 <head>
 	<title>Ragam 2013 | National Institute of Technology, Calicut</title>
-	<?php include 'root.php' ?>
 	<link href="<?php echo $subDir; ?>css/reset.css" rel="stylesheet"/>
 	<link href="<?php echo $subDir; ?>css/style.css" rel="stylesheet"/>
 	<link href="<?php echo $subDir; ?>css/animations.css" rel="stylesheet"/>
