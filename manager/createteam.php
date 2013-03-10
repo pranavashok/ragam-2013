@@ -1,9 +1,9 @@
 <?php
 require_once("initdb.php");
 $success = 0;
-$event_id = $mysqli->real_escape_string($_POST['event']);
-$teamleader_id = $mysqli->real_escape_string($_POST['teamleader']);
-$teammemberlist = $mysqli->real_escape_string($_POST['teammembers']);
+$event_id = $mysqli->real_escape_string(strip_tags($_POST['event']));
+$teamleader_id = $mysqli->real_escape_string(strip_tags($_POST['teamleader']));
+$teammemberlist = $mysqli->real_escape_string(strip_tags($_POST['teammembers']));
 $teammembers = explode(",", $teammemberlist);
 $numpart = count($teammembers);
 

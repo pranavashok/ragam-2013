@@ -1,11 +1,11 @@
 <?php
 require_once("initdb.php");
-$fullname = $mysqli->real_escape_string($_POST['fullname']);
-$email = $mysqli->real_escape_string($_POST['email']);
-$password = $mysqli->real_escape_string($_POST['password']);
-$college = $mysqli->real_escape_string($_POST['college']);
-$phone = $mysqli->real_escape_string($_POST['phone']);
-$accommodation = $mysqli->real_escape_string($_POST['accommodation']);
+$fullname = $mysqli->real_escape_string(strip_tags($_POST['fullname']));
+$email = $mysqli->real_escape_string(strip_tags($_POST['email']));
+$password = $mysqli->real_escape_string(strip_tags($_POST['password']));
+$college = $mysqli->real_escape_string(strip_tags($_POST['college']));
+$phone = $mysqli->real_escape_string(strip_tags($_POST['phone']));
+$accommodation = $mysqli->real_escape_string(strip_tags($_POST['accommodation']));
 
 $success = 0;
 $msg = "";
