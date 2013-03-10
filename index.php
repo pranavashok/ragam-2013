@@ -94,7 +94,6 @@
 		<canvas id="sitemap"></canvas>
 	</div>
 	<?php 
-		session_start();
 		if (isset($_SESSION['uname']) && isset($_SESSION['ragID'])) {
     ?>
 	<div id="myevents">
