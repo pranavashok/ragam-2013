@@ -291,7 +291,8 @@ require_once('root.php'); ?>
 		<div id="footer_inner">
 			<div id="supportpane_top">
 				<div id="ticker">
-					<div>The event registration has started. You can click on the <span class="symbol" style="vertical-align:middle">M</span> sign on the respective event page to register</div>
+					<div>The online event registration will be closed by 2359 Hrs on 14th March.</div>
+					<div>Welcoming one and all to Ragam 2013</div>
 					<div>The Ragam 2013 <strong><a href="<?php echo $subDir; ?>schedule.html">schedule</a></strong> has been updated on Mar 8th.</div>
 					<div>College ID/Photo ID is mandatory for registration as well as participation.</div>
 				</div>
