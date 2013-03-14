@@ -888,8 +888,8 @@ function lookup(inputString) {
 	    $('#after-login-register').live({
 	    	click: function() {
 	    		$('#dark').attr('class', 'overlayon');
-	    		$('#eventreg-form-wrapper').hide();
-	    		$.ajax({
+	    		$('#eventreg-form-wrapper').show();
+	    		/*$.ajax({
 		        	dataType: 'json',
 		            type: 'POST',
 		            url: '/' + subDir + '/manager/teamcheck.php',
@@ -946,7 +946,7 @@ function lookup(inputString) {
 	    		$('.as-selection-item').remove();
 	    		$('.as-result-item').remove();
 	    		$('#as-values-evreg').val(',');
-	    		$('#evreg').focus();
+	    		$('#evreg').focus();*/
 	    	}
 	    });
 	    $('#eventregform').submit(function(e) {

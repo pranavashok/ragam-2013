@@ -63,33 +63,13 @@ require_once('root.php'); ?>
 		<div id="tip">press enter to log in...</div>
 	</div>
 	<div id="signup-form-wrapper">
-		<form id="signupform" >
-		<input class="nameentry" type="text" name="fullname" id="fullname" title="Full Name" placeholder="full name" onblur="inputBlur(this)" autocomplete="off" />
-		<input class="emailentry" type="email" name="email" title="Email" id="email" placeholder="email" onblur="inputBlur(this)" autocomplete="off"/>
-		<input class="passwordentry" type="password" name="password" title="Password" id="password" placeholder="password" onblur="inputBlur(this)" autocomplete="off"/>
-		<input class="collegeentry" name="college" title="College" id="college" placeholder="college" autocomplete="off" />
-		<div class="styled-select">
-		<select class = "accommodationentry" onChange="$(this).css('color','black')" name="accommodation">
-			<option value="none" selected disabled id="first">accommodation</option>
-		    <option value="1">Yes</option>
-		    <option value="0">No</option>
-		</select>
-		</div>
-		<input class="phoneentry" type="text" name="phone" title="Phone" id="phone" placeholder="phone" autocomplete="off"/><br/>
-		<input class="submit_login" type="submit" name="Submit" value="Submit" /> 
-        </form>
-		<div id="tip">press enter to submit...</div>
+		<div id="tip">Online registration for Ragam 2013 is closed.</div>
 	</div>
 	<?php } else{ ?>
 	<div id="eventreg-form-wrapper">
 		<div id="sub">
 		</div>
-		<form id="eventregform">			
-		<p style="color:white">Team Leader: <?php echo $_SESSION['uname']; ?> </p> <br/>
-		<span style="color:white">Team Members: </span> <input type="text" name="multiname" id="multiname" onblur="inputBlur(this)" />
-		<input class="submit_eventreg" type="submit" name="Submit" value="Submit" /> 
-		</form>
-		<div id="tip">press enter to complete event registration...</div>
+		<div id="tip">Online registration for Ragam 2013 is closed. Now you can register at the venue.</div>
 	</div>
 	<?php } ?>
 	<div id="shortcut" >
