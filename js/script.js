@@ -981,6 +981,14 @@ function lookup(inputString) {
 	    	}
 	        return false;
 	    });
+		$("#currspons").click(function(){
+			$("#pspons").hide();
+			$("#cspons").show();
+		});
+		$("#prevspons").click(function(){
+			$("#cspons").hide();
+			$("#pspons").show();
+		});
 		$('[title]').mouseover(function() {
         	$(this).data('title', $(this).attr('title'));
         	$(this).attr('title', '');

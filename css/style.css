@@ -635,13 +635,20 @@
 	height:80%;
 	padding:30px;
 	display:block;
-	color: b;acl
+	color: black;
 	left:0;
 	top:5%;
 	outline:none;
 	font-size: 15px;
 	line-height: 20px;
 
+}
+#content-content-sponsors span{
+	cursor:pointer;
+	font-weight:bold;
+}
+#content-content-sponsors span:hover{
+	color:red;
 }
 /* Searchbox */
 

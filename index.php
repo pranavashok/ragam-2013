@@ -206,8 +206,9 @@ require_once('root.php'); ?>
 					<div id="content-content-wrapper-sponsors">
 						<div id="content-content-sponsors" class="content">
 						
-						<h3> Previous Sponsors </h3>
-						<img src="img/prevsponsors.jpg" height="450px" >
+						<span id="currspons"> Current Sponsors</span> | <span id="prevspons"> Previous Sponsors </span><br>
+						<img id="cspons" src="img/sponsors.jpg" height="400px" >
+						<img id="pspons" src="img/prevsponsors.jpg" height="450px" >
 
 						</div>
 					</div>
