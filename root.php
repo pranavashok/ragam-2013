@@ -15,10 +15,5 @@
   }
 ?>
 <script>
-  if ('<?php echo $subDir; ?>' == '') {
-    var subDir = '';
-  }
-  else {
     var subDir = '<?php echo $subDir; ?>';
-  }
 </script>
