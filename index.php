@@ -18,20 +18,20 @@ require_once('root.php'); ?>
 	<!-- prefixfree, proximity, easing, rotate, script, nanoscroller and address are minified -->
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.min.js"></script>-->
-	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.jquery.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.dynamic-dom.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.proximity.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotateCompressed.2.2.js"></script>-->
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jQueryRotateCompressed.2.2.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.history.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autoSuggest.minified.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery-ui-1.10.1.custom.min.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/min.js"></script>
-	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autocomplete.min.js"></script>
+	<!-- <script type="text/javascript" src="<?php echo $subDir; ?>js/min.js"></script> -->
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.autocomplete.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/script.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.nanoscroller.min.js"></script>
-	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>-->
+	<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.address-1.4.min.js"></script>
 	<!--<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-tween.js"></script>
 	<script async type="text/javascript" src="<?php echo $subDir; ?>js/arbor-graphics.js"></script>-->
@@ -532,7 +532,8 @@ require_once('root.php'); ?>
 				<form id="form" name="form" method="post" action="javascript:feedback()">
 				</form>
 				
-				<p></p><br /><br/><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.179538060995!2d75.93144721555139!3d11.32158435198812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba642fd50000001%3A0xbe8a77db953bda6c!2sNIT%20Calicut!5e0!3m2!1sen!2sde!4v1586790897700!5m2!1sen!2sde" width="400" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br>
+				<p></p><br /><br/>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.179538060995!2d75.93144721555139!3d11.32158435198812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba642fd50000001%3A0xbe8a77db953bda6c!2sNIT%20Calicut!5e0!3m2!1sen!2sde!4v1586790897700!5m2!1sen!2sde" width="400" height="350" frameborder="0" style="border:0;float:left;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br>
 			
 				<div style="padding:0px 0px 0px 430px; align:right; font-size:10pt; ">
 
@@ -568,13 +569,13 @@ require_once('root.php'); ?>
 	<div id="hidden-subsubmenu-links">
 	</div>
 	<div id="hidden-art">
-		<img id='general' />
-		<img id='fine_arts' />
-		<img id='music' />
-		<img id='dance' />
-		<img id='literary' />
-		<img id='dramatics' />
-		<img id='thematic' />
+		<div id='general' />
+		<div id='fine_arts' />
+		<div id='music' />
+		<div id='dance' />
+		<div id='literary' />
+		<div id='dramatics' />
+		<div id='thematic' />
 	</div>
 	<div id="hidden-info">
 		<div id="hidden-name"><?php 
