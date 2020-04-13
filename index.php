@@ -16,7 +16,7 @@ require_once('root.php'); ?>
 
 	<!-- gallery.js and shorcut.js only loads when initiated with their respective handler -->
 	<!-- prefixfree, proximity, easing, rotate, script, nanoscroller and address are minified -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/jquery.min.js"></script>-->
 	<!--<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.min.js"></script>
 	<script type="text/javascript" src="<?php echo $subDir; ?>js/prefixfree.jquery.js"></script>
@@ -284,8 +284,8 @@ require_once('root.php'); ?>
 				<div id="social_panel">
 						<!--<a style="width:48px; height:48px; display:inline; opacity:0"><img src="<?php echo $subDir; ?>img/twitter.png"></a>
 						<!--<a href="facebook.com" target="blank" ><img src="<?php echo $subDir; ?>img/twitter.png"></a>-->
-						<span class="social_button"><a href="http://www.youtube.com/user/RagamCulfest" target="blank"><img src="<?php echo $subDir; ?>img/youtube.png"></a></span>
-						<span class="social_button"><a href="http://www.facebook.com/Ragam.nitc" target="blank"><img src="<?php echo $subDir; ?>img/facebook.png"></a></span>
+						<span class="social_button"><a href="https://www.youtube.com/user/RagamCulfest" target="blank"><img src="<?php echo $subDir; ?>img/youtube.png"></a></span>
+						<span class="social_button"><a href="https://www.facebook.com/Ragam.nitc" target="blank"><img src="<?php echo $subDir; ?>img/facebook.png"></a></span>
 				</div>
 			</div>
 		<div id="supportpane_bot">
@@ -532,8 +532,7 @@ require_once('root.php'); ?>
 				<form id="form" name="form" method="post" action="javascript:feedback()">
 				</form>
 				
-				<p></p><br /><br/><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=nit+calicut&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=35.273162,79.013672&amp;vpsrc=0&amp;ie=UTF8&amp;hq=nit&amp;hnear=Kozhikode,+Kerala,+India&amp;t=m&amp;cid=14981244607500735704&amp;ll=11.321174,75.935268&amp;spn=0.058912,0.072956&amp;z=13&amp;iwloc=A" target="_blank" style="color:#ccc; float:left; text-decoration:none;text-align:right">
-				<img src="http://maps.google.com/maps/api/staticmap?center=NIT%20Calicut%2C%20Kerala%2C%20India&zoom=10&format=png&maptype=roadmap&mobile=false&markers=|color:Red|label:NIT%20Calicut|NIT%20Calicut%20Rajpath&size=400x350&key=AIzaSyBnNV0YsOYcye7rJK7eJS4px9eBtR_WE44&sensor=false" title="NIT Calicut Map"/></a><br>
+				<p></p><br /><br/><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.179538060995!2d75.93144721555139!3d11.32158435198812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba642fd50000001%3A0xbe8a77db953bda6c!2sNIT%20Calicut!5e0!3m2!1sen!2sde!4v1586790897700!5m2!1sen!2sde" width="400" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br>
 			
 				<div style="padding:0px 0px 0px 430px; align:right; font-size:10pt; ">
 
@@ -547,7 +546,7 @@ require_once('root.php'); ?>
 			<div id="menu_bot">
 				<hr style="border-top: 1px dotted #ccc">
 				<div id="nitc_details">
-				<span id="nitc_addr">National Institute of Technology Calicut. <a target="_blank" href="http://nitc.ac.in">http://nitc.ac.in</a></span><span id="menubotlinks"> <span id="credits-button">Credits</span> | <a href="#sitemap">Sitemap</a></span>
+				<span id="nitc_addr">National Institute of Technology Calicut. <a target="_blank" href="https://nitc.ac.in">https://nitc.ac.in</a></span><span id="menubotlinks"> <span id="credits-button">Credits</span> | <a href="#sitemap">Sitemap</a></span>
 				</div>			
 			</div>
 	</div>
